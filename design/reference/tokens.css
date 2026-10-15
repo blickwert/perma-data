@@ -1,0 +1,54 @@
+/* AUTO-GENERIERT aus tokens/tokens.json (scripts/build_tokens.py). Nicht von Hand aendern. */
+:root{
+  /* Palette */
+  --pma-navy:#00416B;
+  --pma-navy-dark:#00314F;
+  --pma-teal:#1A8C8C;
+  --pma-teal-light:#25A0A0;
+  --pma-aqua:#57D3D3;
+  --pma-aqua-glass:rgba(87,211,211,0.94);
+  --pma-white:#FFFFFF;
+  --pma-off-white:#FAFAFA;
+  --pma-mint:#E8F1F1;
+  --pma-mist:#C9DAD9;
+  --pma-slate:#4B6269;
+  --pma-silver:#D6D6D6;
+  --pma-graphite:#6B6B6B;
+  --pma-sky:#8FCBE6;
+  --pma-sky-light:#C9E6EE;
+  --pma-sage:#86B0B0;
+  --pma-clay:#8A5F59;
+  /* RGB-Tripel fuer Transparenzen: rgba(var(--pma-navy-rgb),.3) */
+  --pma-navy-rgb:0,65,107;
+  --pma-shadow-rgb:15,23,42;
+  /* Rollen */
+  --pma-color-text:var(--pma-navy);
+  --pma-color-heading:var(--pma-navy);
+  --pma-color-text-muted:var(--pma-slate);
+  --pma-color-text-on-dark:var(--pma-white);
+  --pma-color-text-on-dark-muted:var(--pma-silver);
+  --pma-color-surface:var(--pma-white);
+  --pma-color-surface-neutral:var(--pma-off-white);
+  --pma-color-surface-tint:var(--pma-mint);
+  --pma-color-surface-brand:var(--pma-navy);
+  --pma-color-surface-dark:var(--pma-navy-dark);
+  --pma-color-border:var(--pma-mist);
+  --pma-color-border-on-dark:var(--pma-graphite);
+  --pma-color-accent:var(--pma-aqua);
+  --pma-color-accent-strong:var(--pma-teal);
+  --pma-color-cta:var(--pma-navy);
+  /* Schriften */
+  --pma-font-heading:'Gotham','Gotham Medium','Montserrat',sans-serif;
+  --pma-font-body:'Roboto',system-ui,sans-serif;
+  --pma-font-script:'Bickham Script Pro','Great Vibes',cursive;
+  /* Radien, Schatten */
+  --pma-radius-card:12px;
+  --pma-radius-pill:999px;
+  --pma-shadow-card:0 10px 30px -8px rgba(var(--pma-shadow-rgb),0.18);
+  --pma-shadow-pop:0 4px 14px rgba(var(--pma-navy-rgb),0.3);
+  --pma-shadow-menu:0 14px 24px -12px rgba(var(--pma-navy-rgb),0.3);
+  /* Layout */
+  --pma-max-width:1200px;
+  --pma-gutter:32px;
+  --pma-gutter-mobile:20px;
+}

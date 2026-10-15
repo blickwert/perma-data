@@ -76,6 +76,7 @@ def page(fname, title, current, body, desc):
 <title>{title} – PERMA Mind Academy</title>
 <meta name="description" content="{desc}">
 {FONTS}
+<link rel="stylesheet" href="tokens.css">
 <link rel="stylesheet" href="site.css">
 </head>
 <body>
@@ -215,7 +216,7 @@ def impressum():
 <h2>Bildnachweis</h2>
 <p>{ph("[Fotograf:in / Bildquelle für Hero-, Team- und Bannerbilder ergänzen]")}</p>
 
-<p style="margin-top:40px;font-size:14px;color:#587077">Stand: {ph("[Datum]")}</p>
+<p style="margin-top:40px;font-size:14px;color:var(--pma-slate)">Stand: {ph("[Datum]")}</p>
 </article></div>
 """
     page("impressum.html", "Impressum", "impressum.html", body,

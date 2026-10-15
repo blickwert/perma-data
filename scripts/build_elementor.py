@@ -363,20 +363,20 @@ def s_ausbildungen():
                   "flex-shrink": 1, "min-width": 180}, mobile={"flex-basis": (100, "%")}),
         ], {"flex-wrap": "wrap", "gap": 20, "column-gap": 32, "align-items": "flex-start",
             "padding": (32, 0, 32, 0), "border-width": (0, 0, 1, 0), "border-style": "solid",
-            "border-color": C["line"]}))
+            "border-color": C["mist"]}))
     list_wrap = flex("modlist", rows, {"max-width": 1200, "width": (100, "%"), "margin": (0, "auto", 0, "auto"),
                                        "flex-direction": "column", "padding": (24, 32, 0, 32),
                                        "box-sizing": "border-box"}, mobile={"padding": (24, 20, 0, 20)})
     b = d["banner"]
     banner = flex("banner", [
         image("bannerimg", b["image_alt"], {"flex-grow": 1.2, "flex-basis": 420, "min-height": 300,
-                                            "bg": C["line"]}),
+                                            "bg": C["mist"]}),
         flex("bannerbox", [
             tag("bannertag", b["tag"]),
             heading("bannert", b["title"], "h3", {"font-size": 32, "line-height": 1.2, "color": "#FFFFFF"},
                     mobile={"font-size": 26}),
             flex("bannerrow", [html("bannerico", svg("badge-check", 26, "1.8", f"color:{C['aqua']}")),
-                               para("bannerp", b["text"], {"font-size": 15, "line-height": 1.6, "color": "#D5ECEC"})],
+                               para("bannerp", b["text"], {"font-size": 15, "line-height": 1.6, "color": C["mint"]})],
                  {"gap": 14, "align-items": "flex-start"}),
         ], {"flex-grow": 1, "flex-basis": 360, "min-width": 0, "box-sizing": "border-box", "padding": (40, 40, 40, 40),
             "bg": C["navy_dark"], "flex-direction": "column", "gap": 20, "justify-content": "center"},
@@ -402,8 +402,8 @@ def s_vorteile():
 
 def s_sorgfalt():
     d = CONTENT["sorgfalt"]
-    pills = [para(f"pill{i}", t, {"border-width": (1, 1, 1, 1), "border-style": "solid", "border-color": C["line"],
-                                  "background-color": C["soft"], "border-radius": 999, "padding": (8, 16, 8, 16),
+    pills = [para(f"pill{i}", t, {"border-width": (1, 1, 1, 1), "border-style": "solid", "border-color": C["mist"],
+                                  "background-color": C["mint"], "border-radius": 999, "padding": (8, 16, 8, 16),
                                   "font-size": 12, "font-weight": "500"}) for i, t in enumerate(d["pills"])]
     left = flex("sgl", [
         eyebrow("sge", d["eyebrow"], C["teal"]),
@@ -422,7 +422,7 @@ def s_sorgfalt():
                                           "margin": (8, 0, 0, 0)}),
         ], {"flex-grow": 1, "flex-basis": 240, "box-sizing": "border-box", "flex-direction": "column",
             "padding": (24, 24, 24, 24), "border-width": (2, 0, 0, 0), "border-style": "solid",
-            "border-color": C["navy"] if hi else C["teal"], "bg": "#FFFFFF" if hi else C["soft"],
+            "border-color": C["navy"] if hi else C["teal"], "bg": "#FFFFFF" if hi else C["mint"],
             **({"box-shadow": "soft"} if hi else {})}))
     right = flex("sgr", cards, {"flex-wrap": "wrap", "gap": 16, "flex-grow": 2, "flex-basis": 520, "min-width": 0})
     return wrap("sorgfalt", [flex("sgrow", [left, right], {"flex-wrap": "wrap", "gap": 48})], bg="#FEFEFE",
@@ -444,21 +444,21 @@ def s_team():
     for i, p in enumerate(d["people"]):
         cards.append(flex(f"tmc{i}", [
             image(f"tmi{i}", p["photo_alt"], {"flex-grow": 2, "flex-basis": 200, "min-height": 290,
-                                              "bg": C["line"]}, mobile={"min-height": 220}),
+                                              "bg": C["mist"]}, mobile={"min-height": 220}),
             flex(f"tmb{i}", [
                 para(f"tmr{i}", p["role"], {"font-size": 12, "font-weight": "500", "letter-spacing": (0.16, "em"),
                                             "text-transform": "uppercase", "color": C["teal"]}),
                 heading(f"tmn{i}", p["name"], "h3", {"font-size": 26, "line-height": 1.25, "margin": (8, 0, 0, 0)}),
-                para(f"tmq{i}", p["title"], {"font-size": 14, "color": C["muted"], "margin": (4, 0, 0, 0)}),
+                para(f"tmq{i}", p["title"], {"font-size": 14, "color": C["slate"], "margin": (4, 0, 0, 0)}),
                 para(f"tmw{i}", p["bio"], {"font-size": 14, "line-height": 1.7, "margin": (18, 0, 0, 0)}),
-                para(f"tmz{i}", p["quote"], {"font-family": F["script"], "font-size": 24, "line-height": 1.3,
+                para(f"tmz{i}", p["quote"], {"font-family": F["script"], "font-size": 26, "line-height": 1.3,
                                              "margin": (14, 0, 0, 0)}),
             ], {"flex-direction": "column", "flex-grow": 3, "flex-basis": 280, "min-width": 0,
                 "padding": (28, 28, 28, 28), "box-sizing": "border-box"}),
         ], {"flex-wrap": "wrap", "flex-grow": 1, "flex-basis": 520, "min-width": 0, "bg": "#FFFFFF",
             "border-radius": 12, "overflow": "hidden", "box-shadow": "soft"}))
     return wrap("team", [head, flex("tmcards", cards, {"flex-wrap": "wrap", "gap": 24, "margin": (48, 0, 0, 0)})],
-                bg=C["soft"], pad=(80, 32, 88, 32), anchor="team", gap=0)
+                bg=C["mint"], pad=(80, 32, 88, 32), anchor="team", gap=0)
 
 
 FORM = """<form class="pma-form" method="post" action="#" style="display:flex;flex-direction:column;gap:20px;font-family:Roboto,system-ui,sans-serif;color:#00416B">
@@ -483,7 +483,7 @@ def s_kontakt():
         heading("ktt", d["title"], "h2", {"font-size": 34, "line-height": 1.2, "color": "#FFFFFF",
                                           "margin": (24, 0, 0, 0)}, mobile={"font-size": 26}),
         para("ktp", d["text"], {"margin": (24, 0, 0, 0), "line-height": 1.75, "color": "#FFFFFF"}),
-        flex("ktn", [html("ktni", svg("badge-check", 20, "1.8", "color:#B7CDCD")),
+        flex("ktn", [html("ktni", svg("badge-check", 20, "1.8", f"color:{C['mist']}")),
                      para("ktnp", d["note"], {"font-size": 14, "line-height": 1.7, "color": "#FFFFFF"})],
              {"margin": (40, 0, 0, 0), "padding": (24, 0, 0, 0), "border-width": (1, 0, 0, 0),
               "border-style": "solid", "border-color": "rgba(255,255,255,0.85)", "gap": 12, "align-items": "flex-start"}),
@@ -504,7 +504,7 @@ def s_footer():
         return flex(seed, kids, {"flex-direction": "column", "flex-grow": grow, "flex-basis": basis})
 
     lab = lambda s, t: para(s, t, {"color": C["aqua"], "font-weight": "500", "font-size": 14})
-    txt = lambda s, t: para(s, t, {"color": "#D6D6D6", "font-size": 14, "line-height": 1.7})
+    txt = lambda s, t: para(s, t, {"color": C["silver"], "font-size": 14, "line-height": 1.7})
     soc = flex("fsoc", [html(f"fs{i}", f'<a href="{u}" aria-label="{n}" style="width:44px;height:44px;border:1px solid #6B6B6B;border-radius:50%;color:#D6D6D6;display:inline-flex;align-items:center;justify-content:center">{svg(n.lower(), 20, "2")}</a>')
                         for i, (n, u) in enumerate(d["social"])], {"gap": 8})
     cols = [
@@ -525,7 +525,7 @@ def s_footer():
                                                            "gap": 40, "column-gap": 56, "padding": (48, 32, 48, 32),
                                                            "box-sizing": "border-box"},
                                 mobile={"padding": (40, 20, 40, 20)})],
-                {"flex-direction": "column", "width": (100, "%"), "bg": C["navy_dark"], "color": "#D6D6D6"})
+                {"flex-direction": "column", "width": (100, "%"), "bg": C["navy_dark"], "color": C["silver"]})
 
 
 SECTIONS = [
