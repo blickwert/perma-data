@@ -7,6 +7,11 @@ Ziel: ein wiederverwendbares Elementor-Template, gebaut mit den **Atomic Element
 > **Status:** Entwurf. Die JSON-Templates werden aus Design-Tokens + Inhalt generiert und sind
 > **noch nicht in einer echten Elementor-Installation getestet** (siehe „Offene Punkte“).
 
+## Live-Vorschau
+
+Das Design (`design/reference/`) wird per GitHub Pages veröffentlicht: <https://blickwert.github.io/perma-data/>.
+Einmalig einzurichten: *Settings → Pages → Source: GitHub Actions*. Danach aktualisiert sich die Seite bei jedem Push auf `main`.
+
 ## Struktur
 
 | Pfad | Inhalt |
