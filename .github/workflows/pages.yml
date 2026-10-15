@@ -1,0 +1,39 @@
+name: Design-Vorschau (GitHub Pages)
+
+on:
+  push:
+    branches: [main]
+    paths: ["design/reference/**", ".github/workflows/pages.yml"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Seite zusammenstellen
+        run: |
+          mkdir _site
+          cp -r design/reference/. _site/
+          rm -f _site/README-export.md
+          cat > _site/index.html <<'HTML'
+          <!doctype html><meta charset="utf-8"><meta http-equiv="refresh" content="0; url=Main.dc.html"><title>PERMA Mind Academy</title><a href="Main.dc.html">Zur Vorschau</a>
+          HTML
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+      - id: deployment
+        uses: actions/deploy-pages@v4
