@@ -1,5 +1,7 @@
 # Corporate Design v2
 
+**v2 ist die Arbeitsgrundlage** für alle weiteren Änderungen und für den späteren Elementor-Export. Version 1 bleibt nur zum Vergleich im Repo.
+
 Das neue Corporate Design liegt parallel zur ersten Version in **`design/v2/`** (Vorschau: `/v2/`). Die erste Version (`design/reference/`) bleibt unverändert zum Vergleich.
 
 Quellen: `Font_and_color_info.pdf`, Logo (Variante auf Weiß), Siegel (Stamp 3), Visitenkarte und Logo auf Navy.
@@ -15,7 +17,7 @@ Quellen: `Font_and_color_info.pdf`, Logo (Variante auf Weiß), Siegel (Stamp 3),
 ## Was sich gegenüber v1 sichtbar ändert
 - Neues Logo (fünf farbige Bögen), in der Fußzeile die weiße Variante.
 - Hero: Verlauf von Himmelblau über Lila zu Orange (Morgenröte) statt Blau-Türkis-Braun, Textbox in Blau.
-- Angebots-Kacheln: dunkles Navy mit farbiger Oberkante und Icon je Kachel (Blau, Lila, Orange, Grün). Weißer Text auf den hellen Markenfarben wäre schlecht lesbar.
+- Angebots-Kacheln: dunkel getönt mit je einem Hauch der Markenfarben (Blau, Lila, Orange, Grün), weißer Text. Das Feld „Angebot 0X“ trägt die volle Kachelfarbe. Weißer Text auf den hellen Markenfarben selbst wäre schlecht lesbar. Die Töne heißen `--pma-blue-deep`, `--pma-purple-deep` usw. in `tokens.v2.json`.
 - Zertifikat-Bereich: das Siegel statt des Foto-Platzhalters.
 - Fünffarbiger Streifen über der Fußzeile (wie auf der Visitenkarte).
 - Roboto Light für die Einleitungen der Unterseiten.
