@@ -18,7 +18,8 @@ Quellen: `Font_and_color_info.pdf`, Logo (Variante auf Weiß), Siegel (Stamp 3),
 - Neues Logo (fünf farbige Bögen), in der Fußzeile die weiße Variante.
 - Hero: Verlauf von Himmelblau über Lila zu Orange (Morgenröte) statt Blau-Türkis-Braun, Textbox in Blau.
 - Angebots-Kacheln: dunkel getönt mit je einem Hauch der Markenfarben (Blau, Lila, Orange, Grün), weißer Text. Das Feld „Angebot 0X“ trägt die volle Kachelfarbe. Weißer Text auf den hellen Markenfarben selbst wäre schlecht lesbar. Die Töne heißen `--pma-blue-deep`, `--pma-purple-deep` usw. in `tokens.v2.json`.
-- Akzentfarben der Reihe nach von oben (Blau, Lila, Orange, Grün): bei „Sorgfalt vor großen Versprechen“ Oberkante und Icon der vier Karten sowie ein Punkt in den Schlagwörtern, in der Modul-Liste ein Balken unter der Ziffer und das Niveau-Feld. Bei „Ihre Vorteile“ tragen die sechs Karten Oberkante und Icon in Blau, Lila, Orange, Grün, Rot und wieder Blau.
+- Akzentfarben der Reihe nach von oben (Blau, Lila, Orange, Grün): bei „Warum PERMA Mind Academy?“ Oberkante und Icon der vier Karten, in der Modul-Liste ein Balken unter der Ziffer und das Niveau-Feld.
+- **Startseite gestrafft:** „Ihre Vorteile“ und „Sorgfalt vor großen Versprechen“ sind zu einem Abschnitt „Warum PERMA Mind Academy?“ mit vier Karten verschmolzen (Wissenschaftlich fundiert, Praxisnah, Persönlich begleitet, Nachvollziehbarer Abschluss). „Erfahrene Trainer:innen“ steht jetzt in der Einleitung des Team-Bereichs, „Termine und Format“ in der Einleitung der Module.
 - Der schwebende Button „Kontakt aufnehmen“ ist orange mit Navy-Schrift (Weiß auf Orange hätte nur 2,4:1 Kontrast, Navy auf Orange 4,5:1). Der Button in der Kopfzeile bleibt Navy.
 - Zertifikat-Bereich: das Siegel statt des Foto-Platzhalters.
 - Fünffarbiger Streifen über der Fußzeile (wie auf der Visitenkarte).
