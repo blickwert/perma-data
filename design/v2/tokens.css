@@ -25,9 +25,11 @@
   --bw-purple-deep:#634E81;
   --bw-orange-deep:#846741;
   --bw-green-deep:#0D6860;
+  --bw-placeholder:#FFF4CC;
   /* RGB-Tripel fuer Transparenzen: rgba(var(--bw-navy-rgb),.3) */
   --bw-navy-rgb:0,65,107;
   --bw-shadow-rgb:15,23,42;
+  --bw-white-rgb:255,255,255;
   /* Rollen */
   --bw-color-text:var(--bw-navy);
   --bw-color-heading:var(--bw-navy);
