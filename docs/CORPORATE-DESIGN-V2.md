@@ -43,4 +43,5 @@ Die Startseite (`design/v2/Main.dc.html`) und `site.css` werden von Hand gepfleg
 
 - `design/v2/styles.css`: Komponenten-Klassen mit Präfix `pma-` (BEM-nah), mobile-first, Breakpoints 561 / 821 / 1001 px. Keine Inline-Styles im HTML.
 - Abstände über `--pma-space-N` (N × 0,25 rem), Linienstärken über `--pma-border-width-*`; beide stammen aus `tokens/tokens.v2.json` und werden bei Bedarf dort erweitert.
-- Umgestellt: Header/Navigation, Hero, Intro, Angebot, Ausbildungen & Module (inkl. Zertifikat-Banner), Warum PERMA Mind Academy. Akzentfarben laufen über die Utility-Klassen `pma-accent--blue|purple|orange|green`. Die übrigen Abschnitte folgen schrittweise (Aussehen unverändert, per Screenshot-Vergleich geprüft).
+- Umgestellt: die gesamte Startseite (Header/Navigation, Hero, Intro, Angebot, Ausbildungen & Module inkl. Zertifikat-Banner, Warum PERMA Mind Academy, Team, Kontakt-Teaser, Footer, Kontakt-Button). `Main.dc.html` enthält keine Inline-Styles und keinen eigenen `<style>`-Block mehr. Akzentfarben laufen über die Utility-Klassen `pma-accent--blue|purple|orange|green`. Aussehen per Screenshot-Vergleich (1440/1100/900/700/390 px) geprüft; Abweichungen nur durch Rundung auf die Abstandsskala.
+- Noch offen: die generierten Unterseiten (Kontakt, Impressum, Datenschutz) nutzen weiterhin `site.css`.

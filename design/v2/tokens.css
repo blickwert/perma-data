@@ -68,6 +68,8 @@
   /* Radien, Schatten */
   --pma-radius-card:12px;
   --pma-radius-pill:999px;
+  --pma-radius-sm:6px;
+  --pma-radius-md:8px;
   --pma-shadow-card:0 10px 30px -8px rgba(var(--pma-shadow-rgb),0.18);
   --pma-shadow-pop:0 4px 14px rgba(var(--pma-navy-rgb),0.3);
   --pma-shadow-menu:0 14px 24px -12px rgba(var(--pma-navy-rgb),0.3);
