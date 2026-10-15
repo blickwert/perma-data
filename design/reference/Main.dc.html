@@ -1,0 +1,437 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PERMA Mind Academy</title>
+<script src="./vendor/react.js"></script>
+<script src="./vendor/react-dom.js"></script>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&amp;family=Roboto:ital,wght@0,300;0,400;0,500;1,300&amp;family=Great+Vibes&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;font-family:'Roboto',system-ui,sans-serif;color:#00416B;background:#FFFFFF}
+a{color:#00416B}a:hover{color:#00416b}
+input,select,textarea,button{font-family:'Roboto',system-ui,sans-serif}
+
+.mnav{display:none}
+.mnav summary{list-style:none;cursor:pointer;width:44px;height:44px;display:flex;align-items:center;justify-content:center;border-radius:50%;border:1px solid #C9DAD9;color:#00416B}
+.mnav summary::-webkit-details-marker{display:none}
+.mnav-panel{position:absolute;left:0;right:0;top:100%;background:#FFFFFF;padding:4px 20px 20px;box-shadow:0 14px 24px -12px rgba(0,65,107,0.3);display:flex;flex-direction:column}
+.mnav-panel a{min-height:52px;display:flex;align-items:center;text-decoration:none;border-bottom:1px solid #E4F4F4;font-size:17px}
+.mnav-panel a.mnav-cta{margin-top:16px;border:0;justify-content:center;background:#00416B;color:#FFFFFF;border-radius:999px;font-weight:500}
+@media (max-width:900px){
+header nav{display:none!important}
+.mnav{display:block}
+header > div{padding:12px 20px!important;flex-wrap:nowrap!important}
+header svg{height:44px!important}
+header > div > a[href="#kontakt"]{margin-left:auto}
+}
+@media (max-width:560px){
+header > div > a[href="#kontakt"]{display:none!important}
+.mnav{margin-left:auto}
+}
+@media (max-width:820px){
+.rs-hero{height:auto!important;padding-top:260px!important}
+.rs-cap{left:20px!important;bottom:auto!important;top:16px!important}
+.rs-dots{display:none!important}
+.rs-p40{padding:24px!important}
+.rs-p48{padding:24px!important}
+.rs-herobox{position:relative!important;right:auto!important;top:auto!important;margin:0 20px 48px!important;width:auto!important;max-width:none!important;padding:28px!important}
+h1{font-size:28px!important}
+.rs-f47{font-size:38px!important}
+.rs-intro{padding:56px 20px!important;gap:28px!important}
+.rs-intro > p{font-size:18px!important}
+.rs-s1{padding:48px 20px 56px!important}
+.rs-s2{padding:48px 20px 32px!important}
+.rs-s3{padding:40px 20px 0!important}
+.rs-s4{padding:56px 20px 64px!important}
+.rs-s5{padding:56px 20px!important}
+.rs-s6{padding:40px 20px!important}
+.rs-mh340{min-height:0!important}
+.rs-mh300{min-height:200px!important}
+.rs-mh290{min-height:220px!important}
+.rs-f34{font-size:26px!important}
+.rs-f30{font-size:24px!important}
+.rs-f48{font-size:36px!important}
+.rs-num{flex:0 0 100%!important}
+.rs-tag{flex:1 1 100%!important}
+.rs-fab{right:16px!important;bottom:16px!important;padding:12px 16px!important;font-size:15px!important}
+}
+</style>
+</helmet>
+<div style="width:100%;background:#FFFFFF;font-family:'Roboto',system-ui,sans-serif;color:#00416B;line-height:1.6;position:relative">
+
+<!-- 1 NAVIGATION (sticky) -->
+<header style="position:sticky;top:0;z-index:20;background:#FFFFFF;box-shadow:0 1px 0 #E4F4F4">
+<div style="display:flex;flex-wrap:wrap;gap:12px 32px;align-items:center;justify-content:space-between;padding:16px 40px;box-sizing:border-box">
+<a href="#oben" aria-label="PERMA Mind Academy" style="display:block;text-decoration:none;flex:0 0 auto"><svg role="img" aria-label="PERMA Mind Academy – We create wellbeing" height="56" style="display:block;height:56px;width:auto" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 376.5 119.8" xml:space="preserve"> <g> <g> <path fill="#00416B" d="M136.6,63.7h4.2l6.9,10.7l6.9-10.7h4.2v22.7h-4V70.1l-7.2,10.7h-0.1l-7.1-10.6v16.2h-4V63.7z"></path> <path fill="#00416B" d="M164.4,62.9h4.2v3.7h-4.2V62.9z M164.5,69.2h4v17.1h-4V69.2z"></path> <path fill="#00416B" d="M173.6,69.2h4v2.7c0.3-0.4,0.6-0.8,0.9-1.2c0.3-0.4,0.7-0.7,1.2-1c0.4-0.3,0.9-0.5,1.5-0.7 c0.5-0.2,1.1-0.2,1.8-0.2c1.9,0,3.4,0.6,4.5,1.8c1.1,1.2,1.6,2.8,1.6,4.8v10.9h-4v-9.7c0-1.3-0.3-2.4-0.9-3.1 c-0.6-0.7-1.5-1.1-2.7-1.1c-1.1,0-2.1,0.4-2.8,1.1c-0.7,0.7-1.1,1.8-1.1,3.1v9.6h-4V69.2z"></path> <path fill="#00416B" d="M200.8,86.7c-1,0-2-0.2-2.9-0.6c-1-0.4-1.8-1-2.5-1.7c-0.7-0.8-1.3-1.7-1.8-2.8c-0.5-1.1-0.7-2.4-0.7-3.8 v-0.1c0-1.4,0.2-2.7,0.7-3.8c0.4-1.1,1-2,1.8-2.8c0.7-0.8,1.6-1.3,2.5-1.7c1-0.4,1.9-0.6,3-0.6c1.4,0,2.6,0.3,3.5,0.9 c0.9,0.6,1.7,1.3,2.3,2.1v-9.2h4v23.7h-4l0-2.9c-0.6,0.9-1.4,1.6-2.4,2.3C203.3,86.4,202.1,86.7,200.8,86.7z M201.7,83.3 c0.6,0,1.3-0.1,1.9-0.4c0.6-0.3,1.1-0.6,1.6-1.1c0.5-0.5,0.8-1.1,1.1-1.7c0.3-0.7,0.4-1.4,0.4-2.2v-0.1c0-0.8-0.1-1.6-0.4-2.3 c-0.3-0.7-0.6-1.3-1.1-1.7c-0.5-0.5-1-0.8-1.6-1.1c-0.6-0.3-1.2-0.4-1.9-0.4c-0.7,0-1.3,0.1-1.9,0.4c-0.6,0.2-1.1,0.6-1.6,1.1 c-0.5,0.5-0.8,1.1-1.1,1.7c-0.3,0.7-0.4,1.4-0.4,2.3v0.1c0,0.8,0.1,1.6,0.4,2.3c0.3,0.7,0.6,1.3,1.1,1.7c0.5,0.5,1,0.8,1.6,1.1 C200.4,83.2,201,83.3,201.7,83.3z"></path> <path fill="#00416B" d="M233.6,63.5h3.7l10,22.9h-4.2l-2.3-5.5h-10.7l-2.3,5.5h-4.1L233.6,63.5z M239.3,77.3l-3.9-9.1l-3.9,9.1H239.3 z"></path> <path fill="#00416B" d="M258.7,86.7c-1.3,0-2.5-0.2-3.5-0.7c-1.1-0.5-2-1.1-2.8-1.9c-0.8-0.8-1.4-1.7-1.9-2.8 c-0.4-1.1-0.7-2.2-0.7-3.4v-0.1c0-1.2,0.2-2.4,0.7-3.5c0.4-1.1,1.1-2,1.9-2.9c0.8-0.8,1.7-1.5,2.8-1.9c1.1-0.5,2.3-0.7,3.6-0.7 c1.6,0,3,0.3,4,0.8c1.1,0.5,2,1.3,2.8,2.1l-2.4,2.6c-0.6-0.6-1.3-1.1-1.9-1.5c-0.7-0.4-1.5-0.6-2.5-0.6c-0.7,0-1.4,0.1-2,0.4 c-0.6,0.3-1.1,0.7-1.6,1.2c-0.4,0.5-0.8,1.1-1,1.7c-0.2,0.7-0.4,1.4-0.4,2.1v0.1c0,0.8,0.1,1.5,0.4,2.1c0.2,0.7,0.6,1.3,1.1,1.8 c0.5,0.5,1,0.9,1.6,1.2c0.6,0.3,1.3,0.4,2.1,0.4c0.9,0,1.7-0.2,2.4-0.6c0.7-0.4,1.4-0.9,2-1.5l2.4,2.3c-0.8,1-1.8,1.7-2.9,2.3 C261.7,86.4,260.4,86.7,258.7,86.7z"></path> <path fill="#00416B" d="M279.7,86.3v-2.1c-0.6,0.7-1.3,1.3-2.2,1.8c-0.9,0.5-2,0.7-3.3,0.7c-0.8,0-1.6-0.1-2.3-0.3 c-0.7-0.2-1.4-0.6-1.9-1c-0.5-0.4-1-1-1.3-1.7c-0.3-0.7-0.5-1.4-0.5-2.3v-0.1c0-1,0.2-1.8,0.5-2.5c0.3-0.7,0.8-1.3,1.4-1.8 c0.6-0.5,1.4-0.8,2.2-1c0.9-0.2,1.8-0.3,2.8-0.3c1,0,1.9,0.1,2.6,0.2c0.7,0.1,1.4,0.3,2.1,0.5v-0.3c0-1.2-0.4-2.1-1.1-2.7 c-0.7-0.6-1.8-0.9-3.1-0.9c-1,0-1.8,0.1-2.6,0.3c-0.8,0.2-1.5,0.5-2.3,0.8l-1.1-3.1c1-0.4,1.9-0.8,2.9-1c1-0.3,2.2-0.4,3.6-0.4 c2.6,0,4.4,0.6,5.7,1.9c1.2,1.3,1.8,3,1.8,5.3v10.1H279.7z M279.8,79.2c-0.5-0.2-1.1-0.4-1.8-0.5c-0.7-0.1-1.4-0.2-2.2-0.2 c-1.2,0-2.2,0.2-2.9,0.7c-0.7,0.5-1,1.1-1,1.9v0.1c0,0.8,0.3,1.4,1,1.9c0.6,0.4,1.4,0.6,2.4,0.6c0.6,0,1.2-0.1,1.8-0.3 c0.6-0.2,1-0.4,1.4-0.7c0.4-0.3,0.7-0.7,1-1.1c0.2-0.4,0.3-0.9,0.3-1.5V79.2z"></path> <path fill="#00416B" d="M295.4,86.7c-1,0-2-0.2-2.9-0.6c-1-0.4-1.8-1-2.5-1.7c-0.7-0.8-1.3-1.7-1.8-2.8c-0.5-1.1-0.7-2.4-0.7-3.8 v-0.1c0-1.4,0.2-2.7,0.7-3.8c0.4-1.1,1-2,1.8-2.8c0.7-0.8,1.6-1.3,2.5-1.7c1-0.4,1.9-0.6,3-0.6c1.4,0,2.6,0.3,3.5,0.9 c0.9,0.6,1.7,1.3,2.3,2.1v-9.2h4v23.7h-4l0-2.9c-0.6,0.9-1.4,1.6-2.4,2.3C297.9,86.4,296.8,86.7,295.4,86.7z M296.3,83.3 c0.6,0,1.3-0.1,1.9-0.4c0.6-0.3,1.1-0.6,1.6-1.1c0.5-0.5,0.8-1.1,1.1-1.7c0.3-0.7,0.4-1.4,0.4-2.2v-0.1c0-0.8-0.1-1.6-0.4-2.3 c-0.3-0.7-0.6-1.3-1.1-1.7c-0.5-0.5-1-0.8-1.6-1.1c-0.6-0.3-1.2-0.4-1.9-0.4c-0.7,0-1.3,0.1-1.9,0.4c-0.6,0.2-1.1,0.6-1.6,1.1 c-0.5,0.5-0.8,1.1-1.1,1.7c-0.3,0.7-0.4,1.4-0.4,2.3v0.1c0,0.8,0.1,1.6,0.4,2.3c0.3,0.7,0.6,1.3,1.1,1.7c0.5,0.5,1,0.8,1.6,1.1 C295,83.2,295.6,83.3,296.3,83.3z"></path> <path fill="#00416B" d="M317.9,86.7c-1.2,0-2.4-0.2-3.5-0.6c-1.1-0.4-2-1-2.8-1.8c-0.8-0.8-1.4-1.7-1.9-2.8c-0.5-1.1-0.7-2.3-0.7-3.6 v-0.1c0-1.2,0.2-2.4,0.6-3.5c0.4-1.1,1-2,1.7-2.8c0.7-0.8,1.6-1.4,2.6-1.9c1-0.5,2.1-0.7,3.4-0.7c1.4,0,2.6,0.2,3.6,0.7 c1,0.5,1.9,1.2,2.6,2c0.7,0.8,1.2,1.8,1.5,2.9c0.3,1.1,0.5,2.3,0.5,3.5c0,0.2,0,0.4,0,0.5c0,0.2,0,0.4,0,0.6H313 c0.2,1.4,0.8,2.5,1.7,3.2c0.9,0.7,2,1.1,3.3,1.1c1,0,1.8-0.2,2.5-0.5c0.7-0.3,1.4-0.9,2.1-1.5l2.3,2c-0.8,1-1.8,1.8-2.9,2.3 C320.8,86.4,319.5,86.7,317.9,86.7z M321.8,76.6c-0.1-0.6-0.2-1.2-0.4-1.8c-0.2-0.6-0.5-1-0.9-1.4c-0.4-0.4-0.8-0.7-1.3-1 c-0.5-0.2-1.1-0.4-1.7-0.4c-1.2,0-2.2,0.4-3,1.2c-0.8,0.8-1.3,1.9-1.4,3.3H321.8z"></path> <path fill="#00416B" d="M329.6,69.2h4v2.6c0.3-0.4,0.6-0.8,0.9-1.1c0.3-0.3,0.7-0.7,1.1-0.9c0.4-0.3,0.9-0.5,1.4-0.7 c0.5-0.2,1.1-0.2,1.8-0.2c1.2,0,2.3,0.3,3.1,0.8c0.9,0.6,1.5,1.3,2,2.2c0.7-0.9,1.5-1.7,2.5-2.2c0.9-0.6,2.1-0.8,3.4-0.8 c1.9,0,3.4,0.6,4.4,1.7c1.1,1.1,1.6,2.8,1.6,4.8v10.9h-4v-9.7c0-1.4-0.3-2.4-0.9-3.1c-0.6-0.7-1.5-1.1-2.6-1.1 c-1.1,0-2,0.4-2.6,1.1c-0.7,0.7-1,1.8-1,3.2v9.6h-4v-9.7c0-1.3-0.3-2.4-0.9-3.1c-0.6-0.7-1.5-1.1-2.6-1.1s-2,0.4-2.6,1.1 c-0.7,0.8-1,1.8-1,3.1v9.6h-4V69.2z"></path> <path fill="#00416B" d="M363.9,91.6c-0.8,0-1.6-0.1-2.2-0.3c-0.6-0.2-1.3-0.4-1.9-0.8l1.3-2.9c0.4,0.2,0.7,0.4,1.1,0.5 c0.4,0.1,0.8,0.2,1.2,0.2c0.6,0,1-0.1,1.4-0.4c0.4-0.3,0.7-0.8,1-1.6l-7.1-17.1h4.2l4.9,12.7l4.4-12.7h4.1l-6.8,17.6 c-0.3,0.9-0.7,1.6-1.1,2.2c-0.4,0.6-0.8,1.1-1.2,1.5c-0.5,0.4-1,0.7-1.5,0.8C365.2,91.5,364.6,91.6,363.9,91.6z"></path> </g> <g> <path fill="#00416B" d="M137.8,99h1.4l5.3,15l4.9-15h1l4.9,15l5.3-15h1.3l-6.1,16.9h-1l-4.9-14.6l-4.9,14.6h-1L137.8,99z"></path> <path fill="#00416B" d="M162.9,109.7L162.9,109.7c0-3.6,2.5-6.4,5.8-6.4c3.4,0,5.6,2.8,5.6,6.4c0,0.2,0,0.3,0,0.5h-10.2 c0.2,3.1,2.4,4.8,4.8,4.8c1.9,0,3.2-0.8,4.2-1.9l0.8,0.7c-1.2,1.3-2.7,2.3-5.1,2.3C165.7,116.1,162.9,113.5,162.9,109.7z M173.1,109.1c-0.2-2.5-1.6-4.8-4.4-4.8c-2.4,0-4.3,2-4.5,4.8H173.1z"></path> <path fill="#00416B" d="M184.2,109.7L184.2,109.7c0-3.5,2.7-6.5,6.2-6.5c2.3,0,3.7,1.1,4.9,2.3l-0.8,0.9c-1.1-1.1-2.3-2-4.1-2 c-2.8,0-4.9,2.3-4.9,5.3v0c0,3,2.2,5.3,5,5.3c1.7,0,3.1-0.9,4.1-2l0.8,0.7c-1.3,1.4-2.7,2.4-5,2.4 C186.9,116.1,184.2,113.2,184.2,109.7z"></path> <path fill="#00416B" d="M198.8,103.5h1.2v3.5c1-2.2,3-3.8,5.4-3.7v1.3h-0.1c-2.8,0-5.3,2.1-5.3,6.1v5h-1.2V103.5z"></path> <path fill="#00416B" d="M206.9,109.7L206.9,109.7c0-3.6,2.5-6.4,5.8-6.4c3.4,0,5.6,2.8,5.6,6.4c0,0.2,0,0.3,0,0.5h-10.2 c0.2,3.1,2.4,4.8,4.8,4.8c1.9,0,3.2-0.8,4.2-1.9l0.8,0.7c-1.2,1.3-2.7,2.3-5.1,2.3C209.7,116.1,206.9,113.5,206.9,109.7z M217.1,109.1c-0.2-2.5-1.6-4.8-4.4-4.8c-2.4,0-4.3,2-4.5,4.8H217.1z"></path> <path fill="#00416B" d="M220.8,112.2L220.8,112.2c0-2.6,2.2-4,5.4-4c1.7,0,2.9,0.2,4.1,0.5v-0.5c0-2.5-1.5-3.8-4-3.8 c-1.5,0-2.7,0.4-3.8,1l-0.4-1c1.3-0.6,2.7-1.1,4.4-1.1c1.7,0,3,0.5,3.9,1.3c0.8,0.8,1.3,1.9,1.3,3.5v7.6h-1.2v-2 c-0.8,1.2-2.4,2.3-4.7,2.3C223.3,116.1,220.8,114.8,220.8,112.2z M230.3,111.2v-1.4c-1-0.3-2.4-0.6-4.2-0.6c-2.6,0-4,1.2-4,2.9v0 c0,1.8,1.7,2.8,3.6,2.8C228.1,115,230.3,113.4,230.3,111.2z"></path> <path fill="#00416B" d="M236.1,112.7v-8h-1.8v-1.1h1.8v-3.9h1.2v3.9h4.3v1.1h-4.3v7.9c0,1.8,1,2.4,2.5,2.4c0.6,0,1.1-0.1,1.8-0.4v1.1 c-0.6,0.3-1.2,0.4-2,0.4C237.7,116,236.1,115,236.1,112.7z"></path> <path fill="#00416B" d="M243.9,109.7L243.9,109.7c0-3.6,2.5-6.4,5.8-6.4c3.4,0,5.6,2.8,5.6,6.4c0,0.2,0,0.3,0,0.5h-10.2 c0.2,3.1,2.4,4.8,4.8,4.8c1.9,0,3.2-0.8,4.2-1.9l0.8,0.7c-1.2,1.3-2.7,2.3-5.1,2.3C246.7,116.1,243.9,113.5,243.9,109.7z M254.1,109.1c-0.2-2.5-1.6-4.8-4.4-4.8c-2.4,0-4.3,2-4.5,4.8H254.1z"></path> <path fill="#00416B" d="M264.9,103.5h1.3l3.7,10.8l3.7-10.8h0.9l3.7,10.8l3.7-10.8h1.3l-4.5,12.4h-1l-3.7-10.5l-3.7,10.5h-1 L264.9,103.5z"></path> <path fill="#00416B" d="M285.3,109.7L285.3,109.7c0-3.6,2.5-6.4,5.8-6.4c3.4,0,5.6,2.8,5.6,6.4c0,0.2,0,0.3,0,0.5h-10.2 c0.2,3.1,2.4,4.8,4.8,4.8c1.9,0,3.2-0.8,4.2-1.9l0.8,0.7c-1.2,1.3-2.7,2.3-5.1,2.3C288.1,116.1,285.3,113.5,285.3,109.7z M295.4,109.1c-0.2-2.5-1.6-4.8-4.4-4.8c-2.4,0-4.3,2-4.5,4.8H295.4z"></path> <path fill="#00416B" d="M300.3,98.3h1.2v17.5h-1.2V98.3z"></path> <path fill="#00416B" d="M306.3,98.3h1.2v17.5h-1.2V98.3z"></path> <path fill="#00416B" d="M313.3,113.2v2.6h-1.2V98.3h1.2v8c1.1-1.6,2.6-3,5-3c3,0,6,2.4,6,6.4v0c0,4-3,6.4-6,6.4 C315.9,116.1,314.3,114.7,313.3,113.2z M323,109.7L323,109.7c0-3.3-2.2-5.3-4.8-5.3c-2.5,0-5,2.1-5,5.3v0c0,3.1,2.5,5.3,5,5.3 C320.9,115,323,113,323,109.7z"></path> <path fill="#00416B" d="M327.1,109.7L327.1,109.7c0-3.6,2.5-6.4,5.8-6.4c3.4,0,5.6,2.8,5.6,6.4c0,0.2,0,0.3,0,0.5h-10.2 c0.2,3.1,2.4,4.8,4.8,4.8c1.9,0,3.2-0.8,4.2-1.9l0.8,0.7c-1.2,1.3-2.7,2.3-5.1,2.3C329.9,116.1,327.1,113.5,327.1,109.7z M337.3,109.1c-0.2-2.5-1.6-4.8-4.4-4.8c-2.4,0-4.3,2-4.5,4.8H337.3z"></path> <path fill="#00416B" d="M342,98.7h1.5v1.6H342V98.7z M342.2,103.5h1.2v12.3h-1.2V103.5z"></path> <path fill="#00416B" d="M348,103.5h1.2v2.3c0.8-1.4,2.2-2.6,4.4-2.6c3.1,0,4.9,2.1,4.9,5v7.5h-1.2v-7.3c0-2.5-1.4-4.2-3.9-4.2 c-2.4,0-4.3,1.8-4.3,4.4v7.1H348V103.5z"></path> <path fill="#00416B" d="M362.5,117.8l0.7-1c1.5,1.1,3.1,1.7,5,1.7c2.8,0,4.8-1.6,4.8-4.8v-1.8c-1.1,1.5-2.7,2.8-5.1,2.8 c-3,0-5.9-2.3-5.9-5.8v0c0-3.5,2.9-5.8,5.9-5.8c2.5,0,4.1,1.3,5.1,2.7v-2.5h1.2v10.4c0,1.8-0.6,3.2-1.6,4.2 c-1.1,1.1-2.6,1.6-4.4,1.6C366.1,119.7,364.2,119.1,362.5,117.8z M373,109.1L373,109.1c0-2.9-2.5-4.7-5.1-4.7 c-2.6,0-4.7,1.8-4.7,4.6v0c0,2.8,2.2,4.7,4.7,4.7C370.5,113.8,373,111.9,373,109.1z"></path> </g> <path fill="#00416B" d="M137.2,4.7h18.4c2.7,0,5.2,0.4,7.3,1.1c2.2,0.7,4.1,1.8,5.6,3.2c1.5,1.4,2.7,3,3.5,4.9c0.8,1.9,1.2,4,1.2,6.4 v0.1c0,2.6-0.5,4.9-1.5,6.9c-1,2-2.3,3.6-4,5c-1.7,1.3-3.7,2.3-5.9,3c-2.3,0.7-4.7,1-7.3,1h-9.3v15h-8.1V4.7z M154.9,28.9 c3.1,0,5.6-0.8,7.4-2.3c1.8-1.6,2.7-3.6,2.7-6v-0.1c0-2.8-0.9-4.8-2.7-6.2c-1.8-1.4-4.3-2.1-7.3-2.1h-9.5v16.8H154.9z"></path> <g> <rect x="181.6" y="4.7" fill="#00416B" width="34.4" height="7.4"></rect> <polygon fill="#00416B" points="189.8,43.8 189.8,31.4 213.1,31.4 213.1,24 181.6,24 181.6,51.2 216.4,51.2 216.4,43.8 "></polygon> </g> <path fill="#00416B" d="M226.2,4.7h20.7c2.9,0,5.5,0.4,7.8,1.2c2.3,0.8,4.1,2,5.7,3.4c1.2,1.3,2.2,2.8,2.9,4.5c0.7,1.7,1,3.5,1,5.6 v0.1c0,1.9-0.3,3.6-0.8,5.2c-0.6,1.5-1.3,2.9-2.3,4.1c-1,1.2-2.1,2.2-3.5,3c-1.4,0.8-2.8,1.5-4.5,1.9l12.6,17.6h-9.6L244.6,35h-0.1 h-10.1v16.2h-8.1V4.7z M246.3,27.8c2.9,0,5.3-0.7,7-2.1c1.7-1.4,2.6-3.3,2.6-5.7v-0.1c0-2.5-0.8-4.5-2.5-5.8c-1.7-1.3-4.1-2-7.1-2 h-11.9v15.7H246.3z"></path> <path fill="#00416B" d="M274.3,4.7h8.7l14.2,22l14.2-22h8.7v46.5h-8.1V17.8l-14.7,21.9h-0.3L282.4,18v33.2h-8.1V4.7z"></path> <g> <polygon fill="#00416B" points="368.2,51.2 376.5,51.2 356.1,4.3 348.5,4.3 328,51.2 336.2,51.2 352.1,14.1 "></polygon> </g> <g> <g> <g> <path fill="#40C6C9" d="M71.4,0c-2.6,5.9-8.6,17.7-14.3,15.3c-5.8-2.8-9.7-11.1-11.2-15.1c-6,1.4-11.7,3.6-17,6.8 C37.3,33.6,56.8,33.9,57,33.9h0c0.2,0,0.4,0,0.6,0C77,33.9,86.2,11,87.9,6.2C82.7,3.3,77.2,1.2,71.4,0z"></path> </g> <g> <path fill="#57D3D3" d="M99.4,43.5c0.9-6.1,6.8-11.8,10.6-14.9c-3.1-5.3-7-10-11.6-14.1C76.1,30.4,81.5,48.8,81.6,49l0,0 c5.3,18.6,29.1,21.1,35.4,21.5c0.8-3.9,1.2-7.9,1.2-11.8c0-2-0.1-4-0.3-6.1C110.4,51.7,98.8,49.4,99.4,43.5z"></path> </g> <g> <path fill="#34B3B3" d="M17.6,15.7c-4.4,4.3-8.1,9.3-11,14.8c3.9,2.7,10.1,7.8,11.4,13.5c1.2,6.1-11.8,9.5-18,10.8 C0,55.9,0,56.9,0,57.8c0,4.9,0.6,9.8,1.8,14.6c6.5-0.9,31-5.5,34.5-24.5l0,0C36.4,47.7,40,29.4,17.6,15.7z"></path> </g> <g> <path fill="#1A8C8C" d="M72,82.9c-3.8,5.5-10,18.2-3.4,36.9c6.4-0.9,12.5-2.7,18.3-5.6C85.8,111,83,100.9,86,94.5 c0.6-1,1.4-1.7,2.6-2.1c4.9-1.4,14.1,3.1,18.4,5.4c3.8-4.8,6.8-10.1,8.9-15.8c-6.4-3.6-24.8-12.3-38.5-4.2 C75.3,79.1,73.5,80.8,72,82.9z"></path> </g> <g> <path fill="#25A0A0" d="M49.4,82.9c3.8,5.5,10,18.2,3.4,36.9c-6.4-0.9-12.5-2.7-18.3-5.6c1.1-3.2,3.9-13.4,0.8-19.7 c-0.6-1-1.4-1.7-2.6-2.1c-4.9-1.4-14.1,3.1-18.4,5.4C10.5,93,7.5,87.7,5.3,82c6.4-3.6,24.8-12.3,38.5-4.2 C46.1,79.1,47.9,80.8,49.4,82.9z"></path> </g> </g> </g> </g> </svg> </a>
+<nav style="display:flex;flex-wrap:wrap;gap:4px 32px;justify-content:center;font-size:14px;flex:1 1 440px">
+<a href="#ueber-uns" style="text-decoration:none;min-height:44px;display:inline-flex;align-items:center">Über uns</a>
+<a href="#angebot" style="text-decoration:none;min-height:44px;display:inline-flex;align-items:center">Angebot</a>
+<a href="#ausbildungen" style="text-decoration:none;min-height:44px;display:inline-flex;align-items:center">Ausbildungen</a>
+<a href="#team" style="text-decoration:none;min-height:44px;display:inline-flex;align-items:center">Team</a>
+<a href="#kontakt" style="text-decoration:none;min-height:44px;display:inline-flex;align-items:center">Kontakt</a>
+</nav>
+<a href="#kontakt" style="text-decoration:none;background:{{accent}};color:#FFFFFF;font-size:15px;font-weight:500;padding:0 24px;min-height:44px;border-radius:999px;display:inline-flex;align-items:center;flex:0 0 auto">Unverbindlich anfragen</a>
+<details class="mnav"><summary aria-label="Menü öffnen"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"></path></svg></summary>
+<div class="mnav-panel"><a href="#ueber-uns">Über uns</a><a href="#angebot">Angebot</a><a href="#ausbildungen">Ausbildungen</a><a href="#team">Team</a><a href="#kontakt">Kontakt</a><a class="mnav-cta" href="#kontakt">Unverbindlich anfragen</a></div></details>
+</div>
+</header>
+
+<main id="oben">
+
+<!-- 2 HERO -->
+<section class="rs-hero" style="position:relative;height:560px;background:linear-gradient(180deg,#8FCBE6 0%,#C9E6EE 42%,#86B0B0 66%,#8A5F59 100%);overflow:hidden">
+<div class="rs-cap" style="position:absolute;left:40px;bottom:24px;font-size:13px;color:#FFFFFF;background:rgba(0,65,107,0.55);padding:4px 10px;border-radius:4px">[Hero-Bild / Illustration: Menschen in ruhiger, positiver Atmosphäre]</div>
+<div class="rs-herobox rs-p40" style="position:absolute;right:10%;top:50%;margin-top:-40px;width:520px;max-width:calc(100% - 48px);box-sizing:border-box;background:rgba(87,211,211,0.94);padding:40px;display:flex;flex-direction:column;gap:20px">
+<h1 style="margin:0;font-family:'Gotham','Gotham Medium','Montserrat',sans-serif;font-size:36px;line-height:1.2;color:#00416B;font-weight:500">Willkommen bei der PERMA Mind Academy</h1>
+<p class="rs-f47" style="margin:0;font-family:'Bickham Script Pro','Great Vibes',cursive;font-size:47px;line-height:1.1;color:#00416B;font-weight:400">We create wellbeing</p>
+<div style="display:flex;flex-wrap:wrap;gap:12px 28px;align-items:center;margin-top:8px">
+<a href="#kontakt" style="text-decoration:none;color:#00416B;font-size:16px;font-weight:500;border-bottom:1px solid #00416B;padding-bottom:4px">Jetzt vormerken →</a>
+<a href="#ausbildungen" style="text-decoration:none;color:#00416B;font-size:16px;border-bottom:1px solid #00416B;padding-bottom:4px">Ausbildungen entdecken →</a>
+</div>
+</div>
+<div class="rs-dots" style="position:absolute;left:0;right:0;bottom:20px;display:flex;gap:14px;justify-content:center">
+<span style="width:8px;height:8px;border-radius:50%;background:#FFFFFF"></span>
+<span style="width:10px;height:10px;border-radius:50%;border:1.5px solid #FFFFFF;box-sizing:border-box;margin-top:-1px"></span>
+<span style="width:8px;height:8px;border-radius:50%;background:#FFFFFF"></span>
+</div>
+</section>
+
+<!-- INTRO -->
+<section class="rs-intro" id="ueber-uns" style="max-width:760px;margin:0 auto;padding:88px 32px 80px;box-sizing:border-box;display:flex;flex-direction:column;align-items:center;gap:40px;text-align:center">
+<p style="margin:0;font-family:'Gotham','Gotham Medium','Montserrat',sans-serif;font-size:22px;line-height:1.6;font-weight:500">Die PERMA Mind Academy vermittelt Positive Psychologie als wissenschaftlich fundiertes Wissen und als Handwerkszeug für die tägliche Arbeit. Unsere Ausbildungen richten sich an Fachkräfte aus Beratung, Coaching, Pädagogik, Gesundheit und Führung, die Wohlbefinden gezielt und verantwortungsvoll fördern möchten.</p>
+<div style="width:64px;height:1px;background:#00416B"></div>
+<div style="display:flex;flex-direction:column;gap:16px;align-items:center">
+<h2 style="margin:0;font-size:15px;font-weight:500">Der Lernraum</h2>
+<p style="margin:0;font-family:'Gotham','Gotham Medium','Montserrat',sans-serif;font-size:24px;line-height:1.35;font-weight:500">Wissenschaftlich klar. Menschlich zugewandt.</p>
+<div style="margin-top:12px;display:flex;flex-wrap:wrap;gap:16px 64px;justify-content:center">
+<div style="display:flex;flex-direction:column;align-items:center"><span style="font-family:'Gotham','Gotham Medium','Montserrat',sans-serif;font-size:44px;line-height:1;font-weight:500">4</span><span style="margin-top:6px;font-size:14px">Aufbauende Ausbildungsmodule</span></div>
+<div style="display:flex;flex-direction:column;align-items:center"><span style="font-family:'Gotham','Gotham Medium','Montserrat',sans-serif;font-size:44px;line-height:1;font-weight:500">5</span><span style="margin-top:6px;font-size:14px">Dimensionen des PERMA-Modells</span></div>
+</div>
+</div>
+</section>
+
+<!-- 3 UNSER ANGEBOT -->
+<section id="angebot" style="background:#E4F4F4">
+<div class="rs-s1" style="max-width:1200px;margin:0 auto;padding:72px 32px 80px;box-sizing:border-box;display:flex;flex-direction:column;gap:24px">
+<div style="display:flex;flex-direction:column;align-items:center;gap:12px;text-align:center;margin-bottom:32px">
+<h2 class="rs-f30" style="margin:0;font-family:'Gotham','Gotham Medium','Montserrat',sans-serif;font-size:30px;line-height:1.25;font-weight:500">Was wir für Sie tun</h2>
+<p style="margin:0;max-width:560px;font-size:16px">Die Academy verbindet die Erkenntnisse der Positiven Psychologie mit Methoden, die sich in Ihrer täglichen Arbeit bewähren.</p>
+</div>
+<div style="display:flex;flex-wrap:wrap;gap:12px">
+
+<div class="rs-p40 rs-mh340" style="flex:1 1 440px;min-width:0;min-height:340px;box-sizing:border-box;padding:40px;display:flex;flex-direction:column;gap:18px;background:linear-gradient(135deg,#25A0A0 0%,#1A8C8C 100%);color:#FFFFFF">
+<div style="display:flex;align-items:center;justify-content:space-between">
+<div style="background:#57D3D3;color:#00416B;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;padding:3px 8px">Angebot 01</div>
+<span style="color:#57D3D3;display:inline-flex"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg></span>
+</div>
+<div class="rs-f34" style="font-family:'Gotham','Gotham Medium','Montserrat',sans-serif;font-size:34px;line-height:1.25;font-weight:500">Ausbildungen</div>
+<p style="margin:0;font-size:16px;color:#FFFFFF;max-width:420px">Strukturierte Module von den Grundlagen bis zur Anwendung in Beratung, Coaching und Führung.</p>
+<a href="#ausbildungen" style="margin-top:auto;align-self:flex-start;color:#FFFFFF;font-size:15px;text-decoration:none;border-bottom:1px solid #FFFFFF;padding-bottom:4px">Mehr erfahren →</a>
+</div>
+
+<div class="rs-p40 rs-mh340" style="flex:1 1 440px;min-width:0;min-height:340px;box-sizing:border-box;padding:40px;display:flex;flex-direction:column;gap:18px;background:linear-gradient(135deg,#00416B 0%,#00314F 100%);color:#FFFFFF">
+<div style="display:flex;align-items:center;justify-content:space-between">
+<div style="background:#57D3D3;color:#00416B;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;padding:3px 8px">Angebot 02</div>
+<span style="color:#57D3D3;display:inline-flex"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 9a2 2 0 0 1-2 2H6l-4 4V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2z"></path><path d="M18 9h2a2 2 0 0 1 2 2v11l-4-4h-6a2 2 0 0 1-2-2v-1"></path></svg></span>
+</div>
+<div class="rs-f34" style="font-family:'Gotham','Gotham Medium','Montserrat',sans-serif;font-size:34px;line-height:1.25;font-weight:500">Workshops</div>
+<p style="margin:0;font-size:16px;color:#FFFFFF;max-width:420px">Kompakte Formate zu einzelnen Themen, für Teams und Einzelpersonen.</p>
+<a href="#kontakt" style="margin-top:auto;align-self:flex-start;color:#57D3D3;font-size:15px;text-decoration:none;border-bottom:1px solid #57D3D3;padding-bottom:4px">Mehr erfahren →</a>
+</div>
+
+<div class="rs-p40 rs-mh340" style="flex:1 1 440px;min-width:0;min-height:340px;box-sizing:border-box;padding:40px;display:flex;flex-direction:column;gap:18px;background:linear-gradient(135deg,#00416B 0%,#25A0A0 100%);color:#FFFFFF">
+<div style="display:flex;align-items:center;justify-content:space-between">
+<div style="background:#57D3D3;color:#00416B;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;padding:3px 8px">Angebot 03</div>
+<span style="color:#57D3D3;display:inline-flex"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"></path><path d="M7 17 17 7"></path></svg></span>
+</div>
+<div class="rs-f34" style="font-family:'Gotham','Gotham Medium','Montserrat',sans-serif;font-size:34px;line-height:1.25;font-weight:500">Coaching-Tools</div>
+<p style="margin:0;font-size:16px;color:#FFFFFF;max-width:420px">Erprobte Methoden und Materialien, die Sie direkt in Ihrer Praxis einsetzen.</p>
+<a href="#kontakt" style="margin-top:auto;align-self:flex-start;color:#57D3D3;font-size:15px;text-decoration:none;border-bottom:1px solid #57D3D3;padding-bottom:4px">Mehr erfahren →</a>
+</div>
+
+<div class="rs-p40 rs-mh340" style="flex:1 1 440px;min-width:0;min-height:340px;box-sizing:border-box;padding:40px;display:flex;flex-direction:column;gap:18px;background:linear-gradient(135deg,#00314F 0%,#00416B 100%);color:#FFFFFF">
+<div style="display:flex;align-items:center;justify-content:space-between">
+<div style="background:#57D3D3;color:#00416B;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;padding:3px 8px">Angebot 04</div>
+<span style="color:#57D3D3;display:inline-flex"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"></path><path d="m9 12 2 2 4-4"></path></svg></span>
+</div>
+<div class="rs-f34" style="font-family:'Gotham','Gotham Medium','Montserrat',sans-serif;font-size:34px;line-height:1.25;font-weight:500">Zertifizierungen</div>
+<p style="margin:0;font-size:16px;color:#FFFFFF;max-width:420px">Ein nachvollziehbarer Abschluss, der Ihre Kompetenz belegt. [Anerkennung noch bestätigen]</p>
+<a href="#ausbildungen" style="margin-top:auto;align-self:flex-start;color:#57D3D3;font-size:15px;text-decoration:none;border-bottom:1px solid #57D3D3;padding-bottom:4px">Mehr erfahren →</a>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- 4 AUSBILDUNGEN & MODULE -->
+<section id="ausbildungen">
+<div style="background:#FAFAFA">
+<div class="rs-s2" style="max-width:1200px;margin:0 auto;padding:56px 32px 48px;box-sizing:border-box;display:flex;flex-direction:column;gap:6px">
+<div style="font-size:14px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase">Ausbildungen &amp; Module</div>
+<div class="rs-f30" style="font-family:'Gotham','Gotham Medium','Montserrat',sans-serif;font-size:30px;line-height:1.25;font-weight:500">Ihr Weg zur zertifizierten Fachkraft</div>
+<p style="margin:12px 0 0;max-width:640px;font-size:16px">In vier aufeinander aufbauenden Modulen entsteht ein solides Verständnis der Positiven Psychologie und ein konkreter Bezug zu Ihrem Arbeitskontext.</p>
+</div>
+</div>
+<div style="max-width:1200px;margin:0 auto;padding:24px 32px 0;box-sizing:border-box">
+
+<div style="display:flex;flex-wrap:wrap;gap:20px 32px;align-items:flex-start;padding:32px 0;border-bottom:1px solid #C9DAD9">
+<div class="rs-f48 rs-num" style="flex:0 0 72px;font-family:'Gotham','Gotham Medium','Montserrat',sans-serif;font-size:48px;line-height:1;font-weight:500">01</div>
+<div style="flex:1 1 360px;min-width:0;display:flex;flex-direction:column;gap:8px">
+<h3 style="margin:0;font-family:'Gotham','Gotham Medium','Montserrat',sans-serif;font-size:26px;line-height:1.3;font-weight:500">Grundlagen der Positiven Psychologie</h3>
+<p style="margin:0;font-size:16px;max-width:560px">Ursprung, Forschungsstand und das PERMA-Modell nach Seligman als Orientierungsrahmen.</p>
+<a href="#kontakt" style="align-self:flex-start;margin-top:4px;font-size:16px;font-weight:500;min-height:44px;display:inline-flex;align-items:center">→&nbsp;<span style="text-decoration:underline">Mehr erfahren</span></a>
+</div>
+<div class="rs-tag" style="flex:0 1 240px;min-width:180px;display:flex;flex-direction:column;gap:8px;align-items:flex-start">
+<div style="background:#57D3D3;color:#00416B;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;padding:3px 8px">Einstieg</div>
+<div style="font-size:15px">Dauer: [Dauer]</div>
+</div>
+</div>
+
+<div style="display:flex;flex-wrap:wrap;gap:20px 32px;align-items:flex-start;padding:32px 0;border-bottom:1px solid #C9DAD9">
+<div class="rs-f48 rs-num" style="flex:0 0 72px;font-family:'Gotham','Gotham Medium','Montserrat',sans-serif;font-size:48px;line-height:1;font-weight:500">02</div>
+<div style="flex:1 1 360px;min-width:0;display:flex;flex-direction:column;gap:8px">
+<h3 style="margin:0;font-family:'Gotham','Gotham Medium','Montserrat',sans-serif;font-size:26px;line-height:1.3;font-weight:500">PERMA in der Praxis</h3>
+<p style="margin:0;font-size:16px;max-width:560px">Positive Emotionen, Engagement, Beziehungen, Sinn und Zielerreichung in konkrete Übungen übersetzen.</p>
+<a href="#kontakt" style="align-self:flex-start;margin-top:4px;font-size:16px;font-weight:500;min-height:44px;display:inline-flex;align-items:center">→&nbsp;<span style="text-decoration:underline">Mehr erfahren</span></a>
+</div>
+<div class="rs-tag" style="flex:0 1 240px;min-width:180px;display:flex;flex-direction:column;gap:8px;align-items:flex-start">
+<div style="background:#57D3D3;color:#00416B;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;padding:3px 8px">Aufbau</div>
+<div style="font-size:15px">Dauer: [Dauer]</div>
+</div>
+</div>
+
+<div style="display:flex;flex-wrap:wrap;gap:20px 32px;align-items:flex-start;padding:32px 0;border-bottom:1px solid #C9DAD9">
+<div class="rs-f48 rs-num" style="flex:0 0 72px;font-family:'Gotham','Gotham Medium','Montserrat',sans-serif;font-size:48px;line-height:1;font-weight:500">03</div>
+<div style="flex:1 1 360px;min-width:0;display:flex;flex-direction:column;gap:8px">
+<h3 style="margin:0;font-family:'Gotham','Gotham Medium','Montserrat',sans-serif;font-size:26px;line-height:1.3;font-weight:500">Stärkenorientiertes Coaching</h3>
+<p style="margin:0;font-size:16px;max-width:560px">Gesprächsführung und Methoden, die Ressourcen sichtbar machen und Entwicklung begleiten.</p>
+<a href="#kontakt" style="align-self:flex-start;margin-top:4px;font-size:16px;font-weight:500;min-height:44px;display:inline-flex;align-items:center">→&nbsp;<span style="text-decoration:underline">Mehr erfahren</span></a>
+</div>
+<div class="rs-tag" style="flex:0 1 240px;min-width:180px;display:flex;flex-direction:column;gap:8px;align-items:flex-start">
+<div style="background:#57D3D3;color:#00416B;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;padding:3px 8px">Aufbau</div>
+<div style="font-size:15px">Dauer: [Dauer]</div>
+</div>
+</div>
+
+<div style="display:flex;flex-wrap:wrap;gap:20px 32px;align-items:flex-start;padding:32px 0;border-bottom:1px solid #C9DAD9">
+<div class="rs-f48 rs-num" style="flex:0 0 72px;font-family:'Gotham','Gotham Medium','Montserrat',sans-serif;font-size:48px;line-height:1;font-weight:500">04</div>
+<div style="flex:1 1 360px;min-width:0;display:flex;flex-direction:column;gap:8px">
+<h3 style="margin:0;font-family:'Gotham','Gotham Medium','Montserrat',sans-serif;font-size:26px;line-height:1.3;font-weight:500">Positive Führung und Teams</h3>
+<p style="margin:0;font-size:16px;max-width:560px">Wohlbefinden und Leistungsfähigkeit in Organisationen fördern, mit Fallarbeit.</p>
+<a href="#kontakt" style="align-self:flex-start;margin-top:4px;font-size:16px;font-weight:500;min-height:44px;display:inline-flex;align-items:center">→&nbsp;<span style="text-decoration:underline">Mehr erfahren</span></a>
+</div>
+<div class="rs-tag" style="flex:0 1 240px;min-width:180px;display:flex;flex-direction:column;gap:8px;align-items:flex-start">
+<div style="background:#57D3D3;color:#00416B;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;padding:3px 8px">Vertiefung</div>
+<div style="font-size:15px">Dauer: [Dauer]</div>
+</div>
+</div>
+
+</div>
+
+<!-- Abschluss & Zertifikat (Banner) -->
+<div class="rs-s3" style="max-width:1200px;margin:0 auto;padding:64px 32px 0;box-sizing:border-box">
+<div style="display:flex;flex-wrap:wrap">
+<div class="rs-mh300" style="flex:1.2 1 420px;min-width:0;min-height:300px;background:#C9DAD9;display:flex;align-items:flex-end;padding:16px;box-sizing:border-box;font-size:13px;color:#00416B">[Foto: Zertifikatsübergabe oder Lerngruppe]</div>
+<div class="rs-p40" style="flex:1 1 360px;min-width:0;box-sizing:border-box;padding:40px;background:#00314F;color:#FFFFFF;display:flex;flex-direction:column;gap:20px;justify-content:center">
+<div style="align-self:flex-start;background:#57D3D3;color:#00416B;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;padding:3px 8px">Zertifikat</div>
+<div class="rs-f34" style="font-family:'Gotham','Gotham Medium','Montserrat',sans-serif;font-size:32px;line-height:1.2;font-weight:500">Abschluss &amp;<br>Zertifikat</div>
+<div style="display:flex;gap:14px;align-items:flex-start;font-size:15px;line-height:1.6;color:#D5ECEC">
+<span style="color:#57D3D3;display:inline-flex;flex:0 0 auto;margin-top:2px"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"></path><path d="m9 12 2 2 4-4"></path></svg></span>
+<span>[Abschlussform und Anerkennung vor Programmstart transparent ergänzen]</span>
+</div>
+</div>
+</div>
+</div>
+<div style="height:96px"></div>
+</section>
+
+<!-- 5 WARUM PERMA MIND ACADEMY: IHRE VORTEILE -->
+<section style="background:#FAFAFA">
+<div class="rs-s4" style="max-width:1200px;margin:0 auto;padding:88px 32px 96px;box-sizing:border-box;display:flex;flex-direction:column;gap:48px">
+<div style="display:flex;flex-direction:column;gap:6px;max-width:720px">
+<div style="font-size:14px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase">Warum PERMA Mind Academy?</div>
+<div class="rs-f30" style="font-family:'Gotham','Gotham Medium','Montserrat',sans-serif;font-size:30px;line-height:1.25;font-weight:500">Ihre Vorteile</div>
+<p style="margin:12px 0 0;font-size:16px">Sechs Gründe, warum Fachkräfte ihre Weiterbildung in Positiver Psychologie bei uns absolvieren.</p>
+</div>
+<div style="display:flex;flex-wrap:wrap;gap:40px 32px">
+
+<div style="flex:1 1 300px;min-width:0;display:flex;flex-direction:column;gap:12px;border-top:3px solid #00416B;padding-top:20px">
+<span style="display:inline-flex"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#00416B" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 2v7.527a2 2 0 0 1-.211.896L4.72 20.55a1 1 0 0 0 .9 1.45h12.76a1 1 0 0 0 .9-1.45l-5.069-10.127A2 2 0 0 1 14 9.527V2"></path><path d="M8.5 2h7"></path><path d="M7 16h10"></path></svg></span>
+<div style="font-family:'Gotham','Gotham Medium','Montserrat',sans-serif;font-size:22px;line-height:1.3;font-weight:500">Wissenschaftlich fundiert</div>
+<div style="font-size:16px">Die Inhalte stützen sich auf den aktuellen Forschungsstand.</div>
+</div>
+<div style="flex:1 1 300px;min-width:0;display:flex;flex-direction:column;gap:12px;border-top:3px solid #00416B;padding-top:20px">
+<span style="display:inline-flex"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#00416B" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path><rect width="20" height="14" x="2" y="6" rx="2"></rect></svg></span>
+<div style="font-family:'Gotham','Gotham Medium','Montserrat',sans-serif;font-size:22px;line-height:1.3;font-weight:500">Praxisnah</div>
+<div style="font-size:16px">Jedes Modul enthält Übungen für Ihren Berufsalltag.</div>
+</div>
+<div style="flex:1 1 300px;min-width:0;display:flex;flex-direction:column;gap:12px;border-top:3px solid #00416B;padding-top:20px">
+<span style="display:inline-flex"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#00416B" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 20a6 6 0 0 0-12 0"></path><circle cx="12" cy="10" r="4"></circle><circle cx="12" cy="12" r="10"></circle></svg></span>
+<div style="font-family:'Gotham','Gotham Medium','Montserrat',sans-serif;font-size:22px;line-height:1.3;font-weight:500">Erfahrene Trainer:innen</div>
+<div style="font-size:16px">Lehre durch Fachleute mit Praxiserfahrung.</div>
+</div>
+<div style="flex:1 1 300px;min-width:0;display:flex;flex-direction:column;gap:12px;border-top:3px solid #00416B;padding-top:20px">
+<span style="display:inline-flex"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#00416B" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 9a2 2 0 0 1-2 2H6l-4 4V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2z"></path><path d="M18 9h2a2 2 0 0 1 2 2v11l-4-4h-6a2 2 0 0 1-2-2v-1"></path></svg></span>
+<div style="font-family:'Gotham','Gotham Medium','Montserrat',sans-serif;font-size:22px;line-height:1.3;font-weight:500">Kleine Gruppen</div>
+<div style="font-size:16px">Raum für Fragen, Austausch und persönliche Begleitung. [Gruppengröße ergänzen]</div>
+</div>
+<div style="flex:1 1 300px;min-width:0;display:flex;flex-direction:column;gap:12px;border-top:3px solid #00416B;padding-top:20px">
+<span style="display:inline-flex"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#00416B" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"></path><path d="m9 12 2 2 4-4"></path></svg></span>
+<div style="font-family:'Gotham','Gotham Medium','Montserrat',sans-serif;font-size:22px;line-height:1.3;font-weight:500">Anerkannte Zertifikate</div>
+<div style="font-size:16px">[Anerkennung bestätigen]</div>
+</div>
+<div style="flex:1 1 300px;min-width:0;display:flex;flex-direction:column;gap:12px;border-top:3px solid #00416B;padding-top:20px">
+<span style="display:inline-flex"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#00416B" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="m16.24 7.76-1.804 5.411a2 2 0 0 1-1.265 1.265L7.76 16.24l1.804-5.411a2 2 0 0 1 1.265-1.265z"></path></svg></span>
+<div style="font-family:'Gotham','Gotham Medium','Montserrat',sans-serif;font-size:22px;line-height:1.3;font-weight:500">Flexible Termine</div>
+<div style="font-size:16px">[Präsenz, Online oder Blockformat ergänzen]</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- 5b SORGFALT (Abb. 3) -->
+<section style="background:#FEFEFE">
+<div class="rs-s5" style="max-width:1200px;margin:0 auto;padding:96px 32px;box-sizing:border-box;display:flex;flex-wrap:wrap;gap:48px">
+<div style="flex:1 1 360px;min-width:0;max-width:480px">
+<p style="margin:0;font-size:12px;font-weight:500;letter-spacing:0.24em;text-transform:uppercase;color:#1A8C8C">Warum diese Academy</p>
+<h2 class="rs-f34" style="margin:16px 0 0;font-family:'Gotham','Gotham Medium','Montserrat',sans-serif;font-size:34px;line-height:1.2;color:#00416b;font-weight:500">Sorgfalt vor<br>großen Versprechen.</h2>
+<p style="margin:20px 0 0;font-size:16px;line-height:1.75;color:#4B6269">Hier geht es nicht um schnelle Rezepte. Die Academy schafft einen fundierten Rahmen, in dem Theorie, Erfahrung und professionelle Praxis miteinander in Gespräch kommen.</p>
+<div style="margin-top:32px;display:flex;flex-wrap:wrap;gap:12px">
+<span style="border:1px solid #C9DAD9;background:#E8F1F1;border-radius:999px;padding:8px 16px;font-size:12px;font-weight:500;color:#00416b">Forschungsorientiert</span>
+<span style="border:1px solid #C9DAD9;background:#E8F1F1;border-radius:999px;padding:8px 16px;font-size:12px;font-weight:500;color:#00416b">Praxisbezogen</span>
+<span style="border:1px solid #C9DAD9;background:#E8F1F1;border-radius:999px;padding:8px 16px;font-size:12px;font-weight:500;color:#00416b">Persönlich begleitet</span>
+</div>
+</div>
+<div style="flex:2 1 520px;min-width:0;display:flex;flex-wrap:wrap;gap:16px">
+<article style="flex:1 1 240px;box-sizing:border-box;border-top:2px solid #1A8C8C;background:#E8F1F1;padding:24px">
+<span style="color:#1A8C8C;display:inline-flex"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 2v7.527a2 2 0 0 1-.211.896L4.72 20.55a1 1 0 0 0 .9 1.45h12.76a1 1 0 0 0 .9-1.45l-5.069-10.127A2 2 0 0 1 14 9.527V2"></path><path d="M8.5 2h7"></path><path d="M7 16h10"></path></svg></span>
+<h3 style="margin:28px 0 0;font-family:'Gotham','Gotham Medium','Montserrat',sans-serif;font-size:21px;line-height:1.3;color:#00416b;font-weight:500">Wissenschaftlich orientiert</h3>
+<p style="margin:8px 0 0;font-size:15px;line-height:1.7;color:#4B6269">Inhalte werden nachvollziehbar kontextualisiert statt verkürzt vermittelt.</p>
+</article>
+<article style="flex:1 1 240px;box-sizing:border-box;border-top:2px solid #00416b;background:#FFFFFF;padding:24px;box-shadow:0 10px 30px -8px rgba(15,23,42,0.18)">
+<span style="color:#1A8C8C;display:inline-flex"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"></path><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"></path><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"></path></svg></span>
+<h3 style="margin:28px 0 0;font-family:'Gotham','Gotham Medium','Montserrat',sans-serif;font-size:21px;line-height:1.3;color:#00416b;font-weight:500">Fachlich vertieft</h3>
+<p style="margin:8px 0 0;font-size:15px;line-height:1.7;color:#4B6269">Zusammenhänge erhalten Raum, damit Wissen tragfähig wird.</p>
+</article>
+<article style="flex:1 1 240px;box-sizing:border-box;border-top:2px solid #00416b;background:#FFFFFF;padding:24px;box-shadow:0 10px 30px -8px rgba(15,23,42,0.18)">
+<span style="color:#1A8C8C;display:inline-flex"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path><rect width="20" height="14" x="2" y="6" rx="2"></rect></svg></span>
+<h3 style="margin:28px 0 0;font-family:'Gotham','Gotham Medium','Montserrat',sans-serif;font-size:21px;line-height:1.3;color:#00416b;font-weight:500">Praxisnah gedacht</h3>
+<p style="margin:8px 0 0;font-size:15px;line-height:1.7;color:#4B6269">Lernimpulse werden mit realen beruflichen und persönlichen Kontexten verbunden.</p>
+</article>
+<article style="flex:1 1 240px;box-sizing:border-box;border-top:2px solid #1A8C8C;background:#E8F1F1;padding:24px">
+<span style="color:#1A8C8C;display:inline-flex"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 20a6 6 0 0 0-12 0"></path><circle cx="12" cy="10" r="4"></circle><circle cx="12" cy="12" r="10"></circle></svg></span>
+<h3 style="margin:28px 0 0;font-family:'Gotham','Gotham Medium','Montserrat',sans-serif;font-size:21px;line-height:1.3;color:#00416b;font-weight:500">Persönlich begleitet</h3>
+<p style="margin:8px 0 0;font-size:15px;line-height:1.7;color:#4B6269">Fragen und Reflexion sind integraler Teil des Lernprozesses.</p>
+</article>
+</div>
+</div>
+</section>
+
+<!-- 6 UNSER TEAM (Abb. 1) -->
+<section id="team" style="background:#E8F1F1">
+<div class="rs-s4" style="max-width:1200px;margin:0 auto;padding:80px 32px 88px;box-sizing:border-box">
+<div style="display:flex;flex-wrap:wrap;gap:20px 48px;align-items:flex-start;justify-content:space-between">
+<div style="flex:1 1 400px">
+<p style="margin:0;font-size:12px;font-weight:500;letter-spacing:0.24em;text-transform:uppercase;color:#00416B">Unser Team</p>
+<h2 class="rs-f34" style="margin:12px 0 0;font-family:'Gotham','Gotham Medium','Montserrat',sans-serif;font-size:34px;line-height:1.2;color:#00416b;font-weight:500">Die Köpfe der Academy</h2>
+</div>
+<p style="flex:1 1 320px;margin:0;max-width:450px;font-size:16px;line-height:1.75;color:#4B6269">Zwei Perspektiven, ein gemeinsames Anliegen: Positive Psychologie mit fachlicher Tiefe und zugewandter Klarheit zugänglich machen.</p>
+</div>
+<div style="margin-top:48px;display:flex;flex-wrap:wrap;gap:24px">
+
+<article style="flex:1 1 520px;min-width:0;display:flex;flex-wrap:wrap;background:#FFFFFF;border-radius:12px;overflow:hidden;box-shadow:0 10px 30px -8px rgba(15,23,42,0.18)">
+<div class="rs-mh290" style="flex:2 1 200px;min-height:290px;background:#C9DAD9;display:flex;align-items:flex-end;padding:16px;box-sizing:border-box;font-size:13px;color:#00416B">[Foto Person 1]</div>
+<div style="flex:3 1 280px;min-width:0;padding:28px;box-sizing:border-box">
+<p style="margin:0;font-size:12px;font-weight:500;letter-spacing:0.16em;text-transform:uppercase;color:#1A8C8C">[Rolle]</p>
+<h3 style="margin:8px 0 0;font-family:'Gotham','Gotham Medium','Montserrat',sans-serif;font-size:26px;line-height:1.25;color:#00416b;font-weight:500">[Name 1]</h3>
+<p style="margin:4px 0 0;font-size:14px;color:#587077">[Titel / Qualifikation]</p>
+<p style="margin:18px 0 0;font-size:14px;line-height:1.7;color:#00416B">[Werdegang in 2 bis 3 Sätzen: Ausbildung, Berufserfahrung, Schwerpunkt]</p>
+<p style="margin: 14px 0 0; font-family: 'Roboto',system-ui,sans-serif; font-style: italic; font-size: 18px; line-height: 1.5; color: #00416b; font-weight: 300">„Wohlbefinden entsteht dort, wo Menschen ihre Stärken einsetzen dürfen.“ <span style="font-family:'Roboto',system-ui,sans-serif;font-size:12px;font-weight:400;color:#587077">[Entwurf]</span></p>
+</div>
+</article>
+
+<article style="flex:1 1 520px;min-width:0;display:flex;flex-wrap:wrap;background:#FFFFFF;border-radius:12px;overflow:hidden;box-shadow:0 10px 30px -8px rgba(15,23,42,0.18)">
+<div class="rs-mh290" style="flex:2 1 200px;min-height:290px;background:#C9DAD9;display:flex;align-items:flex-end;padding:16px;box-sizing:border-box;font-size:13px;color:#00416B">[Foto Person 2]</div>
+<div style="flex:3 1 280px;min-width:0;padding:28px;box-sizing:border-box">
+<p style="margin:0;font-size:12px;font-weight:500;letter-spacing:0.16em;text-transform:uppercase;color:#1A8C8C">[Rolle]</p>
+<h3 style="margin:8px 0 0;font-family:'Gotham','Gotham Medium','Montserrat',sans-serif;font-size:26px;line-height:1.25;color:#00416b;font-weight:500">[Name 2]</h3>
+<p style="margin:4px 0 0;font-size:14px;color:#587077">[Titel / Qualifikation]</p>
+<p style="margin:18px 0 0;font-size:14px;line-height:1.7;color:#00416B">[Werdegang in 2 bis 3 Sätzen: Ausbildung, Berufserfahrung, Schwerpunkt]</p>
+<p style="margin: 14px 0 0; font-family: 'Roboto',system-ui,sans-serif; font-style: italic; font-size: 18px; line-height: 1.5; color: #00416b; font-weight: 300">„Gute Beziehungen sind die verlässlichste Ressource, die wir haben.“ <span style="font-family:'Roboto',system-ui,sans-serif;font-size:12px;font-weight:400;color:#587077">[Entwurf]</span></p>
+</div>
+</article>
+
+</div>
+</div>
+</section>
+
+<!-- 7 KONTAKT & VORMERKUNG (Abb. 2) -->
+<section class="rs-s5" id="kontakt" style="max-width:1200px;margin:0 auto;padding:96px 32px;box-sizing:border-box">
+<div style="display:flex;flex-wrap:wrap;border-radius:12px;overflow:hidden;box-shadow:0 10px 30px -8px rgba(15,23,42,0.18);background:#00416b">
+<div class="rs-p48" style="flex:5 1 340px;min-width:0;box-sizing:border-box;padding:48px;color:#FFFFFF;display:flex;flex-direction:column">
+<p style="margin:0;font-size:12px;font-weight:500;letter-spacing:0.24em;text-transform:uppercase;color:#FFFFFF">Kontakt &amp; Vormerkung</p>
+<h2 class="rs-f34" style="margin:24px 0 0;font-family:'Gotham','Gotham Medium','Montserrat',sans-serif;font-size:34px;line-height:1.2;color:#FFFFFF;font-weight:500">Jetzt unverbindlich<br>vormerken</h2>
+<p style="margin:24px 0 0;font-size:16px;line-height:1.75;color:#FFFFFF">Sie möchten mehr über unsere Ausbildungen erfahren oder sich einen Platz sichern? Tragen Sie sich unverbindlich ein. Wir melden uns persönlich bei Ihnen und beantworten Ihre Fragen zu Inhalten, Terminen und Voraussetzungen.</p>
+<div style="margin-top:40px;padding-top:24px;border-top:1px solid rgba(255,255,255,0.85);display:flex;gap:12px;align-items:flex-start">
+<span style="color:#B7CDCD;display:inline-flex;margin-top:2px;flex:0 0 auto"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path><path d="m9 12 2 2 4-4"></path></svg></span>
+<p style="margin:0;font-size:14px;line-height:1.7;color:#FFFFFF">Ihre Daten behandeln wir vertraulich. Kein Newsletter ohne Einwilligung, keine Verpflichtung.</p>
+</div>
+</div>
+<form class="rs-p48" style="flex:7 1 440px;min-width:0;box-sizing:border-box;padding:48px;background:#FFFFFF;display:flex;flex-direction:column;gap:20px">
+<div><label for="name" style="display:block;margin-bottom:8px;font-size:14px;font-weight:500;color:#00416B">Ihr Name</label><input id="name" type="text" placeholder="Ihr Name" style="width:100%;box-sizing:border-box;min-height:48px;padding:0 16px;border:1px solid #B7CDCD;border-radius:12px;background:#FEFEFE;font-size:15px;color:#00416B"></div>
+<div><label for="mail" style="display:block;margin-bottom:8px;font-size:14px;font-weight:500;color:#00416B">E-Mail-Adresse</label><input id="mail" type="email" placeholder="name@beispiel.at" style="width:100%;box-sizing:border-box;min-height:48px;padding:0 16px;border:1px solid #B7CDCD;border-radius:12px;background:#FEFEFE;font-size:15px;color:#00416B"></div>
+<div><label for="tel" style="display:block;margin-bottom:8px;font-size:14px;font-weight:500;color:#00416B">Telefon <span style="font-weight:400;color:#587077">(optional)</span></label><input id="tel" type="tel" placeholder="+43" style="width:100%;box-sizing:border-box;min-height:48px;padding:0 16px;border:1px solid #B7CDCD;border-radius:12px;background:#FEFEFE;font-size:15px;color:#00416B"></div>
+<div><label for="modul" style="display:block;margin-bottom:8px;font-size:14px;font-weight:500;color:#00416B">Interesse an Modul</label>
+<select id="modul" style="width:100%;box-sizing:border-box;min-height:48px;padding:0 16px;border:1px solid #B7CDCD;border-radius:12px;background:#FEFEFE;font-size:15px;color:#00416B">
+<option>Bitte auswählen</option>
+<option>Grundlagen der Positiven Psychologie</option>
+<option>PERMA in der Praxis</option>
+<option>Stärkenorientiertes Coaching</option>
+<option>Positive Führung und Teams</option>
+<option>Noch unsicher, bitte beraten Sie mich</option>
+</select></div>
+<div><label for="msg" style="display:block;margin-bottom:8px;font-size:14px;font-weight:500;color:#00416B">Nachricht <span style="font-weight:400;color:#587077">(optional)</span></label><textarea id="msg" rows="4" placeholder="z. B. beruflicher Kontext oder eine Frage" style="width:100%;box-sizing:border-box;padding:14px 16px;border:1px solid #B7CDCD;border-radius:12px;background:#FEFEFE;font-size:15px;color:#00416B"></textarea></div>
+<div style="display:flex;gap:12px;align-items:flex-start"><input id="dsgvo" type="checkbox" style="width:20px;height:20px;margin:2px 0 0;flex:0 0 auto"><label for="dsgvo" style="font-size:14px;line-height:1.6;color:#00416B">Ich stimme der Verarbeitung meiner Daten gemäß <a href="#">Datenschutzerklärung</a> zu.</label></div>
+<button type="submit" style="width:100%;min-height:48px;padding:0 24px;border:0;border-radius:12px;background:linear-gradient(135deg,#57d3d3 0%,#25a0a0 100%);color:#00314f;font-size:15px;font-weight:500;display:inline-flex;align-items:center;justify-content:center;gap:10px;cursor:pointer;box-shadow:0 10px 30px -8px rgba(15,23,42,0.18)">Vormerkung absenden <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z"></path><path d="m21.854 2.147-10.94 10.939"></path></svg></button>
+</form>
+</div>
+</section>
+
+</main>
+
+<!-- 8 FOOTER -->
+<footer style="background:#00314F;color:#D6D6D6">
+<div class="rs-s6" style="max-width:1200px;margin:0 auto;padding:48px 32px;box-sizing:border-box;display:flex;flex-wrap:wrap;gap:40px 56px;font-size:14px;line-height:1.7;letter-spacing:0.02em">
+<div style="flex:1 1 240px;display:flex;flex-direction:column"><div style="font-family:'Gotham','Gotham Medium','Montserrat',sans-serif;font-size:24px;line-height:1.2;color:#FFFFFF;font-weight:500">PERMA Mind</div><div style="color:#57D3D3;font-weight:500;margin-top:4px">Academy für Positive Psychologie</div></div>
+<div style="flex:1 1 240px;display:flex;flex-direction:column"><div style="color:#57D3D3;font-weight:500">Kontakt</div><div>[Straße Nr., PLZ Ort]</div><div>Tel: [Telefon]</div><div>Mail: [E-Mail]</div></div>
+<div style="flex:1 1 160px;display:flex;flex-direction:column;gap:8px"><div style="color:#57D3D3;font-weight:500">Social Media</div>
+<div style="display:flex;gap:8px">
+<a href="#" aria-label="Instagram" style="width:44px;height:44px;border:1px solid #6B6B6B;border-radius:50%;color:#D6D6D6;display:inline-flex;align-items:center;justify-content:center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="20" x="2" y="2" rx="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg></a>
+<a href="#" aria-label="LinkedIn" style="width:44px;height:44px;border:1px solid #6B6B6B;border-radius:50%;color:#D6D6D6;display:inline-flex;align-items:center;justify-content:center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
+</div></div>
+<div style="flex:1 1 140px;display:flex;flex-direction:column;gap:12px"><a href="#" style="color:#57D3D3;font-weight:500;text-decoration:none">Impressum</a><a href="#" style="color:#57D3D3;font-weight:500;text-decoration:none">Datenschutz</a></div>
+</div>
+</footer>
+
+<!-- FLOATING CTA -->
+<a class="rs-fab" href="#kontakt" style="position:fixed;right:24px;bottom:24px;z-index:30;display:inline-flex;align-items:center;gap:12px;background:{{accent}};color:#FFFFFF;text-decoration:none;font-size:17px;padding:14px 22px;border-radius:8px;min-height:44px;box-sizing:border-box;box-shadow:0 4px 14px rgba(0,65,107,0.25)"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20l1.4-4.2A8 8 0 1 1 8.4 18.8L4 20z"></path></svg>Kontakt aufnehmen</a>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"accent":{"editor":"color","default":"#00416b","options":["#00416b","#00416B","#0B3C8A"]},"$preview":{"width":1440,"height":7000}}'>
+class Component extends DCLogic {
+renderVals() {
+return { accent: this.props.accent ?? '#00416b' };
+}
+}
+</script>
+</body>
+</html>

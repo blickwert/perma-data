@@ -1,0 +1,3734 @@
+{
+  "content": [
+    {
+      "id": "578cee2",
+      "elType": "e-flexbox",
+      "settings": {
+        "classes": {
+          "$$type": "classes",
+          "value": [
+            "e-1bd7ca9"
+          ]
+        },
+        "_cssid": {
+          "$$type": "string",
+          "value": "angebot"
+        }
+      },
+      "elements": [
+        {
+          "id": "256489c",
+          "elType": "e-flexbox",
+          "settings": {
+            "classes": {
+              "$$type": "classes",
+              "value": [
+                "e-56f01a5"
+              ]
+            }
+          },
+          "elements": [
+            {
+              "id": "c079579",
+              "elType": "e-flexbox",
+              "settings": {
+                "classes": {
+                  "$$type": "classes",
+                  "value": [
+                    "e-b043c08"
+                  ]
+                }
+              },
+              "elements": [
+                {
+                  "id": "d3cb713",
+                  "elType": "widget",
+                  "settings": {
+                    "classes": {
+                      "$$type": "classes",
+                      "value": [
+                        "e-9cbbf4d"
+                      ]
+                    },
+                    "title": {
+                      "$$type": "html",
+                      "value": "Was wir für Sie tun"
+                    },
+                    "tag": {
+                      "$$type": "string",
+                      "value": "h2"
+                    }
+                  },
+                  "elements": [],
+                  "styles": {
+                    "e-9cbbf4d": {
+                      "id": "e-9cbbf4d",
+                      "label": "local",
+                      "type": "class",
+                      "variants": [
+                        {
+                          "meta": {
+                            "breakpoint": "desktop",
+                            "state": null
+                          },
+                          "props": {
+                            "margin": {
+                              "$$type": "dimensions",
+                              "value": {
+                                "block-start": {
+                                  "$$type": "size",
+                                  "value": {
+                                    "size": 0,
+                                    "unit": "px"
+                                  }
+                                },
+                                "inline-end": {
+                                  "$$type": "size",
+                                  "value": {
+                                    "size": 0,
+                                    "unit": "px"
+                                  }
+                                },
+                                "block-end": {
+                                  "$$type": "size",
+                                  "value": {
+                                    "size": 0,
+                                    "unit": "px"
+                                  }
+                                },
+                                "inline-start": {
+                                  "$$type": "size",
+                                  "value": {
+                                    "size": 0,
+                                    "unit": "px"
+                                  }
+                                }
+                              }
+                            },
+                            "font-weight": {
+                              "$$type": "string",
+                              "value": "500"
+                            },
+                            "line-height": {
+                              "$$type": "size",
+                              "value": {
+                                "size": 1.25,
+                                "unit": "em"
+                              }
+                            },
+                            "color": {
+                              "$$type": "color",
+                              "value": "#00416B"
+                            },
+                            "font-family": {
+                              "$$type": "string",
+                              "value": "Gotham"
+                            },
+                            "font-size": {
+                              "$$type": "size",
+                              "value": {
+                                "size": 30,
+                                "unit": "px"
+                              }
+                            }
+                          }
+                        },
+                        {
+                          "meta": {
+                            "breakpoint": "mobile",
+                            "state": null
+                          },
+                          "props": {
+                            "font-size": {
+                              "$$type": "size",
+                              "value": {
+                                "size": 24,
+                                "unit": "px"
+                              }
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  "widgetType": "e-heading"
+                },
+                {
+                  "id": "caf7450",
+                  "elType": "widget",
+                  "settings": {
+                    "classes": {
+                      "$$type": "classes",
+                      "value": [
+                        "e-b311d49"
+                      ]
+                    },
+                    "paragraph": {
+                      "$$type": "html",
+                      "value": "Die Academy verbindet die Erkenntnisse der Positiven Psychologie mit Methoden, die sich in Ihrer täglichen Arbeit bewähren."
+                    }
+                  },
+                  "elements": [],
+                  "styles": {
+                    "e-b311d49": {
+                      "id": "e-b311d49",
+                      "label": "local",
+                      "type": "class",
+                      "variants": [
+                        {
+                          "meta": {
+                            "breakpoint": "desktop",
+                            "state": null
+                          },
+                          "props": {
+                            "margin": {
+                              "$$type": "dimensions",
+                              "value": {
+                                "block-start": {
+                                  "$$type": "size",
+                                  "value": {
+                                    "size": 12,
+                                    "unit": "px"
+                                  }
+                                },
+                                "inline-end": {
+                                  "$$type": "size",
+                                  "value": {
+                                    "size": 0,
+                                    "unit": "px"
+                                  }
+                                },
+                                "block-end": {
+                                  "$$type": "size",
+                                  "value": {
+                                    "size": 0,
+                                    "unit": "px"
+                                  }
+                                },
+                                "inline-start": {
+                                  "$$type": "size",
+                                  "value": {
+                                    "size": 0,
+                                    "unit": "px"
+                                  }
+                                }
+                              }
+                            },
+                            "font-size": {
+                              "$$type": "size",
+                              "value": {
+                                "size": 16,
+                                "unit": "px"
+                              }
+                            },
+                            "color": {
+                              "$$type": "color",
+                              "value": "#00416B"
+                            },
+                            "max-width": {
+                              "$$type": "size",
+                              "value": {
+                                "size": 640,
+                                "unit": "px"
+                              }
+                            },
+                            "text-align": {
+                              "$$type": "string",
+                              "value": "center"
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  "widgetType": "e-paragraph"
+                }
+              ],
+              "styles": {
+                "e-b043c08": {
+                  "id": "e-b043c08",
+                  "label": "local",
+                  "type": "class",
+                  "variants": [
+                    {
+                      "meta": {
+                        "breakpoint": "desktop",
+                        "state": null
+                      },
+                      "props": {
+                        "display": {
+                          "$$type": "string",
+                          "value": "flex"
+                        },
+                        "flex-direction": {
+                          "$$type": "string",
+                          "value": "column"
+                        },
+                        "gap": {
+                          "$$type": "size",
+                          "value": {
+                            "size": 6,
+                            "unit": "px"
+                          }
+                        },
+                        "align-items": {
+                          "$$type": "string",
+                          "value": "center"
+                        },
+                        "text-align": {
+                          "$$type": "string",
+                          "value": "center"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "id": "2c24dd7",
+              "elType": "e-flexbox",
+              "settings": {
+                "classes": {
+                  "$$type": "classes",
+                  "value": [
+                    "e-3f05d0d"
+                  ]
+                }
+              },
+              "elements": [
+                {
+                  "id": "ab7338d",
+                  "elType": "e-flexbox",
+                  "settings": {
+                    "classes": {
+                      "$$type": "classes",
+                      "value": [
+                        "e-daf6c18"
+                      ]
+                    }
+                  },
+                  "elements": [
+                    {
+                      "id": "8db8d56",
+                      "elType": "e-flexbox",
+                      "settings": {
+                        "classes": {
+                          "$$type": "classes",
+                          "value": [
+                            "e-f225ebc"
+                          ]
+                        }
+                      },
+                      "elements": [
+                        {
+                          "id": "cdd3e56",
+                          "elType": "widget",
+                          "settings": {
+                            "classes": {
+                              "$$type": "classes",
+                              "value": [
+                                "e-af194fe"
+                              ]
+                            },
+                            "paragraph": {
+                              "$$type": "html",
+                              "value": "Angebot 01"
+                            }
+                          },
+                          "elements": [],
+                          "styles": {
+                            "e-af194fe": {
+                              "id": "e-af194fe",
+                              "label": "local",
+                              "type": "class",
+                              "variants": [
+                                {
+                                  "meta": {
+                                    "breakpoint": "desktop",
+                                    "state": null
+                                  },
+                                  "props": {
+                                    "margin": {
+                                      "$$type": "dimensions",
+                                      "value": {
+                                        "block-start": {
+                                          "$$type": "size",
+                                          "value": {
+                                            "size": 0,
+                                            "unit": "px"
+                                          }
+                                        },
+                                        "inline-end": {
+                                          "$$type": "size",
+                                          "value": {
+                                            "size": 0,
+                                            "unit": "px"
+                                          }
+                                        },
+                                        "block-end": {
+                                          "$$type": "size",
+                                          "value": {
+                                            "size": 0,
+                                            "unit": "px"
+                                          }
+                                        },
+                                        "inline-start": {
+                                          "$$type": "size",
+                                          "value": {
+                                            "size": 0,
+                                            "unit": "px"
+                                          }
+                                        }
+                                      }
+                                    },
+                                    "font-size": {
+                                      "$$type": "size",
+                                      "value": {
+                                        "size": 11,
+                                        "unit": "px"
+                                      }
+                                    },
+                                    "color": {
+                                      "$$type": "color",
+                                      "value": "#00416B"
+                                    },
+                                    "background": {
+                                      "$$type": "background",
+                                      "value": {
+                                        "color": {
+                                          "$$type": "color",
+                                          "value": "#57D3D3"
+                                        }
+                                      }
+                                    },
+                                    "font-weight": {
+                                      "$$type": "string",
+                                      "value": "500"
+                                    },
+                                    "letter-spacing": {
+                                      "$$type": "size",
+                                      "value": {
+                                        "size": 0.14,
+                                        "unit": "em"
+                                      }
+                                    },
+                                    "text-transform": {
+                                      "$$type": "string",
+                                      "value": "uppercase"
+                                    },
+                                    "padding": {
+                                      "$$type": "dimensions",
+                                      "value": {
+                                        "block-start": {
+                                          "$$type": "size",
+                                          "value": {
+                                            "size": 3,
+                                            "unit": "px"
+                                          }
+                                        },
+                                        "inline-end": {
+                                          "$$type": "size",
+                                          "value": {
+                                            "size": 8,
+                                            "unit": "px"
+                                          }
+                                        },
+                                        "block-end": {
+                                          "$$type": "size",
+                                          "value": {
+                                            "size": 3,
+                                            "unit": "px"
+                                          }
+                                        },
+                                        "inline-start": {
+                                          "$$type": "size",
+                                          "value": {
+                                            "size": 8,
+                                            "unit": "px"
+                                          }
+                                        }
+                                      }
+                                    },
+                                    "align-self": {
+                                      "$$type": "string",
+                                      "value": "flex-start"
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          },
+                          "widgetType": "e-paragraph"
+                        },
+                        {
+                          "id": "8771d09",
+                          "elType": "widget",
+                          "widgetType": "html",
+                          "settings": {
+                            "html": "<span style=\"display:inline-flex;color:#57D3D3\"><svg width=\"30\" height=\"30\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z\"></path><path d=\"M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z\"></path></svg></span>"
+                          },
+                          "elements": [],
+                          "styles": {}
+                        }
+                      ],
+                      "styles": {
+                        "e-f225ebc": {
+                          "id": "e-f225ebc",
+                          "label": "local",
+                          "type": "class",
+                          "variants": [
+                            {
+                              "meta": {
+                                "breakpoint": "desktop",
+                                "state": null
+                              },
+                              "props": {
+                                "display": {
+                                  "$$type": "string",
+                                  "value": "flex"
+                                },
+                                "align-items": {
+                                  "$$type": "string",
+                                  "value": "center"
+                                },
+                                "justify-content": {
+                                  "$$type": "string",
+                                  "value": "space-between"
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    },
+                    {
+                      "id": "edd072b",
+                      "elType": "widget",
+                      "settings": {
+                        "classes": {
+                          "$$type": "classes",
+                          "value": [
+                            "e-7088f1a"
+                          ]
+                        },
+                        "title": {
+                          "$$type": "html",
+                          "value": "Ausbildungen"
+                        },
+                        "tag": {
+                          "$$type": "string",
+                          "value": "h3"
+                        }
+                      },
+                      "elements": [],
+                      "styles": {
+                        "e-7088f1a": {
+                          "id": "e-7088f1a",
+                          "label": "local",
+                          "type": "class",
+                          "variants": [
+                            {
+                              "meta": {
+                                "breakpoint": "desktop",
+                                "state": null
+                              },
+                              "props": {
+                                "margin": {
+                                  "$$type": "dimensions",
+                                  "value": {
+                                    "block-start": {
+                                      "$$type": "size",
+                                      "value": {
+                                        "size": 0,
+                                        "unit": "px"
+                                      }
+                                    },
+                                    "inline-end": {
+                                      "$$type": "size",
+                                      "value": {
+                                        "size": 0,
+                                        "unit": "px"
+                                      }
+                                    },
+                                    "block-end": {
+                                      "$$type": "size",
+                                      "value": {
+                                        "size": 0,
+                                        "unit": "px"
+                                      }
+                                    },
+                                    "inline-start": {
+                                      "$$type": "size",
+                                      "value": {
+                                        "size": 0,
+                                        "unit": "px"
+                                      }
+                                    }
+                                  }
+                                },
+                                "font-weight": {
+                                  "$$type": "string",
+                                  "value": "500"
+                                },
+                                "line-height": {
+                                  "$$type": "size",
+                                  "value": {
+                                    "size": 1.25,
+                                    "unit": "em"
+                                  }
+                                },
+                                "color": {
+                                  "$$type": "color",
+                                  "value": "#FFFFFF"
+                                },
+                                "font-family": {
+                                  "$$type": "string",
+                                  "value": "Gotham"
+                                },
+                                "font-size": {
+                                  "$$type": "size",
+                                  "value": {
+                                    "size": 34,
+                                    "unit": "px"
+                                  }
+                                }
+                              }
+                            },
+                            {
+                              "meta": {
+                                "breakpoint": "mobile",
+                                "state": null
+                              },
+                              "props": {
+                                "font-size": {
+                                  "$$type": "size",
+                                  "value": {
+                                    "size": 26,
+                                    "unit": "px"
+                                  }
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      "widgetType": "e-heading"
+                    },
+                    {
+                      "id": "6fccf71",
+                      "elType": "widget",
+                      "settings": {
+                        "classes": {
+                          "$$type": "classes",
+                          "value": [
+                            "e-5d7b03e"
+                          ]
+                        },
+                        "paragraph": {
+                          "$$type": "html",
+                          "value": "Strukturierte Module von den Grundlagen bis zur Anwendung in Beratung, Coaching und Führung."
+                        }
+                      },
+                      "elements": [],
+                      "styles": {
+                        "e-5d7b03e": {
+                          "id": "e-5d7b03e",
+                          "label": "local",
+                          "type": "class",
+                          "variants": [
+                            {
+                              "meta": {
+                                "breakpoint": "desktop",
+                                "state": null
+                              },
+                              "props": {
+                                "margin": {
+                                  "$$type": "dimensions",
+                                  "value": {
+                                    "block-start": {
+                                      "$$type": "size",
+                                      "value": {
+                                        "size": 0,
+                                        "unit": "px"
+                                      }
+                                    },
+                                    "inline-end": {
+                                      "$$type": "size",
+                                      "value": {
+                                        "size": 0,
+                                        "unit": "px"
+                                      }
+                                    },
+                                    "block-end": {
+                                      "$$type": "size",
+                                      "value": {
+                                        "size": 0,
+                                        "unit": "px"
+                                      }
+                                    },
+                                    "inline-start": {
+                                      "$$type": "size",
+                                      "value": {
+                                        "size": 0,
+                                        "unit": "px"
+                                      }
+                                    }
+                                  }
+                                },
+                                "font-size": {
+                                  "$$type": "size",
+                                  "value": {
+                                    "size": 16,
+                                    "unit": "px"
+                                  }
+                                },
+                                "color": {
+                                  "$$type": "color",
+                                  "value": "#FFFFFF"
+                                },
+                                "max-width": {
+                                  "$$type": "size",
+                                  "value": {
+                                    "size": 420,
+                                    "unit": "px"
+                                  }
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      "widgetType": "e-paragraph"
+                    },
+                    {
+                      "id": "3e353d3",
+                      "elType": "widget",
+                      "settings": {
+                        "classes": {
+                          "$$type": "classes",
+                          "value": [
+                            "e-f3c3456"
+                          ]
+                        },
+                        "text": {
+                          "$$type": "string",
+                          "value": "Mehr erfahren →"
+                        },
+                        "link": {
+                          "$$type": "link",
+                          "value": {
+                            "destination": {
+                              "$$type": "url",
+                              "value": "#ausbildungen"
+                            },
+                            "isTargetBlank": null
+                          }
+                        }
+                      },
+                      "elements": [],
+                      "styles": {
+                        "e-f3c3456": {
+                          "id": "e-f3c3456",
+                          "label": "local",
+                          "type": "class",
+                          "variants": [
+                            {
+                              "meta": {
+                                "breakpoint": "desktop",
+                                "state": null
+                              },
+                              "props": {
+                                "text-decoration": {
+                                  "$$type": "string",
+                                  "value": "none"
+                                },
+                                "margin": {
+                                  "$$type": "dimensions",
+                                  "value": {
+                                    "block-start": {
+                                      "$$type": "size",
+                                      "value": {
+                                        "size": "",
+                                        "unit": "auto"
+                                      }
+                                    },
+                                    "inline-end": {
+                                      "$$type": "size",
+                                      "value": {
+                                        "size": 0,
+                                        "unit": "px"
+                                      }
+                                    },
+                                    "block-end": {
+                                      "$$type": "size",
+                                      "value": {
+                                        "size": 0,
+                                        "unit": "px"
+                                      }
+                                    },
+                                    "inline-start": {
+                                      "$$type": "size",
+                                      "value": {
+                                        "size": 0,
+                                        "unit": "px"
+                                      }
+                                    }
+                                  }
+                                },
+                                "align-self": {
+                                  "$$type": "string",
+                                  "value": "flex-start"
+                                },
+                                "color": {
+                                  "$$type": "color",
+                                  "value": "#FFFFFF"
+                                },
+                                "font-size": {
+                                  "$$type": "size",
+                                  "value": {
+                                    "size": 15,
+                                    "unit": "px"
+                                  }
+                                },
+                                "background": {
+                                  "$$type": "background",
+                                  "value": {
+                                    "color": {
+                                      "$$type": "color",
+                                      "value": "transparent"
+                                    }
+                                  }
+                                },
+                                "padding": {
+                                  "$$type": "dimensions",
+                                  "value": {
+                                    "block-start": {
+                                      "$$type": "size",
+                                      "value": {
+                                        "size": 0,
+                                        "unit": "px"
+                                      }
+                                    },
+                                    "inline-end": {
+                                      "$$type": "size",
+                                      "value": {
+                                        "size": 0,
+                                        "unit": "px"
+                                      }
+                                    },
+                                    "block-end": {
+                                      "$$type": "size",
+                                      "value": {
+                                        "size": 4,
+                                        "unit": "px"
+                                      }
+                                    },
+                                    "inline-start": {
+                                      "$$type": "size",
+                                      "value": {
+                                        "size": 0,
+                                        "unit": "px"
+                                      }
+                                    }
+                                  }
+                                },
+                                "border-width": {
+                                  "$$type": "dimensions",
+                                  "value": {
+                                    "block-start": {
+                                      "$$type": "size",
+                                      "value": {
+                                        "size": 0,
+                                        "unit": "px"
+                                      }
+                                    },
+                                    "inline-end": {
+                                      "$$type": "size",
+                                      "value": {
+                                        "size": 0,
+                                        "unit": "px"
+                                      }
+                                    },
+                                    "block-end": {
+                                      "$$type": "size",
+                                      "value": {
+                                        "size": 1,
+                                        "unit": "px"
+                                      }
+                                    },
+                                    "inline-start": {
+                                      "$$type": "size",
+                                      "value": {
+                                        "size": 0,
+                                        "unit": "px"
+                                      }
+                                    }
+                                  }
+                                },
+                                "border-style": {
+                                  "$$type": "string",
+                                  "value": "solid"
+                                },
+                                "border-color": {
+                                  "$$type": "color",
+                                  "value": "#FFFFFF"
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      "widgetType": "e-button"
+                    }
+                  ],
+                  "styles": {
+                    "e-daf6c18": {
+                      "id": "e-daf6c18",
+                      "label": "local",
+                      "type": "class",
+                      "variants": [
+                        {
+                          "meta": {
+                            "breakpoint": "desktop",
+                            "state": null
+                          },
+                          "props": {
+                            "display": {
+                              "$$type": "string",
+                              "value": "flex"
+                            },
+                            "flex-grow": {
+                              "$$type": "number",
+                              "value": 1
+                            },
+                            "flex-shrink": {
+                              "$$type": "number",
+                              "value": 1
+                            },
+                            "flex-basis": {
+                              "$$type": "size",
+                              "value": {
+                                "size": 440,
+                                "unit": "px"
+                              }
+                            },
+                            "min-width": {
+                              "$$type": "size",
+                              "value": {
+                                "size": 0,
+                                "unit": "px"
+                              }
+                            },
+                            "min-height": {
+                              "$$type": "size",
+                              "value": {
+                                "size": 340,
+                                "unit": "px"
+                              }
+                            },
+                            "box-sizing": {
+                              "$$type": "string",
+                              "value": "border-box"
+                            },
+                            "padding": {
+                              "$$type": "dimensions",
+                              "value": {
+                                "block-start": {
+                                  "$$type": "size",
+                                  "value": {
+                                    "size": 40,
+                                    "unit": "px"
+                                  }
+                                },
+                                "inline-end": {
+                                  "$$type": "size",
+                                  "value": {
+                                    "size": 40,
+                                    "unit": "px"
+                                  }
+                                },
+                                "block-end": {
+                                  "$$type": "size",
+                                  "value": {
+                                    "size": 40,
+                                    "unit": "px"
+                                  }
+                                },
+                                "inline-start": {
+                                  "$$type": "size",
+                                  "value": {
+                                    "size": 40,
+                                    "unit": "px"
+                                  }
+                                }
+                              }
+                            },
+                            "flex-direction": {
+                              "$$type": "string",
+                              "value": "column"
+                            },
+                            "gap": {
+                              "$$type": "size",
+                              "value": {
+                                "size": 18,
+                                "unit": "px"
+                              }
+                            },
+                            "background": {
+                              "$$type": "background",
+                              "value": {
+                                "background-overlay": {
+                                  "$$type": "background-overlay",
+                                  "value": [
+                                    {
+                                      "$$type": "background-gradient-overlay",
+                                      "value": {
+                                        "type": {
+                                          "$$type": "string",
+                                          "value": "linear"
+                                        },
+                                        "angle": {
+                                          "$$type": "number",
+                                          "value": 135
+                                        },
+                                        "stops": {
+                                          "$$type": "gradient-color-stop",
+                                          "value": [
+                                            {
+                                              "$$type": "color-stop",
+                                              "value": {
+                                                "color": {
+                                                  "$$type": "color",
+                                                  "value": "#25A0A0"
+                                                },
+                                                "offset": {
+                                                  "$$type": "number",
+                                                  "value": 0
+                                                }
+                                              }
+                                            },
+                                            {
+                                              "$$type": "color-stop",
+                                              "value": {
+                                                "color": {
+                                                  "$$type": "color",
+                                                  "value": "#1A8C8C"
+                                                },
+                                                "offset": {
+                                                  "$$type": "number",
+                                                  "value": 100
+                                                }
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            },
+                            "color": {
+                              "$$type": "color",
+                              "value": "#FFFFFF"
+                            }
+                          }
+                        },
+                        {
+                          "meta": {
+                            "breakpoint": "mobile",
+                            "state": null
+                          },
+                          "props": {
+                            "padding": {
+                              "$$type": "dimensions",
+                              "value": {
+                                "block-start": {
+                                  "$$type": "size",
+                                  "value": {
+                                    "size": 24,
+                                    "unit": "px"
+                                  }
+                                },
+                                "inline-end": {
+                                  "$$type": "size",
+                                  "value": {
+                                    "size": 24,
+                                    "unit": "px"
+                                  }
+                                },
+                                "block-end": {
+                                  "$$type": "size",
+                                  "value": {
+                                    "size": 24,
+                                    "unit": "px"
+                                  }
+                                },
+                                "inline-start": {
+                                  "$$type": "size",
+                                  "value": {
+                                    "size": 24,
+                                    "unit": "px"
+                                  }
+                                }
+                              }
+                            },
+                            "min-height": {
+                              "$$type": "size",
+                              "value": {
+                                "size": 0,
+                                "unit": "px"
+                              }
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "id": "f45f153",
+                  "elType": "e-flexbox",
+                  "settings": {
+                    "classes": {
+                      "$$type": "classes",
+                      "value": [
+                        "e-cad9d77"
+                      ]
+                    }
+                  },
+                  "elements": [
+                    {
+                      "id": "1ee6a90",
+                      "elType": "e-flexbox",
+                      "settings": {
+                        "classes": {
+                          "$$type": "classes",
+                          "value": [
+                            "e-875c6ee"
+                          ]
+                        }
+                      },
+                      "elements": [
+                        {
+                          "id": "6899076",
+                          "elType": "widget",
+                          "settings": {
+                            "classes": {
+                              "$$type": "classes",
+                              "value": [
+                                "e-3ae8d0a"
+                              ]
+                            },
+                            "paragraph": {
+                              "$$type": "html",
+                              "value": "Angebot 02"
+                            }
+                          },
+                          "elements": [],
+                          "styles": {
+                            "e-3ae8d0a": {
+                              "id": "e-3ae8d0a",
+                              "label": "local",
+                              "type": "class",
+                              "variants": [
+                                {
+                                  "meta": {
+                                    "breakpoint": "desktop",
+                                    "state": null
+                                  },
+                                  "props": {
+                                    "margin": {
+                                      "$$type": "dimensions",
+                                      "value": {
+                                        "block-start": {
+                                          "$$type": "size",
+                                          "value": {
+                                            "size": 0,
+                                            "unit": "px"
+                                          }
+                                        },
+                                        "inline-end": {
+                                          "$$type": "size",
+                                          "value": {
+                                            "size": 0,
+                                            "unit": "px"
+                                          }
+                                        },
+                                        "block-end": {
+                                          "$$type": "size",
+                                          "value": {
+                                            "size": 0,
+                                            "unit": "px"
+                                          }
+                                        },
+                                        "inline-start": {
+                                          "$$type": "size",
+                                          "value": {
+                                            "size": 0,
+                                            "unit": "px"
+                                          }
+                                        }
+                                      }
+                                    },
+                                    "font-size": {
+                                      "$$type": "size",
+                                      "value": {
+                                        "size": 11,
+                                        "unit": "px"
+                                      }
+                                    },
+                                    "color": {
+                                      "$$type": "color",
+                                      "value": "#00416B"
+                                    },
+                                    "background": {
+                                      "$$type": "background",
+                                      "value": {
+                                        "color": {
+                                          "$$type": "color",
+                                          "value": "#57D3D3"
+                                        }
+                                      }
+                                    },
+                                    "font-weight": {
+                                      "$$type": "string",
+                                      "value": "500"
+                                    },
+                                    "letter-spacing": {
+                                      "$$type": "size",
+                                      "value": {
+                                        "size": 0.14,
+                                        "unit": "em"
+                                      }
+                                    },
+                                    "text-transform": {
+                                      "$$type": "string",
+                                      "value": "uppercase"
+                                    },
+                                    "padding": {
+                                      "$$type": "dimensions",
+                                      "value": {
+                                        "block-start": {
+                                          "$$type": "size",
+                                          "value": {
+                                            "size": 3,
+                                            "unit": "px"
+                                          }
+                                        },
+                                        "inline-end": {
+                                          "$$type": "size",
+                                          "value": {
+                                            "size": 8,
+                                            "unit": "px"
+                                          }
+                                        },
+                                        "block-end": {
+                                          "$$type": "size",
+                                          "value": {
+                                            "size": 3,
+                                            "unit": "px"
+                                          }
+                                        },
+                                        "inline-start": {
+                                          "$$type": "size",
+                                          "value": {
+                                            "size": 8,
+                                            "unit": "px"
+                                          }
+                                        }
+                                      }
+                                    },
+                                    "align-self": {
+                                      "$$type": "string",
+                                      "value": "flex-start"
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          },
+                          "widgetType": "e-paragraph"
+                        },
+                        {
+                          "id": "c7ac4c7",
+                          "elType": "widget",
+                          "widgetType": "html",
+                          "settings": {
+                            "html": "<span style=\"display:inline-flex;color:#57D3D3\"><svg width=\"30\" height=\"30\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M14 9a2 2 0 0 1-2 2H6l-4 4V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2z\"></path><path d=\"M18 9h2a2 2 0 0 1 2 2v11l-4-4h-6a2 2 0 0 1-2-2v-1\"></path></svg></span>"
+                          },
+                          "elements": [],
+                          "styles": {}
+                        }
+                      ],
+                      "styles": {
+                        "e-875c6ee": {
+                          "id": "e-875c6ee",
+                          "label": "local",
+                          "type": "class",
+                          "variants": [
+                            {
+                              "meta": {
+                                "breakpoint": "desktop",
+                                "state": null
+                              },
+                              "props": {
+                                "display": {
+                                  "$$type": "string",
+                                  "value": "flex"
+                                },
+                                "align-items": {
+                                  "$$type": "string",
+                                  "value": "center"
+                                },
+                                "justify-content": {
+                                  "$$type": "string",
+                                  "value": "space-between"
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    },
+                    {
+                      "id": "54a7fd0",
+                      "elType": "widget",
+                      "settings": {
+                        "classes": {
+                          "$$type": "classes",
+                          "value": [
+                            "e-4d6b09d"
+                          ]
+                        },
+                        "title": {
+                          "$$type": "html",
+                          "value": "Workshops"
+                        },
+                        "tag": {
+                          "$$type": "string",
+                          "value": "h3"
+                        }
+                      },
+                      "elements": [],
+                      "styles": {
+                        "e-4d6b09d": {
+                          "id": "e-4d6b09d",
+                          "label": "local",
+                          "type": "class",
+                          "variants": [
+                            {
+                              "meta": {
+                                "breakpoint": "desktop",
+                                "state": null
+                              },
+                              "props": {
+                                "margin": {
+                                  "$$type": "dimensions",
+                                  "value": {
+                                    "block-start": {
+                                      "$$type": "size",
+                                      "value": {
+                                        "size": 0,
+                                        "unit": "px"
+                                      }
+                                    },
+                                    "inline-end": {
+                                      "$$type": "size",
+                                      "value": {
+                                        "size": 0,
+                                        "unit": "px"
+                                      }
+                                    },
+                                    "block-end": {
+                                      "$$type": "size",
+                                      "value": {
+                                        "size": 0,
+                                        "unit": "px"
+                                      }
+                                    },
+                                    "inline-start": {
+                                      "$$type": "size",
+                                      "value": {
+                                        "size": 0,
+                                        "unit": "px"
+                                      }
+                                    }
+                                  }
+                                },
+                                "font-weight": {
+                                  "$$type": "string",
+                                  "value": "500"
+                                },
+                                "line-height": {
+                                  "$$type": "size",
+                                  "value": {
+                                    "size": 1.25,
+                                    "unit": "em"
+                                  }
+                                },
+                                "color": {
+                                  "$$type": "color",
+                                  "value": "#FFFFFF"
+                                },
+                                "font-family": {
+                                  "$$type": "string",
+                                  "value": "Gotham"
+                                },
+                                "font-size": {
+                                  "$$type": "size",
+                                  "value": {
+                                    "size": 34,
+                                    "unit": "px"
+                                  }
+                                }
+                              }
+                            },
+                            {
+                              "meta": {
+                                "breakpoint": "mobile",
+                                "state": null
+                              },
+                              "props": {
+                                "font-size": {
+                                  "$$type": "size",
+                                  "value": {
+                                    "size": 26,
+                                    "unit": "px"
+                                  }
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      "widgetType": "e-heading"
+                    },
+                    {
+                      "id": "5f5c7a8",
+                      "elType": "widget",
+                      "settings": {
+                        "classes": {
+                          "$$type": "classes",
+                          "value": [
+                            "e-66ba7ea"
+                          ]
+                        },
+                        "paragraph": {
+                          "$$type": "html",
+                          "value": "Kompakte Formate zu einzelnen Themen, für Teams und Einzelpersonen."
+                        }
+                      },
+                      "elements": [],
+                      "styles": {
+                        "e-66ba7ea": {
+                          "id": "e-66ba7ea",
+                          "label": "local",
+                          "type": "class",
+                          "variants": [
+                            {
+                              "meta": {
+                                "breakpoint": "desktop",
+                                "state": null
+                              },
+                              "props": {
+                                "margin": {
+                                  "$$type": "dimensions",
+                                  "value": {
+                                    "block-start": {
+                                      "$$type": "size",
+                                      "value": {
+                                        "size": 0,
+                                        "unit": "px"
+                                      }
+                                    },
+                                    "inline-end": {
+                                      "$$type": "size",
+                                      "value": {
+                                        "size": 0,
+                                        "unit": "px"
+                                      }
+                                    },
+                                    "block-end": {
+                                      "$$type": "size",
+                                      "value": {
+                                        "size": 0,
+                                        "unit": "px"
+                                      }
+                                    },
+                                    "inline-start": {
+                                      "$$type": "size",
+                                      "value": {
+                                        "size": 0,
+                                        "unit": "px"
+                                      }
+                                    }
+                                  }
+                                },
+                                "font-size": {
+                                  "$$type": "size",
+                                  "value": {
+                                    "size": 16,
+                                    "unit": "px"
+                                  }
+                                },
+                                "color": {
+                                  "$$type": "color",
+                                  "value": "#FFFFFF"
+                                },
+                                "max-width": {
+                                  "$$type": "size",
+                                  "value": {
+                                    "size": 420,
+                                    "unit": "px"
+                                  }
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      "widgetType": "e-paragraph"
+                    },
+                    {
+                      "id": "181d394",
+                      "elType": "widget",
+                      "settings": {
+                        "classes": {
+                          "$$type": "classes",
+                          "value": [
+                            "e-a5833a1"
+                          ]
+                        },
+                        "text": {
+                          "$$type": "string",
+                          "value": "Mehr erfahren →"
+                        },
+                        "link": {
+                          "$$type": "link",
+                          "value": {
+                            "destination": {
+                              "$$type": "url",
+                              "value": "#kontakt"
+                            },
+                            "isTargetBlank": null
+                          }
+                        }
+                      },
+                      "elements": [],
+                      "styles": {
+                        "e-a5833a1": {
+                          "id": "e-a5833a1",
+                          "label": "local",
+                          "type": "class",
+                          "variants": [
+                            {
+                              "meta": {
+                                "breakpoint": "desktop",
+                                "state": null
+                              },
+                              "props": {
+                                "text-decoration": {
+                                  "$$type": "string",
+                                  "value": "none"
+                                },
+                                "margin": {
+                                  "$$type": "dimensions",
+                                  "value": {
+                                    "block-start": {
+                                      "$$type": "size",
+                                      "value": {
+                                        "size": "",
+                                        "unit": "auto"
+                                      }
+                                    },
+                                    "inline-end": {
+                                      "$$type": "size",
+                                      "value": {
+                                        "size": 0,
+                                        "unit": "px"
+                                      }
+                                    },
+                                    "block-end": {
+                                      "$$type": "size",
+                                      "value": {
+                                        "size": 0,
+                                        "unit": "px"
+                                      }
+                                    },
+                                    "inline-start": {
+                                      "$$type": "size",
+                                      "value": {
+                                        "size": 0,
+                                        "unit": "px"
+                                      }
+                                    }
+                                  }
+                                },
+                                "align-self": {
+                                  "$$type": "string",
+                                  "value": "flex-start"
+                                },
+                                "color": {
+                                  "$$type": "color",
+                                  "value": "#57D3D3"
+                                },
+                                "font-size": {
+                                  "$$type": "size",
+                                  "value": {
+                                    "size": 15,
+                                    "unit": "px"
+                                  }
+                                },
+                                "background": {
+                                  "$$type": "background",
+                                  "value": {
+                                    "color": {
+                                      "$$type": "color",
+                                      "value": "transparent"
+                                    }
+                                  }
+                                },
+                                "padding": {
+                                  "$$type": "dimensions",
+                                  "value": {
+                                    "block-start": {
+                                      "$$type": "size",
+                                      "value": {
+                                        "size": 0,
+                                        "unit": "px"
+                                      }
+                                    },
+                                    "inline-end": {
+                                      "$$type": "size",
+                                      "value": {
+                                        "size": 0,
+                                        "unit": "px"
+                                      }
+                                    },
+                                    "block-end": {
+                                      "$$type": "size",
+                                      "value": {
+                                        "size": 4,
+                                        "unit": "px"
+                                      }
+                                    },
+                                    "inline-start": {
+                                      "$$type": "size",
+                                      "value": {
+                                        "size": 0,
+                                        "unit": "px"
+                                      }
+                                    }
+                                  }
+                                },
+                                "border-width": {
+                                  "$$type": "dimensions",
+                                  "value": {
+                                    "block-start": {
+                                      "$$type": "size",
+                                      "value": {
+                                        "size": 0,
+                                        "unit": "px"
+                                      }
+                                    },
+                                    "inline-end": {
+                                      "$$type": "size",
+                                      "value": {
+                                        "size": 0,
+                                        "unit": "px"
+                                      }
+                                    },
+                                    "block-end": {
+                                      "$$type": "size",
+                                      "value": {
+                                        "size": 1,
+                                        "unit": "px"
+                                      }
+                                    },
+                                    "inline-start": {
+                                      "$$type": "size",
+                                      "value": {
+                                        "size": 0,
+                                        "unit": "px"
+                                      }
+                                    }
+                                  }
+                                },
+                                "border-style": {
+                                  "$$type": "string",
+                                  "value": "solid"
+                                },
+                                "border-color": {
+                                  "$$type": "color",
+                                  "value": "#57D3D3"
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      "widgetType": "e-button"
+                    }
+                  ],
+                  "styles": {
+                    "e-cad9d77": {
+                      "id": "e-cad9d77",
+                      "label": "local",
+                      "type": "class",
+                      "variants": [
+                        {
+                          "meta": {
+                            "breakpoint": "desktop",
+                            "state": null
+                          },
+                          "props": {
+                            "display": {
+                              "$$type": "string",
+                              "value": "flex"
+                            },
+                            "flex-grow": {
+                              "$$type": "number",
+                              "value": 1
+                            },
+                            "flex-shrink": {
+                              "$$type": "number",
+                              "value": 1
+                            },
+                            "flex-basis": {
+                              "$$type": "size",
+                              "value": {
+                                "size": 440,
+                                "unit": "px"
+                              }
+                            },
+                            "min-width": {
+                              "$$type": "size",
+                              "value": {
+                                "size": 0,
+                                "unit": "px"
+                              }
+                            },
+                            "min-height": {
+                              "$$type": "size",
+                              "value": {
+                                "size": 340,
+                                "unit": "px"
+                              }
+                            },
+                            "box-sizing": {
+                              "$$type": "string",
+                              "value": "border-box"
+                            },
+                            "padding": {
+                              "$$type": "dimensions",
+                              "value": {
+                                "block-start": {
+                                  "$$type": "size",
+                                  "value": {
+                                    "size": 40,
+                                    "unit": "px"
+                                  }
+                                },
+                                "inline-end": {
+                                  "$$type": "size",
+                                  "value": {
+                                    "size": 40,
+                                    "unit": "px"
+                                  }
+                                },
+                                "block-end": {
+                                  "$$type": "size",
+                                  "value": {
+                                    "size": 40,
+                                    "unit": "px"
+                                  }
+                                },
+                                "inline-start": {
+                                  "$$type": "size",
+                                  "value": {
+                                    "size": 40,
+                                    "unit": "px"
+                                  }
+                                }
+                              }
+                            },
+                            "flex-direction": {
+                              "$$type": "string",
+                              "value": "column"
+                            },
+                            "gap": {
+                              "$$type": "size",
+                              "value": {
+                                "size": 18,
+                                "unit": "px"
+                              }
+                            },
+                            "background": {
+                              "$$type": "background",
+                              "value": {
+                                "background-overlay": {
+                                  "$$type": "background-overlay",
+                                  "value": [
+                                    {
+                                      "$$type": "background-gradient-overlay",
+                                      "value": {
+                                        "type": {
+                                          "$$type": "string",
+                                          "value": "linear"
+                                        },
+                                        "angle": {
+                                          "$$type": "number",
+                                          "value": 135
+                                        },
+                                        "stops": {
+                                          "$$type": "gradient-color-stop",
+                                          "value": [
+                                            {
+                                              "$$type": "color-stop",
+                                              "value": {
+                                                "color": {
+                                                  "$$type": "color",
+                                                  "value": "#00416B"
+                                                },
+                                                "offset": {
+                                                  "$$type": "number",
+                                                  "value": 0
+                                                }
+                                              }
+                                            },
+                                            {
+                                              "$$type": "color-stop",
+                                              "value": {
+                                                "color": {
+                                                  "$$type": "color",
+                                                  "value": "#00314F"
+                                                },
+                                                "offset": {
+                                                  "$$type": "number",
+                                                  "value": 100
+                                                }
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            },
+                            "color": {
+                              "$$type": "color",
+                              "value": "#FFFFFF"
+                            }
+                          }
+                        },
+                        {
+                          "meta": {
+                            "breakpoint": "mobile",
+                            "state": null
+                          },
+                          "props": {
+                            "padding": {
+                              "$$type": "dimensions",
+                              "value": {
+                                "block-start": {
+                                  "$$type": "size",
+                                  "value": {
+                                    "size": 24,
+                                    "unit": "px"
+                                  }
+                                },
+                                "inline-end": {
+                                  "$$type": "size",
+                                  "value": {
+                                    "size": 24,
+                                    "unit": "px"
+                                  }
+                                },
+                                "block-end": {
+                                  "$$type": "size",
+                                  "value": {
+                                    "size": 24,
+                                    "unit": "px"
+                                  }
+                                },
+                                "inline-start": {
+                                  "$$type": "size",
+                                  "value": {
+                                    "size": 24,
+                                    "unit": "px"
+                                  }
+                                }
+                              }
+                            },
+                            "min-height": {
+                              "$$type": "size",
+                              "value": {
+                                "size": 0,
+                                "unit": "px"
+                              }
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "id": "9619ce2",
+                  "elType": "e-flexbox",
+                  "settings": {
+                    "classes": {
+                      "$$type": "classes",
+                      "value": [
+                        "e-d77db63"
+                      ]
+                    }
+                  },
+                  "elements": [
+                    {
+                      "id": "97bf88f",
+                      "elType": "e-flexbox",
+                      "settings": {
+                        "classes": {
+                          "$$type": "classes",
+                          "value": [
+                            "e-dba8425"
+                          ]
+                        }
+                      },
+                      "elements": [
+                        {
+                          "id": "79556a1",
+                          "elType": "widget",
+                          "settings": {
+                            "classes": {
+                              "$$type": "classes",
+                              "value": [
+                                "e-8eee1ca"
+                              ]
+                            },
+                            "paragraph": {
+                              "$$type": "html",
+                              "value": "Angebot 03"
+                            }
+                          },
+                          "elements": [],
+                          "styles": {
+                            "e-8eee1ca": {
+                              "id": "e-8eee1ca",
+                              "label": "local",
+                              "type": "class",
+                              "variants": [
+                                {
+                                  "meta": {
+                                    "breakpoint": "desktop",
+                                    "state": null
+                                  },
+                                  "props": {
+                                    "margin": {
+                                      "$$type": "dimensions",
+                                      "value": {
+                                        "block-start": {
+                                          "$$type": "size",
+                                          "value": {
+                                            "size": 0,
+                                            "unit": "px"
+                                          }
+                                        },
+                                        "inline-end": {
+                                          "$$type": "size",
+                                          "value": {
+                                            "size": 0,
+                                            "unit": "px"
+                                          }
+                                        },
+                                        "block-end": {
+                                          "$$type": "size",
+                                          "value": {
+                                            "size": 0,
+                                            "unit": "px"
+                                          }
+                                        },
+                                        "inline-start": {
+                                          "$$type": "size",
+                                          "value": {
+                                            "size": 0,
+                                            "unit": "px"
+                                          }
+                                        }
+                                      }
+                                    },
+                                    "font-size": {
+                                      "$$type": "size",
+                                      "value": {
+                                        "size": 11,
+                                        "unit": "px"
+                                      }
+                                    },
+                                    "color": {
+                                      "$$type": "color",
+                                      "value": "#00416B"
+                                    },
+                                    "background": {
+                                      "$$type": "background",
+                                      "value": {
+                                        "color": {
+                                          "$$type": "color",
+                                          "value": "#57D3D3"
+                                        }
+                                      }
+                                    },
+                                    "font-weight": {
+                                      "$$type": "string",
+                                      "value": "500"
+                                    },
+                                    "letter-spacing": {
+                                      "$$type": "size",
+                                      "value": {
+                                        "size": 0.14,
+                                        "unit": "em"
+                                      }
+                                    },
+                                    "text-transform": {
+                                      "$$type": "string",
+                                      "value": "uppercase"
+                                    },
+                                    "padding": {
+                                      "$$type": "dimensions",
+                                      "value": {
+                                        "block-start": {
+                                          "$$type": "size",
+                                          "value": {
+                                            "size": 3,
+                                            "unit": "px"
+                                          }
+                                        },
+                                        "inline-end": {
+                                          "$$type": "size",
+                                          "value": {
+                                            "size": 8,
+                                            "unit": "px"
+                                          }
+                                        },
+                                        "block-end": {
+                                          "$$type": "size",
+                                          "value": {
+                                            "size": 3,
+                                            "unit": "px"
+                                          }
+                                        },
+                                        "inline-start": {
+                                          "$$type": "size",
+                                          "value": {
+                                            "size": 8,
+                                            "unit": "px"
+                                          }
+                                        }
+                                      }
+                                    },
+                                    "align-self": {
+                                      "$$type": "string",
+                                      "value": "flex-start"
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          },
+                          "widgetType": "e-paragraph"
+                        },
+                        {
+                          "id": "2ab63ba",
+                          "elType": "widget",
+                          "widgetType": "html",
+                          "settings": {
+                            "html": "<span style=\"display:inline-flex;color:#57D3D3\"><svg width=\"30\" height=\"30\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M7 7h10v10\"></path><path d=\"M7 17 17 7\"></path></svg></span>"
+                          },
+                          "elements": [],
+                          "styles": {}
+                        }
+                      ],
+                      "styles": {
+                        "e-dba8425": {
+                          "id": "e-dba8425",
+                          "label": "local",
+                          "type": "class",
+                          "variants": [
+                            {
+                              "meta": {
+                                "breakpoint": "desktop",
+                                "state": null
+                              },
+                              "props": {
+                                "display": {
+                                  "$$type": "string",
+                                  "value": "flex"
+                                },
+                                "align-items": {
+                                  "$$type": "string",
+                                  "value": "center"
+                                },
+                                "justify-content": {
+                                  "$$type": "string",
+                                  "value": "space-between"
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    },
+                    {
+                      "id": "ec9f388",
+                      "elType": "widget",
+                      "settings": {
+                        "classes": {
+                          "$$type": "classes",
+                          "value": [
+                            "e-e0ffbed"
+                          ]
+                        },
+                        "title": {
+                          "$$type": "html",
+                          "value": "Coaching-Tools"
+                        },
+                        "tag": {
+                          "$$type": "string",
+                          "value": "h3"
+                        }
+                      },
+                      "elements": [],
+                      "styles": {
+                        "e-e0ffbed": {
+                          "id": "e-e0ffbed",
+                          "label": "local",
+                          "type": "class",
+                          "variants": [
+                            {
+                              "meta": {
+                                "breakpoint": "desktop",
+                                "state": null
+                              },
+                              "props": {
+                                "margin": {
+                                  "$$type": "dimensions",
+                                  "value": {
+                                    "block-start": {
+                                      "$$type": "size",
+                                      "value": {
+                                        "size": 0,
+                                        "unit": "px"
+                                      }
+                                    },
+                                    "inline-end": {
+                                      "$$type": "size",
+                                      "value": {
+                                        "size": 0,
+                                        "unit": "px"
+                                      }
+                                    },
+                                    "block-end": {
+                                      "$$type": "size",
+                                      "value": {
+                                        "size": 0,
+                                        "unit": "px"
+                                      }
+                                    },
+                                    "inline-start": {
+                                      "$$type": "size",
+                                      "value": {
+                                        "size": 0,
+                                        "unit": "px"
+                                      }
+                                    }
+                                  }
+                                },
+                                "font-weight": {
+                                  "$$type": "string",
+                                  "value": "500"
+                                },
+                                "line-height": {
+                                  "$$type": "size",
+                                  "value": {
+                                    "size": 1.25,
+                                    "unit": "em"
+                                  }
+                                },
+                                "color": {
+                                  "$$type": "color",
+                                  "value": "#FFFFFF"
+                                },
+                                "font-family": {
+                                  "$$type": "string",
+                                  "value": "Gotham"
+                                },
+                                "font-size": {
+                                  "$$type": "size",
+                                  "value": {
+                                    "size": 34,
+                                    "unit": "px"
+                                  }
+                                }
+                              }
+                            },
+                            {
+                              "meta": {
+                                "breakpoint": "mobile",
+                                "state": null
+                              },
+                              "props": {
+                                "font-size": {
+                                  "$$type": "size",
+                                  "value": {
+                                    "size": 26,
+                                    "unit": "px"
+                                  }
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      "widgetType": "e-heading"
+                    },
+                    {
+                      "id": "01423c5",
+                      "elType": "widget",
+                      "settings": {
+                        "classes": {
+                          "$$type": "classes",
+                          "value": [
+                            "e-0372dae"
+                          ]
+                        },
+                        "paragraph": {
+                          "$$type": "html",
+                          "value": "Erprobte Methoden und Materialien, die Sie direkt in Ihrer Praxis einsetzen."
+                        }
+                      },
+                      "elements": [],
+                      "styles": {
+                        "e-0372dae": {
+                          "id": "e-0372dae",
+                          "label": "local",
+                          "type": "class",
+                          "variants": [
+                            {
+                              "meta": {
+                                "breakpoint": "desktop",
+                                "state": null
+                              },
+                              "props": {
+                                "margin": {
+                                  "$$type": "dimensions",
+                                  "value": {
+                                    "block-start": {
+                                      "$$type": "size",
+                                      "value": {
+                                        "size": 0,
+                                        "unit": "px"
+                                      }
+                                    },
+                                    "inline-end": {
+                                      "$$type": "size",
+                                      "value": {
+                                        "size": 0,
+                                        "unit": "px"
+                                      }
+                                    },
+                                    "block-end": {
+                                      "$$type": "size",
+                                      "value": {
+                                        "size": 0,
+                                        "unit": "px"
+                                      }
+                                    },
+                                    "inline-start": {
+                                      "$$type": "size",
+                                      "value": {
+                                        "size": 0,
+                                        "unit": "px"
+                                      }
+                                    }
+                                  }
+                                },
+                                "font-size": {
+                                  "$$type": "size",
+                                  "value": {
+                                    "size": 16,
+                                    "unit": "px"
+                                  }
+                                },
+                                "color": {
+                                  "$$type": "color",
+                                  "value": "#FFFFFF"
+                                },
+                                "max-width": {
+                                  "$$type": "size",
+                                  "value": {
+                                    "size": 420,
+                                    "unit": "px"
+                                  }
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      "widgetType": "e-paragraph"
+                    },
+                    {
+                      "id": "4ce661f",
+                      "elType": "widget",
+                      "settings": {
+                        "classes": {
+                          "$$type": "classes",
+                          "value": [
+                            "e-0334a27"
+                          ]
+                        },
+                        "text": {
+                          "$$type": "string",
+                          "value": "Mehr erfahren →"
+                        },
+                        "link": {
+                          "$$type": "link",
+                          "value": {
+                            "destination": {
+                              "$$type": "url",
+                              "value": "#kontakt"
+                            },
+                            "isTargetBlank": null
+                          }
+                        }
+                      },
+                      "elements": [],
+                      "styles": {
+                        "e-0334a27": {
+                          "id": "e-0334a27",
+                          "label": "local",
+                          "type": "class",
+                          "variants": [
+                            {
+                              "meta": {
+                                "breakpoint": "desktop",
+                                "state": null
+                              },
+                              "props": {
+                                "text-decoration": {
+                                  "$$type": "string",
+                                  "value": "none"
+                                },
+                                "margin": {
+                                  "$$type": "dimensions",
+                                  "value": {
+                                    "block-start": {
+                                      "$$type": "size",
+                                      "value": {
+                                        "size": "",
+                                        "unit": "auto"
+                                      }
+                                    },
+                                    "inline-end": {
+                                      "$$type": "size",
+                                      "value": {
+                                        "size": 0,
+                                        "unit": "px"
+                                      }
+                                    },
+                                    "block-end": {
+                                      "$$type": "size",
+                                      "value": {
+                                        "size": 0,
+                                        "unit": "px"
+                                      }
+                                    },
+                                    "inline-start": {
+                                      "$$type": "size",
+                                      "value": {
+                                        "size": 0,
+                                        "unit": "px"
+                                      }
+                                    }
+                                  }
+                                },
+                                "align-self": {
+                                  "$$type": "string",
+                                  "value": "flex-start"
+                                },
+                                "color": {
+                                  "$$type": "color",
+                                  "value": "#57D3D3"
+                                },
+                                "font-size": {
+                                  "$$type": "size",
+                                  "value": {
+                                    "size": 15,
+                                    "unit": "px"
+                                  }
+                                },
+                                "background": {
+                                  "$$type": "background",
+                                  "value": {
+                                    "color": {
+                                      "$$type": "color",
+                                      "value": "transparent"
+                                    }
+                                  }
+                                },
+                                "padding": {
+                                  "$$type": "dimensions",
+                                  "value": {
+                                    "block-start": {
+                                      "$$type": "size",
+                                      "value": {
+                                        "size": 0,
+                                        "unit": "px"
+                                      }
+                                    },
+                                    "inline-end": {
+                                      "$$type": "size",
+                                      "value": {
+                                        "size": 0,
+                                        "unit": "px"
+                                      }
+                                    },
+                                    "block-end": {
+                                      "$$type": "size",
+                                      "value": {
+                                        "size": 4,
+                                        "unit": "px"
+                                      }
+                                    },
+                                    "inline-start": {
+                                      "$$type": "size",
+                                      "value": {
+                                        "size": 0,
+                                        "unit": "px"
+                                      }
+                                    }
+                                  }
+                                },
+                                "border-width": {
+                                  "$$type": "dimensions",
+                                  "value": {
+                                    "block-start": {
+                                      "$$type": "size",
+                                      "value": {
+                                        "size": 0,
+                                        "unit": "px"
+                                      }
+                                    },
+                                    "inline-end": {
+                                      "$$type": "size",
+                                      "value": {
+                                        "size": 0,
+                                        "unit": "px"
+                                      }
+                                    },
+                                    "block-end": {
+                                      "$$type": "size",
+                                      "value": {
+                                        "size": 1,
+                                        "unit": "px"
+                                      }
+                                    },
+                                    "inline-start": {
+                                      "$$type": "size",
+                                      "value": {
+                                        "size": 0,
+                                        "unit": "px"
+                                      }
+                                    }
+                                  }
+                                },
+                                "border-style": {
+                                  "$$type": "string",
+                                  "value": "solid"
+                                },
+                                "border-color": {
+                                  "$$type": "color",
+                                  "value": "#57D3D3"
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      "widgetType": "e-button"
+                    }
+                  ],
+                  "styles": {
+                    "e-d77db63": {
+                      "id": "e-d77db63",
+                      "label": "local",
+                      "type": "class",
+                      "variants": [
+                        {
+                          "meta": {
+                            "breakpoint": "desktop",
+                            "state": null
+                          },
+                          "props": {
+                            "display": {
+                              "$$type": "string",
+                              "value": "flex"
+                            },
+                            "flex-grow": {
+                              "$$type": "number",
+                              "value": 1
+                            },
+                            "flex-shrink": {
+                              "$$type": "number",
+                              "value": 1
+                            },
+                            "flex-basis": {
+                              "$$type": "size",
+                              "value": {
+                                "size": 440,
+                                "unit": "px"
+                              }
+                            },
+                            "min-width": {
+                              "$$type": "size",
+                              "value": {
+                                "size": 0,
+                                "unit": "px"
+                              }
+                            },
+                            "min-height": {
+                              "$$type": "size",
+                              "value": {
+                                "size": 340,
+                                "unit": "px"
+                              }
+                            },
+                            "box-sizing": {
+                              "$$type": "string",
+                              "value": "border-box"
+                            },
+                            "padding": {
+                              "$$type": "dimensions",
+                              "value": {
+                                "block-start": {
+                                  "$$type": "size",
+                                  "value": {
+                                    "size": 40,
+                                    "unit": "px"
+                                  }
+                                },
+                                "inline-end": {
+                                  "$$type": "size",
+                                  "value": {
+                                    "size": 40,
+                                    "unit": "px"
+                                  }
+                                },
+                                "block-end": {
+                                  "$$type": "size",
+                                  "value": {
+                                    "size": 40,
+                                    "unit": "px"
+                                  }
+                                },
+                                "inline-start": {
+                                  "$$type": "size",
+                                  "value": {
+                                    "size": 40,
+                                    "unit": "px"
+                                  }
+                                }
+                              }
+                            },
+                            "flex-direction": {
+                              "$$type": "string",
+                              "value": "column"
+                            },
+                            "gap": {
+                              "$$type": "size",
+                              "value": {
+                                "size": 18,
+                                "unit": "px"
+                              }
+                            },
+                            "background": {
+                              "$$type": "background",
+                              "value": {
+                                "background-overlay": {
+                                  "$$type": "background-overlay",
+                                  "value": [
+                                    {
+                                      "$$type": "background-gradient-overlay",
+                                      "value": {
+                                        "type": {
+                                          "$$type": "string",
+                                          "value": "linear"
+                                        },
+                                        "angle": {
+                                          "$$type": "number",
+                                          "value": 135
+                                        },
+                                        "stops": {
+                                          "$$type": "gradient-color-stop",
+                                          "value": [
+                                            {
+                                              "$$type": "color-stop",
+                                              "value": {
+                                                "color": {
+                                                  "$$type": "color",
+                                                  "value": "#00416B"
+                                                },
+                                                "offset": {
+                                                  "$$type": "number",
+                                                  "value": 0
+                                                }
+                                              }
+                                            },
+                                            {
+                                              "$$type": "color-stop",
+                                              "value": {
+                                                "color": {
+                                                  "$$type": "color",
+                                                  "value": "#25A0A0"
+                                                },
+                                                "offset": {
+                                                  "$$type": "number",
+                                                  "value": 100
+                                                }
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            },
+                            "color": {
+                              "$$type": "color",
+                              "value": "#FFFFFF"
+                            }
+                          }
+                        },
+                        {
+                          "meta": {
+                            "breakpoint": "mobile",
+                            "state": null
+                          },
+                          "props": {
+                            "padding": {
+                              "$$type": "dimensions",
+                              "value": {
+                                "block-start": {
+                                  "$$type": "size",
+                                  "value": {
+                                    "size": 24,
+                                    "unit": "px"
+                                  }
+                                },
+                                "inline-end": {
+                                  "$$type": "size",
+                                  "value": {
+                                    "size": 24,
+                                    "unit": "px"
+                                  }
+                                },
+                                "block-end": {
+                                  "$$type": "size",
+                                  "value": {
+                                    "size": 24,
+                                    "unit": "px"
+                                  }
+                                },
+                                "inline-start": {
+                                  "$$type": "size",
+                                  "value": {
+                                    "size": 24,
+                                    "unit": "px"
+                                  }
+                                }
+                              }
+                            },
+                            "min-height": {
+                              "$$type": "size",
+                              "value": {
+                                "size": 0,
+                                "unit": "px"
+                              }
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "id": "8e7e255",
+                  "elType": "e-flexbox",
+                  "settings": {
+                    "classes": {
+                      "$$type": "classes",
+                      "value": [
+                        "e-697d799"
+                      ]
+                    }
+                  },
+                  "elements": [
+                    {
+                      "id": "ac81c81",
+                      "elType": "e-flexbox",
+                      "settings": {
+                        "classes": {
+                          "$$type": "classes",
+                          "value": [
+                            "e-a44dce2"
+                          ]
+                        }
+                      },
+                      "elements": [
+                        {
+                          "id": "1e26fb7",
+                          "elType": "widget",
+                          "settings": {
+                            "classes": {
+                              "$$type": "classes",
+                              "value": [
+                                "e-58e23f3"
+                              ]
+                            },
+                            "paragraph": {
+                              "$$type": "html",
+                              "value": "Angebot 04"
+                            }
+                          },
+                          "elements": [],
+                          "styles": {
+                            "e-58e23f3": {
+                              "id": "e-58e23f3",
+                              "label": "local",
+                              "type": "class",
+                              "variants": [
+                                {
+                                  "meta": {
+                                    "breakpoint": "desktop",
+                                    "state": null
+                                  },
+                                  "props": {
+                                    "margin": {
+                                      "$$type": "dimensions",
+                                      "value": {
+                                        "block-start": {
+                                          "$$type": "size",
+                                          "value": {
+                                            "size": 0,
+                                            "unit": "px"
+                                          }
+                                        },
+                                        "inline-end": {
+                                          "$$type": "size",
+                                          "value": {
+                                            "size": 0,
+                                            "unit": "px"
+                                          }
+                                        },
+                                        "block-end": {
+                                          "$$type": "size",
+                                          "value": {
+                                            "size": 0,
+                                            "unit": "px"
+                                          }
+                                        },
+                                        "inline-start": {
+                                          "$$type": "size",
+                                          "value": {
+                                            "size": 0,
+                                            "unit": "px"
+                                          }
+                                        }
+                                      }
+                                    },
+                                    "font-size": {
+                                      "$$type": "size",
+                                      "value": {
+                                        "size": 11,
+                                        "unit": "px"
+                                      }
+                                    },
+                                    "color": {
+                                      "$$type": "color",
+                                      "value": "#00416B"
+                                    },
+                                    "background": {
+                                      "$$type": "background",
+                                      "value": {
+                                        "color": {
+                                          "$$type": "color",
+                                          "value": "#57D3D3"
+                                        }
+                                      }
+                                    },
+                                    "font-weight": {
+                                      "$$type": "string",
+                                      "value": "500"
+                                    },
+                                    "letter-spacing": {
+                                      "$$type": "size",
+                                      "value": {
+                                        "size": 0.14,
+                                        "unit": "em"
+                                      }
+                                    },
+                                    "text-transform": {
+                                      "$$type": "string",
+                                      "value": "uppercase"
+                                    },
+                                    "padding": {
+                                      "$$type": "dimensions",
+                                      "value": {
+                                        "block-start": {
+                                          "$$type": "size",
+                                          "value": {
+                                            "size": 3,
+                                            "unit": "px"
+                                          }
+                                        },
+                                        "inline-end": {
+                                          "$$type": "size",
+                                          "value": {
+                                            "size": 8,
+                                            "unit": "px"
+                                          }
+                                        },
+                                        "block-end": {
+                                          "$$type": "size",
+                                          "value": {
+                                            "size": 3,
+                                            "unit": "px"
+                                          }
+                                        },
+                                        "inline-start": {
+                                          "$$type": "size",
+                                          "value": {
+                                            "size": 8,
+                                            "unit": "px"
+                                          }
+                                        }
+                                      }
+                                    },
+                                    "align-self": {
+                                      "$$type": "string",
+                                      "value": "flex-start"
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          },
+                          "widgetType": "e-paragraph"
+                        },
+                        {
+                          "id": "69e5bca",
+                          "elType": "widget",
+                          "widgetType": "html",
+                          "settings": {
+                            "html": "<span style=\"display:inline-flex;color:#57D3D3\"><svg width=\"30\" height=\"30\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z\"></path><path d=\"m9 12 2 2 4-4\"></path></svg></span>"
+                          },
+                          "elements": [],
+                          "styles": {}
+                        }
+                      ],
+                      "styles": {
+                        "e-a44dce2": {
+                          "id": "e-a44dce2",
+                          "label": "local",
+                          "type": "class",
+                          "variants": [
+                            {
+                              "meta": {
+                                "breakpoint": "desktop",
+                                "state": null
+                              },
+                              "props": {
+                                "display": {
+                                  "$$type": "string",
+                                  "value": "flex"
+                                },
+                                "align-items": {
+                                  "$$type": "string",
+                                  "value": "center"
+                                },
+                                "justify-content": {
+                                  "$$type": "string",
+                                  "value": "space-between"
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    },
+                    {
+                      "id": "5ca3ef3",
+                      "elType": "widget",
+                      "settings": {
+                        "classes": {
+                          "$$type": "classes",
+                          "value": [
+                            "e-2be34b5"
+                          ]
+                        },
+                        "title": {
+                          "$$type": "html",
+                          "value": "Zertifizierungen"
+                        },
+                        "tag": {
+                          "$$type": "string",
+                          "value": "h3"
+                        }
+                      },
+                      "elements": [],
+                      "styles": {
+                        "e-2be34b5": {
+                          "id": "e-2be34b5",
+                          "label": "local",
+                          "type": "class",
+                          "variants": [
+                            {
+                              "meta": {
+                                "breakpoint": "desktop",
+                                "state": null
+                              },
+                              "props": {
+                                "margin": {
+                                  "$$type": "dimensions",
+                                  "value": {
+                                    "block-start": {
+                                      "$$type": "size",
+                                      "value": {
+                                        "size": 0,
+                                        "unit": "px"
+                                      }
+                                    },
+                                    "inline-end": {
+                                      "$$type": "size",
+                                      "value": {
+                                        "size": 0,
+                                        "unit": "px"
+                                      }
+                                    },
+                                    "block-end": {
+                                      "$$type": "size",
+                                      "value": {
+                                        "size": 0,
+                                        "unit": "px"
+                                      }
+                                    },
+                                    "inline-start": {
+                                      "$$type": "size",
+                                      "value": {
+                                        "size": 0,
+                                        "unit": "px"
+                                      }
+                                    }
+                                  }
+                                },
+                                "font-weight": {
+                                  "$$type": "string",
+                                  "value": "500"
+                                },
+                                "line-height": {
+                                  "$$type": "size",
+                                  "value": {
+                                    "size": 1.25,
+                                    "unit": "em"
+                                  }
+                                },
+                                "color": {
+                                  "$$type": "color",
+                                  "value": "#FFFFFF"
+                                },
+                                "font-family": {
+                                  "$$type": "string",
+                                  "value": "Gotham"
+                                },
+                                "font-size": {
+                                  "$$type": "size",
+                                  "value": {
+                                    "size": 34,
+                                    "unit": "px"
+                                  }
+                                }
+                              }
+                            },
+                            {
+                              "meta": {
+                                "breakpoint": "mobile",
+                                "state": null
+                              },
+                              "props": {
+                                "font-size": {
+                                  "$$type": "size",
+                                  "value": {
+                                    "size": 26,
+                                    "unit": "px"
+                                  }
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      "widgetType": "e-heading"
+                    },
+                    {
+                      "id": "c130624",
+                      "elType": "widget",
+                      "settings": {
+                        "classes": {
+                          "$$type": "classes",
+                          "value": [
+                            "e-a8ae46a"
+                          ]
+                        },
+                        "paragraph": {
+                          "$$type": "html",
+                          "value": "Ein nachvollziehbarer Abschluss, der Ihre Kompetenz belegt. [Anerkennung noch bestätigen]"
+                        }
+                      },
+                      "elements": [],
+                      "styles": {
+                        "e-a8ae46a": {
+                          "id": "e-a8ae46a",
+                          "label": "local",
+                          "type": "class",
+                          "variants": [
+                            {
+                              "meta": {
+                                "breakpoint": "desktop",
+                                "state": null
+                              },
+                              "props": {
+                                "margin": {
+                                  "$$type": "dimensions",
+                                  "value": {
+                                    "block-start": {
+                                      "$$type": "size",
+                                      "value": {
+                                        "size": 0,
+                                        "unit": "px"
+                                      }
+                                    },
+                                    "inline-end": {
+                                      "$$type": "size",
+                                      "value": {
+                                        "size": 0,
+                                        "unit": "px"
+                                      }
+                                    },
+                                    "block-end": {
+                                      "$$type": "size",
+                                      "value": {
+                                        "size": 0,
+                                        "unit": "px"
+                                      }
+                                    },
+                                    "inline-start": {
+                                      "$$type": "size",
+                                      "value": {
+                                        "size": 0,
+                                        "unit": "px"
+                                      }
+                                    }
+                                  }
+                                },
+                                "font-size": {
+                                  "$$type": "size",
+                                  "value": {
+                                    "size": 16,
+                                    "unit": "px"
+                                  }
+                                },
+                                "color": {
+                                  "$$type": "color",
+                                  "value": "#FFFFFF"
+                                },
+                                "max-width": {
+                                  "$$type": "size",
+                                  "value": {
+                                    "size": 420,
+                                    "unit": "px"
+                                  }
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      "widgetType": "e-paragraph"
+                    },
+                    {
+                      "id": "c5871be",
+                      "elType": "widget",
+                      "settings": {
+                        "classes": {
+                          "$$type": "classes",
+                          "value": [
+                            "e-bd2860d"
+                          ]
+                        },
+                        "text": {
+                          "$$type": "string",
+                          "value": "Mehr erfahren →"
+                        },
+                        "link": {
+                          "$$type": "link",
+                          "value": {
+                            "destination": {
+                              "$$type": "url",
+                              "value": "#ausbildungen"
+                            },
+                            "isTargetBlank": null
+                          }
+                        }
+                      },
+                      "elements": [],
+                      "styles": {
+                        "e-bd2860d": {
+                          "id": "e-bd2860d",
+                          "label": "local",
+                          "type": "class",
+                          "variants": [
+                            {
+                              "meta": {
+                                "breakpoint": "desktop",
+                                "state": null
+                              },
+                              "props": {
+                                "text-decoration": {
+                                  "$$type": "string",
+                                  "value": "none"
+                                },
+                                "margin": {
+                                  "$$type": "dimensions",
+                                  "value": {
+                                    "block-start": {
+                                      "$$type": "size",
+                                      "value": {
+                                        "size": "",
+                                        "unit": "auto"
+                                      }
+                                    },
+                                    "inline-end": {
+                                      "$$type": "size",
+                                      "value": {
+                                        "size": 0,
+                                        "unit": "px"
+                                      }
+                                    },
+                                    "block-end": {
+                                      "$$type": "size",
+                                      "value": {
+                                        "size": 0,
+                                        "unit": "px"
+                                      }
+                                    },
+                                    "inline-start": {
+                                      "$$type": "size",
+                                      "value": {
+                                        "size": 0,
+                                        "unit": "px"
+                                      }
+                                    }
+                                  }
+                                },
+                                "align-self": {
+                                  "$$type": "string",
+                                  "value": "flex-start"
+                                },
+                                "color": {
+                                  "$$type": "color",
+                                  "value": "#57D3D3"
+                                },
+                                "font-size": {
+                                  "$$type": "size",
+                                  "value": {
+                                    "size": 15,
+                                    "unit": "px"
+                                  }
+                                },
+                                "background": {
+                                  "$$type": "background",
+                                  "value": {
+                                    "color": {
+                                      "$$type": "color",
+                                      "value": "transparent"
+                                    }
+                                  }
+                                },
+                                "padding": {
+                                  "$$type": "dimensions",
+                                  "value": {
+                                    "block-start": {
+                                      "$$type": "size",
+                                      "value": {
+                                        "size": 0,
+                                        "unit": "px"
+                                      }
+                                    },
+                                    "inline-end": {
+                                      "$$type": "size",
+                                      "value": {
+                                        "size": 0,
+                                        "unit": "px"
+                                      }
+                                    },
+                                    "block-end": {
+                                      "$$type": "size",
+                                      "value": {
+                                        "size": 4,
+                                        "unit": "px"
+                                      }
+                                    },
+                                    "inline-start": {
+                                      "$$type": "size",
+                                      "value": {
+                                        "size": 0,
+                                        "unit": "px"
+                                      }
+                                    }
+                                  }
+                                },
+                                "border-width": {
+                                  "$$type": "dimensions",
+                                  "value": {
+                                    "block-start": {
+                                      "$$type": "size",
+                                      "value": {
+                                        "size": 0,
+                                        "unit": "px"
+                                      }
+                                    },
+                                    "inline-end": {
+                                      "$$type": "size",
+                                      "value": {
+                                        "size": 0,
+                                        "unit": "px"
+                                      }
+                                    },
+                                    "block-end": {
+                                      "$$type": "size",
+                                      "value": {
+                                        "size": 1,
+                                        "unit": "px"
+                                      }
+                                    },
+                                    "inline-start": {
+                                      "$$type": "size",
+                                      "value": {
+                                        "size": 0,
+                                        "unit": "px"
+                                      }
+                                    }
+                                  }
+                                },
+                                "border-style": {
+                                  "$$type": "string",
+                                  "value": "solid"
+                                },
+                                "border-color": {
+                                  "$$type": "color",
+                                  "value": "#57D3D3"
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      "widgetType": "e-button"
+                    }
+                  ],
+                  "styles": {
+                    "e-697d799": {
+                      "id": "e-697d799",
+                      "label": "local",
+                      "type": "class",
+                      "variants": [
+                        {
+                          "meta": {
+                            "breakpoint": "desktop",
+                            "state": null
+                          },
+                          "props": {
+                            "display": {
+                              "$$type": "string",
+                              "value": "flex"
+                            },
+                            "flex-grow": {
+                              "$$type": "number",
+                              "value": 1
+                            },
+                            "flex-shrink": {
+                              "$$type": "number",
+                              "value": 1
+                            },
+                            "flex-basis": {
+                              "$$type": "size",
+                              "value": {
+                                "size": 440,
+                                "unit": "px"
+                              }
+                            },
+                            "min-width": {
+                              "$$type": "size",
+                              "value": {
+                                "size": 0,
+                                "unit": "px"
+                              }
+                            },
+                            "min-height": {
+                              "$$type": "size",
+                              "value": {
+                                "size": 340,
+                                "unit": "px"
+                              }
+                            },
+                            "box-sizing": {
+                              "$$type": "string",
+                              "value": "border-box"
+                            },
+                            "padding": {
+                              "$$type": "dimensions",
+                              "value": {
+                                "block-start": {
+                                  "$$type": "size",
+                                  "value": {
+                                    "size": 40,
+                                    "unit": "px"
+                                  }
+                                },
+                                "inline-end": {
+                                  "$$type": "size",
+                                  "value": {
+                                    "size": 40,
+                                    "unit": "px"
+                                  }
+                                },
+                                "block-end": {
+                                  "$$type": "size",
+                                  "value": {
+                                    "size": 40,
+                                    "unit": "px"
+                                  }
+                                },
+                                "inline-start": {
+                                  "$$type": "size",
+                                  "value": {
+                                    "size": 40,
+                                    "unit": "px"
+                                  }
+                                }
+                              }
+                            },
+                            "flex-direction": {
+                              "$$type": "string",
+                              "value": "column"
+                            },
+                            "gap": {
+                              "$$type": "size",
+                              "value": {
+                                "size": 18,
+                                "unit": "px"
+                              }
+                            },
+                            "background": {
+                              "$$type": "background",
+                              "value": {
+                                "background-overlay": {
+                                  "$$type": "background-overlay",
+                                  "value": [
+                                    {
+                                      "$$type": "background-gradient-overlay",
+                                      "value": {
+                                        "type": {
+                                          "$$type": "string",
+                                          "value": "linear"
+                                        },
+                                        "angle": {
+                                          "$$type": "number",
+                                          "value": 135
+                                        },
+                                        "stops": {
+                                          "$$type": "gradient-color-stop",
+                                          "value": [
+                                            {
+                                              "$$type": "color-stop",
+                                              "value": {
+                                                "color": {
+                                                  "$$type": "color",
+                                                  "value": "#00314F"
+                                                },
+                                                "offset": {
+                                                  "$$type": "number",
+                                                  "value": 0
+                                                }
+                                              }
+                                            },
+                                            {
+                                              "$$type": "color-stop",
+                                              "value": {
+                                                "color": {
+                                                  "$$type": "color",
+                                                  "value": "#00416B"
+                                                },
+                                                "offset": {
+                                                  "$$type": "number",
+                                                  "value": 100
+                                                }
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            },
+                            "color": {
+                              "$$type": "color",
+                              "value": "#FFFFFF"
+                            }
+                          }
+                        },
+                        {
+                          "meta": {
+                            "breakpoint": "mobile",
+                            "state": null
+                          },
+                          "props": {
+                            "padding": {
+                              "$$type": "dimensions",
+                              "value": {
+                                "block-start": {
+                                  "$$type": "size",
+                                  "value": {
+                                    "size": 24,
+                                    "unit": "px"
+                                  }
+                                },
+                                "inline-end": {
+                                  "$$type": "size",
+                                  "value": {
+                                    "size": 24,
+                                    "unit": "px"
+                                  }
+                                },
+                                "block-end": {
+                                  "$$type": "size",
+                                  "value": {
+                                    "size": 24,
+                                    "unit": "px"
+                                  }
+                                },
+                                "inline-start": {
+                                  "$$type": "size",
+                                  "value": {
+                                    "size": 24,
+                                    "unit": "px"
+                                  }
+                                }
+                              }
+                            },
+                            "min-height": {
+                              "$$type": "size",
+                              "value": {
+                                "size": 0,
+                                "unit": "px"
+                              }
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  }
+                }
+              ],
+              "styles": {
+                "e-3f05d0d": {
+                  "id": "e-3f05d0d",
+                  "label": "local",
+                  "type": "class",
+                  "variants": [
+                    {
+                      "meta": {
+                        "breakpoint": "desktop",
+                        "state": null
+                      },
+                      "props": {
+                        "display": {
+                          "$$type": "string",
+                          "value": "flex"
+                        },
+                        "flex-wrap": {
+                          "$$type": "string",
+                          "value": "wrap"
+                        },
+                        "gap": {
+                          "$$type": "size",
+                          "value": {
+                            "size": 12,
+                            "unit": "px"
+                          }
+                        },
+                        "margin": {
+                          "$$type": "dimensions",
+                          "value": {
+                            "block-start": {
+                              "$$type": "size",
+                              "value": {
+                                "size": 32,
+                                "unit": "px"
+                              }
+                            },
+                            "inline-end": {
+                              "$$type": "size",
+                              "value": {
+                                "size": 0,
+                                "unit": "px"
+                              }
+                            },
+                            "block-end": {
+                              "$$type": "size",
+                              "value": {
+                                "size": 0,
+                                "unit": "px"
+                              }
+                            },
+                            "inline-start": {
+                              "$$type": "size",
+                              "value": {
+                                "size": 0,
+                                "unit": "px"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          ],
+          "styles": {
+            "e-56f01a5": {
+              "id": "e-56f01a5",
+              "label": "local",
+              "type": "class",
+              "variants": [
+                {
+                  "meta": {
+                    "breakpoint": "desktop",
+                    "state": null
+                  },
+                  "props": {
+                    "display": {
+                      "$$type": "string",
+                      "value": "flex"
+                    },
+                    "max-width": {
+                      "$$type": "size",
+                      "value": {
+                        "size": 1200,
+                        "unit": "px"
+                      }
+                    },
+                    "width": {
+                      "$$type": "size",
+                      "value": {
+                        "size": 100,
+                        "unit": "%"
+                      }
+                    },
+                    "margin": {
+                      "$$type": "dimensions",
+                      "value": {
+                        "block-start": {
+                          "$$type": "size",
+                          "value": {
+                            "size": 0,
+                            "unit": "px"
+                          }
+                        },
+                        "inline-end": {
+                          "$$type": "size",
+                          "value": {
+                            "size": "",
+                            "unit": "auto"
+                          }
+                        },
+                        "block-end": {
+                          "$$type": "size",
+                          "value": {
+                            "size": 0,
+                            "unit": "px"
+                          }
+                        },
+                        "inline-start": {
+                          "$$type": "size",
+                          "value": {
+                            "size": "",
+                            "unit": "auto"
+                          }
+                        }
+                      }
+                    },
+                    "flex-direction": {
+                      "$$type": "string",
+                      "value": "column"
+                    },
+                    "gap": {
+                      "$$type": "size",
+                      "value": {
+                        "size": 24,
+                        "unit": "px"
+                      }
+                    },
+                    "padding": {
+                      "$$type": "dimensions",
+                      "value": {
+                        "block-start": {
+                          "$$type": "size",
+                          "value": {
+                            "size": 72,
+                            "unit": "px"
+                          }
+                        },
+                        "inline-end": {
+                          "$$type": "size",
+                          "value": {
+                            "size": 32,
+                            "unit": "px"
+                          }
+                        },
+                        "block-end": {
+                          "$$type": "size",
+                          "value": {
+                            "size": 80,
+                            "unit": "px"
+                          }
+                        },
+                        "inline-start": {
+                          "$$type": "size",
+                          "value": {
+                            "size": 32,
+                            "unit": "px"
+                          }
+                        }
+                      }
+                    },
+                    "box-sizing": {
+                      "$$type": "string",
+                      "value": "border-box"
+                    }
+                  }
+                },
+                {
+                  "meta": {
+                    "breakpoint": "mobile",
+                    "state": null
+                  },
+                  "props": {
+                    "padding": {
+                      "$$type": "dimensions",
+                      "value": {
+                        "block-start": {
+                          "$$type": "size",
+                          "value": {
+                            "size": 48,
+                            "unit": "px"
+                          }
+                        },
+                        "inline-end": {
+                          "$$type": "size",
+                          "value": {
+                            "size": 20,
+                            "unit": "px"
+                          }
+                        },
+                        "block-end": {
+                          "$$type": "size",
+                          "value": {
+                            "size": 56,
+                            "unit": "px"
+                          }
+                        },
+                        "inline-start": {
+                          "$$type": "size",
+                          "value": {
+                            "size": 20,
+                            "unit": "px"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "styles": {
+        "e-1bd7ca9": {
+          "id": "e-1bd7ca9",
+          "label": "local",
+          "type": "class",
+          "variants": [
+            {
+              "meta": {
+                "breakpoint": "desktop",
+                "state": null
+              },
+              "props": {
+                "display": {
+                  "$$type": "string",
+                  "value": "flex"
+                },
+                "flex-direction": {
+                  "$$type": "string",
+                  "value": "column"
+                },
+                "width": {
+                  "$$type": "size",
+                  "value": {
+                    "size": 100,
+                    "unit": "%"
+                  }
+                },
+                "background": {
+                  "$$type": "background",
+                  "value": {
+                    "color": {
+                      "$$type": "color",
+                      "value": "#E4F4F4"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "page_settings": [],
+  "version": "0.4",
+  "title": "PMA – Unser Angebot",
+  "type": "container"
+}
