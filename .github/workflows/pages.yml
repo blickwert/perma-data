@@ -30,6 +30,7 @@ jobs:
           rm -f _site/README-export.md
           mkdir -p _site/v2
           cp -r design/v2/. _site/v2/
+          printf '%s\n' '<!doctype html><meta charset="utf-8"><meta http-equiv="refresh" content="0; url=Main.dc.html"><title>PERMA Mind Academy v2</title><a href="Main.dc.html">Zur Vorschau</a>' > _site/v2/index.html
           cat > _site/index.html <<'HTML'
           <!doctype html><meta charset="utf-8"><meta http-equiv="refresh" content="0; url=Main.dc.html"><title>PERMA Mind Academy</title><a href="Main.dc.html">Zur Vorschau</a>
           HTML
