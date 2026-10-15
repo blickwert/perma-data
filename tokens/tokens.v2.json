@@ -52,10 +52,7 @@
     "heading_fallback": "Montserrat",
     "heading_stack": "'Gotham','Gotham Medium','Montserrat',sans-serif",
     "body": "Roboto",
-    "body_stack": "'Roboto',system-ui,sans-serif",
-    "script": "Bickham Script Pro",
-    "script_fallback": "Great Vibes",
-    "script_stack": "'Bickham Script Pro','Great Vibes',cursive"
+    "body_stack": "'Roboto',system-ui,sans-serif"
   },
   "radius": {
     "card": 12,
