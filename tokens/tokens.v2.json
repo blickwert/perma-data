@@ -56,7 +56,9 @@
   },
   "radius": {
     "card": 12,
-    "pill": 999
+    "pill": 999,
+    "sm": 6,
+    "md": 8
   },
   "shadow": {
     "card": "0 10px 30px -8px rgba(var(--pma-shadow-rgb),0.18)",
