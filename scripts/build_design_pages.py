@@ -107,7 +107,7 @@ def kontakt():
 <div class="cols">
 <div>
 <h2 class="title">So erreichen Sie uns</h2>
-<p style="margin:16px 0 0;font-size:16px;line-height:1.75;max-width:520px">Die Anmeldung zu einer Ausbildung ist in wenigen Schritten erledigt. Wenn Sie unsicher sind, welches Modul zu Ihrem beruflichen Kontext passt, oder wenn Sie Unterstützung bei der Anmeldung brauchen, sprechen wir gern persönlich mit Ihnen, {ph("[per E-Mail, Telefon oder Messenger – Kanäle bestätigen]")}.</p>
+<p style="margin:16px 0 0;font-size:var(--pma-fs-base);line-height:var(--pma-lh-body);max-width:520px">Die Anmeldung zu einer Ausbildung ist in wenigen Schritten erledigt. Wenn Sie unsicher sind, welches Modul zu Ihrem beruflichen Kontext passt, oder wenn Sie Unterstützung bei der Anmeldung brauchen, sprechen wir gern persönlich mit Ihnen, {ph("[per E-Mail, Telefon oder Messenger – Kanäle bestätigen]")}.</p>
 <ul class="contact-list">
 <li>{icon("mail")}<span>{ph("[E-Mail]")}<small>Für allgemeine Anfragen</small></span></li>
 <li>{icon("phone")}<span>{ph("[Telefon]")}<small>{ph("[Erreichbarkeit, z. B. Mo–Fr 9–16 Uhr]")}</small></span></li>
@@ -216,7 +216,7 @@ def impressum():
 <h2>Bildnachweis</h2>
 <p>{ph("[Fotograf:in / Bildquelle für Hero-, Team- und Bannerbilder ergänzen]")}</p>
 
-<p style="margin-top:40px;font-size:14px;color:var(--pma-slate)">Stand: {ph("[Datum]")}</p>
+<p style="margin-top:40px;font-size:var(--pma-fs-base);color:var(--pma-slate)">Stand: {ph("[Datum]")}</p>
 </article></div>
 """
     page("impressum.html", "Impressum", "impressum.html", body,
