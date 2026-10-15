@@ -2,7 +2,7 @@
 """Erzeugt die statischen Unterseiten der Design-Vorschau.
 
     python3 scripts/build_design_pages.py       # Version 1 -> design/reference/
-    python3 scripts/build_design_pages.py v2    # Corporate Design v2 -> design/v2/
+(Corporate Design v2: scripts/build_design_pages_v2.py)
 
 Ausgabe: {kontakt,impressum,datenschutz}.html
 Header/Footer entsprechen Main.dc.html; Stile in design/reference/site.css.
@@ -14,16 +14,15 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-V2 = len(sys.argv) > 1 and sys.argv[1] == "v2"
-OUT = ROOT / ("design/v2" if V2 else "design/reference")
+if len(sys.argv) > 1:
+    sys.exit("Fuer v2 bitte scripts/build_design_pages_v2.py verwenden.")
+OUT = ROOT / "design/reference"
 ICONS = json.loads((ROOT / "assets/icons/icons.json").read_text("utf-8"))
 CONTENT = json.loads((ROOT / "content/content.json").read_text("utf-8"))
 
 FONTS = ('<link rel="preconnect" href="https://fonts.googleapis.com">'
          '<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&amp;'
          'family=Roboto:ital,wght@0,300;0,400;0,500;1,300&amp;family=Great+Vibes&amp;display=swap" rel="stylesheet">')
-if V2:
-    FONTS = FONTS.replace("&amp;family=Great+Vibes", "")
 
 
 ICONS.update({
@@ -63,8 +62,7 @@ def header(current):
 
 def footer():
     f = CONTENT["footer"]
-    brand = ('<img src="assets/logo-white.svg" alt="PERMA Mind Academy – We create wellbeing" style="display:block;height:56px;width:auto;align-self:flex-start">'
-             if V2 else f'<div class="brand">{f["brand"]}</div><div class="sub">{f["brand_sub"]}</div>')
+    brand = f'<div class="brand">{f["brand"]}</div><div class="sub">{f["brand_sub"]}</div>'
     return f"""<footer class="site-footer"><div class="wrap">
 <div class="col">{brand}</div>
 <div class="col"><h4>Kontakt</h4><div>{ph(f["address"])}</div><div>Tel: {ph(f["phone"])}</div><div>Mail: {ph(f["mail"])}</div></div>
@@ -72,19 +70,6 @@ def footer():
 <a href="#" aria-label="Instagram">{icon("instagram", 20, "2")}</a><a href="#" aria-label="LinkedIn">{icon("linkedin", 20, "2")}</a></div></div>
 <div class="col l"><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a></div>
 </div></footer>"""
-
-
-# Corporate Design v2: Kontaktdaten laut Visitenkarte (Mag. Michael Wohlkönig, Founder)
-V2_FACTS = [
-    ('<span class="ph">[Straße Nr., PLZ Ort]</span>', 'Plüddemanngasse 104, 8042 Graz'),
-    ('<span class="ph">[Straße Nr.]</span>', 'Plüddemanngasse 104'),
-    ('<span class="ph">[PLZ Ort]</span>', '8042 Graz'),
-    ('<span class="ph">[Telefon]</span>', '+43 676 511 2763'),
-    ('<span class="ph">[E-Mail]</span>', 'michael@perma-academy.at'),
-    ('<span class="ph">[Domain]</span>', 'www.perma-academy.at'),
-    ('<span class="ph">[Name]</span>', 'Mag. Michael Wohlkönig'),
-    ('<span class="ph">[Funktion, z. B. Leitung Organisation]</span>', 'Founder'),
-]
 
 
 def page(fname, title, current, body, desc):
@@ -108,11 +93,6 @@ def page(fname, title, current, body, desc):
 </body>
 </html>
 """
-    if V2:
-        for old, new in V2_FACTS:
-            html = html.replace(old, new)
-        html = html.replace("Roboto, Montserrat, Great Vibes", "Roboto, Montserrat")
-        html = re.sub(r"\bpma-", "bw-", html)  # v2-Praefix
     (OUT / fname).write_text(html, "utf-8")
 
 

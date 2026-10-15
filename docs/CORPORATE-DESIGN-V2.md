@@ -31,9 +31,9 @@ Quellen: `Font_and_color_info.pdf`, Logo (Variante auf Weiß), Siegel (Stamp 3),
 ## Erzeugen
 ```bash
 python3 scripts/build_tokens.py v2          # tokens/tokens.v2.json -> design/v2/tokens.css
-python3 scripts/build_design_pages.py v2    # Kontakt, Impressum, Datenschutz -> design/v2/
+python3 scripts/build_design_pages_v2.py    # Kontakt, Impressum, Datenschutz -> design/v2/
 ```
-Die Startseite (`design/v2/Main.dc.html`) und `site.css` werden von Hand gepflegt und nutzen nur Variablen aus `tokens.css`.
+Die Startseite (`design/v2/Main.dc.html`) und `styles.css` werden von Hand gepflegt und nutzen nur Variablen aus `tokens.css`. Die Unterseiten werden erzeugt und nutzen dasselbe `styles.css`.
 
 ## Offen
 - Gotham Medium ist lizenzpflichtig und derzeit nur über den Fallback Montserrat sichtbar.
@@ -44,4 +44,6 @@ Die Startseite (`design/v2/Main.dc.html`) und `site.css` werden von Hand gepfleg
 - `design/v2/styles.css`: Komponenten-Klassen mit Präfix `bw-` (BEM-nah), mobile-first, Breakpoints 561 / 821 / 1001 px. Keine Inline-Styles im HTML.
 - Abstände über `--bw-space-N` (N × 0,25 rem), Linienstärken über `--bw-border-width-*`; beide stammen aus `tokens/tokens.v2.json` und werden bei Bedarf dort erweitert.
 - Umgestellt: die gesamte Startseite (Header/Navigation, Hero, Intro, Angebot, Ausbildungen & Module inkl. Zertifikat-Banner, Warum PERMA Mind Academy, Team, Kontakt-Teaser, Footer, Kontakt-Button). `Main.dc.html` enthält keine Inline-Styles und keinen eigenen `<style>`-Block mehr. Akzentfarben laufen über die Utility-Klassen `bw-accent--blue|purple|orange|green`. Aussehen per Screenshot-Vergleich (1440/1100/900/700/390 px) geprüft; Abweichungen nur durch Rundung auf die Abstandsskala.
-- Noch offen: die generierten Unterseiten (Kontakt, Impressum, Datenschutz) nutzen weiterhin `site.css`.
+- Auch Kontakt, Impressum und Datenschutz sind umgestellt: dieselben Komponenten (Header, Footer, Button) wie die Startseite, eigene Bausteine in `styles.css` (`bw-page-hero`, `bw-block`, `bw-contact-*`, `bw-steps`, `bw-form*`, `bw-prose`, `bw-toc`), keine Inline-Styles; `site.css` entfällt. Rechtstexte werden als Fließtext-Bereich (`bw-prose`) über Elementtypen formatiert.
+- Praefix: in v2 heißen alle Klassen und Variablen `bw-`; die Version 1 zum Vergleich behält `pma-`.
+- Globales `box-sizing: border-box`: Icon-Buttons und Footer sind dadurch 2 px kleiner als zuvor.
