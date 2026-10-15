@@ -8,7 +8,7 @@ Quellen: `Font_and_color_info.pdf`, Logo (Variante auf Weiß), Siegel (Stamp 3),
 
 ## Was gilt in v2
 
-**Schriften:** Gotham Medium (Überschriften), Roboto Light, Regular und Medium (Text), Bickham Script Pro Semibold (Slogan, Zitate). Fallbacks wie bisher: Montserrat und Great Vibes.
+**Schriften:** Gotham Medium (Überschriften), Roboto Light, Regular und Medium (Text). Die Schreibschrift (Bickham Script Pro) entfällt; Slogan und Zitate stehen in der Standardschrift Roboto. Fallback für Gotham: Montserrat.
 
 **Farben aus dem PDF (7):** Navy `#00416B`, Blau `#16A5D2`, Lila `#B464A7`, Orange `#F09133`, Grün `#18946B`, Rot `#D83662`, Weiß `#FFFFFF`. Alle weiteren Töne (helle Flächen, Linien, gedämpfter Text, Hero-Verlauf, dunkles Navy) sind daraus durch Mischung mit Weiß oder Schwarz abgeleitet, siehe `tokens/tokens.v2.json`.
 
@@ -36,5 +36,5 @@ python3 scripts/build_design_pages.py v2    # Kontakt, Impressum, Datenschutz ->
 Die Startseite (`design/v2/Main.dc.html`) und `site.css` werden von Hand gepflegt und nutzen nur Variablen aus `tokens.css`.
 
 ## Offen
-- Bickham Script Pro Semibold und Gotham Medium sind lizenzpflichtig und derzeit nur über Fallbacks sichtbar.
+- Gotham Medium ist lizenzpflichtig und derzeit nur über den Fallback Montserrat sichtbar.
 - Kontrast: Weißer Text auf Blau und Orange ist knapp. Deshalb Navy-Text auf der blauen Hero-Box und Navy als Grund der Kacheln.

@@ -22,6 +22,8 @@ CONTENT = json.loads((ROOT / "content/content.json").read_text("utf-8"))
 FONTS = ('<link rel="preconnect" href="https://fonts.googleapis.com">'
          '<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&amp;'
          'family=Roboto:ital,wght@0,300;0,400;0,500;1,300&amp;family=Great+Vibes&amp;display=swap" rel="stylesheet">')
+if V2:
+    FONTS = FONTS.replace("&amp;family=Great+Vibes", "")
 
 
 ICONS.update({
@@ -109,6 +111,7 @@ def page(fname, title, current, body, desc):
     if V2:
         for old, new in V2_FACTS:
             html = html.replace(old, new)
+        html = html.replace("Roboto, Montserrat, Great Vibes", "Roboto, Montserrat")
     (OUT / fname).write_text(html, "utf-8")
 
 

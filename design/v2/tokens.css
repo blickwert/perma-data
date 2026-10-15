@@ -47,7 +47,6 @@
   /* Schriften */
   --pma-font-heading:'Gotham','Gotham Medium','Montserrat',sans-serif;
   --pma-font-body:'Roboto',system-ui,sans-serif;
-  --pma-font-script:'Bickham Script Pro','Great Vibes',cursive;
   /* Typografie: Groessen (Desktop), Gewichte, Zeilenhoehen, Zeichenabstand */
   --pma-fs-xs:12px;
   --pma-fs-base:16px;
