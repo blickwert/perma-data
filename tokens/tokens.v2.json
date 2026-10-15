@@ -20,7 +20,11 @@
     "sky": "#7FCEE6",
     "sky_light": "#D0EDF6",
     "dawn_purple": "#D6AACF",
-    "dawn_orange": "#F4B270"
+    "dawn_orange": "#F4B270",
+    "blue_deep": "#0C7299",
+    "purple_deep": "#634E81",
+    "orange_deep": "#846741",
+    "green_deep": "#0D6860"
   },
   "color_rgb": {
     "navy": "0,65,107",

@@ -21,6 +21,10 @@
   --pma-sky-light:#D0EDF6;
   --pma-dawn-purple:#D6AACF;
   --pma-dawn-orange:#F4B270;
+  --pma-blue-deep:#0C7299;
+  --pma-purple-deep:#634E81;
+  --pma-orange-deep:#846741;
+  --pma-green-deep:#0D6860;
   /* RGB-Tripel fuer Transparenzen: rgba(var(--pma-navy-rgb),.3) */
   --pma-navy-rgb:0,65,107;
   --pma-shadow-rgb:15,23,42;
