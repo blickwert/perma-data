@@ -43,4 +43,4 @@ Die Startseite (`design/v2/Main.dc.html`) und `site.css` werden von Hand gepfleg
 
 - `design/v2/styles.css`: Komponenten-Klassen mit Präfix `pma-` (BEM-nah), mobile-first, Breakpoints 561 / 821 / 1001 px. Keine Inline-Styles im HTML.
 - Abstände über `--pma-space-N` (N × 0,25 rem), Linienstärken über `--pma-border-width-*`; beide stammen aus `tokens/tokens.v2.json` und werden bei Bedarf dort erweitert.
-- Umgestellt: Header/Navigation, Hero, Intro, Angebot. Die übrigen Abschnitte folgen schrittweise (Aussehen unverändert, per Screenshot-Vergleich geprüft).
+- Umgestellt: Header/Navigation, Hero, Intro, Angebot, Ausbildungen & Module (inkl. Zertifikat-Banner). Akzentfarben laufen über die Utility-Klassen `pma-accent--blue|purple|orange|green`. Die übrigen Abschnitte folgen schrittweise (Aussehen unverändert, per Screenshot-Vergleich geprüft).
