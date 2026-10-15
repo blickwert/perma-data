@@ -1,20 +1,23 @@
 #!/usr/bin/env python3
-"""Erzeugt design/reference/tokens.css aus tokens/tokens.json.
+"""Erzeugt tokens.css aus der Token-Datei.
 
-    python3 scripts/build_tokens.py
+    python3 scripts/build_tokens.py       # tokens/tokens.json    -> design/reference/tokens.css
+    python3 scripts/build_tokens.py v2    # tokens/tokens.v2.json -> design/v2/tokens.css
 
 Ebene 1 (Palette):  --pma-navy, --pma-mint, ...
 Ebene 2 (Rollen):   --pma-color-text, --pma-color-border, ... (zeigen auf die Palette)
 In Markup und Stylesheets nach Moeglichkeit Rollen verwenden, Palette fuer Verlaeufe.
 """
 import json
+import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-T = json.loads((ROOT / "tokens/tokens.json").read_text("utf-8"))
+V2 = len(sys.argv) > 1 and sys.argv[1] == "v2"
+T = json.loads((ROOT / ("tokens/tokens.v2.json" if V2 else "tokens/tokens.json")).read_text("utf-8"))
 k = lambda s: s.replace("_", "-")
 
-lines = ["/* AUTO-GENERIERT aus tokens/tokens.json (scripts/build_tokens.py). Nicht von Hand aendern. */", ":root{",
+lines = [f"/* AUTO-GENERIERT aus tokens/{'tokens.v2.json' if V2 else 'tokens.json'} (scripts/build_tokens.py). Nicht von Hand aendern. */", ":root{",
          "  /* Palette */"]
 lines += [f"  --pma-{k(n)}:{v};" for n, v in T["color"].items()]
 lines += ["  /* RGB-Tripel fuer Transparenzen: rgba(var(--pma-navy-rgb),.3) */"]
@@ -38,6 +41,6 @@ lines += ["}", "",
           f"@media (max-width:{T['breakpoints']['stack']}px){{", "  :root{"]
 lines += [f"    --pma-fs-{k(n)}:{v}px;" for n, v in T["font_size_mobile"].items()]
 lines += ["  }", "}", ""]
-out = ROOT / "design/reference/tokens.css"
+out = ROOT / ("design/v2/tokens.css" if V2 else "design/reference/tokens.css")
 out.write_text("\n".join(lines), "utf-8")
 print("->", out.relative_to(ROOT))

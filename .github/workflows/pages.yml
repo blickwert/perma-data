@@ -3,7 +3,7 @@ name: Design-Vorschau (GitHub Pages)
 on:
   push:
     branches: [main]
-    paths: ["design/reference/**", ".github/workflows/pages.yml"]
+    paths: ["design/reference/**", "design/v2/**", ".github/workflows/pages.yml"]
   workflow_dispatch:
 
 permissions:
@@ -28,6 +28,8 @@ jobs:
           mkdir _site
           cp -r design/reference/. _site/
           rm -f _site/README-export.md
+          mkdir -p _site/v2
+          cp -r design/v2/. _site/v2/
           cat > _site/index.html <<'HTML'
           <!doctype html><meta charset="utf-8"><meta http-equiv="refresh" content="0; url=Main.dc.html"><title>PERMA Mind Academy</title><a href="Main.dc.html">Zur Vorschau</a>
           HTML

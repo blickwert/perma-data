@@ -12,6 +12,8 @@ Ziel: ein wiederverwendbares Elementor-Template, gebaut mit den **Atomic Element
 Das Design (`design/reference/`) wird per GitHub Pages veröffentlicht: <https://blickwert.github.io/perma-data/>.
 Einmalig einzurichten: *Settings → Pages → Source: GitHub Actions*. Danach aktualisiert sich die Seite bei jedem Push auf `main`.
 
+Corporate Design v2 (neue Farben, Logo, Siegel): <https://blickwert.github.io/perma-data/v2/> – Ordner `design/v2/`, Details in `docs/CORPORATE-DESIGN-V2.md`.
+
 ## Struktur
 
 | Pfad | Inhalt |
