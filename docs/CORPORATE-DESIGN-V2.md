@@ -1,0 +1,34 @@
+# Corporate Design v2
+
+Das neue Corporate Design liegt parallel zur ersten Version in **`design/v2/`** (Vorschau: `/v2/`). Die erste Version (`design/reference/`) bleibt unverändert zum Vergleich.
+
+Quellen: `Font_and_color_info.pdf`, Logo (Variante auf Weiß), Siegel (Stamp 3), Visitenkarte und Logo auf Navy.
+
+## Was gilt in v2
+
+**Schriften:** Gotham Medium (Überschriften), Roboto Light, Regular und Medium (Text), Bickham Script Pro Semibold (Slogan, Zitate). Fallbacks wie bisher: Montserrat und Great Vibes.
+
+**Farben aus dem PDF (7):** Navy `#00416B`, Blau `#16A5D2`, Lila `#B464A7`, Orange `#F09133`, Grün `#18946B`, Rot `#D83662`, Weiß `#FFFFFF`. Alle weiteren Töne (helle Flächen, Linien, gedämpfter Text, Hero-Verlauf, dunkles Navy) sind daraus durch Mischung mit Weiß oder Schwarz abgeleitet, siehe `tokens/tokens.v2.json`.
+
+**Der türkise Akzent entfällt.** An seiner Stelle steht Blau, Grün ersetzt das dunkle Türkis.
+
+## Was sich gegenüber v1 sichtbar ändert
+- Neues Logo (fünf farbige Bögen), in der Fußzeile die weiße Variante.
+- Hero: Verlauf von Himmelblau über Lila zu Orange (Morgenröte) statt Blau-Türkis-Braun, Textbox in Blau.
+- Angebots-Kacheln: dunkles Navy mit farbiger Oberkante und Icon je Kachel (Blau, Lila, Orange, Grün). Weißer Text auf den hellen Markenfarben wäre schlecht lesbar.
+- Zertifikat-Bereich: das Siegel statt des Foto-Platzhalters.
+- Fünffarbiger Streifen über der Fußzeile (wie auf der Visitenkarte).
+- Roboto Light für die Einleitungen der Unterseiten.
+- Kontaktdaten laut Visitenkarte: Plüddemanngasse 104, 8042 Graz, +43 676 511 2763, michael@perma-academy.at, www.perma-academy.at. Mag. Michael Wohlkönig (Founder) steht als Ansprechperson und als erste Teamkarte. Beides bitte bestätigen.
+
+## Erzeugen
+```bash
+python3 scripts/build_tokens.py v2          # tokens/tokens.v2.json -> design/v2/tokens.css
+python3 scripts/build_design_pages.py v2    # Kontakt, Impressum, Datenschutz -> design/v2/
+```
+Die Startseite (`design/v2/Main.dc.html`) und `site.css` werden von Hand gepflegt und nutzen nur Variablen aus `tokens.css`.
+
+## Offen
+- Bickham Script Pro Semibold und Gotham Medium sind lizenzpflichtig und derzeit nur über Fallbacks sichtbar.
+- Kontrast: Weißer Text auf Blau und Orange ist knapp. Deshalb Navy-Text auf der blauen Hero-Box und Navy als Grund der Kacheln.
+- Das Word-Dokument mit den Inhalten (`docs/Website-Inhalte-PERMA-Mind-Academy.docx`) bezieht sich auf v1, die Texte sind in v2 gleich bis auf die Kontaktdaten.

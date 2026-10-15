@@ -1,0 +1,84 @@
+/* AUTO-GENERIERT aus tokens/tokens.v2.json (scripts/build_tokens.py). Nicht von Hand aendern. */
+:root{
+  /* Palette */
+  --pma-navy:#00416B;
+  --pma-navy-dark:#003353;
+  --pma-blue:#16A5D2;
+  --pma-blue-dark:#138CB2;
+  --pma-blue-glass:rgba(22,165,210,0.94);
+  --pma-purple:#B464A7;
+  --pma-orange:#F09133;
+  --pma-green:#18946B;
+  --pma-red:#D83662;
+  --pma-white:#FFFFFF;
+  --pma-off-white:#F7F9FB;
+  --pma-mint:#E8F6FA;
+  --pma-mist:#DBE4EA;
+  --pma-slate:#386B8C;
+  --pma-silver:#CCD9E1;
+  --pma-graphite:#59849F;
+  --pma-sky:#7FCEE6;
+  --pma-sky-light:#D0EDF6;
+  --pma-dawn-purple:#D6AACF;
+  --pma-dawn-orange:#F4B270;
+  /* RGB-Tripel fuer Transparenzen: rgba(var(--pma-navy-rgb),.3) */
+  --pma-navy-rgb:0,65,107;
+  --pma-shadow-rgb:15,23,42;
+  /* Rollen */
+  --pma-color-text:var(--pma-navy);
+  --pma-color-heading:var(--pma-navy);
+  --pma-color-text-muted:var(--pma-slate);
+  --pma-color-text-on-dark:var(--pma-white);
+  --pma-color-text-on-dark-muted:var(--pma-silver);
+  --pma-color-surface:var(--pma-white);
+  --pma-color-surface-neutral:var(--pma-off-white);
+  --pma-color-surface-tint:var(--pma-mint);
+  --pma-color-surface-brand:var(--pma-navy);
+  --pma-color-surface-dark:var(--pma-navy-dark);
+  --pma-color-border:var(--pma-mist);
+  --pma-color-border-on-dark:var(--pma-graphite);
+  --pma-color-accent:var(--pma-blue);
+  --pma-color-accent-strong:var(--pma-green);
+  --pma-color-cta:var(--pma-navy);
+  /* Schriften */
+  --pma-font-heading:'Gotham','Gotham Medium','Montserrat',sans-serif;
+  --pma-font-body:'Roboto',system-ui,sans-serif;
+  --pma-font-script:'Bickham Script Pro','Great Vibes',cursive;
+  /* Typografie: Groessen (Desktop), Gewichte, Zeilenhoehen, Zeichenabstand */
+  --pma-fs-xs:12px;
+  --pma-fs-base:16px;
+  --pma-fs-lg:18px;
+  --pma-fs-xl:22px;
+  --pma-fs-2xl:26px;
+  --pma-fs-3xl:32px;
+  --pma-fs-4xl:36px;
+  --pma-fs-5xl:48px;
+  --pma-fw-light:300;
+  --pma-fw-regular:400;
+  --pma-fw-medium:500;
+  --pma-lh-none:1;
+  --pma-lh-tight:1.2;
+  --pma-lh-heading:1.3;
+  --pma-lh-body:1.7;
+  --pma-ls-label:0.14em;
+  --pma-ls-eyebrow:0.24em;
+  /* Radien, Schatten */
+  --pma-radius-card:12px;
+  --pma-radius-pill:999px;
+  --pma-shadow-card:0 10px 30px -8px rgba(var(--pma-shadow-rgb),0.18);
+  --pma-shadow-pop:0 4px 14px rgba(var(--pma-navy-rgb),0.3);
+  --pma-shadow-menu:0 14px 24px -12px rgba(var(--pma-navy-rgb),0.3);
+  /* Layout */
+  --pma-max-width:1200px;
+  --pma-gutter:32px;
+  --pma-gutter-mobile:20px;
+}
+
+/* Mobil (bis 820px): grosse Ueberschriften werden kleiner */
+@media (max-width:820px){
+  :root{
+    --pma-fs-3xl:26px;
+    --pma-fs-4xl:28px;
+    --pma-fs-5xl:38px;
+  }
+}

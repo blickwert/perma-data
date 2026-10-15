@@ -1,0 +1,105 @@
+{
+  "$comment": "Corporate Design v2 (Font_and_color_info.pdf): Basisfarben #00416b #16a5d2 #b464a7 #f09133 #18946b #d83662 #ffffff. Alle anderen Toene sind daraus abgeleitet (Mischung mit Weiss/Schwarz).",
+  "color": {
+    "navy": "#00416B",
+    "navy_dark": "#003353",
+    "blue": "#16A5D2",
+    "blue_dark": "#138CB2",
+    "blue_glass": "rgba(22,165,210,0.94)",
+    "purple": "#B464A7",
+    "orange": "#F09133",
+    "green": "#18946B",
+    "red": "#D83662",
+    "white": "#FFFFFF",
+    "off_white": "#F7F9FB",
+    "mint": "#E8F6FA",
+    "mist": "#DBE4EA",
+    "slate": "#386B8C",
+    "silver": "#CCD9E1",
+    "graphite": "#59849F",
+    "sky": "#7FCEE6",
+    "sky_light": "#D0EDF6",
+    "dawn_purple": "#D6AACF",
+    "dawn_orange": "#F4B270"
+  },
+  "color_rgb": {
+    "navy": "0,65,107",
+    "shadow": "15,23,42"
+  },
+  "role": {
+    "text": "navy",
+    "heading": "navy",
+    "text_muted": "slate",
+    "text_on_dark": "white",
+    "text_on_dark_muted": "silver",
+    "surface": "white",
+    "surface_neutral": "off_white",
+    "surface_tint": "mint",
+    "surface_brand": "navy",
+    "surface_dark": "navy_dark",
+    "border": "mist",
+    "border_on_dark": "graphite",
+    "accent": "blue",
+    "accent_strong": "green",
+    "cta": "navy"
+  },
+  "font": {
+    "heading": "Gotham",
+    "heading_fallback": "Montserrat",
+    "heading_stack": "'Gotham','Gotham Medium','Montserrat',sans-serif",
+    "body": "Roboto",
+    "body_stack": "'Roboto',system-ui,sans-serif",
+    "script": "Bickham Script Pro",
+    "script_fallback": "Great Vibes",
+    "script_stack": "'Bickham Script Pro','Great Vibes',cursive"
+  },
+  "radius": {
+    "card": 12,
+    "pill": 999
+  },
+  "shadow": {
+    "card": "0 10px 30px -8px rgba(var(--pma-shadow-rgb),0.18)",
+    "pop": "0 4px 14px rgba(var(--pma-navy-rgb),0.3)",
+    "menu": "0 14px 24px -12px rgba(var(--pma-navy-rgb),0.3)"
+  },
+  "layout": {
+    "max_width": 1200,
+    "gutter": 32,
+    "gutter_mobile": 20
+  },
+  "breakpoints": {
+    "tablet": 1024,
+    "mobile": 767,
+    "stack": 820
+  },
+  "font_size": {
+    "xs": 12,
+    "base": 16,
+    "lg": 18,
+    "xl": 22,
+    "2xl": 26,
+    "3xl": 32,
+    "4xl": 36,
+    "5xl": 48
+  },
+  "font_size_mobile": {
+    "3xl": 26,
+    "4xl": 28,
+    "5xl": 38
+  },
+  "font_weight": {
+    "light": 300,
+    "regular": 400,
+    "medium": 500
+  },
+  "line_height": {
+    "none": 1,
+    "tight": 1.2,
+    "heading": 1.3,
+    "body": 1.7
+  },
+  "letter_spacing": {
+    "label": "0.14em",
+    "eyebrow": "0.24em"
+  }
+}
