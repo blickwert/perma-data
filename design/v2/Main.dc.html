@@ -12,40 +12,14 @@
 <x-dc>
 <helmet>
 <link rel="stylesheet" href="tokens.css">
+<link rel="stylesheet" href="styles.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&amp;family=Roboto:ital,wght@0,300;0,400;0,500;1,300&amp;display=swap" rel="stylesheet">
 <style>
-body{margin:0;font-family:var(--pma-font-body);color:var(--pma-navy);background:var(--pma-white)}
-a{color:var(--pma-navy)}a:hover{color:var(--pma-navy)}
-input,select,textarea,button{font-family:var(--pma-font-body)}
-
-.mnav{display:none}
-.mnav summary{list-style:none;cursor:pointer;width:44px;height:44px;display:flex;align-items:center;justify-content:center;border-radius:50%;border:1px solid var(--pma-mist);color:var(--pma-navy)}
-.mnav summary::-webkit-details-marker{display:none}
-.mnav-panel{position:absolute;left:0;right:0;top:100%;background:var(--pma-white);padding:4px 20px 20px;box-shadow:0 14px 24px -12px rgba(var(--pma-navy-rgb),0.3);display:flex;flex-direction:column}
-.mnav-panel a{min-height:52px;display:flex;align-items:center;text-decoration:none;border-bottom:1px solid var(--pma-mint);font-size:var(--pma-fs-base)}
-.mnav-panel a.mnav-cta{margin-top:16px;border:0;justify-content:center;background:var(--pma-navy);color:var(--pma-white);border-radius:999px;font-weight:var(--pma-fw-medium)}
-@media (max-width:1000px){
-header nav{display:none!important}
-.mnav{display:block}
-header > div{padding:12px 20px!important;flex-wrap:nowrap!important}
-header img{height:44px!important}
-header > div > a[href="kontakt.html"]{margin-left:auto}
-}
-@media (max-width:560px){
-header > div > a[href="kontakt.html"]{display:none!important}
-.mnav{margin-left:auto}
-}
 @media (max-width:820px){
-.rs-hero{height:auto!important;padding-top:260px!important}
-.rs-cap{left:20px!important;bottom:auto!important;top:16px!important}
-.rs-dots{display:none!important}
 .rs-p40{padding:24px!important}
 .rs-p48{padding:24px!important}
 .rs-team{max-width:100%!important;gap:40px!important}
-.rs-herobox{position:relative!important;left:auto!important;right:auto!important;top:auto!important;transform:none!important;margin:0 20px 48px!important;width:auto!important;max-width:none!important;padding:28px!important}
-.rs-intro{padding:56px 20px!important;gap:28px!important}
-.rs-intro > p{font-size:var(--pma-fs-lg)!important}
 .rs-s1{padding:48px 20px 56px!important}
 .rs-s2{padding:48px 20px 32px!important}
 .rs-s3{padding:40px 20px 0!important}
@@ -61,52 +35,52 @@ header > div > a[href="kontakt.html"]{display:none!important}
 }
 </style>
 </helmet>
-<div style="width:100%;background:var(--pma-white);font-family:var(--pma-font-body);color:var(--pma-navy);line-height:var(--pma-lh-body);position:relative">
+<div class="pma-page">
 
 <!-- 1 NAVIGATION (sticky) -->
-<header style="position:sticky;top:0;z-index:20;background:var(--pma-white);box-shadow:0 1px 0 var(--pma-mint)">
-<div style="display:flex;flex-wrap:wrap;gap:12px 32px;align-items:center;justify-content:space-between;padding:16px 40px;box-sizing:border-box">
-<a href="#oben" aria-label="PERMA Mind Academy" style="display:block;text-decoration:none;flex:0 0 auto"><img src="assets/logo.svg" alt="PERMA Mind Academy – We create wellbeing" style="display:block;height:56px;width:auto"> </a>
-<nav style="display:flex;flex-wrap:wrap;gap:4px 32px;justify-content:center;font-size:var(--pma-fs-base);flex:1 1 440px">
-<a href="#ueber-uns" style="text-decoration:none;min-height:44px;display:inline-flex;align-items:center">Über uns</a>
-<a href="#angebot" style="text-decoration:none;min-height:44px;display:inline-flex;align-items:center">Angebot</a>
-<a href="#ausbildungen" style="text-decoration:none;min-height:44px;display:inline-flex;align-items:center">Ausbildungen</a>
-<a href="#team" style="text-decoration:none;min-height:44px;display:inline-flex;align-items:center">Team</a>
-<a href="kontakt.html" style="text-decoration:none;min-height:44px;display:inline-flex;align-items:center">Kontakt</a>
+<header class="pma-header">
+<div class="pma-header__bar">
+<a class="pma-header__logo" href="#oben" aria-label="PERMA Mind Academy"><img class="pma-header__logo-img" src="assets/logo.svg" alt="PERMA Mind Academy – We create wellbeing"></a>
+<nav class="pma-header__nav">
+<a class="pma-header__link" href="#ueber-uns">Über uns</a>
+<a class="pma-header__link" href="#angebot">Angebot</a>
+<a class="pma-header__link" href="#ausbildungen">Ausbildungen</a>
+<a class="pma-header__link" href="#team">Team</a>
+<a class="pma-header__link" href="kontakt.html">Kontakt</a>
 </nav>
-<a href="kontakt.html" style="text-decoration:none;background:{{accent}};color:var(--pma-white);font-size:var(--pma-fs-base);font-weight:var(--pma-fw-medium);padding:0 24px;min-height:44px;border-radius:999px;display:inline-flex;align-items:center;flex:0 0 auto">Unverbindlich anfragen</a>
-<details class="mnav"><summary aria-label="Menü öffnen"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"></path></svg></summary>
-<div class="mnav-panel"><a href="#ueber-uns">Über uns</a><a href="#angebot">Angebot</a><a href="#ausbildungen">Ausbildungen</a><a href="#team">Team</a><a href="kontakt.html">Kontakt</a><a class="mnav-cta" href="kontakt.html">Unverbindlich anfragen</a></div></details>
+<a class="pma-button pma-button--primary pma-header__cta" href="kontakt.html">Unverbindlich anfragen</a>
+<details class="pma-mnav"><summary class="pma-mnav__toggle" aria-label="Menü öffnen"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"></path></svg></summary>
+<div class="pma-mnav__panel"><a class="pma-mnav__link" href="#ueber-uns">Über uns</a><a class="pma-mnav__link" href="#angebot">Angebot</a><a class="pma-mnav__link" href="#ausbildungen">Ausbildungen</a><a class="pma-mnav__link" href="#team">Team</a><a class="pma-mnav__link" href="kontakt.html">Kontakt</a><a class="pma-button pma-button--primary pma-mnav__cta" href="kontakt.html">Unverbindlich anfragen</a></div></details>
 </div>
 </header>
 
 <main id="oben">
 
 <!-- 2 HERO -->
-<section class="rs-hero" style="position:relative;height:560px;background:linear-gradient(180deg,var(--pma-sky) 0%,var(--pma-sky-light) 42%,var(--pma-dawn-purple) 66%,var(--pma-dawn-orange) 100%);overflow:hidden">
-<div class="rs-cap" style="position:absolute;left:40px;bottom:24px;font-size:var(--pma-fs-xs);color:var(--pma-white);background:rgba(var(--pma-navy-rgb),0.55);padding:4px 10px;border-radius:4px">[Hero-Bild / Illustration: Menschen in ruhiger, positiver Atmosphäre]</div>
-<div class="rs-herobox rs-p40" style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:520px;max-width:calc(100% - 48px);box-sizing:border-box;background:var(--pma-blue-glass);padding:40px;display:flex;flex-direction:column;gap:20px">
-<h1 style="margin:0;font-family:var(--pma-font-heading);font-size:var(--pma-fs-4xl);line-height:var(--pma-lh-tight);color:var(--pma-navy);font-weight:var(--pma-fw-medium)">Willkommen bei der PERMA Mind Academy</h1>
-<p class="rs-f47" style="margin:0;font-family:var(--pma-font-body);font-size:var(--pma-fs-5xl);line-height:var(--pma-lh-tight);color:var(--pma-navy);font-weight:var(--pma-fw-regular)">We create wellbeing</p>
-<div style="display:flex;flex-wrap:wrap;gap:12px 28px;align-items:center;margin-top:8px">
-<a href="kontakt.html" style="text-decoration:none;color:var(--pma-navy);font-size:var(--pma-fs-base);font-weight:var(--pma-fw-medium);border-bottom:1px solid var(--pma-navy);padding-bottom:4px">Jetzt vormerken →</a>
-<a href="#ausbildungen" style="text-decoration:none;color:var(--pma-navy);font-size:var(--pma-fs-base);border-bottom:1px solid var(--pma-navy);padding-bottom:4px">Ausbildungen entdecken →</a>
+<section class="pma-hero">
+<div class="pma-hero__caption">[Hero-Bild / Illustration: Menschen in ruhiger, positiver Atmosphäre]</div>
+<div class="pma-hero__box">
+<h1 class="pma-hero__title">Willkommen bei der PERMA Mind Academy</h1>
+<p class="pma-hero__slogan">We create wellbeing</p>
+<div class="pma-hero__actions">
+<a class="pma-link pma-link--strong" href="kontakt.html">Jetzt vormerken →</a>
+<a class="pma-link" href="#ausbildungen">Ausbildungen entdecken →</a>
 </div>
 </div>
-<div class="rs-dots" style="position:absolute;left:0;right:0;bottom:20px;display:flex;gap:14px;justify-content:center">
-<span style="width:8px;height:8px;border-radius:50%;background:var(--pma-white)"></span>
-<span style="width:10px;height:10px;border-radius:50%;border:1.5px solid var(--pma-white);box-sizing:border-box;margin-top:-1px"></span>
-<span style="width:8px;height:8px;border-radius:50%;background:var(--pma-white)"></span>
+<div class="pma-hero__dots">
+<span class="pma-hero__dot"></span>
+<span class="pma-hero__dot pma-hero__dot--active"></span>
+<span class="pma-hero__dot"></span>
 </div>
 </section>
 
 <!-- INTRO -->
-<section class="rs-intro" id="ueber-uns" style="max-width:760px;margin:0 auto;padding:88px 32px 80px;box-sizing:border-box;display:flex;flex-direction:column;align-items:center;gap:40px;text-align:center">
-<p style="margin:0;font-family:var(--pma-font-heading);font-size:var(--pma-fs-xl);line-height:var(--pma-lh-body);font-weight:var(--pma-fw-medium)">Die PERMA Mind Academy vermittelt Positive Psychologie als wissenschaftlich fundiertes Wissen und als Handwerkszeug für die tägliche Arbeit. Unsere Ausbildungen richten sich an Fachkräfte aus Beratung, Coaching, Pädagogik, Gesundheit und Führung, die Wohlbefinden gezielt und verantwortungsvoll fördern möchten.</p>
-<div style="width:64px;height:1px;background:var(--pma-navy)"></div>
-<div style="display:flex;flex-direction:column;gap:16px;align-items:center">
-<h2 style="margin:0;font-size:var(--pma-fs-base);font-weight:var(--pma-fw-medium)">Der Lernraum</h2>
-<p style="margin:0;font-family:var(--pma-font-heading);font-size:var(--pma-fs-2xl);line-height:var(--pma-lh-heading);font-weight:var(--pma-fw-medium)">Wissenschaftlich klar. Menschlich zugewandt.</p>
+<section class="pma-intro" id="ueber-uns">
+<p class="pma-intro__lead">Die PERMA Mind Academy vermittelt Positive Psychologie als wissenschaftlich fundiertes Wissen und als Handwerkszeug für die tägliche Arbeit. Unsere Ausbildungen richten sich an Fachkräfte aus Beratung, Coaching, Pädagogik, Gesundheit und Führung, die Wohlbefinden gezielt und verantwortungsvoll fördern möchten.</p>
+<div class="pma-divider"></div>
+<div class="pma-intro__group">
+<h2 class="pma-eyebrow-title">Der Lernraum</h2>
+<p class="pma-intro__claim">Wissenschaftlich klar. Menschlich zugewandt.</p>
 </div>
 </section>
 
@@ -364,10 +338,10 @@ header > div > a[href="kontakt.html"]{display:none!important}
 
 </div>
 </x-dc>
-<script type="text/x-dc" data-dc-script data-props='{"accent":{"editor":"color","default":"#00416b","options":["#00416b","#00416B","#0B3C8A"]},"$preview":{"width":1440,"height":7000}}'>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":7000}}'>
 class Component extends DCLogic {
 renderVals() {
-return { accent: this.props.accent ?? '#00416b' };
+return {};
 }
 }
 </script>

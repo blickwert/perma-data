@@ -31,7 +31,7 @@ Alle Werte kommen aus Variablen im `:root`. Im restlichen CSS stehen **keine** H
 Phase 1 (Design-Vorschau): Die Tokens tragen konkrete Werte aus dem Corporate Design (`tokens/tokens.v2.json`, erzeugt `tokens.css`). Schriftnamen und Hex-Codes stehen **nur** dort im `:root`.
 Phase 2 (Elementor-Export): Erst beim Export werden Farben und Schriften auf die Elementor Global Variablen gemappt (`--pma-color-primary: var(--e-global-color-primary)` usw.). Die Schriften steuert später das Elementor Design System. Bis dahin kein vorzeitiges Mapping.
 
-Das Beispiel zeigt das Prinzip. Maßgeblich sind die bestehenden Tokens in `design/v2/tokens.css` (`--pma-*`, Quelle `tokens/tokens.v2.json`); neue Tokens (z. B. Spacing, Radius) werden dort ergänzt.
+Das Beispiel zeigt das Prinzip. Die Stylesheets liegen in `design/v2/styles.css` (Komponenten, mobile-first, Breakpoints 561/821/1001 px). Maßgeblich sind die bestehenden Tokens in `design/v2/tokens.css` (`--pma-*`, Quelle `tokens/tokens.v2.json`); neue Tokens (z. B. Spacing, Radius) werden dort ergänzt.
 
 ```css
 :root {
@@ -43,12 +43,12 @@ Das Beispiel zeigt das Prinzip. Maßgeblich sind die bestehenden Tokens in `desi
   --pma-font-heading: 'Gotham','Montserrat',sans-serif;
   --pma-font-body:    'Roboto',system-ui,sans-serif;
 
-  /* Spacing-Skala (nur diese Werte verwenden, bei Bedarf erweitern) */
-  --pma-space-xs: 0.5rem;
-  --pma-space-s:  1rem;
-  --pma-space-m:  1.5rem;
-  --pma-space-l:  2.5rem;
-  --pma-space-xl: 4rem;
+  /* Spacing-Skala: --pma-space-N = N x 0.25rem (nur diese Werte verwenden, bei Bedarf erweitern) */
+  --pma-space-2:  0.5rem;
+  --pma-space-4:  1rem;
+  --pma-space-6:  1.5rem;
+  --pma-space-10: 2.5rem;
+  --pma-space-16: 4rem;
 
   /* Rahmen, Radius, Schatten */
   --pma-radius: 8px;

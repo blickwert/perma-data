@@ -34,6 +34,11 @@ lines += [f"  --pma-ls-{k(n)}:{v};" for n, v in T["letter_spacing"].items()]
 lines += ["  /* Radien, Schatten */"]
 lines += [f"  --pma-radius-{k(n)}:{v}px;" for n, v in T["radius"].items()]
 lines += [f"  --pma-shadow-{k(n)}:{v};" for n, v in T["shadow"].items()]
+if "space" in T:
+    lines += ["  /* Abstandsskala: --pma-space-N = N x 0.25rem (erweiterbar nach Bedarf) */"]
+    lines += [f"  --pma-space-{k(n)}:{v / 16:g}rem;" for n, v in T["space"].items()]
+    lines += ["  /* Linienstaerken */"]
+    lines += [f"  --pma-border-width-{k(n)}:{v}px;" for n, v in T["border_width"].items()]
 lines += ["  /* Layout */"]
 lines += [f"  --pma-{k(n)}:{v}px;" for n, v in T["layout"].items()]
 lines += ["}", "",
