@@ -81,11 +81,12 @@ input,select,textarea,button{font-family:var(--pma-font-body)}
 
 /* ========== Komponente: Chip / Eyebrow ========== */
 .pma-chip{background:var(--pma-accent,var(--pma-blue));color:var(--pma-on-accent,var(--pma-navy));font-size:var(--pma-fs-xs);font-weight:var(--pma-fw-medium);letter-spacing:var(--pma-ls-label);text-transform:uppercase;padding:var(--pma-space-1) var(--pma-space-2)}
-.pma-eyebrow{font-size:var(--pma-fs-xs);font-weight:var(--pma-fw-medium);letter-spacing:var(--pma-ls-eyebrow);text-transform:uppercase}
+.pma-eyebrow{margin:0;font-size:var(--pma-fs-xs);font-weight:var(--pma-fw-medium);letter-spacing:var(--pma-ls-eyebrow);text-transform:uppercase}
 
 /* ========== Layout: Container + wiederkehrende Ueberschrift ========== */
 .pma-container{max-width:var(--pma-max-width);margin:0 auto;padding-left:var(--pma-gutter-mobile);padding-right:var(--pma-gutter-mobile);box-sizing:border-box}
 .pma-heading-section{margin:0;font-family:var(--pma-font-heading);font-size:var(--pma-fs-3xl);line-height:var(--pma-lh-heading);font-weight:var(--pma-fw-medium)}
+.pma-heading-section--tight{line-height:var(--pma-lh-tight)}
 
 @media (min-width:821px){
   .pma-container{padding-left:var(--pma-gutter);padding-right:var(--pma-gutter)}
@@ -147,4 +148,23 @@ input,select,textarea,button{font-family:var(--pma-font-body)}
   .pma-certificate{padding-top:var(--pma-space-16)}
   .pma-certificate__stamp{min-height:300px}
   .pma-certificate__body{padding:var(--pma-space-10)}
+}
+
+/* ========== Komponente: Warum PERMA Mind Academy ========== */
+.pma-why{background:var(--pma-color-surface)}
+.pma-why__inner{padding-top:var(--pma-space-14);padding-bottom:var(--pma-space-14);display:flex;flex-wrap:wrap;gap:var(--pma-space-12)}
+.pma-why__intro{flex:1 1 360px;min-width:0;max-width:480px}
+.pma-why__title{margin-top:var(--pma-space-4)}
+.pma-why__text{margin:var(--pma-space-5) 0 0;font-size:var(--pma-fs-base);line-height:var(--pma-lh-body)}
+.pma-why__grid{flex:2 1 520px;min-width:0;display:flex;flex-wrap:wrap;gap:var(--pma-space-4)}
+
+.pma-feature{flex:1 1 240px;box-sizing:border-box;padding:var(--pma-space-6);box-shadow:inset 0 var(--pma-space-1) 0 var(--pma-accent)}
+.pma-feature--tint{background:var(--pma-color-surface-tint)}
+.pma-feature--raised{background:var(--pma-color-surface);box-shadow:inset 0 var(--pma-space-1) 0 var(--pma-accent),var(--pma-shadow-card)}
+.pma-feature__icon{color:var(--pma-accent);display:inline-flex}
+.pma-feature__title{margin:var(--pma-space-7) 0 0;font-family:var(--pma-font-heading);font-size:var(--pma-fs-xl);line-height:var(--pma-lh-heading);color:var(--pma-color-heading);font-weight:var(--pma-fw-medium)}
+.pma-feature__text{margin:var(--pma-space-2) 0 0;font-size:var(--pma-fs-base);line-height:var(--pma-lh-body);color:var(--pma-color-text-muted)}
+
+@media (min-width:821px){
+  .pma-why__inner{padding-top:var(--pma-space-24);padding-bottom:var(--pma-space-24)}
 }
