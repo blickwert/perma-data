@@ -17,7 +17,7 @@ Einmalig einzurichten: *Settings → Pages → Source: GitHub Actions*. Danach a
 | Pfad | Inhalt |
 |---|---|
 | `design/reference/` | Original-Mockup (Export aus dem Design-Tool, nur Referenz). Ansehen: `cd design/reference && python3 -m http.server`, dann `Main.dc.html` öffnen |
-| `tokens/tokens.json` | Farben, Fonts, Radien, Schatten, Layout, Breakpoints |
+| `tokens/tokens.json` | Single Source für Farben (Palette + Rollen), Fonts, Radien, Schatten, Layout – siehe `docs/DESIGN-TOKENS.md` |
 | `content/content.json` | Alle Texte inkl. `[Platzhalter]` – hier pflegen, nicht in den JSONs |
 | `assets/` | `logo.svg`, Icons (`icons/*.svg`, Lucide-Stil) |
 | `scripts/build_elementor.py` | Generator: Tokens + Inhalt → Elementor-JSON |
