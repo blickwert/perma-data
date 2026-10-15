@@ -21,7 +21,7 @@ Einmalig einzurichten: *Settings → Pages → Source: GitHub Actions*. Danach a
 | `content/content.json` | Alle Texte inkl. `[Platzhalter]` – hier pflegen, nicht in den JSONs |
 | `assets/` | `logo.svg`, Icons (`icons/*.svg`, Lucide-Stil) |
 | `scripts/build_elementor.py` | Generator: Tokens + Inhalt → Elementor-JSON |
-| `templates/elementor/` | Ergebnis: je Sektion eine Datei + `full-page.json` |
+| `templates/elementor/` | entsteht erst beim Export (`scripts/build_elementor.py`), derzeit nicht im Repo |
 | `docs/` | Seitenbriefing, Import-Anleitung, Design-Hinweise |
 
 ## Build
@@ -33,7 +33,7 @@ python3 scripts/build_elementor.py   # keine Abhängigkeiten, Python 3.8+
 ## Import in WordPress
 
 Siehe [`docs/IMPORT.md`](docs/IMPORT.md). Kurz: Elementor-Atomic-Editor aktivieren →
-Templates → Importieren → `templates/elementor/full-page.json` (oder einzelne Sektionen).
+Templates → Importieren → `templates/elementor/full-page.json` (vorher mit `python3 scripts/build_elementor.py` erzeugen).
 
 ## Seitenaufbau
 

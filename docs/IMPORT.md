@@ -5,6 +5,7 @@
 - Fonts: **Gotham** (Lizenz nötig, sonst Fallback **Montserrat**), **Roboto**, **Bickham Script Pro** (Lizenz, sonst Fallback **Great Vibes**). Fallbacks per Google Fonts oder lokal hosten (DSGVO!).
 
 ## Import
+0. Templates erzeugen: `python3 scripts/build_elementor.py` (die JSON-Dateien liegen nicht im Repo).
 1. *Elementor → Templates → Saved Templates → Template importieren* → `templates/elementor/full-page.json`.
 2. Neue Seite mit „Elementor Canvas“/„Full Width“ anlegen, Template einfügen.
 3. Alternativ Sektionen einzeln aus `01-header.json … 10-footer.json` importieren (z. B. Header/Footer ins Theme-Builder-Template).
