@@ -1,0 +1,74 @@
+/* PERMA Mind Academy v2: Komponenten-Stylesheet (Regeln: .claude/skills/html-css-richtlinien)
+   Mobile-first. Breakpoints: 561px, 821px, 1001px. Werte nur ueber tokens.css. */
+
+/* ========== Base ========== */
+body{margin:0;font-family:var(--pma-font-body);color:var(--pma-color-text);background:var(--pma-color-surface)}
+a{color:var(--pma-color-text)}
+input,select,textarea,button{font-family:var(--pma-font-body)}
+.pma-page{width:100%;background:var(--pma-color-surface);font-family:var(--pma-font-body);color:var(--pma-color-text);line-height:var(--pma-lh-body);position:relative}
+
+/* ========== Komponente: Button / Link ========== */
+.pma-button{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:0 var(--pma-space-6);border-radius:var(--pma-radius-pill);text-decoration:none;font-size:var(--pma-fs-base);font-weight:var(--pma-fw-medium)}
+.pma-button--primary{background:var(--pma-color-cta);color:var(--pma-color-text-on-dark)}
+
+.pma-link{color:var(--pma-color-text);text-decoration:none;font-size:var(--pma-fs-base);border-bottom:var(--pma-border-width-hair) solid currentColor;padding-bottom:var(--pma-space-1)}
+.pma-link--strong{font-weight:var(--pma-fw-medium)}
+
+/* ========== Komponente: Header + Navigation ========== */
+.pma-header{position:sticky;top:0;z-index:20;background:var(--pma-color-surface);box-shadow:0 var(--pma-border-width-hair) 0 var(--pma-color-surface-tint)}
+.pma-header__bar{display:flex;flex-wrap:nowrap;gap:var(--pma-space-3) var(--pma-space-8);align-items:center;justify-content:space-between;padding:var(--pma-space-3) var(--pma-gutter-mobile);box-sizing:border-box}
+.pma-header__logo{display:block;text-decoration:none;flex:0 0 auto}
+.pma-header__logo-img{display:block;height:44px;width:auto}
+.pma-header__nav{display:none}
+.pma-header__link{text-decoration:none;min-height:44px;display:inline-flex;align-items:center}
+.pma-header__cta{display:none;flex:0 0 auto;margin-left:auto}
+
+.pma-mnav{display:block;margin-left:auto}
+.pma-mnav__toggle{list-style:none;cursor:pointer;width:44px;height:44px;display:flex;align-items:center;justify-content:center;border-radius:50%;border:var(--pma-border-width-hair) solid var(--pma-color-border);color:var(--pma-color-text)}
+.pma-mnav__toggle::-webkit-details-marker{display:none}
+.pma-mnav__panel{position:absolute;left:0;right:0;top:100%;background:var(--pma-color-surface);padding:var(--pma-space-1) var(--pma-gutter-mobile) var(--pma-space-5);box-shadow:var(--pma-shadow-menu);display:flex;flex-direction:column}
+.pma-mnav__link{min-height:52px;display:flex;align-items:center;text-decoration:none;border-bottom:var(--pma-border-width-hair) solid var(--pma-color-surface-tint);font-size:var(--pma-fs-base)}
+.pma-mnav__cta{margin-top:var(--pma-space-4);border:0;justify-content:center}
+
+@media (min-width:561px){
+  .pma-header__cta{display:inline-flex}
+  .pma-mnav{margin-left:0}
+}
+@media (min-width:1001px){
+  .pma-header__bar{flex-wrap:wrap;padding:var(--pma-space-4) var(--pma-space-10)}
+  .pma-header__logo-img{height:56px}
+  .pma-header__nav{display:flex;flex-wrap:wrap;gap:var(--pma-space-1) var(--pma-space-8);justify-content:center;font-size:var(--pma-fs-base);flex:1 1 440px}
+  .pma-header__cta{margin-left:0}
+  .pma-mnav{display:none}
+}
+
+/* ========== Komponente: Hero ========== */
+.pma-hero{position:relative;padding-top:260px;background:linear-gradient(180deg,var(--pma-sky) 0%,var(--pma-sky-light) 42%,var(--pma-dawn-purple) 66%,var(--pma-dawn-orange) 100%);overflow:hidden}
+.pma-hero__caption{position:absolute;left:var(--pma-gutter-mobile);top:var(--pma-space-4);font-size:var(--pma-fs-xs);color:var(--pma-color-text-on-dark);background:rgba(var(--pma-navy-rgb),0.55);padding:var(--pma-space-1) 10px;border-radius:var(--pma-space-1)}
+.pma-hero__box{position:relative;box-sizing:border-box;margin:0 var(--pma-gutter-mobile) var(--pma-space-12);background:var(--pma-blue-glass);padding:var(--pma-space-7);display:flex;flex-direction:column;gap:var(--pma-space-5)}
+.pma-hero__title{margin:0;font-family:var(--pma-font-heading);font-size:var(--pma-fs-4xl);line-height:var(--pma-lh-tight);color:var(--pma-color-heading);font-weight:var(--pma-fw-medium)}
+.pma-hero__slogan{margin:0;font-family:var(--pma-font-body);font-size:var(--pma-fs-5xl);line-height:var(--pma-lh-tight);color:var(--pma-color-heading);font-weight:var(--pma-fw-regular)}
+.pma-hero__actions{display:flex;flex-wrap:wrap;gap:var(--pma-space-3) var(--pma-space-7);align-items:center;margin-top:var(--pma-space-2)}
+.pma-hero__dots{display:none}
+.pma-hero__dot{width:var(--pma-space-2);height:var(--pma-space-2);border-radius:50%;background:var(--pma-white)}
+.pma-hero__dot--active{width:10px;height:10px;background:none;border:1.5px solid var(--pma-white);box-sizing:border-box;margin-top:-1px}
+
+@media (min-width:821px){
+  .pma-hero{height:560px;padding-top:0}
+  .pma-hero__caption{left:var(--pma-space-10);top:auto;bottom:var(--pma-space-6)}
+  .pma-hero__box{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:520px;max-width:calc(100% - 48px);margin:0;padding:var(--pma-space-10)}
+  .pma-hero__dots{position:absolute;left:0;right:0;bottom:var(--pma-space-5);display:flex;gap:14px;justify-content:center}
+}
+
+/* ========== Komponente: Intro ========== */
+.pma-intro{max-width:760px;margin:0 auto;padding:var(--pma-space-14) var(--pma-gutter-mobile);box-sizing:border-box;display:flex;flex-direction:column;align-items:center;gap:var(--pma-space-7);text-align:center}
+.pma-intro__lead{margin:0;font-family:var(--pma-font-heading);font-size:var(--pma-fs-lg);line-height:var(--pma-lh-body);font-weight:var(--pma-fw-medium)}
+.pma-intro__group{display:flex;flex-direction:column;gap:var(--pma-space-4);align-items:center}
+.pma-eyebrow-title{margin:0;font-size:var(--pma-fs-base);font-weight:var(--pma-fw-medium)}
+.pma-intro__claim{margin:0;font-family:var(--pma-font-heading);font-size:var(--pma-fs-2xl);line-height:var(--pma-lh-heading);font-weight:var(--pma-fw-medium)}
+.pma-divider{width:var(--pma-space-16);height:var(--pma-border-width-hair);background:var(--pma-color-heading)}
+
+@media (min-width:821px){
+  .pma-intro{padding:var(--pma-space-22) var(--pma-gutter) var(--pma-space-20);gap:var(--pma-space-10)}
+  .pma-intro__lead{font-size:var(--pma-fs-xl)}
+}

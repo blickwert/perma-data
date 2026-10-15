@@ -38,3 +38,9 @@ Die Startseite (`design/v2/Main.dc.html`) und `site.css` werden von Hand gepfleg
 ## Offen
 - Gotham Medium ist lizenzpflichtig und derzeit nur über den Fallback Montserrat sichtbar.
 - Kontrast: Weißer Text auf Blau und Orange ist knapp. Deshalb Navy-Text auf der blauen Hero-Box und Navy als Grund der Kacheln.
+
+## CSS-Struktur (nach Skill html-css-richtlinien)
+
+- `design/v2/styles.css`: Komponenten-Klassen mit Präfix `pma-` (BEM-nah), mobile-first, Breakpoints 561 / 821 / 1001 px. Keine Inline-Styles im HTML.
+- Abstände über `--pma-space-N` (N × 0,25 rem), Linienstärken über `--pma-border-width-*`; beide stammen aus `tokens/tokens.v2.json` und werden bei Bedarf dort erweitert.
+- Umgestellt: Header/Navigation, Hero, Intro. Die übrigen Abschnitte folgen schrittweise (Aussehen unverändert, per Screenshot-Vergleich geprüft).

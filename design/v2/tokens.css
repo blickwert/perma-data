@@ -71,6 +71,26 @@
   --pma-shadow-card:0 10px 30px -8px rgba(var(--pma-shadow-rgb),0.18);
   --pma-shadow-pop:0 4px 14px rgba(var(--pma-navy-rgb),0.3);
   --pma-shadow-menu:0 14px 24px -12px rgba(var(--pma-navy-rgb),0.3);
+  /* Abstandsskala: --pma-space-N = N x 0.25rem (erweiterbar nach Bedarf) */
+  --pma-space-1:0.25rem;
+  --pma-space-2:0.5rem;
+  --pma-space-3:0.75rem;
+  --pma-space-4:1rem;
+  --pma-space-5:1.25rem;
+  --pma-space-6:1.5rem;
+  --pma-space-7:1.75rem;
+  --pma-space-8:2rem;
+  --pma-space-10:2.5rem;
+  --pma-space-12:3rem;
+  --pma-space-14:3.5rem;
+  --pma-space-16:4rem;
+  --pma-space-18:4.5rem;
+  --pma-space-20:5rem;
+  --pma-space-22:5.5rem;
+  --pma-space-24:6rem;
+  /* Linienstaerken */
+  --pma-border-width-hair:1px;
+  --pma-border-width-strong:2px;
   /* Layout */
   --pma-max-width:1200px;
   --pma-gutter:32px;
