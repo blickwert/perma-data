@@ -38,4 +38,3 @@ Die Startseite (`design/v2/Main.dc.html`) und `site.css` werden von Hand gepfleg
 ## Offen
 - Bickham Script Pro Semibold und Gotham Medium sind lizenzpflichtig und derzeit nur über Fallbacks sichtbar.
 - Kontrast: Weißer Text auf Blau und Orange ist knapp. Deshalb Navy-Text auf der blauen Hero-Box und Navy als Grund der Kacheln.
-- Das Word-Dokument mit den Inhalten (`docs/Website-Inhalte-PERMA-Mind-Academy.docx`) bezieht sich auf v1, die Texte sind in v2 gleich bis auf die Kontaktdaten.
