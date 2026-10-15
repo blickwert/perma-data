@@ -18,10 +18,10 @@ Oberstes Ziel: **Konsistenz.** Jede Definition (Farbe, Schrift, Abstand, Rahmen,
 
 - Sobald ein Stil an mehr als einer Stelle vorkommt, wird er als Klasse definiert, nicht am Element wiederholt.
 - Zwei Ebenen verwenden:
-  - **Komponenten-Klassen** für wiederkehrende Bausteine: `.pma-card`, `.pma-button`, `.pma-section`, `.pma-hero`
-  - **Modifier/Utilities** für Varianten: `.pma-button--secondary`, `.pma-section--dark`, `.pma-mt-m`
-- Mehrere Klassen pro Element sind ok und erwünscht (`class="pma-card pma-card--highlight"`), statt Sonderfälle neu zu stylen.
-- Benennung: Präfix `pma-`, Kleinbuchstaben, Bindestriche, BEM-nah (`.pma-card__title`, `.pma-card--highlight`). Namen beschreiben **Funktion**, nicht Aussehen (`.pma-button--primary`, nicht `.pma-blue-button`).
+  - **Komponenten-Klassen** für wiederkehrende Bausteine: `.bw-card`, `.bw-button`, `.bw-section`, `.bw-hero`
+  - **Modifier/Utilities** für Varianten: `.bw-button--secondary`, `.bw-section--dark`, `.bw-mt-m`
+- Mehrere Klassen pro Element sind ok und erwünscht (`class="bw-card bw-card--highlight"`), statt Sonderfälle neu zu stylen.
+- Benennung: Präfix `bw-`, Kleinbuchstaben, Bindestriche, BEM-nah (`.bw-card__title`, `.bw-card--highlight`). Namen beschreiben **Funktion**, nicht Aussehen (`.bw-button--primary`, nicht `.bw-blue-button`).
 - Selektoren flach halten: maximal 2 Ebenen, keine ID-Selektoren, keine Selektoren, die an der DOM-Struktur hängen (`div > div > p`).
 
 ## 3. Design-Tokens als CSS Custom Properties
@@ -29,38 +29,38 @@ Oberstes Ziel: **Konsistenz.** Jede Definition (Farbe, Schrift, Abstand, Rahmen,
 Alle Werte kommen aus Variablen im `:root`. Im restlichen CSS stehen **keine** Hex-Codes, Pixelwerte für Abstände oder Schriftnamen direkt.
 
 Phase 1 (Design-Vorschau): Die Tokens tragen konkrete Werte aus dem Corporate Design (`tokens/tokens.v2.json`, erzeugt `tokens.css`). Schriftnamen und Hex-Codes stehen **nur** dort im `:root`.
-Phase 2 (Elementor-Export): Erst beim Export werden Farben und Schriften auf die Elementor Global Variablen gemappt (`--pma-color-primary: var(--e-global-color-primary)` usw.). Die Schriften steuert später das Elementor Design System. Bis dahin kein vorzeitiges Mapping.
+Phase 2 (Elementor-Export): Erst beim Export werden Farben und Schriften auf die Elementor Global Variablen gemappt (`--bw-color-primary: var(--e-global-color-primary)` usw.). Die Schriften steuert später das Elementor Design System. Bis dahin kein vorzeitiges Mapping.
 
-Das Beispiel zeigt das Prinzip. Die Stylesheets liegen in `design/v2/styles.css` (Komponenten, mobile-first, Breakpoints 561/821/1001 px). Maßgeblich sind die bestehenden Tokens in `design/v2/tokens.css` (`--pma-*`, Quelle `tokens/tokens.v2.json`); neue Tokens (z. B. Spacing, Radius) werden dort ergänzt.
+Das Beispiel zeigt das Prinzip. Die Stylesheets liegen in `design/v2/styles.css` (Komponenten, mobile-first, Breakpoints 561/821/1001 px). Maßgeblich sind die bestehenden Tokens in `design/v2/tokens.css` (`--bw-*`, Quelle `tokens/tokens.v2.json`); neue Tokens (z. B. Spacing, Radius) werden dort ergänzt.
 
 ```css
 :root {
   /* Farben (Vorschau: feste Werte, Export: --e-global-color-*) */
-  --pma-color-primary: #00416B;
-  --pma-color-accent:  #16A5D2;
+  --bw-color-primary: #00416B;
+  --bw-color-accent:  #16A5D2;
 
   /* Schriften (Vorschau: feste Namen, Export: --e-global-typography-*) */
-  --pma-font-heading: 'Gotham','Montserrat',sans-serif;
-  --pma-font-body:    'Roboto',system-ui,sans-serif;
+  --bw-font-heading: 'Gotham','Montserrat',sans-serif;
+  --bw-font-body:    'Roboto',system-ui,sans-serif;
 
-  /* Spacing-Skala: --pma-space-N = N x 0.25rem (nur diese Werte verwenden, bei Bedarf erweitern) */
-  --pma-space-2:  0.5rem;
-  --pma-space-4:  1rem;
-  --pma-space-6:  1.5rem;
-  --pma-space-10: 2.5rem;
-  --pma-space-16: 4rem;
+  /* Spacing-Skala: --bw-space-N = N x 0.25rem (nur diese Werte verwenden, bei Bedarf erweitern) */
+  --bw-space-2:  0.5rem;
+  --bw-space-4:  1rem;
+  --bw-space-6:  1.5rem;
+  --bw-space-10: 2.5rem;
+  --bw-space-16: 4rem;
 
   /* Rahmen, Radius, Schatten */
-  --pma-radius: 8px;
-  --pma-border: 1px solid var(--pma-color-accent);
-  --pma-shadow: 0 2px 8px rgb(0 0 0 / 0.08);
+  --bw-radius: 8px;
+  --bw-border: 1px solid var(--bw-color-accent);
+  --bw-shadow: 0 2px 8px rgb(0 0 0 / 0.08);
 }
 ```
 
 Regeln:
 - Es gibt nur die definierten Spacing-Stufen. Keine Zwischenwerte wie `13px` oder `2.2rem`. Wird eine Stufe gebraucht, die fehlt, wird die Skala zentral im Token-File erweitert (benannt, wiederverwendbar), nicht am Element improvisiert.
 - Pro Projekt eine feste Anzahl Farben und Schriften (aus dem Design System). Neue Werte erst ins Design System aufnehmen, dann verwenden.
-- Schriftgrößen ebenfalls als Skala (`--pma-text-s/m/l`, Überschriftenstufen), idealerweise fluid mit `clamp()`.
+- Schriftgrößen ebenfalls als Skala (`--bw-text-s/m/l`, Überschriftenstufen), idealerweise fluid mit `clamp()`.
 
 ## 4. Konsistenz über alle Seiten
 
@@ -79,17 +79,17 @@ Beim Erstellen einer neuen Seite zuerst vorhandene Klassen wiederverwenden. Neue
 
 - Elementor gibt Überschriften als `.elementor-heading-title` mit Größenklassen wie `.elementor-size-default` aus. Typografie-Stile deshalb **über die Elementor Global Fonts** steuern und im Custom-CSS nur dort ergänzen, wo nötig, z. B.:
   ```css
-  .pma-section .elementor-heading-title { font-family: var(--pma-font-heading); }
+  .bw-section .elementor-heading-title { font-family: var(--bw-font-heading); }
   ```
 - Mehrere Schriften: Primär-/Sekundär-Font als eigene Global Fonts anlegen und über die Variablen oben ansprechen, nie per Schriftname außerhalb von `:root`.
-- Buttons über `.elementor-button` bzw. unsere `.pma-button`-Klassen vereinheitlichen, nicht pro Widget einzeln stylen.
+- Buttons über `.elementor-button` bzw. unsere `.bw-button`-Klassen vereinheitlichen, nicht pro Widget einzeln stylen.
 - Eigene Klassen im Elementor-Feld „CSS-Klassen" eintragen, nicht per Widget-Einzelstyling im Editor duplizieren.
 - Farben, Schriften und Abstände im Elementor-Editor möglichst aus den Globals wählen, nicht manuell überschreiben.
 
 ## 6. HTML-Struktur
 
 - Semantisch: `header`, `nav`, `main`, `section`, `article`, `footer`; genau ein `h1` pro Seite, Überschriften-Hierarchie nicht überspringen.
-- Optik **nie** über die Tag-Wahl steuern: Ein `h3` wird nicht verwendet, weil es kleiner aussieht. Dafür gibt es Klassen (`.pma-heading-s`).
+- Optik **nie** über die Tag-Wahl steuern: Ein `h3` wird nicht verwendet, weil es kleiner aussieht. Dafür gibt es Klassen (`.bw-heading-s`).
 - Keine leeren Elemente oder `<br>` für Abstände; dafür Spacing-Klassen.
 - Bilder mit `alt`, Links mit sprechendem Text, Buttons als `<a>` oder `<button>` korrekt.
 - Barrierefreiheit: ausreichender Kontrast, sichtbarer `:focus-visible`-Zustand.
@@ -119,6 +119,6 @@ Kommentare als Abschnittsüberschriften, keine toten oder doppelten Regeln.
 - [ ] Keine Hex-Werte, Schriftnamen oder freien Pixelabstände außerhalb von `:root`
 - [ ] Farben und Schriften kommen aus Tokens (Mapping auf `--e-global-*` erst beim Export)
 - [ ] Spacing, Radius, Rahmen, Buttons entsprechen den bestehenden Definitionen
-- [ ] Klassennamen mit `pma-` Präfix und funktional benannt
+- [ ] Klassennamen mit `bw-` Präfix und funktional benannt
 - [ ] Semantische Tags, Überschriftenhierarchie korrekt
 - [ ] Mobile geprüft

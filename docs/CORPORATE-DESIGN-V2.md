@@ -17,7 +17,7 @@ Quellen: `Font_and_color_info.pdf`, Logo (Variante auf Weiß), Siegel (Stamp 3),
 ## Was sich gegenüber v1 sichtbar ändert
 - Neues Logo (fünf farbige Bögen), in der Fußzeile die weiße Variante.
 - Hero: Verlauf von Himmelblau über Lila zu Orange (Morgenröte) statt Blau-Türkis-Braun, Textbox in Blau.
-- Angebots-Kacheln: dunkel getönt mit je einem Hauch der Markenfarben (Blau, Lila, Orange, Grün), weißer Text. Das Feld „Angebot 0X“ trägt die volle Kachelfarbe. Weißer Text auf den hellen Markenfarben selbst wäre schlecht lesbar. Die Töne heißen `--pma-blue-deep`, `--pma-purple-deep` usw. in `tokens.v2.json`.
+- Angebots-Kacheln: dunkel getönt mit je einem Hauch der Markenfarben (Blau, Lila, Orange, Grün), weißer Text. Das Feld „Angebot 0X“ trägt die volle Kachelfarbe. Weißer Text auf den hellen Markenfarben selbst wäre schlecht lesbar. Die Töne heißen `--bw-blue-deep`, `--bw-purple-deep` usw. in `tokens.v2.json`.
 - Akzentfarben der Reihe nach von oben (Blau, Lila, Orange, Grün): bei „Warum PERMA Mind Academy?“ Oberkante und Icon der vier Karten, in der Modul-Liste ein Balken unter der Ziffer und das Niveau-Feld.
 - **Startseite gestrafft:** „Ihre Vorteile“ und „Sorgfalt vor großen Versprechen“ sind zu einem Abschnitt „Warum PERMA Mind Academy?“ mit vier Karten verschmolzen (Wissenschaftlich fundiert, Praxisnah, Persönlich begleitet, Nachvollziehbarer Abschluss). „Erfahrene Trainer:innen“ steht jetzt in der Einleitung des Team-Bereichs, „Termine und Format“ in der Einleitung der Module. Die Kennzahlen „4“ und „5“ im Intro-Block sind entfallen.
 - **Team:** zwei Personen nebeneinander in einem Block mit einer festen Maximalbreite von 960 px (`max-width`) (mobil untereinander in voller Breite). Pro Person oben ein Porträt (Rollen-Feld oben links im Bild), darunter Name, Titel, Kurzprofil, Social-Icons, Trenner, „Werdegang“ mit drei Haken-Punkten (Ausbildung, Berufserfahrung, Schwerpunkt) und das Zitat in Schreibschrift. Der Bereich hat weißen Grund, die Bildfläche ist hellblau.
@@ -41,7 +41,7 @@ Die Startseite (`design/v2/Main.dc.html`) und `site.css` werden von Hand gepfleg
 
 ## CSS-Struktur (nach Skill html-css-richtlinien)
 
-- `design/v2/styles.css`: Komponenten-Klassen mit Präfix `pma-` (BEM-nah), mobile-first, Breakpoints 561 / 821 / 1001 px. Keine Inline-Styles im HTML.
-- Abstände über `--pma-space-N` (N × 0,25 rem), Linienstärken über `--pma-border-width-*`; beide stammen aus `tokens/tokens.v2.json` und werden bei Bedarf dort erweitert.
-- Umgestellt: die gesamte Startseite (Header/Navigation, Hero, Intro, Angebot, Ausbildungen & Module inkl. Zertifikat-Banner, Warum PERMA Mind Academy, Team, Kontakt-Teaser, Footer, Kontakt-Button). `Main.dc.html` enthält keine Inline-Styles und keinen eigenen `<style>`-Block mehr. Akzentfarben laufen über die Utility-Klassen `pma-accent--blue|purple|orange|green`. Aussehen per Screenshot-Vergleich (1440/1100/900/700/390 px) geprüft; Abweichungen nur durch Rundung auf die Abstandsskala.
+- `design/v2/styles.css`: Komponenten-Klassen mit Präfix `bw-` (BEM-nah), mobile-first, Breakpoints 561 / 821 / 1001 px. Keine Inline-Styles im HTML.
+- Abstände über `--bw-space-N` (N × 0,25 rem), Linienstärken über `--bw-border-width-*`; beide stammen aus `tokens/tokens.v2.json` und werden bei Bedarf dort erweitert.
+- Umgestellt: die gesamte Startseite (Header/Navigation, Hero, Intro, Angebot, Ausbildungen & Module inkl. Zertifikat-Banner, Warum PERMA Mind Academy, Team, Kontakt-Teaser, Footer, Kontakt-Button). `Main.dc.html` enthält keine Inline-Styles und keinen eigenen `<style>`-Block mehr. Akzentfarben laufen über die Utility-Klassen `bw-accent--blue|purple|orange|green`. Aussehen per Screenshot-Vergleich (1440/1100/900/700/390 px) geprüft; Abweichungen nur durch Rundung auf die Abstandsskala.
 - Noch offen: die generierten Unterseiten (Kontakt, Impressum, Datenschutz) nutzen weiterhin `site.css`.
