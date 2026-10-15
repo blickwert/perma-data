@@ -1,109 +1,109 @@
 /* AUTO-GENERIERT aus tokens/tokens.v2.json (scripts/build_tokens.py). Nicht von Hand aendern. */
 :root{
   /* Palette */
-  --pma-navy:#00416B;
-  --pma-navy-dark:#003353;
-  --pma-blue:#16A5D2;
-  --pma-blue-dark:#138CB2;
-  --pma-blue-glass:rgba(22,165,210,0.94);
-  --pma-purple:#B464A7;
-  --pma-orange:#F09133;
-  --pma-green:#18946B;
-  --pma-red:#D83662;
-  --pma-white:#FFFFFF;
-  --pma-off-white:#F7F9FB;
-  --pma-mint:#E8F6FA;
-  --pma-mist:#DBE4EA;
-  --pma-slate:#386B8C;
-  --pma-silver:#CCD9E1;
-  --pma-graphite:#59849F;
-  --pma-sky:#7FCEE6;
-  --pma-sky-light:#D0EDF6;
-  --pma-dawn-purple:#D6AACF;
-  --pma-dawn-orange:#F4B270;
-  --pma-blue-deep:#0C7299;
-  --pma-purple-deep:#634E81;
-  --pma-orange-deep:#846741;
-  --pma-green-deep:#0D6860;
-  /* RGB-Tripel fuer Transparenzen: rgba(var(--pma-navy-rgb),.3) */
-  --pma-navy-rgb:0,65,107;
-  --pma-shadow-rgb:15,23,42;
+  --bw-navy:#00416B;
+  --bw-navy-dark:#003353;
+  --bw-blue:#16A5D2;
+  --bw-blue-dark:#138CB2;
+  --bw-blue-glass:rgba(22,165,210,0.94);
+  --bw-purple:#B464A7;
+  --bw-orange:#F09133;
+  --bw-green:#18946B;
+  --bw-red:#D83662;
+  --bw-white:#FFFFFF;
+  --bw-off-white:#F7F9FB;
+  --bw-mint:#E8F6FA;
+  --bw-mist:#DBE4EA;
+  --bw-slate:#386B8C;
+  --bw-silver:#CCD9E1;
+  --bw-graphite:#59849F;
+  --bw-sky:#7FCEE6;
+  --bw-sky-light:#D0EDF6;
+  --bw-dawn-purple:#D6AACF;
+  --bw-dawn-orange:#F4B270;
+  --bw-blue-deep:#0C7299;
+  --bw-purple-deep:#634E81;
+  --bw-orange-deep:#846741;
+  --bw-green-deep:#0D6860;
+  /* RGB-Tripel fuer Transparenzen: rgba(var(--bw-navy-rgb),.3) */
+  --bw-navy-rgb:0,65,107;
+  --bw-shadow-rgb:15,23,42;
   /* Rollen */
-  --pma-color-text:var(--pma-navy);
-  --pma-color-heading:var(--pma-navy);
-  --pma-color-text-muted:var(--pma-slate);
-  --pma-color-text-on-dark:var(--pma-white);
-  --pma-color-text-on-dark-muted:var(--pma-silver);
-  --pma-color-surface:var(--pma-white);
-  --pma-color-surface-neutral:var(--pma-off-white);
-  --pma-color-surface-tint:var(--pma-mint);
-  --pma-color-surface-brand:var(--pma-navy);
-  --pma-color-surface-dark:var(--pma-navy-dark);
-  --pma-color-border:var(--pma-mist);
-  --pma-color-border-on-dark:var(--pma-graphite);
-  --pma-color-accent:var(--pma-blue);
-  --pma-color-accent-strong:var(--pma-green);
-  --pma-color-cta:var(--pma-navy);
+  --bw-color-text:var(--bw-navy);
+  --bw-color-heading:var(--bw-navy);
+  --bw-color-text-muted:var(--bw-slate);
+  --bw-color-text-on-dark:var(--bw-white);
+  --bw-color-text-on-dark-muted:var(--bw-silver);
+  --bw-color-surface:var(--bw-white);
+  --bw-color-surface-neutral:var(--bw-off-white);
+  --bw-color-surface-tint:var(--bw-mint);
+  --bw-color-surface-brand:var(--bw-navy);
+  --bw-color-surface-dark:var(--bw-navy-dark);
+  --bw-color-border:var(--bw-mist);
+  --bw-color-border-on-dark:var(--bw-graphite);
+  --bw-color-accent:var(--bw-blue);
+  --bw-color-accent-strong:var(--bw-green);
+  --bw-color-cta:var(--bw-navy);
   /* Schriften */
-  --pma-font-heading:'Gotham','Gotham Medium','Montserrat',sans-serif;
-  --pma-font-body:'Roboto',system-ui,sans-serif;
+  --bw-font-heading:'Gotham','Gotham Medium','Montserrat',sans-serif;
+  --bw-font-body:'Roboto',system-ui,sans-serif;
   /* Typografie: Groessen (Desktop), Gewichte, Zeilenhoehen, Zeichenabstand */
-  --pma-fs-xs:12px;
-  --pma-fs-base:16px;
-  --pma-fs-lg:18px;
-  --pma-fs-xl:22px;
-  --pma-fs-2xl:26px;
-  --pma-fs-3xl:32px;
-  --pma-fs-4xl:36px;
-  --pma-fs-5xl:48px;
-  --pma-fw-light:300;
-  --pma-fw-regular:400;
-  --pma-fw-medium:500;
-  --pma-lh-none:1;
-  --pma-lh-tight:1.2;
-  --pma-lh-heading:1.3;
-  --pma-lh-body:1.7;
-  --pma-ls-label:0.14em;
-  --pma-ls-eyebrow:0.24em;
+  --bw-fs-xs:12px;
+  --bw-fs-base:16px;
+  --bw-fs-lg:18px;
+  --bw-fs-xl:22px;
+  --bw-fs-2xl:26px;
+  --bw-fs-3xl:32px;
+  --bw-fs-4xl:36px;
+  --bw-fs-5xl:48px;
+  --bw-fw-light:300;
+  --bw-fw-regular:400;
+  --bw-fw-medium:500;
+  --bw-lh-none:1;
+  --bw-lh-tight:1.2;
+  --bw-lh-heading:1.3;
+  --bw-lh-body:1.7;
+  --bw-ls-label:0.14em;
+  --bw-ls-eyebrow:0.24em;
   /* Radien, Schatten */
-  --pma-radius-card:12px;
-  --pma-radius-pill:999px;
-  --pma-radius-sm:6px;
-  --pma-radius-md:8px;
-  --pma-shadow-card:0 10px 30px -8px rgba(var(--pma-shadow-rgb),0.18);
-  --pma-shadow-pop:0 4px 14px rgba(var(--pma-navy-rgb),0.3);
-  --pma-shadow-menu:0 14px 24px -12px rgba(var(--pma-navy-rgb),0.3);
-  /* Abstandsskala: --pma-space-N = N x 0.25rem (erweiterbar nach Bedarf) */
-  --pma-space-1:0.25rem;
-  --pma-space-2:0.5rem;
-  --pma-space-3:0.75rem;
-  --pma-space-4:1rem;
-  --pma-space-5:1.25rem;
-  --pma-space-6:1.5rem;
-  --pma-space-7:1.75rem;
-  --pma-space-8:2rem;
-  --pma-space-10:2.5rem;
-  --pma-space-12:3rem;
-  --pma-space-14:3.5rem;
-  --pma-space-16:4rem;
-  --pma-space-18:4.5rem;
-  --pma-space-20:5rem;
-  --pma-space-22:5.5rem;
-  --pma-space-24:6rem;
+  --bw-radius-card:12px;
+  --bw-radius-pill:999px;
+  --bw-radius-sm:6px;
+  --bw-radius-md:8px;
+  --bw-shadow-card:0 10px 30px -8px rgba(var(--bw-shadow-rgb),0.18);
+  --bw-shadow-pop:0 4px 14px rgba(var(--bw-navy-rgb),0.3);
+  --bw-shadow-menu:0 14px 24px -12px rgba(var(--bw-navy-rgb),0.3);
+  /* Abstandsskala: --bw-space-N = N x 0.25rem (erweiterbar nach Bedarf) */
+  --bw-space-1:0.25rem;
+  --bw-space-2:0.5rem;
+  --bw-space-3:0.75rem;
+  --bw-space-4:1rem;
+  --bw-space-5:1.25rem;
+  --bw-space-6:1.5rem;
+  --bw-space-7:1.75rem;
+  --bw-space-8:2rem;
+  --bw-space-10:2.5rem;
+  --bw-space-12:3rem;
+  --bw-space-14:3.5rem;
+  --bw-space-16:4rem;
+  --bw-space-18:4.5rem;
+  --bw-space-20:5rem;
+  --bw-space-22:5.5rem;
+  --bw-space-24:6rem;
   /* Linienstaerken */
-  --pma-border-width-hair:1px;
-  --pma-border-width-strong:2px;
+  --bw-border-width-hair:1px;
+  --bw-border-width-strong:2px;
   /* Layout */
-  --pma-max-width:1200px;
-  --pma-gutter:32px;
-  --pma-gutter-mobile:20px;
+  --bw-max-width:1200px;
+  --bw-gutter:32px;
+  --bw-gutter-mobile:20px;
 }
 
 /* Mobil (bis 820px): grosse Ueberschriften werden kleiner */
 @media (max-width:820px){
   :root{
-    --pma-fs-3xl:26px;
-    --pma-fs-4xl:28px;
-    --pma-fs-5xl:38px;
+    --bw-fs-3xl:26px;
+    --bw-fs-4xl:28px;
+    --bw-fs-5xl:38px;
   }
 }

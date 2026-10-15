@@ -112,6 +112,7 @@ def page(fname, title, current, body, desc):
         for old, new in V2_FACTS:
             html = html.replace(old, new)
         html = html.replace("Roboto, Montserrat, Great Vibes", "Roboto, Montserrat")
+        html = re.sub(r"\bpma-", "bw-", html)  # v2-Praefix
     (OUT / fname).write_text(html, "utf-8")
 
 
