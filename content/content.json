@@ -1,0 +1,97 @@
+{
+  "nav": {
+    "links": [["Über uns", "#ueber-uns"], ["Angebot", "#angebot"], ["Ausbildungen", "#ausbildungen"], ["Team", "#team"], ["Kontakt", "#kontakt"]],
+    "cta": "Unverbindlich anfragen"
+  },
+  "hero": {
+    "title": "Willkommen bei der PERMA Mind Academy",
+    "slogan": "We create wellbeing",
+    "cta": "Jetzt vormerken →",
+    "cta2": "Ausbildungen entdecken →"
+  },
+  "intro": {
+    "text": "Die PERMA Mind Academy vermittelt Positive Psychologie als wissenschaftlich fundiertes Wissen und als Handwerkszeug für die tägliche Arbeit. Unsere Ausbildungen richten sich an Fachkräfte aus Beratung, Coaching, Pädagogik, Gesundheit und Führung, die Wohlbefinden gezielt und verantwortungsvoll fördern möchten.",
+    "eyebrow": "Der Lernraum",
+    "claim": "Wissenschaftlich klar. Menschlich zugewandt.",
+    "stats": [["4", "Aufbauende Ausbildungsmodule"], ["5", "Dimensionen des PERMA-Modells"]]
+  },
+  "angebot": {
+    "title": "Was wir für Sie tun",
+    "intro": "Die Academy verbindet die Erkenntnisse der Positiven Psychologie mit Methoden, die sich in Ihrer täglichen Arbeit bewähren.",
+    "cards": [
+      {"icon": "book", "title": "Ausbildungen", "text": "Strukturierte Module von den Grundlagen bis zur Anwendung in Beratung, Coaching und Führung.", "href": "#ausbildungen", "from": "#25A0A0", "to": "#1A8C8C"},
+      {"icon": "chat", "title": "Workshops", "text": "Kompakte Formate zu einzelnen Themen, für Teams und Einzelpersonen.", "href": "#kontakt", "from": "#00416B", "to": "#00314F"},
+      {"icon": "arrows", "title": "Coaching-Tools", "text": "Erprobte Methoden und Materialien, die Sie direkt in Ihrer Praxis einsetzen.", "href": "#kontakt", "from": "#00416B", "to": "#25A0A0"},
+      {"icon": "badge-check", "title": "Zertifizierungen", "text": "Ein nachvollziehbarer Abschluss, der Ihre Kompetenz belegt. [Anerkennung noch bestätigen]", "href": "#ausbildungen", "from": "#00314F", "to": "#00416B"}
+    ]
+  },
+  "ausbildungen": {
+    "eyebrow": "Ausbildungen & Module",
+    "title": "Ihr Weg zur zertifizierten Fachkraft",
+    "intro": "In vier aufeinander aufbauenden Modulen entsteht ein solides Verständnis der Positiven Psychologie und ein konkreter Bezug zu Ihrem Arbeitskontext.",
+    "modules": [
+      {"title": "Grundlagen der Positiven Psychologie", "text": "Ursprung, Forschungsstand und das PERMA-Modell nach Seligman als Orientierungsrahmen.", "level": "Einstieg", "duration": "[Dauer]"},
+      {"title": "PERMA in der Praxis", "text": "Positive Emotionen, Engagement, Beziehungen, Sinn und Zielerreichung in konkrete Übungen übersetzen.", "level": "Aufbau", "duration": "[Dauer]"},
+      {"title": "Stärkenorientiertes Coaching", "text": "Gesprächsführung und Methoden, die Ressourcen sichtbar machen und Entwicklung begleiten.", "level": "Aufbau", "duration": "[Dauer]"},
+      {"title": "Positive Führung und Teams", "text": "Wohlbefinden und Leistungsfähigkeit in Organisationen fördern, mit Fallarbeit.", "level": "Vertiefung", "duration": "[Dauer]"}
+    ],
+    "banner": {
+      "tag": "Zertifikat",
+      "title": "Abschluss &amp;<br>Zertifikat",
+      "text": "[Abschlussform und Anerkennung vor Programmstart transparent ergänzen]",
+      "image_alt": "Zertifikatsübergabe oder Lerngruppe"
+    }
+  },
+  "vorteile": {
+    "eyebrow": "Warum PERMA Mind Academy?",
+    "title": "Ihre Vorteile",
+    "intro": "Sechs Gründe, warum Fachkräfte ihre Weiterbildung in Positiver Psychologie bei uns absolvieren.",
+    "items": [
+      {"icon": "flask", "title": "Wissenschaftlich fundiert", "text": "Die Inhalte stützen sich auf den aktuellen Forschungsstand."},
+      {"icon": "briefcase", "title": "Praxisnah", "text": "Jedes Modul enthält Übungen für Ihren Berufsalltag."},
+      {"icon": "user-circle", "title": "Erfahrene Trainer:innen", "text": "Lehre durch Fachleute mit Praxiserfahrung."},
+      {"icon": "chat", "title": "Kleine Gruppen", "text": "Raum für Fragen, Austausch und persönliche Begleitung. [Gruppengröße ergänzen]"},
+      {"icon": "badge-check", "title": "Anerkannte Zertifikate", "text": "[Anerkennung bestätigen]"},
+      {"icon": "clock", "title": "Flexible Termine", "text": "[Präsenz, Online oder Blockformat ergänzen]"}
+    ]
+  },
+  "sorgfalt": {
+    "eyebrow": "Warum diese Academy",
+    "title": "Sorgfalt vor<br>großen Versprechen.",
+    "text": "Hier geht es nicht um schnelle Rezepte. Die Academy schafft einen fundierten Rahmen, in dem Theorie, Erfahrung und professionelle Praxis miteinander in Gespräch kommen.",
+    "pills": ["Forschungsorientiert", "Praxisbezogen", "Persönlich begleitet"],
+    "cards": [
+      {"icon": "flask", "title": "Wissenschaftlich orientiert", "text": "Inhalte werden nachvollziehbar kontextualisiert statt verkürzt vermittelt."},
+      {"icon": "layers", "title": "Fachlich vertieft", "text": "Zusammenhänge erhalten Raum, damit Wissen tragfähig wird."},
+      {"icon": "briefcase", "title": "Praxisnah gedacht", "text": "Lernimpulse werden mit realen beruflichen und persönlichen Kontexten verbunden."},
+      {"icon": "user-circle", "title": "Persönlich begleitet", "text": "Fragen und Reflexion sind integraler Teil des Lernprozesses."}
+    ]
+  },
+  "team": {
+    "eyebrow": "Unser Team",
+    "title": "Die Köpfe der Academy",
+    "intro": "Zwei Perspektiven, ein gemeinsames Anliegen: Positive Psychologie mit fachlicher Tiefe und zugewandter Klarheit zugänglich machen.",
+    "people": [
+      {"role": "[Rolle]", "name": "[Name 1]", "title": "[Titel / Qualifikation]", "bio": "[Werdegang in 2 bis 3 Sätzen: Ausbildung, Berufserfahrung, Schwerpunkt]", "quote": "„Wohlbefinden entsteht dort, wo Menschen ihre Stärken einsetzen dürfen.“ [Entwurf]", "photo_alt": "Foto Person 1"},
+      {"role": "[Rolle]", "name": "[Name 2]", "title": "[Titel / Qualifikation]", "bio": "[Werdegang in 2 bis 3 Sätzen: Ausbildung, Berufserfahrung, Schwerpunkt]", "quote": "„Gute Beziehungen sind die verlässlichste Ressource, die wir haben.“ [Entwurf]", "photo_alt": "Foto Person 2"}
+    ]
+  },
+  "kontakt": {
+    "eyebrow": "Kontakt & Vormerkung",
+    "title": "Jetzt unverbindlich<br>vormerken",
+    "text": "Sie möchten mehr über unsere Ausbildungen erfahren oder sich einen Platz sichern? Tragen Sie sich unverbindlich ein. Wir melden uns persönlich bei Ihnen und beantworten Ihre Fragen zu Inhalten, Terminen und Voraussetzungen.",
+    "note": "Ihre Daten behandeln wir vertraulich. Kein Newsletter ohne Einwilligung, keine Verpflichtung.",
+    "options": ["Grundlagen der Positiven Psychologie", "PERMA in der Praxis", "Stärkenorientiertes Coaching", "Positive Führung und Teams", "Noch unsicher, bitte beraten Sie mich"],
+    "thanks": "Vielen Dank für Ihre Anfrage. Wir melden uns in Kürze bei Ihnen."
+  },
+  "footer": {
+    "brand": "PERMA Mind",
+    "brand_sub": "Academy für Positive Psychologie",
+    "address": "[Straße Nr., PLZ Ort]",
+    "phone": "[Telefon]",
+    "mail": "[E-Mail]",
+    "social": [["Instagram", "#"], ["LinkedIn", "#"]],
+    "impressum": "/impressum",
+    "datenschutz": "/datenschutz"
+  }
+}
