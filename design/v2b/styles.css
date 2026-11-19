@@ -314,7 +314,11 @@ input,select,textarea,button{font-family:var(--bw-font-body)}
 
 /* ========== Komponente: Angebotsseite (Eckdaten, Karten, Weiterführend) ========== */
 /* Angebotsseiten folgen dem Farbschema der Angebotskarten: Akzent-Tiefe -> Navy */
-.bw-page-hero--offer{background:linear-gradient(135deg,var(--bw-accent-deep) 0%,var(--bw-navy-dark) 100%);color:var(--bw-color-text-on-dark)}
+/* Header und Kopfbereich teilen sich einen Verlauf, der am Fenster ausgerichtet ist (fixed): keine Kante dazwischen */
+.bw-page-hero--offer{background:linear-gradient(135deg,var(--bw-accent-deep) 0%,var(--bw-navy-dark) 100%) fixed;color:var(--bw-color-text-on-dark)}
+.bw-header--accent{background:linear-gradient(135deg,var(--bw-accent-deep) 0%,var(--bw-navy-dark) 100%) fixed;box-shadow:none;color:var(--bw-color-text-on-dark)}
+.bw-header--accent .bw-header__link{color:inherit}
+.bw-header--accent .bw-mnav__toggle{color:inherit;border-color:rgba(var(--bw-white-rgb),0.4)}
 .bw-crumbs a,.bw-page-hero__text a{color:inherit}
 .bw-form-card--accent{background:linear-gradient(135deg,var(--bw-accent-deep) 0%,var(--bw-navy-dark) 100%)}
 .bw-button--light{background:var(--bw-color-surface);color:var(--bw-color-text)}
