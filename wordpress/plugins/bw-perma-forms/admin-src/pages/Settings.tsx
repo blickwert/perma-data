@@ -12,7 +12,7 @@ type SettingsResponse = {
 	webhook_url?: string;
 	turnstile_url: string;
 };
-type BrevoOptions = { lists: { id: number; name: string }[]; templates: { id: number; name: string }[] };
+type BrevoOptions = { lists: { id: number; name: string }[]; templates: { id: number; name: string; active: boolean; tag: string }[] };
 type FormStatus = { key: string; title: string; cf7_id: number; edit_url: string; in_sync: boolean };
 
 /** Recipient, Brevo, spam thresholds and the status of the Contact Form 7 forms. */
@@ -63,6 +63,19 @@ export default function Settings() {
 				setError( '' );
 				setSaved( __( 'Settings saved.', 'bw-perma-forms' ) );
 				return get< { cf7_active: boolean; forms: FormStatus[] } >( '/forms' ).then( setForms );
+			} )
+			.catch( ( e ) => setError( errorMessage( e ) ) )
+			.finally( () => setBusy( false ) );
+	};
+
+	const setupBrevo = () => {
+		setBusy( true );
+		post< { list_id: number; template_id: number } >( '/brevo/setup', { create_list: true, create_template: true } )
+			.then( () => Promise.all( [ get< SettingsResponse >( '/settings' ), get< BrevoOptions >( '/brevo/options' ) ] ) )
+			.then( ( [ s, o ] ) => {
+				load( s );
+				setBrevo( o );
+				setSaved( __( 'List and confirmation template created in Brevo.', 'bw-perma-forms' ) );
 			} )
 			.catch( ( e ) => setError( errorMessage( e ) ) )
 			.finally( () => setBusy( false ) );
@@ -132,11 +145,15 @@ export default function Settings() {
 								label={ __( 'Double opt-in template', 'bw-perma-forms' ) }
 								help={ __( 'Brevo template of type "Double opt-in confirmation".', 'bw-perma-forms' ) }
 								value={ String( values.brevo_doi_template_id ?? '' ) }
-								options={ [ { label: __( '– choose –', 'bw-perma-forms' ), value: '0' }, ...brevo.templates.map( ( t ) => ( { label: `${ t.name } (#${ t.id })`, value: String( t.id ) } ) ) ] }
+								options={ [ { label: __( '– choose –', 'bw-perma-forms' ), value: '0' }, ...brevo.templates.filter( ( t ) => t.active ).map( ( t ) => ( { label: `${ t.name } (#${ t.id })`, value: String( t.id ) } ) ) ] }
 								onChange={ ( v ) => setValues( { ...values, brevo_doi_template_id: v } ) }
 								__next40pxDefaultSize
 								__nextHasNoMarginBottom
 							/>
+							<p className="bwo-help">{ __( 'Creates the list "Newsletter PERMA Mind Academy" and a double opt-in template in the PERMA style in Brevo and selects both.', 'bw-perma-forms' ) }</p>
+							<Button variant="secondary" onClick={ setupBrevo } disabled={ busy } __next40pxDefaultSize>
+								{ __( 'Set up Brevo', 'bw-perma-forms' ) }
+							</Button>
 						</>
 					) : (
 						<>

@@ -51,7 +51,7 @@ Regeln beim Zusammenführen: Namen und Beruf werden nur mit nicht leeren Werten 
 
 1. Contact Form 7 aktivieren, dann das Plugin. Die drei CF7-Formulare entstehen beim ersten Aufruf des Dashboards.
 2. **PERMA Kontakte › Einstellungen:** Empfänger (Standard `bw-cms@blickwert.at`, später `info@perma-academy.at`), Pfad der Datenschutzerklärung.
-3. **Brevo:** Liste und Double-Opt-in-Vorlage in Brevo anlegen; in den Einstellungen erscheinen sie zur Auswahl (sonst IDs eintragen). Weiterleitung nach der Bestätigung: Seite `/newsletter-bestaetigt/`. Optional die angezeigte Webhook-Adresse in Brevo eintragen. Hat das Brevo-Konto „Autorisierte IP-Adressen“ eingeschaltet, muss die IP des Webservers dort freigegeben sein (sonst Fehler „unrecognised IP address“).
+3. **Brevo:** In den Einstellungen „Brevo einrichten“ klicken: Das Plugin legt die Liste „Newsletter PERMA Mind Academy“, eine Double-Opt-in-Vorlage im PERMA-Stil (Absender: erste aktive Absenderadresse in Brevo) und den Webhook für Bestätigungen und Abmeldungen an und wählt sie aus. Wiederholen erzeugt keine Doppelten. Alternativ Liste und Vorlage in Brevo selbst anlegen und auswählen. Weiterleitung nach der Bestätigung: Seite `/newsletter-bestaetigt/`. Optional die angezeigte Webhook-Adresse in Brevo eintragen. Hat das Brevo-Konto „Autorisierte IP-Adressen“ eingeschaltet, muss die IP des Webservers dort freigegeben sein (sonst Fehler „unrecognised IP address“).
 4. **Turnstile:** Schlüssel in Contact Form 7 › Integration eintragen.
 
 ## Übertragung

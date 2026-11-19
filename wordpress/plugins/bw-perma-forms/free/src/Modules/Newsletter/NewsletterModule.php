@@ -47,7 +47,7 @@ final class NewsletterModule extends AbstractModule {
 			$this->settings->int( 'brevo_doi_template_id' ),
 			$this->settings->url( 'brevo_redirect_url' )
 		);
-		( new NewsletterController( $service, $client ) )->register();
+		( new NewsletterController( $service, $client, $this->settings ) )->register();
 		add_filter( 'bw_perma_forms_settings_response', [ $this, 'settings_response' ] );
 	}
 

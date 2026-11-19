@@ -19,6 +19,7 @@ final class NewsletterController {
 	public function __construct(
 		private readonly NewsletterService $service,
 		private readonly \BW\PermaForms\Modules\Newsletter\Service\BrevoClient $client,
+		private readonly \BW\PermaForms\Core\Settings $settings,
 	) {}
 
 	public function register(): void {
@@ -67,6 +68,19 @@ final class NewsletterController {
 		);
 		register_rest_route(
 			Plugin::REST_NS,
+			'/brevo/setup',
+			[
+				'methods'             => 'POST',
+				'callback'            => [ $this, 'brevo_setup' ],
+				'permission_callback' => static fn(): bool => current_user_can( Plugin::CAPABILITY ),
+				'args'                => [
+					'create_list'     => [ 'type' => 'boolean', 'default' => true ],
+					'create_template' => [ 'type' => 'boolean', 'default' => true ],
+				],
+			]
+		);
+		register_rest_route(
+			Plugin::REST_NS,
 			'/brevo/webhook',
 			[
 				'methods'             => 'POST',
@@ -84,6 +98,31 @@ final class NewsletterController {
 		}
 		$options = $this->client->options();
 		return is_wp_error( $options ) ? new \WP_Error( $options->get_error_code(), $options->get_error_message(), [ 'status' => 502 ] ) : new \WP_REST_Response( $options );
+	}
+
+	/** Creates list and double opt-in template in Brevo and stores their ids in the settings. */
+	public function brevo_setup( \WP_REST_Request $request ): \WP_REST_Response|\WP_Error {
+		if ( ! $this->client->configured() ) {
+			return new \WP_Error( 'bw_perma_forms_brevo_key', __( 'No Brevo API key.', 'bw-perma-forms' ), [ 'status' => 400 ] );
+		}
+		$result = ( new \BW\PermaForms\Modules\Newsletter\Service\BrevoSetup( $this->client ) )->run(
+			(bool) $request->get_param( 'create_list' ),
+			(bool) $request->get_param( 'create_template' ),
+			wp_specialchars_decode( get_bloginfo( 'name' ), ENT_QUOTES ),
+			self::webhook_url()
+		);
+		if ( is_wp_error( $result ) ) {
+			return new \WP_Error( $result->get_error_code(), $result->get_error_message(), [ 'status' => 502 ] );
+		}
+		$values = [];
+		if ( $result['list_id'] ) {
+			$values['brevo_list_ids'] = (string) $result['list_id'];
+		}
+		if ( $result['template_id'] ) {
+			$values['brevo_doi_template_id'] = $result['template_id'];
+		}
+		$this->settings->update( $values );
+		return new \WP_REST_Response( $result );
 	}
 
 	public function webhook( \WP_REST_Request $request ): \WP_REST_Response {
