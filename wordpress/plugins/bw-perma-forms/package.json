@@ -1,0 +1,20 @@
+{
+	"name": "bw-perma-forms",
+	"version": "0.1.0",
+	"private": true,
+	"description": "Admin app of BW PERMA Forms",
+	"scripts": {
+		"build": "wp-scripts build admin=./admin-src/admin.tsx --output-path=free/build",
+		"start": "wp-scripts start admin=./admin-src/admin.tsx --output-path=free/build"
+	},
+	"devDependencies": {
+		"@types/react": "^18.3.31",
+		"@wordpress/api-fetch": "^7.57.0",
+		"@wordpress/components": "^29.12.0",
+		"@wordpress/element": "^6.46.0",
+		"@wordpress/i18n": "^5.26.0",
+		"@wordpress/scripts": "30.20.0",
+		"@wordpress/url": "^4.57.0",
+		"typescript": "5.8.3"
+	}
+}

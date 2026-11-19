@@ -70,6 +70,8 @@ Siehe Abschnitt 6. Lokal prüfen, z. B. mit WordPress Playground (`npx @wp-playg
 ### Phase 2 – Plugin im Repo bauen (`wordpress/plugins/bw-perma-forms/`)
 Siehe Abschnitt 7. Unit-Tests für die Services (PHPUnit + Brain Monkey laut Plugin-Skill).
 
+**Stand Phase 2:** Plugin gebaut und in Playground geprüft; statt Flamingo eine eigene Kontakt-Datenbank (Wunsch des Auftraggebers: Grundlage für spätere Mitglieder, CSV-Export im Dashboard). Aufbau und Einrichtung: [`docs/WP-PLUGIN.md`](WP-PLUGIN.md).
+
 ### Phase 3 – Übertragung auf die Dev-Installation
 1. Theme und Plugin installieren und aktivieren (über das Bridge-Plugin, z. B. als ZIP).
 2. Seiten anlegen (Slugs aus Abschnitt 8), Startseite als statische Startseite setzen, Navigation (mit Untermenü „Ausbildungen“) und Footer-Links einrichten.

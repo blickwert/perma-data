@@ -1,0 +1,293 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: BW PERMA Forms 0.1.0\n"
+"Language: de_DE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "%d contacts"
+msgstr "%d Kontakte"
+
+msgid "(no name)"
+msgstr "(ohne Namen)"
+
+msgid "Add"
+msgstr "Hinzufügen"
+
+msgid "All"
+msgstr "Alle"
+
+msgid "An own key is stored. Leave empty to keep it, enter \"-\" to remove it."
+msgstr "Ein eigener Schlüssel ist gespeichert. Leer lassen, um ihn zu behalten; „-“ eingeben, um ihn zu entfernen."
+
+msgid "BW PERMA Forms needs Contact Form 7. The forms stay empty until it is active."
+msgstr "BW PERMA Forms braucht Contact Form 7. Bis es aktiv ist, bleiben die Formulare leer."
+
+msgid "Blocked words (one per line)"
+msgstr "Gesperrte Wörter (eines pro Zeile)"
+
+msgid "Brevo API key"
+msgstr "Brevo-API-Schlüssel"
+
+msgid "Brevo list for the newsletter; several separated by commas."
+msgstr "Brevo-Liste für den Newsletter; mehrere mit Komma trennen."
+
+msgid "Brevo sends people here after they clicked the confirmation link."
+msgstr "Hierher leitet Brevo nach dem Klick auf den Bestätigungslink weiter."
+
+msgid "Brevo template of type \"Double opt-in confirmation\"."
+msgstr "Brevo-Vorlage vom Typ „Double-Opt-in-Bestätigung“."
+
+msgid "Cloudflare Turnstile"
+msgstr "Cloudflare Turnstile"
+
+msgid "Confirmation pending"
+msgstr "Bestätigung offen"
+
+msgid "Contact Form 7"
+msgstr "Contact Form 7"
+
+msgid "Contact Form 7 is not active."
+msgstr "Contact Form 7 ist nicht aktiv."
+
+msgid "Contact database"
+msgstr "Kontakt-Datenbank"
+
+msgid "Contact details"
+msgstr "Kontaktdaten"
+
+msgid "Contact form"
+msgstr "Kontaktformular"
+
+msgid "Contact not found."
+msgstr "Kontakt nicht gefunden."
+
+msgid "Contacts"
+msgstr "Kontakte"
+
+msgid "Course"
+msgstr "Ausbildung"
+
+msgid "Courses"
+msgstr "Ausbildungen"
+
+msgid "Courses of interest"
+msgstr "Interesse an Ausbildungen"
+
+msgid "Created"
+msgstr "Angelegt"
+
+msgid "Created %1$s via %2$s."
+msgstr "Angelegt am %1$s über %2$s."
+
+msgid "Delete contact"
+msgstr "Kontakt löschen"
+
+msgid "Delete this contact with all submissions? This cannot be undone."
+msgstr "Diesen Kontakt mit allen Einträgen löschen? Das lässt sich nicht rückgängig machen."
+
+msgid "Double opt-in template ID"
+msgstr "ID der Double-Opt-in-Vorlage"
+
+msgid "Download CSV"
+msgstr "CSV herunterladen"
+
+msgid "E-mail"
+msgstr "E-Mail"
+
+msgid "Empty: the key of the connected Brevo plugin is used."
+msgstr "Leer: Der Schlüssel des verbundenen Brevo-Plugins wird verwendet."
+
+msgid "Enter this address in Brevo (Settings › Webhooks, marketing events \"List addition\" and \"Unsubscribed\"); the contact list then shows confirmed and unsubscribed addresses."
+msgstr "Diese Adresse in Brevo eintragen (Einstellungen › Webhooks, Marketing-Ereignisse „Zur Liste hinzugefügt“ und „Abgemeldet“). Dann zeigt die Kontaktliste bestätigte und abgemeldete Adressen."
+
+msgid "Extra fields"
+msgstr "Zusatzfelder"
+
+msgid "First name"
+msgstr "Vorname"
+
+msgid "Form"
+msgstr "Formular"
+
+msgid "Former member"
+msgstr "Ehemaliges Mitglied"
+
+msgid "Forms"
+msgstr "Formulare"
+
+msgid "Forms (Contact Form 7)"
+msgstr "Formulare (Contact Form 7)"
+
+msgid "Forms rewritten."
+msgstr "Formulare neu geschrieben."
+
+msgid "Free fields for later member data (e.g. address, membership number). Every field becomes a column in the CSV export. An empty value deletes the field."
+msgstr "Freie Felder für spätere Mitgliedsdaten (z. B. Adresse, Mitgliedsnummer). Jedes Feld wird eine Spalte im CSV-Export. Ein leerer Wert löscht das Feld."
+
+msgid "History"
+msgstr "Verlauf"
+
+msgid "Inquiry"
+msgstr "Anfrage"
+
+msgid "Interest list"
+msgstr "Interessentenliste"
+
+msgid "Interest list and contact form go to this address."
+msgstr "Interessentenliste und Kontaktformular gehen an diese Adresse."
+
+msgid "Last name"
+msgstr "Nachname"
+
+msgid "List ID(s)"
+msgstr "Listen-ID(s)"
+
+msgid "Max. links per submission"
+msgstr "Max. Links pro Eintrag"
+
+msgid "Max. submissions per visitor"
+msgstr "Max. Einträge pro Besucher:in"
+
+msgid "Member"
+msgstr "Mitglied"
+
+msgid "Minimum fill time (seconds)"
+msgstr "Mindestausfüllzeit (Sekunden)"
+
+msgid "Name"
+msgstr "Name"
+
+msgid "New field (name)"
+msgstr "Neues Feld (Name)"
+
+msgid "Newsletter"
+msgstr "Newsletter"
+
+msgid "Newsletter (Brevo)"
+msgstr "Newsletter (Brevo)"
+
+msgid "Next"
+msgstr "Weiter"
+
+msgid "No"
+msgstr "Nein"
+
+msgid "No contacts found."
+msgstr "Keine Kontakte gefunden."
+
+msgid "No key yet: connect the Brevo plugin or enter an API key here."
+msgstr "Noch kein Schlüssel: Brevo-Plugin verbinden oder hier einen API-Schlüssel eintragen."
+
+msgid "None"
+msgstr "Keine"
+
+msgid "Notes (internal)"
+msgstr "Notizen (intern)"
+
+msgid "Open Contact Form 7 › Integration"
+msgstr "Contact Form 7 › Integration öffnen"
+
+msgid "PERMA contacts"
+msgstr "PERMA Kontakte"
+
+msgid "Page %1$d of %2$d"
+msgstr "Seite %1$d von %2$d"
+
+msgid "Page after confirming"
+msgstr "Seite nach der Bestätigung"
+
+msgid "Path on this site (e.g. /datenschutz/) or full URL."
+msgstr "Pfad auf dieser Website (z. B. /datenschutz/) oder vollständige Adresse."
+
+msgid "Phone"
+msgstr "Telefon"
+
+msgid "Preselected course"
+msgstr "Vorausgewählte Ausbildung"
+
+msgid "Previous"
+msgstr "Zurück"
+
+msgid "Privacy policy (link in the forms)"
+msgstr "Datenschutzerklärung (Link in den Formularen)"
+
+msgid "Profession or previous training"
+msgstr "Beruf oder bisherige Ausbildung"
+
+msgid "Prospect"
+msgstr "Interessent:in"
+
+msgid "Recipient of form mails"
+msgstr "Empfänger der Formular-Mails"
+
+msgid "Rewrite forms now"
+msgstr "Formulare jetzt neu schreiben"
+
+msgid "Save"
+msgstr "Speichern"
+
+msgid "Save settings"
+msgstr "Einstellungen speichern"
+
+msgid "Saved."
+msgstr "Gespeichert."
+
+msgid "Search name, e-mail, profession"
+msgstr "Name, E-Mail, Beruf suchen"
+
+msgid "Sections"
+msgstr "Bereiche"
+
+msgid "Settings"
+msgstr "Einstellungen"
+
+msgid "Settings saved."
+msgstr "Einstellungen gespeichert."
+
+msgid "Spam protection"
+msgstr "Spamschutz"
+
+msgid "Status"
+msgstr "Status"
+
+msgid "Subscribed"
+msgstr "Angemeldet"
+
+msgid "The e-mail address is invalid or already used by another contact."
+msgstr "Die E-Mail-Adresse ist ungültig oder gehört schon zu einem anderen Kontakt."
+
+msgid "The plugin writes these forms itself. Changes in Contact Form 7 are overwritten when the plugin changes the form."
+msgstr "Das Plugin schreibt diese Formulare selbst. Änderungen in Contact Form 7 werden überschrieben, sobald das Plugin das Formular ändert."
+
+msgid "Turnstile keys are entered in Contact Form 7; the widget then appears in all forms."
+msgstr "Die Turnstile-Schlüssel werden in Contact Form 7 eingetragen; danach erscheint das Widget in allen Formularen."
+
+msgid "Unsubscribed"
+msgstr "Abgemeldet"
+
+msgid "Usually set by Brevo; change only to correct it."
+msgstr "Wird normalerweise von Brevo gesetzt; nur zur Korrektur ändern."
+
+msgid "Webhook for Brevo"
+msgstr "Webhook für Brevo"
+
+msgid "You are not allowed to export contacts."
+msgstr "Du darfst keine Kontakte exportieren."
+
+msgid "not created yet"
+msgstr "noch nicht angelegt"
+
+msgid "up to date"
+msgstr "aktuell"
+
+msgid "will be updated"
+msgstr "wird aktualisiert"
+
+msgid "… within minutes"
+msgstr "… innerhalb von Minuten"
+
+msgid "← All contacts"
+msgstr "← Alle Kontakte"

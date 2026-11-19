@@ -1,0 +1,17 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "bw/perma-form",
+	"title": "PERMA-Formular",
+	"category": "widgets",
+	"icon": "feedback",
+	"description": "Interessentenliste, Newsletter oder Kontaktformular der PERMA Mind Academy.",
+	"textdomain": "bw-perma-forms",
+	"attributes": {
+		"form": { "type": "string", "default": "interest", "enum": [ "interest", "newsletter", "contact" ] },
+		"preselect": { "type": "string", "default": "" }
+	},
+	"supports": { "html": false, "className": true, "reusable": false },
+	"editorScript": "file:./editor.js",
+	"style": "bw-perma-forms"
+}

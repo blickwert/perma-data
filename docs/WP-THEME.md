@@ -30,7 +30,7 @@ Lokale Prüfung (WordPress Playground, PHP 8.3, WordPress aktuell): Theme und `w
 - **Patterns (Kategorie „PERMA Mind: Abschnitte“):** Hero, Profilmerkmale, Einleitung, Warum PERMA Mind Academy, Angebotskarten, Verstehen + PERMA-Modell + Vom Verstehen zum Anwenden, Über uns + Trainer, ECQA-Zertifizierung, Interessentenliste, Häufige Fragen, Newsletter, Kontakt, Angebotskopf, Angebot (Module, Umfang, Eckdaten, Weiterführend), Interessentenliste für ein Angebot.
 - **Seiten-Patterns (Kategorie „PERMA Mind: Seiten“):** Startseite, Basic, Advanced, Clinical Expert, Impressum, Datenschutz. Sie erscheinen beim Anlegen einer neuen Seite zur Auswahl.
 - **Eigener Block `bw/icon`:** Symbol aus `assets/icons/`, serverseitig gerendert, Farbe aus der Akzentfarbe. Editor ohne Build-Schritt (`blocks/icon/editor.js`).
-- **Formulare:** Platzhalter-Block `bw/perma-form` (`form`: `interest` | `newsletter` | `contact`, `preselect`: `basic` | `advanced` | `clinical`). Ihn registriert das Plugin `bw-perma-forms`; ohne Plugin bleibt die Stelle leer.
+- **Formulare:** Platzhalter-Block `bw/perma-form` (`form`: `interest` | `newsletter` | `contact`, `preselect`: `basic` | `advanced` | `clinical`). Ihn registriert das Plugin `bw-perma-forms` (siehe `docs/WP-PLUGIN.md`); ohne Plugin bleibt die Stelle leer.
 
 ## Blockstile (Auswahl im Editor statt Einstellungen)
 
