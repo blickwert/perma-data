@@ -20,7 +20,7 @@ final class Settings {
 		'brevo_api_key'          => '',
 		'brevo_list_ids'         => '',
 		'brevo_doi_template_id'  => 0,
-		'brevo_redirect_url'     => '/?newsletter=bestaetigt',
+		'brevo_redirect_url'     => '/newsletter-bestaetigt/',
 		'spam_min_seconds'       => 4,
 		'spam_rate_limit'        => 5,
 		'spam_rate_window'       => 10,

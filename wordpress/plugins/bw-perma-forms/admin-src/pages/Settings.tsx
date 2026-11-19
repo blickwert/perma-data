@@ -1,6 +1,6 @@
 import { __ } from '@wordpress/i18n';
 import { useEffect, useState } from '@wordpress/element';
-import { Button, Notice, Snackbar, Spinner, TextControl, TextareaControl } from '@wordpress/components';
+import { Button, Notice, SelectControl, Snackbar, Spinner, TextControl, TextareaControl } from '@wordpress/components';
 import { errorMessage, get, post } from '../api';
 import PageHeader from '../components/PageHeader';
 
@@ -12,6 +12,7 @@ type SettingsResponse = {
 	webhook_url?: string;
 	turnstile_url: string;
 };
+type BrevoOptions = { lists: { id: number; name: string }[]; templates: { id: number; name: string }[] };
 type FormStatus = { key: string; title: string; cf7_id: number; edit_url: string; in_sync: boolean };
 
 /** Recipient, Brevo, spam thresholds and the status of the Contact Form 7 forms. */
@@ -20,6 +21,8 @@ export default function Settings() {
 	const [ values, setValues ] = useState< Values >( {} );
 	const [ apiKey, setApiKey ] = useState( '' );
 	const [ forms, setForms ] = useState< { cf7_active: boolean; forms: FormStatus[] } | null >( null );
+	const [ brevo, setBrevo ] = useState< BrevoOptions | null >( null );
+	const [ brevoError, setBrevoError ] = useState( '' );
 	const [ busy, setBusy ] = useState( false );
 	const [ error, setError ] = useState( '' );
 	const [ saved, setSaved ] = useState( '' );
@@ -33,6 +36,7 @@ export default function Settings() {
 	useEffect( () => {
 		get< SettingsResponse >( '/settings' ).then( load ).catch( ( e ) => setError( errorMessage( e ) ) );
 		get< { cf7_active: boolean; forms: FormStatus[] } >( '/forms' ).then( setForms ).catch( () => setForms( null ) );
+		get< BrevoOptions >( '/brevo/options' ).then( setBrevo ).catch( ( e ) => setBrevoError( errorMessage( e ) ) );
 	}, [] );
 
 	if ( ! data ) {
@@ -113,8 +117,33 @@ export default function Settings() {
 				<div className="bwo-card">
 					<h2>{ __( 'Newsletter (Brevo)', 'bw-perma-forms' ) }</h2>
 					<TextControl label={ __( 'Brevo API key', 'bw-perma-forms' ) } help={ keyHelp } type="password" autoComplete="off" value={ apiKey } onChange={ setApiKey } __next40pxDefaultSize __nextHasNoMarginBottom />
-					{ text( 'brevo_list_ids', __( 'List ID(s)', 'bw-perma-forms' ), __( 'Brevo list for the newsletter; several separated by commas.', 'bw-perma-forms' ) ) }
-					{ text( 'brevo_doi_template_id', __( 'Double opt-in template ID', 'bw-perma-forms' ), __( 'Brevo template of type "Double opt-in confirmation".', 'bw-perma-forms' ), 'number' ) }
+					{ brevoError && <Notice status="warning" isDismissible={ false }>{ brevoError }</Notice> }
+					{ brevo ? (
+						<>
+							<SelectControl
+								label={ __( 'Newsletter list', 'bw-perma-forms' ) }
+								value={ String( values.brevo_list_ids ?? '' ).split( ',' )[ 0 ] }
+								options={ [ { label: __( '– choose –', 'bw-perma-forms' ), value: '' }, ...brevo.lists.map( ( l ) => ( { label: `${ l.name } (#${ l.id })`, value: String( l.id ) } ) ) ] }
+								onChange={ ( v ) => setValues( { ...values, brevo_list_ids: v } ) }
+								__next40pxDefaultSize
+								__nextHasNoMarginBottom
+							/>
+							<SelectControl
+								label={ __( 'Double opt-in template', 'bw-perma-forms' ) }
+								help={ __( 'Brevo template of type "Double opt-in confirmation".', 'bw-perma-forms' ) }
+								value={ String( values.brevo_doi_template_id ?? '' ) }
+								options={ [ { label: __( '– choose –', 'bw-perma-forms' ), value: '0' }, ...brevo.templates.map( ( t ) => ( { label: `${ t.name } (#${ t.id })`, value: String( t.id ) } ) ) ] }
+								onChange={ ( v ) => setValues( { ...values, brevo_doi_template_id: v } ) }
+								__next40pxDefaultSize
+								__nextHasNoMarginBottom
+							/>
+						</>
+					) : (
+						<>
+							{ text( 'brevo_list_ids', __( 'List ID(s)', 'bw-perma-forms' ), __( 'Brevo list for the newsletter; several separated by commas.', 'bw-perma-forms' ) ) }
+							{ text( 'brevo_doi_template_id', __( 'Double opt-in template ID', 'bw-perma-forms' ), __( 'Brevo template of type "Double opt-in confirmation".', 'bw-perma-forms' ), 'number' ) }
+						</>
+					) }
 					{ text( 'brevo_redirect_url', __( 'Page after confirming', 'bw-perma-forms' ), __( 'Brevo sends people here after they clicked the confirmation link.', 'bw-perma-forms' ) ) }
 					{ data.webhook_url && (
 						<>

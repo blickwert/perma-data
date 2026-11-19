@@ -16,7 +16,10 @@ final class NewsletterController {
 
 	public const TOKEN_OPTION = 'bw_perma_forms_webhook_token';
 
-	public function __construct( private readonly NewsletterService $service ) {}
+	public function __construct(
+		private readonly NewsletterService $service,
+		private readonly \BW\PermaForms\Modules\Newsletter\Service\BrevoClient $client,
+	) {}
 
 	public function register(): void {
 		add_filter( 'bw_perma_forms_before_submit', [ $this, 'before_submit' ], 10, 3 );
@@ -55,6 +58,15 @@ final class NewsletterController {
 	public function routes(): void {
 		register_rest_route(
 			Plugin::REST_NS,
+			'/brevo/options',
+			[
+				'methods'             => 'GET',
+				'callback'            => [ $this, 'brevo_options' ],
+				'permission_callback' => static fn(): bool => current_user_can( Plugin::CAPABILITY ),
+			]
+		);
+		register_rest_route(
+			Plugin::REST_NS,
 			'/brevo/webhook',
 			[
 				'methods'             => 'POST',
@@ -63,6 +75,15 @@ final class NewsletterController {
 				'permission_callback' => static fn( \WP_REST_Request $r ): bool => hash_equals( self::token(), (string) $r->get_param( 'token' ) ),
 			]
 		);
+	}
+
+	/** Lists and templates from Brevo for the settings page. */
+	public function brevo_options(): \WP_REST_Response|\WP_Error {
+		if ( ! $this->client->configured() ) {
+			return new \WP_Error( 'bw_perma_forms_brevo_key', __( 'No Brevo API key.', 'bw-perma-forms' ), [ 'status' => 400 ] );
+		}
+		$options = $this->client->options();
+		return is_wp_error( $options ) ? new \WP_Error( $options->get_error_code(), $options->get_error_message(), [ 'status' => 502 ] ) : new \WP_REST_Response( $options );
 	}
 
 	public function webhook( \WP_REST_Request $request ): \WP_REST_Response {

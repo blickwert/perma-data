@@ -40,13 +40,14 @@ final class NewsletterModule extends AbstractModule {
 	public function register(): void {
 		add_filter( 'bw_perma_forms_definitions', [ $this, 'add_definition' ] );
 		$lists   = array_filter( array_map( 'intval', explode( ',', $this->settings->string( 'brevo_list_ids' ) ) ) );
+		$client  = new BrevoClient( self::api_key( $this->settings->string( 'brevo_api_key' ) ) );
 		$service = new NewsletterService(
-			new BrevoClient( self::api_key( $this->settings->string( 'brevo_api_key' ) ) ),
+			$client,
 			$lists,
 			$this->settings->int( 'brevo_doi_template_id' ),
 			$this->settings->url( 'brevo_redirect_url' )
 		);
-		( new NewsletterController( $service ) )->register();
+		( new NewsletterController( $service, $client ) )->register();
 		add_filter( 'bw_perma_forms_settings_response', [ $this, 'settings_response' ] );
 	}
 

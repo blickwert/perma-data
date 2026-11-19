@@ -51,8 +51,16 @@ Regeln beim Zusammenführen: Namen und Beruf werden nur mit nicht leeren Werten 
 
 1. Contact Form 7 aktivieren, dann das Plugin. Die drei CF7-Formulare entstehen beim ersten Aufruf des Dashboards.
 2. **PERMA Kontakte › Einstellungen:** Empfänger (Standard `bw-cms@blickwert.at`, später `info@perma-academy.at`), Pfad der Datenschutzerklärung.
-3. **Brevo:** Liste und Double-Opt-in-Vorlage in Brevo anlegen, deren IDs eintragen, Weiterleitungsseite nach der Bestätigung angeben. Optional die angezeigte Webhook-Adresse in Brevo eintragen.
+3. **Brevo:** Liste und Double-Opt-in-Vorlage in Brevo anlegen; in den Einstellungen erscheinen sie zur Auswahl (sonst IDs eintragen). Weiterleitung nach der Bestätigung: Seite `/newsletter-bestaetigt/`. Optional die angezeigte Webhook-Adresse in Brevo eintragen. Hat das Brevo-Konto „Autorisierte IP-Adressen“ eingeschaltet, muss die IP des Webservers dort freigegeben sein (sonst Fehler „unrecognised IP address“).
 4. **Turnstile:** Schlüssel in Contact Form 7 › Integration eintragen.
+
+## Übertragung
+
+```bash
+python3 scripts/wp_deploy.py --site perma all   # ZIPs bauen, per BW WP Bridge installieren, Seiten anlegen
+```
+
+Zugangsdaten kommen aus `WP_PERMA_*` (Umgebung), nie aus dem Repo. Die ZIPs landen in `dist/` (nicht im Git).
 
 ## Entwicklung
 

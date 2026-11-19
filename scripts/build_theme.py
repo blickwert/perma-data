@@ -680,6 +680,14 @@ def finalize_assets_in_patterns():
         f.write_text(s, "utf-8")
 
 
+def p_newsletter_confirmed():
+    inner = (para("Newsletter", "bw-eyebrow") + heading("Danke, deine Anmeldung ist bestätigt", 1, "bw-page-hero__title")
+             + para("Du erhältst ab jetzt den Newsletter der PERMA Mind Academy mit Neuigkeiten zu Ausbildungen und Terminen. "
+                    "Abmelden kannst du dich jederzeit über den Link am Ende jeder Ausgabe.", "bw-page-hero__lead")
+             + buttons(button("Zu den Ausbildungen", home("/#ausbildungen")), cls="bw-page-hero__actions"))
+    return group(container(inner, "bw-page-hero__inner"), "bw-page-hero", "section", style="gradient-page", label="Newsletter bestätigt")
+
+
 # ------------------------------------------------------------------ Seiteninhalte für die Übertragung (Phase 3)
 def build_content():
     """Seiteninhalte als Block-Markup mit {{home:/pfad}}-Platzhaltern; beim Übertragen durch die Website-Adresse ersetzt."""
@@ -697,6 +705,9 @@ def build_content():
     pages["datenschutz"] = {"title": "Datenschutzerklärung", "slug": "datenschutz", "template": "page-rechtliches",
                             "markup": legal_blocks("datenschutz.html"),
                             "meta": {"title": "Datenschutz | PERMA Mind Academy", "desc": "Datenschutzerklärung der PERMA Mind Academy."}}
+    pages["newsletter-bestaetigt"] = {"title": "Newsletter bestätigt", "slug": "newsletter-bestaetigt", "template": "",
+                                      "markup": p_newsletter_confirmed(),
+                                      "meta": {"title": "Newsletter bestätigt | PERMA Mind Academy", "desc": "Deine Anmeldung zum Newsletter der PERMA Mind Academy ist bestätigt."}}
     index = []
     for key, p in pages.items():
         (d / f"{key}.html").write_text(p["markup"] + "\n", "utf-8")

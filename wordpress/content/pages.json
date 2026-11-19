@@ -60,6 +60,16 @@
    "front_page": false,
    "seo_title": "Datenschutz | PERMA Mind Academy",
    "seo_description": "Datenschutzerklärung der PERMA Mind Academy."
+  },
+  {
+   "key": "newsletter-bestaetigt",
+   "file": "newsletter-bestaetigt.html",
+   "title": "Newsletter bestätigt",
+   "slug": "newsletter-bestaetigt",
+   "template": "",
+   "front_page": false,
+   "seo_title": "Newsletter bestätigt | PERMA Mind Academy",
+   "seo_description": "Deine Anmeldung zum Newsletter der PERMA Mind Academy ist bestätigt."
   }
  ]
 }
