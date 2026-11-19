@@ -4,6 +4,7 @@
     python3 scripts/wp_deploy.py --site perma build      # ZIPs bauen (Theme, Plugin inkl. Admin-App)
     python3 scripts/wp_deploy.py --site perma install    # ZIPs installieren und aktivieren (überschreibt)
     python3 scripts/wp_deploy.py --site perma pages      # Seiten aus wordpress/content anlegen/aktualisieren, Startseite setzen
+    python3 scripts/wp_deploy.py --site perma seo        # Seitentitel und Meta-Beschreibungen für Yoast SEO setzen
     python3 scripts/wp_deploy.py --site perma all
 
 Zugangsdaten aus Umgebungsvariablen (nie ins Repo): WP_<SITE>_URL, WP_<SITE>_USER, WP_<SITE>_APP_PASSWORD,
@@ -16,6 +17,7 @@ import os
 import re
 import subprocess
 import sys
+import time
 import urllib.error
 import urllib.parse
 import urllib.request
@@ -46,11 +48,16 @@ class Site:
         q.update(query or {})
         req = urllib.request.Request(self.url + "/?" + urllib.parse.urlencode(q), method=method, headers=self.headers,
                                      data=None if body is None else json.dumps(body).encode())
-        try:
-            with urllib.request.urlopen(req, timeout=300) as r:
-                return json.loads(r.read() or b"null")
-        except urllib.error.HTTPError as e:
-            sys.exit(f"{method} {route}: HTTP {e.code} {e.read()[:400].decode(errors='replace')}")
+        for attempt in range(4):
+            try:
+                with urllib.request.urlopen(req, timeout=300) as r:
+                    return json.loads(r.read() or b"null")
+            except urllib.error.HTTPError as e:
+                sys.exit(f"{method} {route}: HTTP {e.code} {e.read()[:400].decode(errors='replace')}")
+            except urllib.error.URLError as e:  # Verbindung abgebrochen: kurz warten, erneut versuchen
+                if attempt == 3:
+                    sys.exit(f"{method} {route}: {e.reason}")
+                time.sleep(2 * (attempt + 1))
 
 
 def zip_dir(src: Path, prefix: str, out: Path, skip=()):
@@ -102,10 +109,22 @@ def pages(site: Site):
         print(f"Startseite: #{front}")
 
 
+def seo(site: Site):
+    """Seitentitel und Beschreibungen aus pages.json in die Felder von Yoast SEO schreiben."""
+    for p in json.loads((CONTENT / "pages.json").read_text("utf-8"))["pages"]:
+        found = site.call("GET", "wp/v2/pages", query={"slug": p["slug"], "_fields": "id"})
+        if not found:
+            print(f"{p['slug']:34} fehlt (zuerst 'pages')")
+            continue
+        site.call("POST", f"bw-bridge/v1/meta/{found[0]['id']}",
+                  {"set": {"_yoast_wpseo_title": p["seo_title"], "_yoast_wpseo_metadesc": p["seo_description"]}})
+        print(f"{p['slug']:34} {p['seo_title']}")
+
+
 if __name__ == "__main__":
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--site", default="perma")
-    ap.add_argument("step", choices=["build", "install", "pages", "all"])
+    ap.add_argument("step", choices=["build", "install", "pages", "seo", "all"])
     a = ap.parse_args()
     if a.step in ("build", "all"):
         build()
@@ -113,3 +132,5 @@ if __name__ == "__main__":
         install(Site(a.site))
     if a.step in ("pages", "all"):
         pages(Site(a.site))
+    if a.step in ("seo", "all"):
+        seo(Site(a.site))
