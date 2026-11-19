@@ -29,7 +29,7 @@ Die Seiten aktualisieren sich bei jedem Push auf `main` (Workflow `.github/workf
 | `.claude/skills/` | Regeln für CSS, Block-Theme und Plugins |
 | `wordpress/themes/perma-mind/` | Block-Theme (Aufbau: `docs/WP-THEME.md`, erzeugt mit `scripts/build_theme.py`) |
 | `wordpress/content/` | Seiteninhalte als Block-Markup für die Übertragung (erzeugt) |
-| `wordpress/plugins/bw-perma-forms/` | Formular-Plugin (folgt in Phase 2) |
+| `wordpress/plugins/bw-perma-forms/` | Formular-Plugin mit Kontakt-Datenbank (Aufbau: `docs/WP-PLUGIN.md`) |
 
 ## Vorschau neu erzeugen
 

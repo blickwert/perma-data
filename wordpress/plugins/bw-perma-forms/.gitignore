@@ -1,0 +1,5 @@
+node_modules/
+vendor/
+free/build/
+.phpunit.cache/
+*.zip

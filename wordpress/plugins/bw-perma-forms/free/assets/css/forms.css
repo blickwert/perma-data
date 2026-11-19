@@ -1,0 +1,53 @@
+/* BW PERMA Forms – Formular-Stil (aus design/v2b/styles.css, angepasst an das Markup von Contact Form 7).
+   Farben, Schriften, Abstände über die --bw-*-Variablen des Themes perma-mind; Ersatzwerte, falls ein anderes Theme aktiv ist. */
+
+.bw-form{display:flex;flex-direction:column;gap:var(--bw-space-5,1.25rem);margin:0;font-family:var(--bw-font-body,inherit);color:var(--bw-color-text,#00416b)}
+.bw-form *{box-sizing:border-box}
+.bw-form p{margin:0}
+.bw-form .hidden-fields-container{display:none}
+.bw-form__row{display:grid;gap:var(--bw-space-5,1.25rem);grid-template-columns:minmax(0,1fr)}
+.bw-form__field,.bw-form__group{display:flex;flex-direction:column;min-width:0;margin:0;padding:0;border:0}
+.bw-form__label{display:block;margin-bottom:var(--bw-space-2,.5rem);padding:0;font-size:var(--bw-fs-base,1rem);font-weight:var(--bw-fw-medium,500)}
+.bw-form__optional{font-weight:var(--bw-fw-regular,400);color:var(--bw-color-text-muted,#386b8c)}
+.bw-form .wpcf7-form-control-wrap{display:block}
+
+/* Eingabefelder */
+.bw-form__input{width:100%;min-height:48px;padding:0 var(--bw-space-4,1rem);border:var(--bw-border-width-hair,1px) solid var(--bw-color-border,#dbe4ea);border-radius:var(--bw-radius-card,12px);background:var(--bw-color-surface,#fff);font:inherit;font-size:var(--bw-fs-base,1rem);color:inherit}
+textarea.bw-form__input{min-height:0;padding:var(--bw-space-3,.75rem) var(--bw-space-4,1rem);resize:vertical}
+.bw-form__input:focus{outline:var(--bw-border-width-strong,2px) solid var(--bw-color-accent,#16a5d2);outline-offset:1px}
+
+/* Mehrfachauswahl (Ausbildungen) */
+.bw-form__options{display:flex;flex-direction:column;gap:var(--bw-space-2,.5rem)}
+.bw-form__options .wpcf7-list-item{display:block;margin:0}
+.bw-form__options label{display:flex;align-items:center;gap:var(--bw-space-3,.75rem);min-height:44px;padding:0 var(--bw-space-4,1rem);border:var(--bw-border-width-hair,1px) solid var(--bw-color-border,#dbe4ea);border-radius:var(--bw-radius-card,12px);cursor:pointer}
+.bw-form__options label:has(:checked){border-color:var(--bw-color-accent,#16a5d2);background:var(--bw-color-surface-tint,#e8f6fa)}
+.bw-form__options input,input.bw-form__checkbox{width:var(--bw-space-5,1.25rem);height:var(--bw-space-5,1.25rem);margin:0;flex:0 0 auto;accent-color:var(--bw-navy,#00416b)}
+
+/* Einzelne Checkbox mit Text (Newsletter, Einwilligung) */
+.bw-form__check .wpcf7-list-item{display:block;margin:0}
+.bw-form__check label{display:flex;gap:var(--bw-space-3,.75rem);align-items:flex-start;font-size:var(--bw-fs-base,1rem);line-height:var(--bw-lh-body,1.7);cursor:pointer}
+input.bw-form__checkbox{margin-top:var(--bw-space-1,.25rem)}
+.bw-form__hint{font-size:var(--bw-fs-base,1rem);line-height:var(--bw-lh-body,1.7);color:var(--bw-color-text-muted,#386b8c)}
+
+/* Absenden (wie Button "Akzent", volle Breite) */
+.bw-form__submit{width:100%;min-height:48px;padding:0 var(--bw-space-7,1.75rem);border:0;border-radius:var(--bw-radius-card,12px);background:linear-gradient(135deg,var(--bw-blue,#16a5d2) 0%,var(--bw-blue-dark,#138cb2) 100%);color:var(--bw-navy-dark,#003353);font:inherit;font-size:var(--bw-fs-base,1rem);font-weight:var(--bw-fw-medium,500);cursor:pointer;box-shadow:var(--bw-shadow-card,none)}
+.bw-form__submit:disabled{opacity:.6;cursor:wait}
+.bw-form .wpcf7-spinner{margin:var(--bw-space-2,.5rem) auto 0;display:block}
+
+/* Meldungen */
+.bw-form .wpcf7-not-valid-tip{margin-top:var(--bw-space-1,.25rem);font-size:var(--bw-fs-xs,.75rem);color:var(--bw-red,#d83662)}
+.bw-form .wpcf7-not-valid{border-color:var(--bw-red,#d83662)}
+.bw-perma-form .wpcf7 form .wpcf7-response-output{margin:0;padding:var(--bw-space-4,1rem) var(--bw-space-5,1.25rem);border:0;border-radius:var(--bw-radius-card,12px);background:var(--bw-color-surface-tint,#e8f6fa);font-size:var(--bw-fs-base,1rem)}
+.bw-perma-form .wpcf7 form.invalid .wpcf7-response-output,.bw-perma-form .wpcf7 form.failed .wpcf7-response-output,.bw-perma-form .wpcf7 form.spam .wpcf7-response-output,.bw-perma-form .wpcf7 form.aborted .wpcf7-response-output{background:var(--bw-placeholder,#fff4cc)}
+/* Nach dem Absenden bleibt nur die Bestätigung stehen */
+.bw-perma-form .wpcf7 form.sent>:not(.wpcf7-response-output){display:none}
+
+/* Honeypot: für Menschen unsichtbar */
+.bw-form__hp{position:absolute!important;left:-10000px!important;width:1px;height:1px;overflow:hidden} /* !important: darf durch kein Theme sichtbar werden */
+
+/* Turnstile */
+.bw-form .wpcf7-turnstile{min-height:65px}
+
+@media (min-width:561px){
+  .bw-form__row{grid-template-columns:repeat(2,minmax(0,1fr))}
+}

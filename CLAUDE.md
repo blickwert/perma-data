@@ -4,7 +4,7 @@ Sprache mit dem Auftraggeber: Deutsch. Auftraggeber: David (Blickwert, Graz).
 
 ## Aktuelle Aufgabe
 
-**WordPress-Umsetzung als Block-Theme + Formular-Plugin.** Vollständige Arbeitsanweisung mit allen bereits getroffenen Entscheidungen: [`docs/WP-UMSETZUNG.md`](docs/WP-UMSETZUNG.md). Phase 0 und 1 sind erledigt (Theme: [`docs/WP-THEME.md`](docs/WP-THEME.md)); weiter mit Phase 2 (Plugin).
+**WordPress-Umsetzung als Block-Theme + Formular-Plugin.** Vollständige Arbeitsanweisung mit allen bereits getroffenen Entscheidungen: [`docs/WP-UMSETZUNG.md`](docs/WP-UMSETZUNG.md). Phase 0 bis 2 sind erledigt (Theme: [`docs/WP-THEME.md`](docs/WP-THEME.md), Plugin: [`docs/WP-PLUGIN.md`](docs/WP-PLUGIN.md)); weiter mit Phase 3 (Übertragung auf die Dev-Installation).
 
 Kurz: Basis ist die Vorschau **v2b** (`design/v2b/`, Texte in `scripts/v2b_content.py`). Theme `wordpress/themes/perma-mind/`, Plugin `wordpress/plugins/bw-perma-forms/` (Contact Form 7, Turnstile, Brevo). Dev-Installation: `WP_PERMA_URL=https://dev.blickwert.at/wp/2604-perma`. Elementor wird nicht mehr verwendet.
 
@@ -35,4 +35,5 @@ Kurz: Basis ist die Vorschau **v2b** (`design/v2b/`, Texte in `scripts/v2b_conte
 | `docs/V2B.md` | Aufbau v2b, Entscheidungen, offene Punkte |
 | `scripts/build_theme.py` | Tokens + Texte → theme.json, tokens.css, Patterns, Icons, Seiteninhalte des Themes |
 | `docs/WP-THEME.md` | Aufbau des Block-Themes, Blockstile, Abweichungen von v2b |
+| `docs/WP-PLUGIN.md` | Plugin bw-perma-forms: Module, Hooks, Kontakt-Datenbank, Einrichtung |
 | `docs/PERMA-v2b-Aenderungen.docx`, `docs/PERMA-v2-Aenderungen.docx` | Änderungslisten für den Kunden |
