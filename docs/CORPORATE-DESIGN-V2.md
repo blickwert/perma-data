@@ -1,6 +1,6 @@
 # Corporate Design v2
 
-**v2 ist die Arbeitsgrundlage** für alle weiteren Änderungen und für den späteren Elementor-Export. Version 1 bleibt nur zum Vergleich im Repo.
+**v2 ist die Arbeitsgrundlage** für alle weiteren Änderungen und für das WordPress-Block-Theme (Basis der Inhalte ist v2b, siehe `docs/V2B.md`). Version 1 bleibt nur zum Vergleich im Repo.
 
 Das neue Corporate Design liegt parallel zur ersten Version in **`design/v2/`** (Vorschau: `/v2/`). Die erste Version (`design/reference/`) bleibt unverändert zum Vergleich.
 

@@ -1,56 +1,38 @@
-# PERMA Mind Academy – Landingpage-Template (WordPress / Elementor Atomic)
+# PERMA Mind Academy – Website (Design-Vorschau und WordPress-Block-Theme)
 
-Template-Projekt für die Landingpage der **PERMA Mind Academy** („We create wellbeing“).
-Ziel: ein wiederverwendbares Elementor-Template, gebaut mit den **Atomic Elements** (Elementor Editor V4:
-`e-flexbox`, `e-div-block`, `e-heading`, `e-paragraph`, `e-button`, `e-image`).
+Website der **PERMA Mind Academy** („We create wellbeing“). Das Design wird hier als statische Vorschau entwickelt und anschließend als eigenes **WordPress-Block-Theme** mit einem **Formular-Plugin** (auf Basis von Contact Form 7) umgesetzt. Elementor wird nicht mehr verwendet.
 
-> **Status:** Entwurf. Die JSON-Templates werden aus Design-Tokens + Inhalt generiert und sind
-> **noch nicht in einer echten Elementor-Installation getestet** (siehe „Offene Punkte“).
+**Nächster Schritt:** WordPress-Umsetzung. Arbeitsanweisung: [`docs/WP-UMSETZUNG.md`](docs/WP-UMSETZUNG.md) (Einstieg für neue Sessions: [`CLAUDE.md`](CLAUDE.md)).
 
-## Live-Vorschau
+## Live-Vorschau (GitHub Pages)
 
-Das Design (`design/reference/`) wird per GitHub Pages veröffentlicht: <https://blickwert.github.io/perma-data/>.
-Einmalig einzurichten: *Settings → Pages → Source: GitHub Actions*. Danach aktualisiert sich die Seite bei jedem Push auf `main`.
+| Version | Link | Ordner | Doku |
+|---|---|---|---|
+| v2b – Kundenwünsche (Homepagetexte V5), **Basis für WordPress** | <https://blickwert.github.io/perma-data/v2b/> | `design/v2b/` | `docs/V2B.md` |
+| v2 – Corporate Design v2 | <https://blickwert.github.io/perma-data/v2/> | `design/v2/` | `docs/CORPORATE-DESIGN-V2.md` |
+| v1 – ursprüngliches Mockup (nur Vergleich) | <https://blickwert.github.io/perma-data/> | `design/reference/` | – |
 
-Corporate Design v2 (neue Farben, Logo, Siegel): <https://blickwert.github.io/perma-data/v2/> – Ordner `design/v2/`, Details in `docs/CORPORATE-DESIGN-V2.md`.
-
-Version v2b (Kundenwünsche, Homepagetexte V5) zum Vergleich: <https://blickwert.github.io/perma-data/v2b/> – Ordner `design/v2b/`, Details in `docs/V2B.md`.
+Die Seiten aktualisieren sich bei jedem Push auf `main` (Workflow `.github/workflows/pages.yml`).
 
 ## Struktur
 
 | Pfad | Inhalt |
 |---|---|
-| `design/reference/` | Original-Mockup (Export aus dem Design-Tool, nur Referenz). Ansehen: `cd design/reference && python3 -m http.server`, dann `Main.dc.html` öffnen |
-| `tokens/tokens.json` | Single Source für Farben (Palette + Rollen), Fonts, Radien, Schatten, Layout – siehe `docs/DESIGN-TOKENS.md` |
-| `content/content.json` | Alle Texte inkl. `[Platzhalter]` – hier pflegen, nicht in den JSONs |
-| `assets/` | `logo.svg`, Icons (`icons/*.svg`, Lucide-Stil) |
-| `scripts/build_elementor.py` | Generator: Tokens + Inhalt → Elementor-JSON |
-| `templates/elementor/` | entsteht erst beim Export (`scripts/build_elementor.py`), derzeit nicht im Repo |
-| `docs/` | Seitenbriefing, Import-Anleitung, Design-Hinweise |
+| `tokens/tokens.v2.json` | Single Source für das Designsystem (Farben, Schriften, Größen, Abstände, Radien, Schatten) |
+| `scripts/build_tokens.py` | Tokens → `tokens.css` (`v1`, `v2`, `v2b`) |
+| `scripts/v2b_content.py` | Alle Website-Texte der Version v2b (Quelle für die WordPress-Inhalte) |
+| `scripts/build_design_pages_v2b.py` | Erzeugt die v2b-Vorschau |
+| `scripts/build_design_pages_v2.py`, `build_design_pages.py` | Unterseiten v2 bzw. v1 |
+| `design/` | Statische Vorschauen v1, v2, v2b |
+| `assets/` | Logo, Icons (`icons/icons.json`, Lucide-Stil) |
+| `docs/` | Briefing, Corporate Design, Tokens, v2b, WordPress-Umsetzung, Änderungslisten (Word) |
+| `.claude/skills/` | Regeln für CSS, Block-Theme und Plugins |
+| `wordpress/` | entsteht in der WordPress-Umsetzung: `themes/perma-mind/`, `plugins/bw-perma-forms/` |
 
-## Build
+## Vorschau neu erzeugen
 
 ```bash
-python3 scripts/build_elementor.py   # keine Abhängigkeiten, Python 3.8+
+python3 scripts/build_tokens.py v2b
+python3 scripts/build_design_pages_v2b.py
+cd design/v2b && python3 -m http.server   # dann index.html öffnen
 ```
-
-## Import in WordPress
-
-Siehe [`docs/IMPORT.md`](docs/IMPORT.md). Kurz: Elementor-Atomic-Editor aktivieren →
-Templates → Importieren → `templates/elementor/full-page.json` (vorher mit `python3 scripts/build_elementor.py` erzeugen).
-
-## Seitenaufbau
-
-1. Header (sticky) · 2. Hero · 3. Intro · 4. Unser Angebot (4 Kacheln) · 5. Ausbildungen & Module (4 Zeilen + Zertifikat-Banner)
-6. Vorteile (6 Icons) · 7. „Sorgfalt vor großen Versprechen“ · 8. Team (2 Karten) · 9. Kontakt & Vormerkung (Formular) · 10. Footer
-
-Der Mockup enthält zusätzlich zum Briefing die Sektionen **Intro** (mit Kennzahlen 4 / 5), **Sorgfalt**, den
-**Zertifikat-Banner** und einen **schwebenden Kontakt-Button**; sie sind übernommen, aber leicht entfernbar
-(Sektionsdatei weglassen bzw. aus `SECTIONS` im Generator streichen).
-
-## Offene Inhalte (aus dem Briefing)
-
-1. Modulnamen, Reihenfolge und **Dauer** der vier Module bestätigen.
-2. Welche **Anerkennung/Zertifizierung** besteht tatsächlich? Bis dahin stehen `[Anerkennung bestätigen]`-Platzhalter – keine Aussage erfinden.
-3. **Team**: Namen, Titel, Werdegang; Zitate sind Entwürfe.
-4. Adresse, Telefon, E-Mail, Social-Links, Impressum/Datenschutz-URLs.
