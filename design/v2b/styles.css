@@ -313,7 +313,12 @@ input,select,textarea,button{font-family:var(--bw-font-body)}
 .bw-form__hint{margin:0;font-size:var(--bw-fs-base);line-height:var(--bw-lh-body);color:var(--bw-color-text-muted)}
 
 /* ========== Komponente: Angebotsseite (Eckdaten, Karten, Weiterführend) ========== */
-.bw-page-hero--offer{box-shadow:inset 0 var(--bw-space-1) 0 var(--bw-accent)}
+/* Angebotsseiten folgen dem Farbschema der Angebotskarten: Akzent-Tiefe -> Navy */
+.bw-page-hero--offer{background:linear-gradient(135deg,var(--bw-accent-deep) 0%,var(--bw-navy-dark) 100%);color:var(--bw-color-text-on-dark)}
+.bw-crumbs a,.bw-page-hero__text a{color:inherit}
+.bw-form-card--accent{background:linear-gradient(135deg,var(--bw-accent-deep) 0%,var(--bw-navy-dark) 100%)}
+.bw-button--light{background:var(--bw-color-surface);color:var(--bw-color-text)}
+.bw-button--on-dark{color:var(--bw-color-text-on-dark)}
 .bw-page-hero__chip{display:inline-block;margin:0}
 .bw-page-hero__text{margin:var(--bw-space-4) 0 0;max-width:680px;font-size:var(--bw-fs-base);line-height:var(--bw-lh-body)}
 .bw-page-hero__actions{display:flex;flex-wrap:wrap;gap:var(--bw-space-3);margin-top:var(--bw-space-8)}
