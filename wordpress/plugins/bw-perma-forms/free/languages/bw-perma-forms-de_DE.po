@@ -291,3 +291,15 @@ msgstr "… innerhalb von Minuten"
 
 msgid "← All contacts"
 msgstr "← Alle Kontakte"
+
+msgid "No Brevo API key."
+msgstr "Kein Brevo-API-Schlüssel."
+
+msgid "Newsletter list"
+msgstr "Newsletter-Liste"
+
+msgid "Double opt-in template"
+msgstr "Double-Opt-in-Vorlage"
+
+msgid "– choose –"
+msgstr "– auswählen –"

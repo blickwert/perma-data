@@ -79,6 +79,8 @@ Siehe Abschnitt 7. Unit-Tests für die Services (PHPUnit + Brain Monkey laut Plu
 4. CF7-Formulare anlegen (vom Plugin bereitgestellt), Empfänger `bw-cms@blickwert.at`, Turnstile- und Brevo-Schlüssel eintragen lassen bzw. eintragen.
 5. Testeinträge für alle drei Formulare absenden, Mails und Brevo-Eingang prüfen, Testdaten danach löschen.
 
+**Stand Phase 3 (19. November 2026):** Theme und Plugin mit `scripts/wp_deploy.py --site perma all` übertragen und aktiv; sieben Seiten angelegt (Startseite, drei Angebotsseiten, Impressum, Datenschutz, Newsletter bestätigt), Startseite gesetzt, Website-Titel „PERMA Mind Academy“, Beispielinhalte im Papierkorb, Twenty Twenty-Five entfernt. CF7-Formulare angelegt; Testeinträge Interessentenliste und Kontakt gespeichert. Offen: Brevo erlaubt nur freigegebene IP-Adressen (Server-IP in Brevo freigeben), Turnstile-Schlüssel, SEO-Titel und -Beschreibungen (kein SEO-Plugin), Testdaten löschen.
+
 ### Phase 4 – Abnahme
 - Screenshot-Vergleich je Seite gegen v2b bei 1440 px und 390 px (Startseite, drei Angebotsseiten, Impressum, Datenschutz).
 - Editor-Test: Neue Seite aus Patterns zusammensetzen, ohne Designeinstellungen; Texte ändern; Stile wechseln.

@@ -41,6 +41,38 @@ class BrevoClient {
 	}
 
 	/**
+	 * Lists and active templates of the account (for choosing them in the settings).
+	 *
+	 * @return array{lists: array<int, array{id: int, name: string}>, templates: array<int, array{id: int, name: string}>}|\WP_Error
+	 */
+	public function options(): array|\WP_Error {
+		$lists = $this->get( 'https://api.brevo.com/v3/contacts/lists?limit=50&offset=0&sort=desc' );
+		if ( is_wp_error( $lists ) ) {
+			return $lists;
+		}
+		$templates = $this->get( 'https://api.brevo.com/v3/smtp/templates?templateStatus=true&limit=100&offset=0&sort=desc' );
+		if ( is_wp_error( $templates ) ) {
+			return $templates;
+		}
+		$pick = static fn( array $rows ): array => array_values( array_map( static fn( array $r ): array => [ 'id' => (int) ( $r['id'] ?? 0 ), 'name' => (string) ( $r['name'] ?? '' ) ], $rows ) );
+		return [ 'lists' => $pick( (array) ( $lists['lists'] ?? [] ) ), 'templates' => $pick( (array) ( $templates['templates'] ?? [] ) ) ];
+	}
+
+	/** @return array<string, mixed>|\WP_Error */
+	private function get( string $url ): array|\WP_Error {
+		$response = wp_remote_get( $url, [ 'timeout' => 15, 'headers' => [ 'api-key' => $this->api_key, 'accept' => 'application/json' ] ] );
+		if ( is_wp_error( $response ) ) {
+			return $response;
+		}
+		$code = (int) wp_remote_retrieve_response_code( $response );
+		$body = json_decode( (string) wp_remote_retrieve_body( $response ), true );
+		if ( $code < 200 || $code >= 300 ) {
+			return new \WP_Error( 'bw_perma_forms_brevo', sprintf( 'Brevo %d: %s', $code, (string) ( $body['message'] ?? 'error' ) ) );
+		}
+		return is_array( $body ) ? $body : [];
+	}
+
+	/**
 	 * Sends the double opt-in mail through Brevo.
 	 *
 	 * @param array<string, mixed> $payload
