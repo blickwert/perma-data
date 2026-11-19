@@ -14,6 +14,8 @@ Einmalig einzurichten: *Settings → Pages → Source: GitHub Actions*. Danach a
 
 Corporate Design v2 (neue Farben, Logo, Siegel): <https://blickwert.github.io/perma-data/v2/> – Ordner `design/v2/`, Details in `docs/CORPORATE-DESIGN-V2.md`.
 
+Version v2b (Kundenwünsche, Homepagetexte V5) zum Vergleich: <https://blickwert.github.io/perma-data/v2b/> – Ordner `design/v2b/`, Details in `docs/V2B.md`.
+
 ## Struktur
 
 | Pfad | Inhalt |
