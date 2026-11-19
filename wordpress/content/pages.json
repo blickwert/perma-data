@@ -1,0 +1,65 @@
+{
+ "$comment": "AUTO-GENERIERT von scripts/build_theme.py – nicht von Hand ändern.",
+ "pages": [
+  {
+   "key": "startseite",
+   "file": "startseite.html",
+   "title": "Startseite",
+   "slug": "startseite",
+   "template": "",
+   "front_page": true,
+   "seo_title": "Positive Psychologie Ausbildung | PERMA Mind Academy",
+   "seo_description": "Positive Psychologie lernen: seit 2014 international vernetzte Trainer, aktuelle Forschung und ECQA-Abschluss. Entdecke Basic, Advanced und Clinical Expert."
+  },
+  {
+   "key": "basic",
+   "file": "basic.html",
+   "title": "Positive Psychology Basic",
+   "slug": "positive-psychologie-basic",
+   "template": "page-angebot",
+   "front_page": false,
+   "seo_title": "Positive Psychologie Basic | PERMA Mind Academy",
+   "seo_description": "Positive Psychologie Basic: drei Module, eigenes Praxisprojekt und ECQA-Abschluss. Ohne Vorkenntnisse. Jetzt unverbindlich in die Interessentenliste eintragen."
+  },
+  {
+   "key": "advanced",
+   "file": "advanced.html",
+   "title": "Positive Psychology Advanced",
+   "slug": "positive-psychologie-advanced",
+   "template": "page-angebot",
+   "front_page": false,
+   "seo_title": "Positive Psychologie Advanced | PERMA Mind Academy",
+   "seo_description": "Positive Psychologie Advanced ab Anfang 2028: 94 Einheiten für die professionelle Anwendung. Basic-Abschluss erforderlich. Unverbindliche Interessentenliste."
+  },
+  {
+   "key": "clinical",
+   "file": "clinical.html",
+   "title": "PERMA Clinical Expert",
+   "slug": "klinische-positive-psychologie",
+   "template": "page-angebot",
+   "front_page": false,
+   "seo_title": "Klinische Positive Psychologie | PERMA Mind Academy",
+   "seo_description": "Klinische Positive Psychologie ab Frühjahr 2028: acht Module, 128 Seminareinheiten und ECQA-Abschluss. Jetzt in die unverbindliche Interessentenliste eintragen."
+  },
+  {
+   "key": "impressum",
+   "file": "impressum.html",
+   "title": "Impressum",
+   "slug": "impressum",
+   "template": "page-rechtliches",
+   "front_page": false,
+   "seo_title": "Impressum | PERMA Mind Academy",
+   "seo_description": "Impressum der PERMA Mind Academy."
+  },
+  {
+   "key": "datenschutz",
+   "file": "datenschutz.html",
+   "title": "Datenschutzerklärung",
+   "slug": "datenschutz",
+   "template": "page-rechtliches",
+   "front_page": false,
+   "seo_title": "Datenschutz | PERMA Mind Academy",
+   "seo_description": "Datenschutzerklärung der PERMA Mind Academy."
+  }
+ ]
+}

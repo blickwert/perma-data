@@ -1,0 +1,17 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "bw/icon",
+	"title": "Symbol",
+	"category": "design",
+	"icon": "star-filled",
+	"description": "Symbol aus dem Theme (Farbe aus der Akzentfarbe des Abschnitts).",
+	"textdomain": "perma-mind",
+	"attributes": {
+		"icon": { "type": "string", "default": "check" },
+		"size": { "type": "integer", "default": 24 }
+	},
+	"supports": { "html": false, "className": true, "customClassName": true, "reusable": false },
+	"editorScript": "file:./editor.js",
+	"render": "file:./render.php"
+}

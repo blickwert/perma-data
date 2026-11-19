@@ -54,8 +54,18 @@ Ergebnis:
 3. Prüfen, ob die verwendete CF7-Version Cloudflare Turnstile selbst unterstützt (Integration in CF7) und ob das Brevo-Plugin eine CF7-Anbindung oder eine eigene Formular-/Listen-Funktion mitbringt. Danach entscheiden, was das Plugin selbst bauen muss (Abschnitt 7).
 4. Ergebnis kurz dem Auftraggeber melden, mit dem konkreten Umsetzungsplan.
 
+**Ergebnis Phase 0 (19. November 2026):**
+- Dev-Installation: WordPress 7.1.5, PHP auf 8.3 umgestellt, Sprache Deutsch, Permalinks `/%postname%/`, Suchmaschinen ausgesperrt.
+- Aufgeräumt: alte Elementor-Plugins und Hello-Themes gelöscht. Behalten: ACF Pro und CookieYes (inaktiv), UpdraftPlus (aktiv).
+- Installiert: Contact Form 7 6.2.5, Brevo-Plugin 3.3.6 (für An- und Abmeldung zum Newsletter; mit dem Brevo-Konto verbunden). Kein SMTP- und kein SEO-Plugin.
+- CF7 bringt Cloudflare Turnstile selbst mit → das Plugin nutzt die CF7-Integration und ergänzt Honeypot, Mindestzeit, Ratenbegrenzung, Inhaltsfilter.
+- CF7 kann Kontakte in Brevo-Listen eintragen, die Bestätigung (Double-Opt-in) liefe aber über WordPress-Mails. Das Brevo-Plugin hat keine CF7-Anbindung. → Das Newsletter-Modul ruft die Brevo-API selbst auf (`/contacts/doubleOptinConfirmation`, Bestätigung mit Brevo-Vorlage).
+- GitHub Pages ist seit dem Umstellen des Repos auf privat nicht mehr erreichbar; Vergleich lokal mit `design/v2b/`.
+
 ### Phase 1 – Theme im Repo bauen (`wordpress/themes/perma-mind/`)
 Siehe Abschnitt 6. Lokal prüfen, z. B. mit WordPress Playground (`npx @wp-playground/cli server --mount=...`), falls im Container verfügbar; sonst direkt auf der Dev-Installation.
+
+**Stand:** Theme gebaut und lokal in Playground geprüft. Aufbau, Generator (`scripts/build_theme.py`), Blockstile und Abweichungen von v2b: [`docs/WP-THEME.md`](WP-THEME.md).
 
 ### Phase 2 – Plugin im Repo bauen (`wordpress/plugins/bw-perma-forms/`)
 Siehe Abschnitt 7. Unit-Tests für die Services (PHPUnit + Brain Monkey laut Plugin-Skill).
