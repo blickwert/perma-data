@@ -57,7 +57,7 @@ Regeln beim Zusammenführen: Namen und Beruf werden nur mit nicht leeren Werten 
 ## Übertragung
 
 ```bash
-python3 scripts/wp_deploy.py --site perma all   # ZIPs bauen, per BW WP Bridge installieren, Seiten anlegen
+python3 scripts/wp_deploy.py --site perma all   # ZIPs bauen, per BW WP Bridge installieren, Seiten anlegen, SEO-Felder (Yoast) setzen
 ```
 
 Zugangsdaten kommen aus `WP_PERMA_*` (Umgebung), nie aus dem Repo. Die ZIPs landen in `dist/` (nicht im Git).
