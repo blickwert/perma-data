@@ -75,15 +75,19 @@ def header(page):
     links = "".join(f'<a class="bw-header__link" href="{home}#{a}">{t}</a>' for t, a in items)
     mlinks = "".join(f'<a class="bw-mnav__link" href="{home}#{a}">{t}</a>' for t, a in items)
     cta = "#interessentenliste" if page in ("index", "basic", "advanced", "clinical") else "index.html#interessentenliste"
-    return f"""<header class="bw-header">
+    acc = next((o["accent"] for o in C.OFFERS if o["key"] == page), None)  # Angebotsseite: Header im Kartenverlauf
+    hcls = f"bw-header bw-header--accent bw-accent--{acc}" if acc else "bw-header"
+    logo = "assets/logo-white.svg" if acc else "assets/logo.svg"
+    btn = "bw-button--light" if acc else "bw-button--primary"
+    return f"""<header class="{hcls}">
 <div class="bw-header__bar">
-<a class="bw-header__logo" href="{home or '#oben'}" aria-label="PERMA Mind Academy – zur Startseite"><img class="bw-header__logo-img" src="assets/logo.svg" alt="PERMA Mind Academy – We create wellbeing"></a>
+<a class="bw-header__logo" href="{home or '#oben'}" aria-label="PERMA Mind Academy – zur Startseite"><img class="bw-header__logo-img" src="{logo}" alt="PERMA Mind Academy – We create wellbeing"></a>
 <nav class="bw-header__nav" aria-label="Hauptnavigation">
 <div class="bw-nav-menu"><a class="bw-header__link" href="{home}#ausbildungen"{current}>Ausbildungen {icon("chevron", 16, "2", "bw-nav-menu__chevron")}</a>
 <div class="bw-nav-menu__panel">{sub}</div></div>
 {links}
 </nav>
-<a class="bw-button bw-button--primary bw-header__cta" href="{cta}">Zur Interessentenliste</a>
+<a class="bw-button {btn} bw-header__cta" href="{cta}">Zur Interessentenliste</a>
 <details class="bw-mnav"><summary class="bw-mnav__toggle" aria-label="Menü öffnen">{icon("menu", 22, "2")}</summary>
 <div class="bw-mnav__panel"><a class="bw-mnav__link" href="{home}#ausbildungen">Ausbildungen</a>{msub}{mlinks}<a class="bw-button bw-button--primary bw-mnav__cta" href="{cta}">Zur Interessentenliste</a></div></details>
 </div>
