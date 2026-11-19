@@ -3,6 +3,7 @@
 
     python3 scripts/build_tokens.py       # tokens/tokens.json    -> design/reference/tokens.css
     python3 scripts/build_tokens.py v2    # tokens/tokens.v2.json -> design/v2/tokens.css
+    python3 scripts/build_tokens.py v2b   # tokens/tokens.v2.json -> design/v2b/tokens.css
 
 Ebene 1 (Palette):  --<praefix>-navy, --<praefix>-mint, ...
 Ebene 2 (Rollen):   --<praefix>-color-text, --<praefix>-color-border, ... (zeigen auf die Palette)
@@ -13,7 +14,8 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-V2 = len(sys.argv) > 1 and sys.argv[1] == "v2"
+MODE = sys.argv[1] if len(sys.argv) > 1 else "v1"
+V2 = MODE in ("v2", "v2b")
 T = json.loads((ROOT / ("tokens/tokens.v2.json" if V2 else "tokens/tokens.json")).read_text("utf-8"))
 k = lambda s: s.replace("_", "-")
 P = "bw" if V2 else "pma"  # CSS-Praefix: v2 = bw-, v1 (Vergleich) = pma-
@@ -47,6 +49,6 @@ lines += ["}", "",
           f"@media (max-width:{T['breakpoints']['stack']}px){{", "  :root{"]
 lines += [f"    --{P}-fs-{k(n)}:{v}px;" for n, v in T["font_size_mobile"].items()]
 lines += ["  }", "}", ""]
-out = ROOT / ("design/v2/tokens.css" if V2 else "design/reference/tokens.css")
+out = ROOT / ({"v2": "design/v2", "v2b": "design/v2b"}.get(MODE, "design/reference") + "/tokens.css")
 out.write_text("\n".join(lines), "utf-8")
 print("->", out.relative_to(ROOT))
