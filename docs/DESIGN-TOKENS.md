@@ -3,7 +3,6 @@
 Single Source of Truth: [`tokens/tokens.json`](../tokens/tokens.json). Daraus entstehen
 
 - `design/reference/tokens.css` (CSS-Variablen für Startseite und Unterseiten): `python3 scripts/build_tokens.py`
-- die Elementor-Templates: `python3 scripts/build_elementor.py`
 
 Farbwerte nur in `tokens.json` ändern, danach beide Skripte laufen lassen (die Unterseiten mit `python3 scripts/build_design_pages.py`).
 
@@ -24,7 +23,7 @@ Farbwerte nur in `tokens.json` ändern, danach beide Skripte laufen lassen (die 
 | `--pma-silver` / `--pma-graphite` | `#D6D6D6` / `#6B6B6B` | Text und Rahmen auf Dunkel |
 | `--pma-sky`, `--pma-sky-light`, `--pma-sage`, `--pma-clay` | | Hero-Verlauf |
 
-**Rollen** (`--pma-color-text`, `--pma-color-border`, …): zeigen auf die Palette und sagen, wofür eine Farbe da ist. Im Elementor-Export werden daraus Variablen.
+**Rollen** (`--pma-color-text`, `--pma-color-border`, …): zeigen auf die Palette und sagen, wofür eine Farbe da ist. Im WordPress-Theme werden daraus `theme.json`-Presets (siehe `docs/WP-UMSETZUNG.md`).
 
 ## Zusammengelegte Farben
 `#FEFEFE` → Weiß · `#E4F4F4`, `#D5ECEC` → Mint (`#E8F1F1`) · `#B7CDCD` → Mist (`#C9DAD9`) · `#587077` → Slate (`#4B6269`) · Navy-Transparenzen .25/.3 → .3.
@@ -62,4 +61,4 @@ Zeilenhöhen 1.25/1.3/1.35/1.4 → 1.3, alle ab 1.5 → 1.7. Die kleine Eyebrow-
 Das Aussehen ändert sich dadurch leicht: Texte ab 14 px sind etwas größer, die Seiten dadurch länger.
 
 ## Noch offen
-Abstände (Padding, Gaps) und Radien, danach Elementor-Export auf Basis der Variablen.
+Abstände (Padding, Gaps) und Radien, danach Übernahme ins Block-Theme (`theme.json`).

@@ -1,18 +1,18 @@
 ---
 name: html-css-richtlinien
-description: Regeln für sauberes, klassenbasiertes HTML und CSS mit einheitlichen Design-Tokens (Farben, Schriften, Spacing, Rahmen, Buttons), kompatibel mit dem Elementor Design System. Verwenden, wenn HTML/CSS für Webseiten, Landingpages, Templates oder Elementor-Projekte geschrieben oder überarbeitet wird.
+description: Regeln für sauberes, klassenbasiertes HTML und CSS mit einheitlichen Design-Tokens (Farben, Schriften, Spacing, Rahmen, Buttons), übertragbar in ein WordPress-Block-Theme (theme.json). Verwenden, wenn HTML/CSS für Webseiten, Landingpages, Design-Vorschauen oder WordPress-Themes und -Plugins geschrieben oder überarbeitet wird.
 ---
 
 # HTML & CSS schreiben – Richtlinien
 
-Oberstes Ziel: **Konsistenz.** Jede Definition (Farbe, Schrift, Abstand, Rahmen, Button) existiert genau einmal und ist auf allen Seiten identisch. Der Code muss später ohne Umbau in das Elementor Design System (Global Colors / Global Fonts) übernommen werden können.
+Oberstes Ziel: **Konsistenz.** Jede Definition (Farbe, Schrift, Abstand, Rahmen, Button) existiert genau einmal und ist auf allen Seiten identisch. Der Code muss ohne Umbau in ein WordPress-Block-Theme übernommen werden können: Tokens werden zu `theme.json`-Presets (siehe Skill `wp-theme-architecture`).
 
 ## 1. Keine Inline-Styles
 
 - Im HTML **kein** `style="..."`. Styling läuft ausschließlich über Klassen.
 - Ausnahme nur, wenn technisch unvermeidbar (z. B. dynamisch berechnete Werte wie ein Fortschrittsbalken `--progress: 70%` als Custom Property). Dann nur die Variable setzen, nie fertige Eigenschaften.
 - Keine `<style>`-Blöcke im Body verstreuen. CSS gehört gesammelt in ein Stylesheet (oder einen einzelnen Block im Head).
-- Kein `!important`, außer zum bewussten Überschreiben von Elementor-/Plugin-Defaults, und dann kommentiert.
+- Kein `!important`, außer zum bewussten Überschreiben von Core- oder Plugin-Defaults, die sich anders nicht erreichen lassen, und dann kommentiert.
 
 ## 2. Wiederholung = eigene Klasse
 
@@ -29,17 +29,17 @@ Oberstes Ziel: **Konsistenz.** Jede Definition (Farbe, Schrift, Abstand, Rahmen,
 Alle Werte kommen aus Variablen im `:root`. Im restlichen CSS stehen **keine** Hex-Codes, Pixelwerte für Abstände oder Schriftnamen direkt.
 
 Phase 1 (Design-Vorschau): Die Tokens tragen konkrete Werte aus dem Corporate Design (`tokens/tokens.v2.json`, erzeugt `tokens.css`). Schriftnamen und Hex-Codes stehen **nur** dort im `:root`.
-Phase 2 (Elementor-Export): Erst beim Export werden Farben und Schriften auf die Elementor Global Variablen gemappt (`--bw-color-primary: var(--e-global-color-primary)` usw.). Die Schriften steuert später das Elementor Design System. Bis dahin kein vorzeitiges Mapping.
+Phase 2 (WordPress-Block-Theme): Aus derselben Token-Datei entsteht `theme.json`. Die `--bw-*`-Variablen zeigen dann auf die WordPress-Presets (`--bw-color-text: var(--wp--preset--color--navy)` usw.), damit das Komponenten-CSS unverändert weiterläuft. Schriften liegen lokal im Theme (`fontFace`), nie auf fremden Servern.
 
-Das Beispiel zeigt das Prinzip. Die Stylesheets liegen in `design/v2/styles.css` (Komponenten, mobile-first, Breakpoints 561/821/1001 px). Maßgeblich sind die bestehenden Tokens in `design/v2/tokens.css` (`--bw-*`, Quelle `tokens/tokens.v2.json`); neue Tokens (z. B. Spacing, Radius) werden dort ergänzt.
+Das Beispiel zeigt das Prinzip. Die Stylesheets liegen in `design/v2/styles.css` bzw. `design/v2b/styles.css` (Komponenten, mobile-first, Breakpoints 561/821/1001 px). Maßgeblich sind die bestehenden Tokens in `design/v2/tokens.css` (`--bw-*`, Quelle `tokens/tokens.v2.json`); neue Tokens (z. B. Spacing, Radius) werden dort ergänzt.
 
 ```css
 :root {
-  /* Farben (Vorschau: feste Werte, Export: --e-global-color-*) */
+  /* Farben (Vorschau: feste Werte, Theme: var(--wp--preset--color--*)) */
   --bw-color-primary: #00416B;
   --bw-color-accent:  #16A5D2;
 
-  /* Schriften (Vorschau: feste Namen, Export: --e-global-typography-*) */
+  /* Schriften (Vorschau: feste Namen, Theme: var(--wp--preset--font-family--*)) */
   --bw-font-heading: 'Gotham','Montserrat',sans-serif;
   --bw-font-body:    'Roboto',system-ui,sans-serif;
 
@@ -75,16 +75,13 @@ Diese Elemente sind projektweit **einmal** definiert und überall gleich:
 
 Beim Erstellen einer neuen Seite zuerst vorhandene Klassen wiederverwenden. Neue Klasse nur, wenn es den Baustein noch nicht gibt, und dann so, dass andere Seiten sie ebenfalls nutzen können.
 
-## 5. Elementor-Kompatibilität
+## 5. WordPress-Kompatibilität
 
-- Elementor gibt Überschriften als `.elementor-heading-title` mit Größenklassen wie `.elementor-size-default` aus. Typografie-Stile deshalb **über die Elementor Global Fonts** steuern und im Custom-CSS nur dort ergänzen, wo nötig, z. B.:
-  ```css
-  .bw-section .elementor-heading-title { font-family: var(--bw-font-heading); }
-  ```
-- Mehrere Schriften: Primär-/Sekundär-Font als eigene Global Fonts anlegen und über die Variablen oben ansprechen, nie per Schriftname außerhalb von `:root`.
-- Buttons über `.elementor-button` bzw. unsere `.bw-button`-Klassen vereinheitlichen, nicht pro Widget einzeln stylen.
-- Eigene Klassen im Elementor-Feld „CSS-Klassen" eintragen, nicht per Widget-Einzelstyling im Editor duplizieren.
-- Farben, Schriften und Abstände im Elementor-Editor möglichst aus den Globals wählen, nicht manuell überschreiben.
+- Gestaltung zuerst über `theme.json` (Elemente, Core-Blöcke, Presets), Komponenten-CSS nur für den Rest (siehe `wp-theme-architecture`).
+- Varianten im Editor als Blockstil (`is-style-<name>`) statt freier CSS-Klassen pro Block.
+- Mehrere Schriften als eigene Font-Families in `theme.json` und über Variablen ansprechen, nie per Schriftname außerhalb von `:root`/`theme.json`.
+- Buttons über `core/button` + Stil-Varianten vereinheitlichen, nicht pro Block einzeln stylen.
+- Farben, Schriften und Abstände im Editor nur aus den Presets wählen; freie Werte sind im Theme abgeschaltet.
 
 ## 6. HTML-Struktur
 
@@ -96,7 +93,7 @@ Beim Erstellen einer neuen Seite zuerst vorhandene Klassen wiederverwenden. Neue
 
 ## 7. Responsive
 
-- Mobile-first, zentrale Breakpoints einmal definieren und überall gleich verwenden.
+- Mobile-first, zentrale Breakpoints einmal definieren und überall gleich verwenden. Im WordPress-Theme für Komponenten Container Queries bevorzugen.
 - Layout mit Flexbox/Grid, Größen mit `rem`/`clamp()` statt fester Pixelwerte.
 - Anpassungen für Breakpoints innerhalb der jeweiligen Komponentenklasse, nicht als verstreute Einzelregeln.
 
@@ -108,7 +105,7 @@ Reihenfolge im Stylesheet:
 3. Layout (Container, Sections, Grid)
 4. Komponenten (Button, Card, Formular …)
 5. Utilities/Modifier
-6. Elementor-Overrides (kommentiert und gebündelt)
+6. Overrides für Core- oder Plugin-Defaults (kommentiert und gebündelt)
 
 Kommentare als Abschnittsüberschriften, keine toten oder doppelten Regeln.
 
@@ -117,7 +114,8 @@ Kommentare als Abschnittsüberschriften, keine toten oder doppelten Regeln.
 - [ ] Kein `style=""` im HTML
 - [ ] Wiederholte Stile sind Klassen
 - [ ] Keine Hex-Werte, Schriftnamen oder freien Pixelabstände außerhalb von `:root`
-- [ ] Farben und Schriften kommen aus Tokens (Mapping auf `--e-global-*` erst beim Export)
+- [ ] Farben und Schriften kommen aus Tokens (im Theme über `theme.json`-Presets)
+- [ ] Keine Schriften oder Skripte von fremden Servern
 - [ ] Spacing, Radius, Rahmen, Buttons entsprechen den bestehenden Definitionen
 - [ ] Klassennamen mit `bw-` Präfix und funktional benannt
 - [ ] Semantische Tags, Überschriftenhierarchie korrekt
