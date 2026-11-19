@@ -180,10 +180,10 @@ def interest_form(pre=None):
 </form>"""
 
 
-def interest_section(title, texts, pre=None, eyebrow="Unverbindliche Interessentenliste"):
+def interest_section(title, texts, pre=None, eyebrow="Unverbindliche Interessentenliste", accent=None):
     side = "".join(f'<p class="bw-form-card__text">{t}</p>' for t in texts)
     return f"""<section class="bw-block" id="interessentenliste"><div class="bw-container">
-<div class="bw-form-card">
+<div class="bw-form-card{f" bw-form-card--accent bw-accent--{accent}" if accent else ""}">
 <div class="bw-form-card__side">
 <p class="bw-eyebrow bw-eyebrow--on-dark">{eyebrow}</p>
 <h2 class="bw-form-card__title">{title}</h2>
@@ -377,8 +377,8 @@ def offer_page(key):
 <h1 class="bw-page-hero__title">{P["h1"]}</h1>
 {lead_html}
 <div class="bw-page-hero__actions">
-<a class="bw-button bw-button--primary" href="#interessentenliste">{o["list_button"]}</a>
-<a class="bw-button bw-button--secondary" href="index.html#ausbildungen">Alle Ausbildungen vergleichen</a>
+<a class="bw-button bw-button--light" href="#interessentenliste">{o["list_button"]}</a>
+<a class="bw-button bw-button--secondary bw-button--on-dark" href="index.html#ausbildungen">Alle Ausbildungen vergleichen</a>
 </div>
 </div></section>
 
@@ -406,7 +406,7 @@ def offer_page(key):
 </div>
 </div></section>
 
-{interest_section(P["list_title"], [P["list_text"]], pre=key)}
+{interest_section(P["list_title"], [P["list_text"]], pre=key, accent=o["accent"])}
 
 <a class="bw-fab" href="#interessentenliste">{icon("send", 22)}Zur Interessentenliste</a>
 """
