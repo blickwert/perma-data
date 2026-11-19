@@ -50,17 +50,94 @@ class BrevoClient {
 		if ( is_wp_error( $lists ) ) {
 			return $lists;
 		}
-		$templates = $this->get( 'https://api.brevo.com/v3/smtp/templates?templateStatus=true&limit=100&offset=0&sort=desc' );
+		$templates = $this->get( 'https://api.brevo.com/v3/smtp/templates?limit=100&offset=0&sort=desc' );
 		if ( is_wp_error( $templates ) ) {
 			return $templates;
 		}
-		$pick = static fn( array $rows ): array => array_values( array_map( static fn( array $r ): array => [ 'id' => (int) ( $r['id'] ?? 0 ), 'name' => (string) ( $r['name'] ?? '' ) ], $rows ) );
+		$pick = static fn( array $rows ): array => array_values( array_map( static fn( array $r ): array => [ 'id' => (int) ( $r['id'] ?? 0 ), 'name' => (string) ( $r['name'] ?? '' ), 'active' => (bool) ( $r['isActive'] ?? true ), 'tag' => (string) ( $r['tag'] ?? '' ) ], $rows ) );
 		return [ 'lists' => $pick( (array) ( $lists['lists'] ?? [] ) ), 'templates' => $pick( (array) ( $templates['templates'] ?? [] ) ) ];
+	}
+
+	/** First active sender of the account (needed for templates), null if none. @return array{name: string, email: string}|null */
+	public function sender(): ?array {
+		$r = $this->get( 'https://api.brevo.com/v3/senders' );
+		foreach ( is_wp_error( $r ) ? [] : (array) ( $r['senders'] ?? [] ) as $s ) {
+			if ( ! empty( $s['active'] ) && ! empty( $s['email'] ) ) {
+				return [ 'name' => (string) ( $s['name'] ?? '' ), 'email' => (string) $s['email'] ];
+			}
+		}
+		return null;
+	}
+
+	/** Id of a contact folder (first existing one, otherwise a new one). */
+	public function folder_id( string $name ): int|\WP_Error {
+		$r = $this->get( 'https://api.brevo.com/v3/contacts/folders?limit=50&offset=0' );
+		if ( is_wp_error( $r ) ) {
+			return $r;
+		}
+		$first = (array) ( $r['folders'][0] ?? [] );
+		if ( ! empty( $first['id'] ) ) {
+			return (int) $first['id'];
+		}
+		$created = $this->post( 'https://api.brevo.com/v3/contacts/folders', [ 'name' => $name ] );
+		return is_wp_error( $created ) ? $created : (int) ( $created['id'] ?? 0 );
+	}
+
+	public function create_list( string $name, int $folder_id ): int|\WP_Error {
+		$r = $this->post( 'https://api.brevo.com/v3/contacts/lists', [ 'name' => $name, 'folderId' => $folder_id ] );
+		return is_wp_error( $r ) ? $r : (int) ( $r['id'] ?? 0 );
+	}
+
+	/**
+	 * Creates an active transactional template.
+	 *
+	 * @param array<string, mixed> $template Brevo fields (templateName, subject, htmlContent, sender, tag …).
+	 */
+	public function create_template( array $template ): int|\WP_Error {
+		$r = $this->post( 'https://api.brevo.com/v3/smtp/templates', $template + [ 'isActive' => true ] );
+		return is_wp_error( $r ) ? $r : (int) ( $r['id'] ?? 0 );
+	}
+
+	/** Registers a marketing webhook for the URL unless one exists already; returns its id. */
+	public function ensure_webhook( string $url, array $events ): int|\WP_Error {
+		$r = $this->get( 'https://api.brevo.com/v3/webhooks?type=marketing' );
+		// Brevo answers "Webhook record does not exist" instead of an empty list when there is none yet.
+		if ( is_wp_error( $r ) && ! str_contains( $r->get_error_message(), 'does not exist' ) ) {
+			return $r;
+		}
+		$r = is_wp_error( $r ) ? [] : $r;
+		foreach ( (array) ( $r['webhooks'] ?? [] ) as $hook ) {
+			if ( ( $hook['url'] ?? '' ) === $url ) {
+				return (int) $hook['id'];
+			}
+		}
+		$created = $this->post( 'https://api.brevo.com/v3/webhooks', [ 'url' => $url, 'type' => 'marketing', 'events' => $events, 'description' => 'PERMA Website: Newsletter-Status' ] );
+		return is_wp_error( $created ) ? $created : (int) ( $created['id'] ?? 0 );
+	}
+
+	/**
+	 * @param array<string, mixed> $body
+	 * @return array<string, mixed>|\WP_Error
+	 */
+	private function post( string $url, array $body ): array|\WP_Error {
+		return $this->request( 'POST', $url, $body );
 	}
 
 	/** @return array<string, mixed>|\WP_Error */
 	private function get( string $url ): array|\WP_Error {
-		$response = wp_remote_get( $url, [ 'timeout' => 15, 'headers' => [ 'api-key' => $this->api_key, 'accept' => 'application/json' ] ] );
+		return $this->request( 'GET', $url );
+	}
+
+	/**
+	 * @param array<string, mixed>|null $body
+	 * @return array<string, mixed>|\WP_Error
+	 */
+	private function request( string $method, string $url, ?array $body = null ): array|\WP_Error {
+		$args = [ 'method' => $method, 'timeout' => 15, 'headers' => [ 'api-key' => $this->api_key, 'accept' => 'application/json', 'content-type' => 'application/json' ] ];
+		if ( null !== $body ) {
+			$args['body'] = (string) wp_json_encode( $body );
+		}
+		$response = wp_remote_request( $url, $args );
 		if ( is_wp_error( $response ) ) {
 			return $response;
 		}

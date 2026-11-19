@@ -303,3 +303,12 @@ msgstr "Double-Opt-in-Vorlage"
 
 msgid "– choose –"
 msgstr "– auswählen –"
+
+msgid "List and confirmation template created in Brevo."
+msgstr "Liste und Bestätigungsvorlage in Brevo angelegt."
+
+msgid "Creates the list \"Newsletter PERMA Mind Academy\" and a double opt-in template in the PERMA style in Brevo and selects both."
+msgstr "Legt in Brevo die Liste „Newsletter PERMA Mind Academy“ und eine Double-Opt-in-Vorlage im PERMA-Stil an und wählt beide aus."
+
+msgid "Set up Brevo"
+msgstr "Brevo einrichten"

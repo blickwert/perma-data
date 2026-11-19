@@ -11,6 +11,7 @@ namespace BW\PermaForms\Tests\Unit;
 
 use Brain\Monkey\Actions;
 use BW\PermaForms\Modules\Newsletter\Service\BrevoClient;
+use BW\PermaForms\Modules\Newsletter\Service\BrevoSetup;
 use BW\PermaForms\Modules\Newsletter\Service\NewsletterService;
 
 final class NewsletterTest extends TestCase {
@@ -21,6 +22,32 @@ final class NewsletterTest extends TestCase {
 		$this->assertSame( 12, $p['templateId'] );
 		$this->assertSame( [ 'FIRSTNAME' => 'Anna' ], $p['attributes'] );
 		$this->assertArrayNotHasKey( 'attributes', BrevoClient::payload( 'a@example.at', [ 3 ], 12, 'u' ) );
+	}
+
+	public function test_doi_template_meets_brevo_rules(): void {
+		$t = BrevoSetup::template( [ 'name' => '', 'email' => 'news@example.at' ], 'PERMA Mind Academy' );
+		$this->assertSame( 'optin', $t['tag'] );
+		$this->assertStringContainsString( '{{ doubleoptin }}', $t['htmlContent'] );
+		$this->assertSame( [ 'name' => 'PERMA Mind Academy', 'email' => 'news@example.at' ], $t['sender'] );
+	}
+
+	public function test_setup_stops_without_sender(): void {
+		$client = $this->createMock( BrevoClient::class );
+		$client->method( 'options' )->willReturn( [ 'lists' => [], 'templates' => [] ] );
+		$client->method( 'sender' )->willReturn( null );
+		$client->expects( $this->never() )->method( 'create_template' );
+		$this->assertInstanceOf( \WP_Error::class, ( new BrevoSetup( $client ) )->run( false, true, 'X' ) );
+	}
+
+	public function test_setup_reuses_existing_list_and_template(): void {
+		$client = $this->createMock( BrevoClient::class );
+		$client->method( 'options' )->willReturn( [
+			'lists'     => [ [ 'id' => 4, 'name' => BrevoSetup::LIST_NAME, 'active' => true, 'tag' => '' ] ],
+			'templates' => [ [ 'id' => 9, 'name' => BrevoSetup::TEMPLATE_NAME, 'active' => true, 'tag' => 'optin' ] ],
+		] );
+		$client->expects( $this->never() )->method( 'create_list' );
+		$client->expects( $this->never() )->method( 'create_template' );
+		$this->assertSame( [ 'list_id' => 4, 'template_id' => 9 ], ( new BrevoSetup( $client ) )->run( true, true, 'X' ) );
 	}
 
 	public function test_webhook_states(): void {
