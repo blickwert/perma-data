@@ -60,7 +60,7 @@ Ergebnis:
 - Installiert: Contact Form 7 6.2.5, Brevo-Plugin 3.3.6 (für An- und Abmeldung zum Newsletter; mit dem Brevo-Konto verbunden). Kein SMTP- und kein SEO-Plugin.
 - CF7 bringt Cloudflare Turnstile selbst mit → das Plugin nutzt die CF7-Integration und ergänzt Honeypot, Mindestzeit, Ratenbegrenzung, Inhaltsfilter.
 - CF7 kann Kontakte in Brevo-Listen eintragen, die Bestätigung (Double-Opt-in) liefe aber über WordPress-Mails. Das Brevo-Plugin hat keine CF7-Anbindung. → Das Newsletter-Modul ruft die Brevo-API selbst auf (`/contacts/doubleOptinConfirmation`, Bestätigung mit Brevo-Vorlage).
-- GitHub Pages ist seit dem Umstellen des Repos auf privat nicht mehr erreichbar; Vergleich lokal mit `design/v2b/`.
+- GitHub Pages war zeitweise nicht erreichbar, weil das Repo privat war; seit es wieder öffentlich ist und Pages neu eingeschaltet wurde, sind die Vorschauen wieder online.
 
 ### Phase 1 – Theme im Repo bauen (`wordpress/themes/perma-mind/`)
 Siehe Abschnitt 6. Lokal prüfen, z. B. mit WordPress Playground (`npx @wp-playground/cli server --mount=...`), falls im Container verfügbar; sonst direkt auf der Dev-Installation.
