@@ -20,7 +20,7 @@ Kurz: Basis ist die Vorschau **v2b** (`design/v2b/`, Texte in `scripts/v2b_conte
 
 - Pro Änderung: Branch, Commit, Pull Request. Der Auftraggeber hat erlaubt, eigene PRs selbst zu mergen („merge meine PRs künftig selbst“). Danach Branch auf `origin/main` zurücksetzen.
 - Sichtbare Änderungen vorher lokal prüfen (Chromium/Playwright, 1440 px und 390 px).
-- Vorschauen wurden über GitHub Pages veröffentlicht (`.github/workflows/pages.yml`); seit das Repo privat ist, sind sie nicht erreichbar. Vergleich lokal (`cd design/v2b && python3 -m http.server`).
+- Vorschauen werden über GitHub Pages veröffentlicht (`.github/workflows/pages.yml`): v1 `/`, v2 `/v2/`, v2b `/v2b/`. Das geht nur, solange das Repo öffentlich ist (kostenloser GitHub-Tarif); wird es privat, schaltet GitHub Pages ab und es muss danach unter Settings › Pages (Source: GitHub Actions) wieder eingeschaltet werden.
 - Dokumentation in `docs/` aktuell halten (v. a. `V2B.md`, `WP-UMSETZUNG.md`).
 
 ## Wichtige Dateien
