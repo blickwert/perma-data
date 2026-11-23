@@ -6,8 +6,7 @@
 Quellen (nur diese ändern, nicht die erzeugten Dateien):
   tokens/tokens.v2.json       -> theme.json, assets/css/tokens.css
   scripts/v2b_content.py      -> patterns/*.php (Texte der Website)
-  design/v2/impressum.html,
-  design/v2/datenschutz.html  -> patterns/legal-*.php (Entwurf der Rechtstexte)
+  content/rechtstexte/*.html  -> Seiten Impressum und Datenschutz (Entwurf der Rechtstexte)
   assets/icons/ + ICONS aus build_design_pages_v2b.py -> assets/icons/*.svg
   design/v2b/assets/logo*.svg -> assets/images/
 
@@ -552,13 +551,16 @@ def related():
 def p_offer_details(key):
     P = C.PAGES[key]
     scope = paras(P["scope"])
+    if P.get("scope_more"):
+        title, texts = P["scope_more"]
+        scope += heading(title, 4, "bw-card__subtitle") + paras(texts)
     if P.get("scope_link"):
         kk, label = P["scope_link"]
         scope += para(f'<a href="{home(OFFER_URL[kk])}">{label} →</a>', "bw-text bw-link-strong")
     main = (section_head(P["content_title"]) + accordions([accordion(t, para(x, "bw-text")) for t, x in P["modules"]])
             + group(heading(P["scope_title"], 3, "bw-card__title") + scope, "bw-card bw-card--plain"))
-    if P.get("extra"):
-        main += group(heading(P["extra_title"], 3, "bw-card__title") + para(P["extra"], "bw-text"), "bw-card")
+    for title, texts in P.get("extras", []):
+        main += group(heading(title, 3, "bw-card__title") + paras(texts), "bw-card")
     split = group(group(main, "bw-split__main") + group(facts_card(key) + related(), "bw-split__aside", "aside"), "bw-split")
     return group(container(split), "bw-block", "section", label="Inhalte, Eckdaten und Weiterführendes")
 
@@ -570,7 +572,8 @@ def p_offer_interest(key):
 
 # ------------------------------------------------------------------ Rechtstexte (Entwurf aus v2)
 def legal_blocks(fname):
-    src = (ROOT / "design/v2" / fname).read_text("utf-8")
+    """Rechtstexte aus content/rechtstexte/ (Entwurf mit [Platzhaltern]) als Blöcke."""
+    src = (ROOT / "content/rechtstexte" / fname).read_text("utf-8")
     main = re.search(r"<main>(.*?)</main>", src, re.S).group(1)
     lead = re.search(r'<p class="bw-page-hero__lead">(.*?)</p>', main, re.S)
     art = re.search(r'<article class="bw-prose">(.*?)</article>', main, re.S).group(1)

@@ -41,6 +41,11 @@ python3 scripts/build_design_pages_v2b.py
 - Kursive Umsetzungshinweise, „Button:“-Markierungen und die Abschnitte 8 bis 10 (nur für die Umsetzung).
 - Noch nicht ausgeschriebene Reihen (Advanced Plus, Neurodivergenz, Clinical Expert Advanced).
 
+## Ergänzungen nach v2b
+
+- **Advanced (Martin Wammerl, November 2026):** unter „Umfang und Abschluss“ der Absatz „Berufliche Qualifikation als Basic Trainer“, darunter die Karte „ECQA Master Trainer für Positive Psychologie (in Planung)“ (`PAGES["advanced"]`: `scope_more`, `extras`).
+- **Rechtstexte:** neue Entwürfe in `content/rechtstexte/` (Quelle für WordPress); die v2b-Vorschau zeigt weiterhin die älteren Entwürfe aus v2.
+
 ## Platzhalter und offene Punkte
 
 - Hero-Bild, Trainerporträts und ECQA-Logo sind Platzhalter (Logo erst in der freigegebenen Version).

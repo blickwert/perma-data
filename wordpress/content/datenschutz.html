@@ -1,7 +1,7 @@
 <!-- wp:paragraph {"className":"bw-prose__lead"} -->
-<p class="bw-prose__lead">Wir nehmen den Schutz Ihrer Daten ernst. Hier erfahren Sie, welche Daten wir verarbeiten, wofür wir sie brauchen und welche Rechte Sie haben.</p>
+<p class="bw-prose__lead">Wir nehmen den Schutz Ihrer Daten ernst. Hier erfahren Sie, welche Daten wir auf dieser Website verarbeiten, wofür wir sie brauchen, wie lange wir sie speichern und welche Rechte Sie haben.</p>
 <!-- /wp:paragraph --><!-- wp:paragraph {"className":"bw-prose__draft"} -->
-<p class="bw-prose__draft"><strong>Entwurf.</strong> Der Text folgt dem üblichen Aufbau einer Datenschutzerklärung für Bildungsanbieter und ist eine Arbeitsgrundlage, keine Rechtsberatung. Gelb markierte Angaben sind zu ergänzen. Abschnitte müssen zur tatsächlichen Technik passen (Hosting, Formular-Dienst, Schriften, Statistik). Vor Veröffentlichung bitte rechtlich prüfen lassen.</p>
+<p class="bw-prose__draft"><strong>Entwurf.</strong> Der Text beschreibt die tatsächliche Technik dieser Website (Stand November 2026): Formulare mit eigener Kontaktdatenbank, Newsletter über Brevo, Spamschutz mit Cloudflare Turnstile, lokal eingebundene Schriften, keine Statistik- oder Werbe-Cookies. Gelb markierte Angaben sind zu ergänzen bzw. zu entscheiden. Keine Rechtsberatung – vor Veröffentlichung bitte prüfen lassen.</p>
 <!-- /wp:paragraph --><!-- wp:group {"tagName":"nav","className":"bw-toc"} -->
 <nav class="wp-block-group bw-toc"><!-- wp:paragraph {"className":"bw-toc__title"} -->
 <p class="bw-toc__title">Inhalt</p>
@@ -15,17 +15,19 @@
 <!-- /wp:list-item --><!-- wp:list-item -->
 <li><a href="#cookies">Cookies</a></li>
 <!-- /wp:list-item --><!-- wp:list-item -->
-<li><a href="#kontakt">Kontaktformular und Vormerkung</a></li>
+<li><a href="#formulare">Interessentenliste und Kontaktformular</a></li>
+<!-- /wp:list-item --><!-- wp:list-item -->
+<li><a href="#spamschutz">Spamschutz (Cloudflare Turnstile)</a></li>
+<!-- /wp:list-item --><!-- wp:list-item -->
+<li><a href="#newsletter">Newsletter (Brevo)</a></li>
 <!-- /wp:list-item --><!-- wp:list-item -->
 <li><a href="#anfragen">Anfragen per E-Mail oder Telefon</a></li>
 <!-- /wp:list-item --><!-- wp:list-item -->
-<li><a href="#fonts">Schriftarten</a></li>
+<li><a href="#schriften">Schriftarten</a></li>
 <!-- /wp:list-item --><!-- wp:list-item -->
-<li><a href="#newsletter">Newsletter</a></li>
+<li><a href="#speicherdauer">Speicherdauer im Überblick</a></li>
 <!-- /wp:list-item --><!-- wp:list-item -->
 <li><a href="#rechte">Ihre Rechte</a></li>
-<!-- /wp:list-item --><!-- wp:list-item -->
-<li><a href="#speicherdauer">Speicherdauer</a></li>
 <!-- /wp:list-item --><!-- wp:list-item -->
 <li><a href="#aenderungen">Änderungen dieser Erklärung</a></li>
 <!-- /wp:list-item --></ol>
@@ -35,44 +37,84 @@
 <!-- /wp:heading --><!-- wp:paragraph -->
 <p>Verantwortlich für die Verarbeitung personenbezogener Daten auf dieser Website ist:</p>
 <!-- /wp:paragraph --><!-- wp:paragraph {"className":"bw-prose__address"} -->
-<p class="bw-prose__address"><mark class="bw-placeholder">[Firmenname inkl. Rechtsform]</mark><br>Plüddemanngasse 104, 8042 Graz, Österreich<br>E-Mail: michael@perma-academy.at · Telefon: +43 676 511 2763</p>
+<p class="bw-prose__address"><mark class="bw-placeholder">[Name bzw. Firmenname inkl. Rechtsform]</mark>, PERMA Mind Academy<br>Plüddemanngasse 104, 8042 Graz, Österreich<br>E-Mail: michael@perma-academy.at · Telefon: +43 676 511 2763</p>
 <!-- /wp:paragraph --><!-- wp:paragraph -->
-<p>Die Übertragung von Daten auf dieser Website erfolgt verschlüsselt (SSL/TLS). Sie erkennen das an dem Schloss-Symbol und dem Präfix „https://“ in der Adresszeile Ihres Browsers.</p>
+<p>Die Übertragung von Daten auf dieser Website erfolgt verschlüsselt (TLS). Sie erkennen das am Schloss-Symbol und am Präfix „https://“ in der Adresszeile Ihres Browsers.</p>
 <!-- /wp:paragraph --><!-- wp:heading {"anchor":"grundlagen"} -->
 <h2 id="grundlagen" class="wp-block-heading">Grundlagen der Verarbeitung</h2>
 <!-- /wp:heading --><!-- wp:paragraph -->
-<p>Wir verarbeiten personenbezogene Daten im Einklang mit der Datenschutz-Grundverordnung (DSGVO) und dem österreichischen Datenschutzgesetz (DSG). Rechtsgrundlagen sind je nach Zweck Ihre Einwilligung (Art. 6 Abs. 1 lit. a DSGVO), die Erfüllung eines Vertrags oder die Durchführung vorvertraglicher Maßnahmen (lit. b), eine rechtliche Verpflichtung (lit. c) oder unser berechtigtes Interesse an einem sicheren und funktionsfähigen Webauftritt (lit. f).</p>
+<p>Wir verarbeiten personenbezogene Daten im Einklang mit der Datenschutz-Grundverordnung (DSGVO) und dem österreichischen Datenschutzgesetz (DSG). Rechtsgrundlagen sind je nach Zweck Ihre Einwilligung (Art. 6 Abs. 1 lit. a DSGVO), die Durchführung vorvertraglicher Maßnahmen auf Ihre Anfrage oder die Erfüllung eines Vertrags (lit. b), eine rechtliche Verpflichtung (lit. c) oder unser berechtigtes Interesse an einem sicheren und funktionsfähigen Webauftritt (lit. f).</p>
 <!-- /wp:paragraph --><!-- wp:paragraph -->
-<p>Wir erheben nur die Daten, die für den jeweiligen Zweck erforderlich sind, und speichern sie nicht länger, als es dieser Zweck oder gesetzliche Aufbewahrungsfristen verlangen.</p>
+<p>Wir erheben nur die Daten, die für den jeweiligen Zweck erforderlich sind, und speichern sie nicht länger, als es dieser Zweck oder gesetzliche Aufbewahrungsfristen verlangen. Ihre Daten verkaufen wir nicht und nutzen sie nicht für Werbung Dritter.</p>
 <!-- /wp:paragraph --><!-- wp:heading {"anchor":"hosting"} -->
 <h2 id="hosting" class="wp-block-heading">Hosting und Server-Logfiles</h2>
 <!-- /wp:heading --><!-- wp:paragraph -->
-<p>Diese Website wird bei <mark class="bw-placeholder">[Hostinganbieter, Sitz, Serverstandort]</mark> gehostet. Mit dem Anbieter besteht ein Auftragsverarbeitungsvertrag gemäß Art. 28 DSGVO.</p>
+<p>Diese Website wird bei <mark class="bw-placeholder">[Hostinganbieter, Sitz, Serverstandort – z. B. Österreich]</mark> betrieben. Mit dem Anbieter besteht ein Auftragsverarbeitungsvertrag gemäß Art. 28 DSGVO. Auf diesem Server liegen auch die Daten aus unseren Formularen (siehe unten).</p>
 <!-- /wp:paragraph --><!-- wp:paragraph -->
-<p>Beim Aufruf der Website speichert der Server automatisch Informationen in sogenannten Logfiles: IP-Adresse, Datum und Uhrzeit der Anfrage, aufgerufene Seite, Referrer-URL, Browsertyp und -version sowie das Betriebssystem. Diese Daten dienen der technisch fehlerfreien Darstellung und der Sicherheit der Website (berechtigtes Interesse, Art. 6 Abs. 1 lit. f DSGVO). Sie werden nicht mit anderen Datenquellen zusammengeführt und nach <mark class="bw-placeholder">[Speicherdauer, z. B. 14 Tagen]</mark> gelöscht.</p>
+<p>Beim Aufruf der Website speichert der Server automatisch Informationen in sogenannten Logfiles: IP-Adresse, Datum und Uhrzeit der Anfrage, aufgerufene Seite, Referrer-URL, Browsertyp und -version sowie Betriebssystem. Diese Daten dienen der technisch fehlerfreien Darstellung und der Sicherheit der Website (berechtigtes Interesse, Art. 6 Abs. 1 lit. f DSGVO). Sie werden nicht mit anderen Datenquellen zusammengeführt und nach <mark class="bw-placeholder">[Speicherdauer beim Hoster, z. B. 14 Tagen]</mark> gelöscht.</p>
 <!-- /wp:paragraph --><!-- wp:heading {"anchor":"cookies"} -->
 <h2 id="cookies" class="wp-block-heading">Cookies</h2>
 <!-- /wp:heading --><!-- wp:paragraph -->
-<p><mark class="bw-placeholder">[Je nach Einsatz anpassen.]</mark> Diese Website verwendet ausschließlich technisch notwendige Cookies, die für die Darstellung und Sicherheit erforderlich sind. Für Cookies, die nicht technisch notwendig sind (z. B. Statistik oder eingebettete Inhalte), holen wir vorab Ihre Einwilligung ein. Sie können Cookies jederzeit in den Einstellungen Ihres Browsers löschen oder blockieren; dann sind einzelne Funktionen eventuell eingeschränkt.</p>
-<!-- /wp:paragraph --><!-- wp:heading {"anchor":"kontakt"} -->
-<h2 id="kontakt" class="wp-block-heading">Kontaktformular und Vormerkung</h2>
-<!-- /wp:heading --><!-- wp:paragraph -->
-<p>Wenn Sie uns über das Kontaktformular oder die Vormerkung schreiben, verarbeiten wir die Angaben aus dem Formular (Name, E-Mail-Adresse, optional Telefonnummer, gewünschtes Modul, Nachricht) sowie Zeitpunkt Ihrer Anfrage, um Ihr Anliegen zu bearbeiten und uns bei Ihnen zu melden. Rechtsgrundlage ist Ihre Einwilligung (Art. 6 Abs. 1 lit. a DSGVO) bzw. die Durchführung vorvertraglicher Maßnahmen (lit. b).</p>
+<p>Diese Website setzt für Besucher:innen keine Cookies zu Statistik-, Marketing- oder Werbezwecken und bindet keine Inhalte von Drittanbietern ein, die solche Cookies setzen. Ein Cookie-Banner ist daher nicht erforderlich. Technisch notwendige Cookies entstehen nur bei der Anmeldung unseres Redaktionsteams im Verwaltungsbereich von WordPress.</p>
 <!-- /wp:paragraph --><!-- wp:paragraph -->
-<p>Ihre Einwilligung können Sie jederzeit mit Wirkung für die Zukunft widerrufen. Wir löschen Ihre Angaben, sobald der Zweck entfällt und keine gesetzlichen Aufbewahrungspflichten entgegenstehen, spätestens jedoch nach <mark class="bw-placeholder">[Löschfrist, z. B. 12 Monaten]</mark> ohne Folgekontakt. Eine Weitergabe an Dritte erfolgt nur, soweit dies zur Bearbeitung erforderlich ist (z. B. E-Mail-Dienstleister) oder Sie eingewilligt haben.</p>
+<p>Auf Seiten mit Formularen wird der Spamschutz Cloudflare Turnstile geladen. Er setzt nach Angaben von Cloudflare keine Cookies zu Tracking-Zwecken (Details im Abschnitt <a href="#spamschutz">Spamschutz</a>).</p>
+<!-- /wp:paragraph --><!-- wp:heading {"anchor":"formulare"} -->
+<h2 id="formulare" class="wp-block-heading">Interessentenliste und Kontaktformular</h2>
+<!-- /wp:heading --><!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Interessentenliste</h3>
+<!-- /wp:heading --><!-- wp:paragraph -->
+<p>Wenn Sie sich in die Interessentenliste eintragen, verarbeiten wir Vorname, Nachname, E-Mail-Adresse, die gewählten Ausbildungen sowie freiwillig Ihren Beruf bzw. Ihre bisherige Ausbildung und eine Nachricht an uns. Zweck ist, Sie über die gewählten Ausbildungen zu informieren und Ihnen die Unterlagen für die verbindliche Anmeldung zu senden, sobald die Ausschreibung vorliegt. Rechtsgrundlage ist die Durchführung vorvertraglicher Maßnahmen auf Ihre Anfrage (Art. 6 Abs. 1 lit. b DSGVO). Sie erhalten eine Bestätigung per E-Mail. Der Eintrag ist unverbindlich; Sie können ihn jederzeit formlos löschen lassen.</p>
+<!-- /wp:paragraph --><!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Kontaktformular</h3>
+<!-- /wp:heading --><!-- wp:paragraph -->
+<p>Wenn Sie uns über das Kontaktformular schreiben, verarbeiten wir Name, E-Mail-Adresse und Ihre Nachricht, um Ihre Anfrage zu beantworten (Art. 6 Abs. 1 lit. b DSGVO bei Fragen zu unseren Angeboten, sonst lit. f).</p>
+<!-- /wp:paragraph --><!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Wie wir die Angaben speichern</h3>
+<!-- /wp:heading --><!-- wp:paragraph -->
+<p>Die Angaben aus beiden Formularen werden per E-Mail an uns übermittelt und in einer Kontaktdatenbank auf unserem Webserver gespeichert. Dort führen wir je Person einen Eintrag mit den Formularangaben, den gewählten Ausbildungen, dem Stand eines Newsletter-Abonnements und dem Verlauf Ihrer Einträge. Wenn Sie später an einer Ausbildung teilnehmen oder Mitglied werden, ergänzen wir diesen Eintrag um die dafür nötigen Vertragsdaten. Zugriff haben nur die Trainer der Academy und die technische Betreuung der Website (<mark class="bw-placeholder">[Blickwert, Graz – Auftragsverarbeiter]</mark>). IP-Adressen speichern wir in der Kontaktdatenbank nicht.</p>
+<!-- /wp:paragraph --><!-- wp:paragraph -->
+<p>Speicherdauer: Einträge in die Interessentenliste löschen wir <mark class="bw-placeholder">[24 Monate]</mark> nach Ihrem letzten Kontakt mit uns, sofern keine Anmeldung zustande kommt; Kontaktanfragen <mark class="bw-placeholder">[6 Monate]</mark> nach ihrer abschließenden Beantwortung. Daten aus einer Anmeldung oder Mitgliedschaft bewahren wir so lange auf, wie es gesetzliche Pflichten verlangen (z. B. sieben Jahre für Buchhaltungsunterlagen nach § 132 BAO).</p>
+<!-- /wp:paragraph --><!-- wp:heading {"anchor":"spamschutz"} -->
+<h2 id="spamschutz" class="wp-block-heading">Spamschutz (Cloudflare Turnstile)</h2>
+<!-- /wp:heading --><!-- wp:paragraph -->
+<p>Zum Schutz unserer Formulare vor automatisierten Einträgen verwenden wir Cloudflare Turnstile, einen Dienst der Cloudflare, Inc., 101 Townsend St., San Francisco, CA 94107, USA. Turnstile prüft beim Laden und Absenden eines Formulars, ob die Anfrage von einem Menschen stammt. Dabei werden insbesondere Ihre IP-Adresse sowie technische Angaben zu Browser und Gerät an Cloudflare übermittelt. Rechtsgrundlage ist unser berechtigtes Interesse an funktionsfähigen, missbrauchsgeschützten Formularen (Art. 6 Abs. 1 lit. f DSGVO).</p>
+<!-- /wp:paragraph --><!-- wp:paragraph -->
+<p>Cloudflare ist unter dem EU-US Data Privacy Framework zertifiziert; die Übermittlung in die USA stützt sich auf den Angemessenheitsbeschluss der EU-Kommission (Art. 45 DSGVO). Weitere Informationen: Datenschutzhinweise von Cloudflare unter www.cloudflare.com/privacypolicy.</p>
+<!-- /wp:paragraph --><!-- wp:paragraph -->
+<p>Zusätzlich setzen wir eigene Schutzmaßnahmen ein: ein für Menschen unsichtbares Prüffeld, eine Mindestausfüllzeit und eine Begrenzung der Einträge je Besucher:in. Dafür wird ein nicht rückrechenbarer Prüfwert Ihrer IP-Adresse für höchstens <mark class="bw-placeholder">[10 Minuten]</mark> zwischengespeichert; die IP-Adresse selbst speichern wir nicht.</p>
+<!-- /wp:paragraph --><!-- wp:heading {"anchor":"newsletter"} -->
+<h2 id="newsletter" class="wp-block-heading">Newsletter (Brevo)</h2>
+<!-- /wp:heading --><!-- wp:paragraph -->
+<p>Für unseren Newsletter verarbeiten wir Ihre E-Mail-Adresse und freiwillig Ihren Vornamen auf Grundlage Ihrer Einwilligung (Art. 6 Abs. 1 lit. a DSGVO). Sie können sich über das Newsletter-Formular oder zusätzlich beim Eintrag in die Interessentenliste anmelden.</p>
+<!-- /wp:paragraph --><!-- wp:paragraph -->
+<p>Wir verwenden das Double-Opt-in-Verfahren: Nach der Anmeldung erhalten Sie eine E-Mail mit einem Bestätigungslink. Erst nach Ihrer Bestätigung erhalten Sie den Newsletter. Gespeichert werden Zeitpunkt der Anmeldung und der Bestätigung sowie die IP-Adresse bei der Bestätigung, um die Einwilligung nachweisen zu können.</p>
+<!-- /wp:paragraph --><!-- wp:paragraph -->
+<p>Versand und Verwaltung erfolgen über Brevo (Sendinblue SAS, 106 boulevard Haussmann, 75008 Paris, Frankreich). Brevo verarbeitet die Daten als Auftragsverarbeiter auf Servern in der EU. Brevo meldet uns Bestätigungen und Abmeldungen, damit unsere Kontaktdatenbank den aktuellen Stand zeigt. <mark class="bw-placeholder">[Falls aktiviert: Brevo wertet aus, ob ein Newsletter geöffnet und welche Links angeklickt wurden, um die Inhalte zu verbessern. Sonst diesen Satz streichen.]</mark></p>
+<!-- /wp:paragraph --><!-- wp:paragraph -->
+<p>Sie können sich jederzeit über den Abmeldelink in jedem Newsletter oder per Nachricht an uns abmelden; damit widerrufen Sie Ihre Einwilligung mit Wirkung für die Zukunft. Nach der Abmeldung löschen wir Ihre Adresse aus der Newsletter-Liste; zum Nachweis der früheren Einwilligung bewahren wir Adresse und Abmeldezeitpunkt bis zu <mark class="bw-placeholder">[3 Jahre]</mark> auf.</p>
 <!-- /wp:paragraph --><!-- wp:heading {"anchor":"anfragen"} -->
 <h2 id="anfragen" class="wp-block-heading">Anfragen per E-Mail oder Telefon</h2>
 <!-- /wp:heading --><!-- wp:paragraph -->
-<p>Wenn Sie uns per E-Mail oder Telefon kontaktieren, speichern und verarbeiten wir Ihre Anfrage einschließlich aller darin enthaltenen personenbezogenen Daten zur Bearbeitung Ihres Anliegens. Diese Daten geben wir nicht ohne Ihre Einwilligung weiter.</p>
-<!-- /wp:paragraph --><!-- wp:heading {"anchor":"fonts"} -->
-<h2 id="fonts" class="wp-block-heading">Schriftarten</h2>
+<p>Wenn Sie uns per E-Mail oder Telefon kontaktieren, verarbeiten wir Ihre Anfrage einschließlich der darin enthaltenen personenbezogenen Daten zur Bearbeitung Ihres Anliegens (Art. 6 Abs. 1 lit. b bzw. f DSGVO). Diese Daten geben wir nicht ohne Ihre Einwilligung weiter.</p>
+<!-- /wp:paragraph --><!-- wp:heading {"anchor":"schriften"} -->
+<h2 id="schriften" class="wp-block-heading">Schriftarten</h2>
 <!-- /wp:heading --><!-- wp:paragraph -->
-<p><mark class="bw-placeholder">[Auswahl treffen:]</mark> Diese Website bindet Schriftarten (Roboto, Montserrat) ein. Variante A: Die Schriften werden lokal von unserem Server ausgeliefert, es findet keine Verbindung zu Google statt. Variante B: Die Schriften werden von Google Fonts geladen; dabei übermittelt Ihr Browser Ihre IP-Adresse an Google. In diesem Fall ist Ihre Einwilligung erforderlich. Wir empfehlen die lokale Einbindung.</p>
-<!-- /wp:paragraph --><!-- wp:heading {"anchor":"newsletter"} -->
-<h2 id="newsletter" class="wp-block-heading">Newsletter</h2>
-<!-- /wp:heading --><!-- wp:paragraph -->
-<p><mark class="bw-placeholder">[Nur falls ein Newsletter angeboten wird.]</mark> Für den Versand des Newsletters verwenden wir das Double-Opt-in-Verfahren: Nach der Anmeldung erhalten Sie eine Bestätigungs-E-Mail. Gespeichert werden E-Mail-Adresse, Zeitpunkt der Anmeldung und Bestätigung sowie die IP-Adresse. Sie können sich jederzeit über den Link in jeder E-Mail abmelden.</p>
-<!-- /wp:paragraph --><!-- wp:heading {"anchor":"rechte"} -->
+<p>Die Schriften dieser Website (Montserrat, Roboto) werden lokal von unserem Server geladen. Es findet keine Verbindung zu Google oder anderen Schriftanbietern statt.</p>
+<!-- /wp:paragraph --><!-- wp:heading {"anchor":"speicherdauer"} -->
+<h2 id="speicherdauer" class="wp-block-heading">Speicherdauer im Überblick</h2>
+<!-- /wp:heading --><!-- wp:list -->
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li>Server-Logfiles: <mark class="bw-placeholder">[14 Tage]</mark></li>
+<!-- /wp:list-item --><!-- wp:list-item -->
+<li>Interessentenliste: <mark class="bw-placeholder">[24 Monate]</mark> nach dem letzten Kontakt, sofern keine Anmeldung zustande kommt</li>
+<!-- /wp:list-item --><!-- wp:list-item -->
+<li>Kontaktanfragen: <mark class="bw-placeholder">[6 Monate]</mark> nach der abschließenden Beantwortung</li>
+<!-- /wp:list-item --><!-- wp:list-item -->
+<li>Newsletter: bis zur Abmeldung; Nachweis der Einwilligung bis zu <mark class="bw-placeholder">[3 Jahre]</mark> danach</li>
+<!-- /wp:list-item --><!-- wp:list-item -->
+<li>Anmeldungen, Teilnahme, Mitgliedschaft: für die Dauer des Vertrags, Buchhaltungsunterlagen sieben Jahre (§ 132 BAO)</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list --><!-- wp:heading {"anchor":"rechte"} -->
 <h2 id="rechte" class="wp-block-heading">Ihre Rechte</h2>
 <!-- /wp:heading --><!-- wp:paragraph -->
 <p>Ihnen stehen nach der DSGVO folgende Rechte zu:</p>
@@ -92,12 +134,10 @@
 <!-- /wp:list-item --></ul>
 <!-- /wp:list --><!-- wp:paragraph -->
 <p>Zur Ausübung dieser Rechte genügt eine formlose Nachricht an die oben genannte Kontaktadresse. Sie haben außerdem das Recht, sich bei der zuständigen Aufsichtsbehörde zu beschweren. In Österreich ist das die <a href="https://www.dsb.gv.at">Datenschutzbehörde</a>, Barichgasse 40–42, 1030 Wien.</p>
-<!-- /wp:paragraph --><!-- wp:heading {"anchor":"speicherdauer"} -->
-<h2 id="speicherdauer" class="wp-block-heading">Speicherdauer</h2>
-<!-- /wp:heading --><!-- wp:paragraph -->
-<p>Wir speichern personenbezogene Daten, solange der Zweck der Verarbeitung besteht. Gesetzliche Aufbewahrungspflichten, etwa nach Unternehmens- und Steuerrecht, bleiben unberührt.</p>
 <!-- /wp:paragraph --><!-- wp:heading {"anchor":"aenderungen"} -->
 <h2 id="aenderungen" class="wp-block-heading">Änderungen dieser Erklärung</h2>
 <!-- /wp:heading --><!-- wp:paragraph -->
-<p>Wir passen diese Datenschutzerklärung an, wenn sich Rechtslage oder Angebot ändern. Es gilt die jeweils hier veröffentlichte Fassung. Stand: <mark class="bw-placeholder">[Datum]</mark></p>
+<p>Wir passen diese Datenschutzerklärung an, wenn sich Rechtslage, Technik oder Angebot ändern. Es gilt die jeweils hier veröffentlichte Fassung.</p>
+<!-- /wp:paragraph --><!-- wp:paragraph {"className":"bw-prose__date"} -->
+<p class="bw-prose__date">Stand: November 2026</p>
 <!-- /wp:paragraph -->

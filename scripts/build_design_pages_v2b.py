@@ -368,12 +368,12 @@ def offer_page(key):
         lead_html = lead_html.replace("abgeschlossene Basic-Ausbildung", f'abgeschlossene <a href="{offer_file("basic")}">Basic-Ausbildung</a>')
     mods = "".join(accordion(t, f'<p class="bw-text">{x}</p>') for t, x in P["modules"])
     scope = paras(P["scope"])
+    if P.get("scope_more"):
+        scope += f'<h4 class="bw-card__subtitle">{P["scope_more"][0]}</h4>' + paras(P["scope_more"][1])
     if P.get("scope_link"):
         k, label = P["scope_link"]
         scope += f'<p class="bw-text"><a class="bw-link bw-link--strong" href="{offer_file(k)}">{label} →</a></p>'
-    extra = ""
-    if P.get("extra"):
-        extra = f'<div class="bw-card"><h3 class="bw-card__title">{P["extra_title"]}</h3><p class="bw-text">{P["extra"]}</p></div>'
+    extra = "".join(f'<div class="bw-card"><h3 class="bw-card__title">{t}</h3>{paras(x)}</div>' for t, x in P.get("extras", []))
     body = f"""
 <section class="bw-page-hero bw-page-hero--offer bw-accent--{o["accent"]}"><div class="bw-container bw-page-hero__inner">
 <p class="bw-crumbs"><a href="index.html">Startseite</a> / <a href="index.html#ausbildungen">Ausbildungen</a> / {o["name"]}</p>
