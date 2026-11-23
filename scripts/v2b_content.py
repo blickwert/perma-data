@@ -167,6 +167,16 @@ PAGES = {
         "scope": [
             "Geplant sind 94 Einheiten: 60 Seminareinheiten, vier Einheiten Coaching, 20 Einheiten Praxisprojekt und Selbststudium sowie zehn Einheiten Peergruppenarbeit. Dein Projekt führt von der Bedarfsanalyse bis zur Auswertung. Der ECQA-Abschluss setzt die vorgesehenen Ausbildungs-, Praxis- und Abschlussleistungen voraus. Zeitplan und genaue Anforderungen folgen mit der Ausschreibung.",
         ],
+        # Ergänzung Martin Wammerl (November 2026): Qualifikation im Umfang-Abschnitt, Master-Trainer-Lehrgang als eigene Karte.
+        "scope_more": ("Berufliche Qualifikation als Basic Trainer", [
+            "Mit dem erfolgreichen Abschluss des Advanced-Curriculums erwirbst du die Qualifikation als „Basic Trainer“ für Positive Psychologie. Du kannst wissenschaftlich fundierte Inhalte und Methoden in deinem beruflichen Umfeld vermitteln, etwa in Workshops für dein Team oder in Fortbildungen für Kolleg:innen.",
+        ]),
+        "extras": [
+            ("ECQA Master Trainer für Positive Psychologie (in Planung)", [
+                "Für Absolvent:innen des Advanced-Curriculums planen wir einen weiterführenden Lehrgang, der an das Mastertraining der European Positive Psychology Academy (EUPPA) anknüpft. Er richtet sich an alle, die künftig selbst Basic- und Advanced-Curricula in Positiver Psychologie nach den Kriterien der ECQA anbieten und unterrichten möchten.",
+                "Im Mittelpunkt steht die Frage, wie du einen ganzen Lehrgang gestaltest. Du erarbeitest ein eigenes Trainingskonzept, formulierst Lernziele und planst, wie die einzelnen Module aufeinander aufbauen. Du übst, aktuelle Forschung verständlich zu vermitteln, praktische Übungen anzuleiten und deren Erfahrungen mit der Gruppe auszuwerten. In der Supervision reflektierst du deine Rolle als Trainer:in und deinen Umgang mit unterschiedlichen Vorkenntnissen und herausfordernden Gruppensituationen.",
+            ]),
+        ],
         "scope_link": ("basic", "Zur Basic-Ausbildung"),
         "list_title": "Unverbindliche Interessentenliste für Advanced",
         "list_text": "Geplanter Beginn ist Anfang 2028. Trage dich unverbindlich in die Interessentenliste für Advanced ein. Sobald die Ausschreibung vorliegt, erhältst du die Unterlagen für die verbindliche Anmeldung. Der kostenfreie Eintrag reserviert noch keinen Platz.",
@@ -207,8 +217,11 @@ PAGES = {
         "scope": [
             "Die acht zweitägigen Module umfassen insgesamt 128 Seminareinheiten an 16 Seminartagen, jeweils 16 Einheiten pro Modul. Hinzu kommen Praxis- und Supervisionsleistungen; deren genauer Umfang folgt mit der Ausschreibung. Für den ECQA-Gesamtabschluss sind alle Module sowie die vorgesehenen Praxis- und Supervisionsleistungen erforderlich. Für einzeln besuchte Module sind Mikrozertifikate vorgesehen.",
         ],
-        "extra_title": "Anerkennung als Fortbildung",
-        "extra": "Die Anerkennung als Fortbildung nach dem Psychologengesetz und dem Psychotherapiegesetz ist in Arbeit. Über den aktuellen Stand informieren wir dich mit der Ausschreibung.",
+        "extras": [
+            ("Anerkennung als Fortbildung", [
+                "Die Anerkennung als Fortbildung nach dem Psychologengesetz und dem Psychotherapiegesetz ist in Arbeit. Über den aktuellen Stand informieren wir dich mit der Ausschreibung.",
+            ]),
+        ],
         "scope_link": None,
         "list_title": "Unverbindliche Interessentenliste für Clinical Expert",
         "list_text": "Geplanter Beginn ist Frühjahr 2028. Trage dich mit deinen Kontaktdaten unverbindlich in die Interessentenliste für Clinical Expert ein. Sobald die Ausschreibung vorliegt, erhältst du die Unterlagen für die verbindliche Anmeldung. Der Eintrag ist kostenfrei und reserviert noch keinen Platz.",

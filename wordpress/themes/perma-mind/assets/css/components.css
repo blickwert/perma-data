@@ -305,6 +305,7 @@ body:has(.bw-page-hero--offer.is-style-accent-green){--bw-accent:var(--bw-green)
 .bw-card{margin-top:var(--bw-space-8);padding:var(--bw-space-6);border:var(--bw-border-width-hair) solid var(--bw-color-border);border-radius:var(--bw-radius-card)}
 .bw-card--plain{border-color:transparent;background:var(--bw-color-surface-neutral)}
 .bw-card__title{margin:0 0 var(--bw-space-3);font-size:var(--bw-fs-xl);line-height:var(--bw-lh-heading)}
+.bw-card__subtitle{margin:var(--bw-space-6) 0 var(--bw-space-2);font-size:var(--bw-fs-lg);line-height:var(--bw-lh-heading)}
 .bw-related{display:flex;flex-direction:column;margin-top:var(--bw-space-6);border-top:var(--bw-border-width-hair) solid var(--bw-color-border)}
 .bw-related__link{margin:0;border-bottom:var(--bw-border-width-hair) solid var(--bw-color-border)}
 .bw-related__link a{display:flex;align-items:center;min-height:44px;font-weight:var(--bw-fw-medium);text-decoration:none}

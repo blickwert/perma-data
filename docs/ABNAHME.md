@@ -32,6 +32,6 @@ Details: `docs/WP-THEME.md`.
 1. **Hoster:** Seiten-Cache (Antwortzeit derzeit 0,7 s), HTTP/2, Cache-Dauer für Bilder, CSS, JS.
 2. **Turnstile-Schlüssel** in Contact Form 7 › Integration (Auftraggeber).
 3. **Empfänger** der Formular-Mails auf `info@perma-academy.at` umstellen (PERMA Kontakte › Einstellungen).
-4. **Rechtstexte** der Academy einsetzen; Datenschutz um Turnstile, Brevo und die Kontakt-Datenbank (Speicherdauer) ergänzen.
+4. **Rechtstexte:** Entwürfe sind vorgeschrieben (`content/rechtstexte/impressum.html`, `datenschutz.html`, abgestimmt auf die Technik der Website: Kontaktdatenbank, Brevo, Turnstile, lokale Schriften, keine Tracking-Cookies). Offen: gelb markierte Angaben (Rechtsform, Firmenbuch, UID, Gewerbe, Hoster, Speicherfristen, Brevo-Öffnungsstatistik, Bildnachweis) ergänzen und rechtlich prüfen lassen.
 5. **Offene Inhalte:** Trainerfotos, ECQA-Logo, Termine, Orte, Fristen, Zertifizierungsgebühren.
 6. **Live-Seite:** Suchmaschinen zulassen (Einstellungen › Lesen), Brevo-Webhook auf die Live-Adresse („Brevo einrichten“ erneut ausführen), `WP_DEBUG` aus.
