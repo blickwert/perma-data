@@ -62,4 +62,8 @@ Im Editor sind freie Farben, Verläufe, Schriftgrößen, Abstände und Rahmen ab
 
 - Formulare (`bw/perma-form`) im Plugin `bw-perma-forms`.
 - Seiten auf der Dev-Installation aus `wordpress/content/` anlegen (Adressen `{{home:/…}}` werden dabei ersetzt), Startseite setzen, SEO-Titel und Beschreibungen (`pages.json`, Plugin oder Theme-Funktion klären).
-- Platzhalter (Hero-Bild, Trainerfotos, ECQA-Logo) bleiben markiert, bis die Academy liefert.
+- Platzhalter (Trainerfotos, ECQA-Logo) bleiben markiert, bis die Academy liefert.
+
+## Hero-Bild
+
+Seit Theme 0.2.0 liegt im Hero ein Hintergrundbild (`assets/images/hero-sonnenaufgang.webp`, Steinturm im Sonnenaufgang, 2000 × 750 px, vom Auftraggeber geliefert). Es ist ein normaler Bild-Block (`bw-hero__image`) und lässt sich im Editor austauschen; dekorativ, daher ohne Alt-Text. Der Hero-Verlauf bleibt als Hintergrund, falls kein Bild gesetzt ist. Ausschnitt: Desktop mittig, mobil nach links verschoben (Steinturm). Neues Bild: mindestens 2000 px breit, WebP, Motiv links und rechts, Mitte ruhig (dort liegt der Textkasten).

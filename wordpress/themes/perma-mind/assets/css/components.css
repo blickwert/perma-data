@@ -108,7 +108,8 @@ body:has(.bw-page-hero--offer.is-style-accent-green){--bw-accent:var(--bw-green)
 
 /* ========== Hero ========== */
 .bw-hero{position:relative;overflow:hidden;padding-top:120px;padding-bottom:var(--bw-space-12)} /* statt margin-bottom der Box: WordPress setzt beim letzten Kind margin-block-end:0 */
-.bw-hero__caption{position:absolute;left:var(--bw-gutter-mobile);top:var(--bw-space-4);margin:0;font-size:var(--bw-fs-xs);color:var(--bw-color-text-on-dark);background:rgba(var(--bw-navy-rgb),0.55);padding:var(--bw-space-1) var(--bw-space-2);border-radius:var(--bw-space-1)}
+.bw-hero__image{position:absolute;inset:0;margin:0}
+.bw-hero__image img{display:block;width:100%;height:100%;object-fit:cover;object-position:20% 50%} /* mobil: Steinturm links im Bild */
 .bw-hero__box{position:relative;box-sizing:border-box;margin:0 var(--bw-gutter-mobile);background:var(--bw-blue-glass);padding:var(--bw-space-7);display:flex;flex-direction:column;gap:var(--bw-space-5)}
 .bw-hero__title{margin:0;font-size:var(--bw-fs-4xl);line-height:var(--bw-lh-tight)}
 .bw-hero__text{margin:0;font-size:var(--bw-fs-base);line-height:var(--bw-lh-body)}
@@ -119,7 +120,7 @@ body:has(.bw-page-hero--offer.is-style-accent-green){--bw-accent:var(--bw-green)
 
 @media (min-width:821px){
   .bw-hero{height:600px;padding-top:0;padding-bottom:0}
-  .bw-hero__caption{left:var(--bw-space-10);top:auto;bottom:var(--bw-space-6)}
+  .bw-hero__image img{object-position:50% 50%}
   .bw-hero__box{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:520px;max-width:calc(100% - 48px);margin:0;padding:var(--bw-space-10)}
   .bw-hero__box--wide{width:640px}
   .bw-hero__box--wide .bw-hero__title,.bw-hero__box--wide .bw-hero__actions{order:0}

@@ -362,7 +362,8 @@ def p_hero():
     box = group(heading(H["h1"], 1, "bw-hero__title") + para(H["paras"][0], "bw-hero__text")
                 + buttons(button(H["button_secondary"], "#interessentenliste"), button(H["button_primary"], "#ausbildungen", "secondary"), cls="bw-hero__actions"),
                 "bw-hero__box bw-hero__box--wide")
-    return group(para("[Hero-Bild / Illustration: Menschen in ruhiger, positiver Atmosphäre]", "bw-hero__caption") + box,
+    # Hintergrundbild als normaler Bild-Block (im Editor austauschbar); dekorativ, daher leerer Alt-Text.
+    return group(image("{{asset:assets/images/hero-sonnenaufgang.webp}}", "", "bw-hero__image") + box,
                  "bw-hero bw-hero--v2b", "section", style="gradient-hero", label="Hero")
 
 

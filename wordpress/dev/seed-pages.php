@@ -16,6 +16,7 @@ $bw_data = json_decode( (string) file_get_contents( $bw_dir . 'pages.json' ), tr
 foreach ( $bw_data['pages'] as $bw_page ) {
 	$bw_markup = (string) file_get_contents( $bw_dir . $bw_page['file'] );
 	$bw_markup = (string) preg_replace_callback( '/\{\{home:([^}]*)\}\}/', static fn( array $m ): string => esc_url( home_url( $m[1] ) ), $bw_markup );
+	$bw_markup = (string) preg_replace_callback( '/\{\{asset:([^}]*)\}\}/', static fn( array $m ): string => esc_url( get_theme_file_uri( $m[1] ) ), $bw_markup );
 	$bw_old    = get_page_by_path( $bw_page['slug'] );
 	$bw_id     = wp_insert_post(
 		[

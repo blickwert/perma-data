@@ -93,6 +93,7 @@ def pages(site: Site):
     for p in index:
         markup = (CONTENT / p["file"]).read_text("utf-8")
         markup = re.sub(r"\{\{home:([^}]*)\}\}", lambda m: site.url + m.group(1), markup)
+        markup = re.sub(r"\{\{asset:([^}]*)\}\}", lambda m: f"{site.url}/wp-content/themes/perma-mind/{m.group(1)}", markup)
         found = site.call("GET", "wp/v2/pages", query={"slug": p["slug"], "status": "publish,draft,private", "_fields": "id"})
         body = {"title": p["title"], "slug": p["slug"], "content": markup, "status": "publish", "template": p["template"]}
         if found:

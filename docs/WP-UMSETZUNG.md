@@ -157,4 +157,4 @@ Sprungziele auf der Startseite: `#ausbildungen`, `#ueber-uns`, `#zertifizierung`
 
 ## 10. Offene Inhalte (nicht blockierend)
 
-Hero-Bild, Trainerfotos, ECQA-Logo (freigegebene Version), Termine/Orte/Fristen/Zertifizierungsgebühren, endgültige Rechtstexte, Status der Fortbildungsanerkennung für Clinical Expert. Platzhalter bleiben sichtbar markiert, bis die Academy liefert.
+Trainerfotos, ECQA-Logo (freigegebene Version), Termine/Orte/Fristen/Zertifizierungsgebühren, endgültige Rechtstexte, Status der Fortbildungsanerkennung für Clinical Expert. Platzhalter bleiben sichtbar markiert, bis die Academy liefert.
