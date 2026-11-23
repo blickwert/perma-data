@@ -45,7 +45,19 @@ final class BlockStyles {
 				register_block_style( $block, [ 'name' => $name, 'label' => $label ] );
 			}
 		}
-		// Core "outline" duplicates our "secondary" button style.
-		unregister_block_style( 'core/button', 'outline' );
+		add_action( 'enqueue_block_editor_assets', [ self::class, 'remove_core_styles' ] );
+	}
+
+	/**
+	 * Core "outline" duplicates our "secondary" button style. Core registers it in JavaScript only,
+	 * so it has to be removed there (unregister_block_style() in PHP would raise a notice).
+	 */
+	public static function remove_core_styles(): void {
+		// Filter at registration time: an unregister call on domReady runs before the core blocks are registered.
+		wp_add_inline_script(
+			'wp-blocks',
+			"wp.hooks.addFilter( 'blocks.registerBlockType', 'perma-mind/button-styles', function ( settings, name ) { return 'core/button' === name ? Object.assign( {}, settings, { styles: ( settings.styles || [] ).filter( function ( s ) { return 'outline' !== s.name; } ) } ) : settings; } );",
+			'after'
+		);
 	}
 }

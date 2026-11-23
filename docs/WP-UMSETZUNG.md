@@ -146,14 +146,16 @@ Sprungziele auf der Startseite: `#ausbildungen`, `#ueber-uns`, `#zertifizierung`
 
 ## 9. Abnahme-Checkliste
 
-- [ ] Alle Seiten sehen bei 1440 px und 390 px aus wie v2b (Abweichungen dokumentiert und begründet)
-- [ ] Keine Inline-Styles mit Rohwerten in Patterns/Vorlagen, keine freien Farben im Editor
-- [ ] Neue Seite nur aus Patterns und Stilen baubar, ohne Designeinstellungen
-- [ ] Schriften lokal, keine Anfragen an Google oder andere fremde Server (außer Turnstile/Brevo bei Formularen)
-- [ ] Je Seite eine H1, Überschriften-Hierarchie korrekt, Akkordeons per Tastatur bedienbar
-- [ ] Alle drei Formulare senden, Mails an bw-cms@blickwert.at, Newsletter landet in Brevo (DOI), Spamschutz greift
-- [ ] `php -l` grün, Plugin-Tests grün, keine PHP-Warnungen im Debug-Log
-- [ ] `CLAUDE.md` und diese Datei auf den neuen Stand gebracht (erledigt / offen)
+Abgenommen am 23. November 2026, Bericht: [`docs/ABNAHME.md`](ABNAHME.md).
+
+- [x] Alle Seiten sehen bei 1440 px und 390 px aus wie v2b (Abweichungen dokumentiert und begründet)
+- [x] Keine Inline-Styles mit Rohwerten in Patterns/Vorlagen, keine freien Farben im Editor
+- [x] Neue Seite nur aus Patterns und Stilen baubar, ohne Designeinstellungen
+- [x] Schriften lokal, keine Anfragen an Google oder andere fremde Server (außer Turnstile/Brevo bei Formularen)
+- [x] Je Seite eine H1, Überschriften-Hierarchie korrekt, Akkordeons per Tastatur bedienbar
+- [x] Alle drei Formulare senden, Mails an bw-cms@blickwert.at, Newsletter landet in Brevo (DOI), Spamschutz greift (Turnstile folgt auf der Live-Seite)
+- [x] `php -l` grün, Plugin-Tests grün, keine PHP-Warnungen im Debug-Log (aus Theme und Plugin)
+- [x] `CLAUDE.md` und diese Datei auf den neuen Stand gebracht
 
 ## 10. Offene Inhalte (nicht blockierend)
 

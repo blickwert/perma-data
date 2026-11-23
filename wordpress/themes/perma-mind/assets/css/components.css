@@ -314,7 +314,7 @@ body:has(.bw-page-hero--offer.is-style-accent-green){--bw-accent:var(--bw-green)
 
 /* ========== Rechtstexte (Fließtext) ========== */
 .bw-prose{max-width:780px;padding:var(--bw-space-10) 0 var(--bw-space-16)}
-.bw-prose__lead{margin:0 0 var(--bw-space-8);font-size:var(--bw-fs-lg);font-weight:var(--bw-fw-light);line-height:var(--bw-lh-body)}
+.bw-prose .bw-prose__lead{margin:0 0 var(--bw-space-8);font-size:var(--bw-fs-lg);font-weight:var(--bw-fw-light);line-height:var(--bw-lh-body)}
 .bw-prose .bw-prose__draft{margin:0 0 var(--bw-space-10);padding:var(--bw-space-3) var(--bw-space-4);border-left:var(--bw-space-1) solid var(--bw-color-accent);background:var(--bw-color-surface-tint);font-size:var(--bw-fs-base);line-height:var(--bw-lh-body)}
 .bw-prose h2{margin:var(--bw-space-12) 0 0;font-size:var(--bw-fs-2xl);line-height:var(--bw-lh-heading)}
 .bw-prose h3{margin:var(--bw-space-7) 0 0;font-size:var(--bw-fs-lg);line-height:var(--bw-lh-heading)}
