@@ -40,16 +40,17 @@ mark.bw-placeholder{background:var(--bw-placeholder);border-radius:var(--bw-spac
 .is-style-gradient-hero{background:var(--wp--preset--gradient--hero)}
 .is-style-gradient-page{background:var(--wp--preset--gradient--page-head)}
 
-/* ========== Blockstile: Akzentfarbe (setzt Akzent, Text auf Akzent, dunkle Variante) ========== */
-.is-style-accent-blue,.bw-accent--blue{--bw-accent:var(--bw-blue);--bw-on-accent:var(--bw-navy);--bw-accent-deep:var(--bw-blue-deep)}
-.is-style-accent-purple,.bw-accent--purple{--bw-accent:var(--bw-purple);--bw-on-accent:var(--bw-white);--bw-accent-deep:var(--bw-purple-deep)}
-.is-style-accent-orange,.bw-accent--orange{--bw-accent:var(--bw-orange);--bw-on-accent:var(--bw-navy);--bw-accent-deep:var(--bw-orange-deep)}
+/* ========== Blockstile: Akzentfarbe (setzt Akzent, Text auf Akzent, dunkle Variante) ==========
+   --bw-accent-label: Hintergrund für kleine Schrift (Etiketten), wo die Akzentfarbe selbst zu wenig Kontrast hat. */
+.is-style-accent-blue,.bw-accent--blue{--bw-accent:var(--bw-blue);--bw-on-accent:var(--bw-navy-dark);--bw-accent-deep:var(--bw-blue-deep)}
+.is-style-accent-purple,.bw-accent--purple{--bw-accent:var(--bw-purple);--bw-on-accent:var(--bw-white);--bw-accent-label:var(--bw-purple-dark);--bw-accent-deep:var(--bw-purple-deep)}
+.is-style-accent-orange,.bw-accent--orange{--bw-accent:var(--bw-orange);--bw-on-accent:var(--bw-navy-dark);--bw-accent-deep:var(--bw-orange-deep)}
 .is-style-accent-green,.bw-accent--green{--bw-accent:var(--bw-green);--bw-on-accent:var(--bw-white);--bw-accent-deep:var(--bw-green-deep)}
 .is-style-accent-red,.bw-accent--red{--bw-accent:var(--bw-red);--bw-on-accent:var(--bw-white);--bw-accent-deep:var(--bw-navy-dark)}
 /* Angebotsseiten: der Header übernimmt den Akzent des Seitenkopfs */
-body:has(.bw-page-hero--offer.is-style-accent-blue){--bw-accent:var(--bw-blue);--bw-on-accent:var(--bw-navy);--bw-accent-deep:var(--bw-blue-deep)}
+body:has(.bw-page-hero--offer.is-style-accent-blue){--bw-accent:var(--bw-blue);--bw-on-accent:var(--bw-navy-dark);--bw-accent-deep:var(--bw-blue-deep)}
 body:has(.bw-page-hero--offer.is-style-accent-purple){--bw-accent:var(--bw-purple);--bw-on-accent:var(--bw-white);--bw-accent-deep:var(--bw-purple-deep)}
-body:has(.bw-page-hero--offer.is-style-accent-orange){--bw-accent:var(--bw-orange);--bw-on-accent:var(--bw-navy);--bw-accent-deep:var(--bw-orange-deep)}
+body:has(.bw-page-hero--offer.is-style-accent-orange){--bw-accent:var(--bw-orange);--bw-on-accent:var(--bw-navy-dark);--bw-accent-deep:var(--bw-orange-deep)}
 body:has(.bw-page-hero--offer.is-style-accent-green){--bw-accent:var(--bw-green);--bw-on-accent:var(--bw-white);--bw-accent-deep:var(--bw-green-deep)}
 
 /* ========== Buttons (core/button) ========== */
@@ -169,7 +170,7 @@ body:has(.bw-page-hero--offer.is-style-accent-green){--bw-accent:var(--bw-green)
 .bw-link-strong a{font-weight:var(--bw-fw-medium);text-decoration:none;border-bottom:var(--bw-border-width-hair) solid currentColor;padding-bottom:var(--bw-space-1)}
 .bw-eyebrow{margin:0;font-size:var(--bw-fs-xs);font-weight:var(--bw-fw-medium);letter-spacing:var(--bw-ls-eyebrow);text-transform:uppercase}
 .bw-eyebrow--on-dark{color:var(--bw-color-text-on-dark)}
-.bw-chip{margin:0;background:var(--bw-accent,var(--bw-blue));color:var(--bw-on-accent,var(--bw-navy));font-size:var(--bw-fs-xs);font-weight:var(--bw-fw-medium);letter-spacing:var(--bw-ls-label);text-transform:uppercase;padding:var(--bw-space-1) var(--bw-space-2)}
+.bw-chip{margin:0;background:var(--bw-accent-label,var(--bw-accent,var(--bw-blue)));color:var(--bw-on-accent,var(--bw-navy-dark));font-size:var(--bw-fs-xs);font-weight:var(--bw-fw-medium);letter-spacing:var(--bw-ls-label);text-transform:uppercase;padding:var(--bw-space-1) var(--bw-space-2)}
 
 /* ========== Warum PERMA Mind Academy ========== */
 .bw-feature{box-sizing:border-box;padding:var(--bw-space-6);box-shadow:inset 0 var(--bw-space-1) 0 var(--bw-accent)}

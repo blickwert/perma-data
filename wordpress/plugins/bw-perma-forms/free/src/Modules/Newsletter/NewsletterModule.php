@@ -49,6 +49,24 @@ final class NewsletterModule extends AbstractModule {
 		);
 		( new NewsletterController( $service, $client, $this->settings ) )->register();
 		add_filter( 'bw_perma_forms_settings_response', [ $this, 'settings_response' ] );
+		add_action( 'wp_enqueue_scripts', [ $this, 'drop_brevo_frontend_assets' ], 1000 );
+	}
+
+	/**
+	 * The Brevo plugin loads its form script (with jQuery) and CSS on every page. Our forms talk to Brevo
+	 * themselves, so these files only slow the page down. Keep them via the filter if Brevo's own forms are used.
+	 */
+	public function drop_brevo_frontend_assets(): void {
+		/**
+		 * Whether to keep the front-end files of the Brevo plugin (default: false).
+		 *
+		 * @param bool $keep
+		 */
+		if ( apply_filters( 'bw_perma_forms_keep_brevo_frontend', false ) ) {
+			return;
+		}
+		wp_dequeue_script( 'sib-front-js' );
+		wp_dequeue_style( 'sib-front-css' );
 	}
 
 	/**

@@ -12,7 +12,7 @@ namespace BW\PermaMind;
 final class Theme {
 
 	public const SLUG    = 'perma-mind';
-	public const VERSION = '0.4.0';
+	public const VERSION = '0.5.0';
 
 	private static ?Theme $instance = null;
 
@@ -26,6 +26,7 @@ final class Theme {
 		add_action( 'init', [ $this, 'register' ] );
 		( new Blocks() )->boot();
 		( new HeroImage() )->boot();
+		( new ThemeImages() )->boot();
 	}
 
 	public function setup(): void {
@@ -38,7 +39,10 @@ final class Theme {
 
 	public function enqueue(): void {
 		$uri = get_theme_file_uri( 'assets/css/' );
-		wp_enqueue_style( 'bw-perma-mind-tokens', $uri . 'tokens.css', [], $this->asset_version( 'tokens.css' ) );
+		// The tokens are small: inline them instead of one more render-blocking request.
+		wp_register_style( 'bw-perma-mind-tokens', false, [], self::VERSION );
+		wp_add_inline_style( 'bw-perma-mind-tokens', (string) file_get_contents( get_theme_file_path( 'assets/css/tokens.css' ) ) );
+		wp_enqueue_style( 'bw-perma-mind-tokens' );
 		wp_enqueue_style( 'bw-perma-mind-components', $uri . 'components.css', [ 'bw-perma-mind-tokens' ], $this->asset_version( 'components.css' ) );
 		wp_enqueue_script( 'bw-perma-mind-front', get_theme_file_uri( 'assets/js/front.js' ), [], self::VERSION, [ 'strategy' => 'defer', 'in_footer' => true ] );
 	}

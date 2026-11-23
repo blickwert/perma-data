@@ -39,6 +39,11 @@
 					"color": "#B464A7"
 				},
 				{
+					"slug": "purple-dark",
+					"name": "Purple Dark",
+					"color": "#A45B98"
+				},
+				{
 					"slug": "orange",
 					"name": "Orange",
 					"color": "#F09133"

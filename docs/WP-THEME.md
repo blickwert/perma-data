@@ -77,3 +77,20 @@ Seit Theme 0.3.0 hat der Hero zwei Hintergrundbilder (vom Auftraggeber geliefert
 **Profilmerkmale mobil:** Slider mit je einem Merkmal (Scroll-Snap, wischbar); blättert alle 4 Sekunden weiter, pausiert 10 Sekunden nach einer Berührung, steht still bei „Bewegung reduzieren“. Ab 821 px alle drei nebeneinander wie bisher.
 
 Neue Bilder: Querformat mindestens 2000 px breit, Mitte ruhig (Textkasten); Hochformat mit ruhigem Himmel im oberen Drittel (Text) und Motiv unten.
+
+## Ladezeit (Lighthouse, Startseite, Dev-Installation)
+
+| | Handy vorher | Handy nachher | Desktop vorher | Desktop nachher |
+|---|---|---|---|---|
+| Leistung | 83 | 95 | 94 | 98 |
+| Barrierefreiheit | 97 | 100 | 97 | 100 |
+| LCP (Hero-Bild) | 4,1 s | 2,4 s | 1,2 s | 0,8 s |
+
+Maßnahmen (Theme 0.5.0, Plugin 0.3.0):
+- Hero-Bild mit `fetchpriority="high"`, `srcset` aus kleineren Fassungen (`<name>-<breite>.webp`, erzeugt von `scripts/build_theme.py`, Varianten in `HERO_VARIANTS`), `sizes`, `width`/`height` (`src/HeroImage.php`).
+- Theme-Bilder (Logos) mit `width`/`height`, Footer-Logo nachgeladen (`src/ThemeImages.php`).
+- `tokens.css` direkt in der Seite statt als eigene Datei.
+- Das Plugin entfernt Skript und CSS des Brevo-Plugins im Frontend; damit fällt jQuery weg (Filter `bw_perma_forms_keep_brevo_frontend`).
+- Etiketten (`bw-chip`) auf Kontrast ≥ 4,5:1: Schrift `navy_dark` auf Blau und Orange, Hintergrund `purple_dark` (neuer Token, Lila 9 % dunkler) bei Lila.
+
+Offen am Server (Hoster, vor dem Livegang): Antwortzeit 0,7 s (Seiten-Cache), HTTP/2, Cache-Dauer für Bilder/CSS/JS. SEO 63 nur, weil die Dev-Seite Suchmaschinen aussperrt.

@@ -3,12 +3,15 @@ Contributors: blickwert
 Requires at least: 6.8
 Tested up to: 7.1
 Requires PHP: 8.3
-Stable tag: 0.2.0
+Stable tag: 0.3.0
 License: GPL-2.0-or-later
 
 Forms of the PERMA Mind Academy (interest list, newsletter, contact) on top of Contact Form 7, with spam protection, Brevo double opt-in and a contact database with CSV export.
 
 == Changelog ==
+
+= 0.3.0 =
+* Front end: the Brevo plugin's form script (with jQuery) and CSS are no longer loaded; filter bw_perma_forms_keep_brevo_frontend keeps them.
 
 = 0.2.0 =
 * Brevo: choose list and template from Brevo, "Set up Brevo" creates list and double opt-in template; confirmation page /newsletter-bestaetigt/.

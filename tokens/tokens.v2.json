@@ -1,5 +1,5 @@
 {
-  "$comment": "Corporate Design v2 (Font_and_color_info.pdf): Basisfarben #00416b #16a5d2 #b464a7 #f09133 #18946b #d83662 #ffffff. Alle anderen Toene sind daraus abgeleitet (Mischung mit Weiss/Schwarz).",
+  "$comment": "Corporate Design v2 (Font_and_color_info.pdf): Basisfarben #00416b #16a5d2 #b464a7 #f09133 #18946b #d83662 #ffffff. Alle anderen Toene sind daraus abgeleitet (Mischung mit Weiss/Schwarz). purple_dark = purple 9 % dunkler, fuer kleine weisse Schrift (Kontrast 4,6:1).",
   "color": {
     "navy": "#00416B",
     "navy_dark": "#003353",
@@ -7,6 +7,7 @@
     "blue_dark": "#138CB2",
     "blue_glass": "rgba(22,165,210,0.94)",
     "purple": "#B464A7",
+    "purple_dark": "#A45B98",
     "orange": "#F09133",
     "green": "#18946B",
     "red": "#D83662",
