@@ -70,6 +70,10 @@ Seit Theme 0.3.0 hat der Hero zwei Hintergrundbilder (vom Auftraggeber geliefert
 
 **Mobil (Variante B, vom Auftraggeber gewählt):** kein Textkasten; Überschrift, ein Satz (`bw-hero__lead`, erster Satz des Hero-Texts) und beide Buttons direkt auf dem Himmel, der zweite Button weiß gefüllt. Der lange Text (`bw-hero__text`) ist mobil ausgeblendet, steht aber im HTML. **Desktop:** unverändert mit blauem Textkasten.
 
-**Schwebender Button** „Zur Interessentenliste“ (nur mobil): erscheint erst, wenn der Hero bzw. Angebotskopf aus dem Bild gescrollt ist (`assets/js/fab.js`, ohne JavaScript immer sichtbar).
+**Schwebender Button** „Zur Interessentenliste“ (nur mobil): erscheint erst, wenn der Hero bzw. Angebotskopf aus dem Bild gescrollt ist (`assets/js/front.js`, ohne JavaScript immer sichtbar).
+
+**Höhe mobil (seit 0.4.0):** Der Hero ist so hoch, dass der blaue Balken mit den Profilmerkmalen genau am unteren Bildschirmrand sitzt: `100svh` minus Header (`--bw-header-height`, 68 px) minus Balken (`--bw-highlights-height`, 64 px), mindestens 420 px. Auf sehr niedrigen Bildschirmen (unter 640 px Höhe) entfällt der kurze Satz.
+
+**Profilmerkmale mobil:** Slider mit je einem Merkmal (Scroll-Snap, wischbar); blättert alle 4 Sekunden weiter, pausiert 10 Sekunden nach einer Berührung, steht still bei „Bewegung reduzieren“. Ab 821 px alle drei nebeneinander wie bisher.
 
 Neue Bilder: Querformat mindestens 2000 px breit, Mitte ruhig (Textkasten); Hochformat mit ruhigem Himmel im oberen Drittel (Text) und Motiv unten.
