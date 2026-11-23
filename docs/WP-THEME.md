@@ -14,7 +14,7 @@ Der Generator schreibt alles, was aus Tokens und Texten folgt. Diese Dateien nic
 |---|---|
 | `theme.json` (Palette, Verläufe, Schriften, Größen, Abstände, Schatten, Elemente) | `tokens/tokens.v2.json` |
 | `assets/css/tokens.css` (`--bw-*` zeigt auf die theme.json-Presets) | `tokens/tokens.v2.json` |
-| `patterns/*.php` (Abschnitte, ganze Seiten, Header, Footer, 404) | `scripts/v2b_content.py`, Rechtstexte aus `design/v2/impressum.html`, `datenschutz.html` |
+| `patterns/*.php` (Abschnitte, ganze Seiten, Header, Footer, 404) | `scripts/v2b_content.py`, Rechtstexte aus `content/rechtstexte/impressum.html`, `datenschutz.html` |
 | `assets/icons/*.svg` | `assets/icons/icons.json` + `ICONS` in `scripts/build_design_pages_v2b.py` |
 | `assets/images/logo*.svg` | `design/v2b/assets/` |
 | `wordpress/content/*.html`, `pages.json` (Seiteninhalte für die Übertragung, Phase 3) | wie Patterns |
