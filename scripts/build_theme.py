@@ -208,7 +208,29 @@ def build_assets():
     img.mkdir(parents=True, exist_ok=True)
     for f in ("logo.svg", "logo-white.svg"):
         shutil.copy(ROOT / "design/v2b/assets" / f, img / f)
+    build_image_variants(img)
     return sorted(ICONS)
+
+
+# Kleinere Fassungen der Hero-Bilder für srcset (src/HeroImage.php sucht <name>-<breite>.webp neben dem Original).
+HERO_VARIANTS = {"hero-sonnenaufgang.webp": (1200, 1600), "hero-sonnenaufgang-mobil.webp": (640, 768)}
+
+
+def build_image_variants(img_dir):
+    try:
+        from PIL import Image
+    except ImportError:
+        print("Hinweis: Pillow fehlt, Bildvarianten nicht erzeugt (pip install pillow)")
+        return
+    for name, widths in HERO_VARIANTS.items():
+        src = img_dir / name
+        if not src.exists():
+            continue
+        with Image.open(src) as im:
+            for w in widths:
+                out = img_dir / f"{src.stem}-{w}.webp"
+                if w < im.width:
+                    im.resize((w, round(im.height * w / im.width)), Image.LANCZOS).save(out, "WEBP", quality=80, method=6)
 
 
 # ------------------------------------------------------------------ Block-Markup

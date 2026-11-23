@@ -2,7 +2,7 @@
 /**
  * Plugin Name: BW PERMA Forms
  * Description: Forms of the PERMA Mind Academy (interest list, newsletter, contact) on top of Contact Form 7, with spam protection, Brevo double opt-in and a contact database with CSV export.
- * Version: 0.2.0
+ * Version: 0.3.0
  * Requires at least: 6.8
  * Requires PHP: 8.3
  * Requires Plugins: contact-form-7
@@ -18,7 +18,7 @@ declare(strict_types=1);
 
 defined( 'ABSPATH' ) || exit;
 
-define( 'BW_PERMA_FORMS_VERSION', '0.2.0' );
+define( 'BW_PERMA_FORMS_VERSION', '0.3.0' );
 define( 'BW_PERMA_FORMS_FILE', __FILE__ );
 define( 'BW_PERMA_FORMS_DIR', __DIR__ . '/' );
 
