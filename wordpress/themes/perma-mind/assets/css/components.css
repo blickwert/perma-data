@@ -107,24 +107,31 @@ body:has(.bw-page-hero--offer.is-style-accent-green){--bw-accent:var(--bw-green)
 }
 
 /* ========== Hero ========== */
-.bw-hero{position:relative;overflow:hidden;padding-top:120px;padding-bottom:var(--bw-space-12)} /* statt margin-bottom der Box: WordPress setzt beim letzten Kind margin-block-end:0 */
+.bw-hero{position:relative;overflow:hidden;min-height:560px;height:calc(100svh - var(--bw-space-18));padding:var(--bw-space-10) var(--bw-gutter-mobile)}
+/* Hintergrundbild: mobil Hochformat (Himmel oben, Steinturm unten), ab Tablet Querformat. src/HeroImage.php macht daraus ein <picture>. */
 .bw-hero__image{position:absolute;inset:0;margin:0}
-.bw-hero__image img{display:block;width:100%;height:100%;object-fit:cover;object-position:20% 50%} /* mobil: Steinturm links im Bild */
-.bw-hero__box{position:relative;box-sizing:border-box;margin:0 var(--bw-gutter-mobile);background:var(--bw-blue-glass);padding:var(--bw-space-7);display:flex;flex-direction:column;gap:var(--bw-space-5)}
+.bw-hero__image picture{display:block;width:100%;height:100%}
+.bw-hero__image img{display:block;width:100%;height:100%;object-fit:cover;object-position:50% 100%}
+.bw-hero__image--mobile{display:none} /* im Frontend schon zusammengefasst; im Editor nur über die Listenansicht erreichbar */
+/* Mobil: kein Kasten, Text direkt auf dem Himmel */
+.bw-hero__box{position:relative;box-sizing:border-box;display:flex;flex-direction:column;gap:var(--bw-space-4)}
 .bw-hero__title{margin:0;font-size:var(--bw-fs-4xl);line-height:var(--bw-lh-tight)}
-.bw-hero__text{margin:0;font-size:var(--bw-fs-base);line-height:var(--bw-lh-body)}
-.bw-hero__actions{gap:var(--bw-space-3) var(--bw-space-7);margin-top:var(--bw-space-2)}
+.bw-hero__lead{margin:0;font-size:var(--bw-fs-lg);font-weight:var(--bw-fw-medium);line-height:var(--bw-lh-heading)}
+.bw-hero__text{display:none;margin:0;font-size:var(--bw-fs-base);line-height:var(--bw-lh-body)}
+.bw-hero__actions{flex-direction:column;align-items:flex-start;gap:var(--bw-space-3);margin-top:var(--bw-space-3)}
+.bw-hero .wp-block-button.is-style-secondary .wp-block-button__link{background:var(--bw-color-surface);box-shadow:none} /* weiß gefüllt: hebt sich vom Himmel und den Wolken ab */
 /* Mobil: Hauptschaltfläche direkt unter der H1, vor dem längeren Text */
-.bw-hero__box--wide .bw-hero__title{order:-2}
-.bw-hero__box--wide .bw-hero__actions{order:-1}
+
 
 @media (min-width:821px){
-  .bw-hero{height:600px;padding-top:0;padding-bottom:0}
+  .bw-hero{height:600px;min-height:0;padding:0}
   .bw-hero__image img{object-position:50% 50%}
-  .bw-hero__box{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:520px;max-width:calc(100% - 48px);margin:0;padding:var(--bw-space-10)}
+  .bw-hero__box{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:520px;max-width:calc(100% - 48px);margin:0;padding:var(--bw-space-10);background:var(--bw-blue-glass);gap:var(--bw-space-5)}
   .bw-hero__box--wide{width:640px}
-  .bw-hero__box--wide .bw-hero__title,.bw-hero__box--wide .bw-hero__actions{order:0}
-  .bw-hero__text{font-size:var(--bw-fs-lg)}
+  .bw-hero__lead{display:none}
+  .bw-hero__text{display:block;font-size:var(--bw-fs-lg)}
+  .bw-hero__actions{flex-direction:row;align-items:center;gap:var(--bw-space-3) var(--bw-space-7);margin-top:var(--bw-space-2)}
+  .bw-hero .wp-block-button.is-style-secondary .wp-block-button__link{background:transparent;box-shadow:inset 0 0 0 var(--bw-border-width-strong) currentColor}
 }
 
 /* ========== Profilmerkmale ========== */
@@ -251,7 +258,8 @@ body:has(.bw-page-hero--offer.is-style-accent-green){--bw-accent:var(--bw-green)
 .bw-contact-list__icon{margin-top:var(--bw-space-1);color:var(--bw-color-accent-strong)}
 
 /* ========== Schwebender Button (nur mobil) ========== */
-.bw-fab{position:fixed;right:var(--bw-space-4);bottom:var(--bw-space-4);z-index:15;margin:0} /* unter dem Header (20), damit das geöffnete Menü ihn verdeckt */
+.bw-fab{position:fixed;right:var(--bw-space-4);bottom:var(--bw-space-4);z-index:15;margin:0;transition:opacity .2s,transform .2s} /* unter dem Header (20), damit das geöffnete Menü ihn verdeckt */
+.bw-fab.is-hidden{opacity:0;transform:translateY(var(--bw-space-4));pointer-events:none} /* solange der Hero mit eigener Hauptschaltfläche sichtbar ist (assets/js/fab.js) */
 .bw-fab a{display:inline-flex;align-items:center;gap:var(--bw-space-3);background:var(--bw-orange);color:var(--bw-navy);text-decoration:none;font-size:var(--bw-fs-base);font-weight:var(--bw-fw-medium);padding:var(--bw-space-3) var(--bw-space-4);border-radius:var(--bw-radius-md);min-height:44px;box-sizing:border-box;box-shadow:var(--bw-shadow-pop)}
 .bw-fab a::before{content:"";width:22px;height:22px;background:currentColor;-webkit-mask:url(../icons/send.svg) center/contain no-repeat;mask:url(../icons/send.svg) center/contain no-repeat}
 @media (min-width:561px){

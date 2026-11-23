@@ -12,7 +12,7 @@ namespace BW\PermaMind;
 final class Theme {
 
 	public const SLUG    = 'perma-mind';
-	public const VERSION = '0.2.0';
+	public const VERSION = '0.3.0';
 
 	private static ?Theme $instance = null;
 
@@ -25,6 +25,7 @@ final class Theme {
 		add_action( 'wp_enqueue_scripts', [ $this, 'enqueue' ] );
 		add_action( 'init', [ $this, 'register' ] );
 		( new Blocks() )->boot();
+		( new HeroImage() )->boot();
 	}
 
 	public function setup(): void {
@@ -39,6 +40,7 @@ final class Theme {
 		$uri = get_theme_file_uri( 'assets/css/' );
 		wp_enqueue_style( 'bw-perma-mind-tokens', $uri . 'tokens.css', [], $this->asset_version( 'tokens.css' ) );
 		wp_enqueue_style( 'bw-perma-mind-components', $uri . 'components.css', [ 'bw-perma-mind-tokens' ], $this->asset_version( 'components.css' ) );
+		wp_enqueue_script( 'bw-perma-mind-fab', get_theme_file_uri( 'assets/js/fab.js' ), [], self::VERSION, [ 'strategy' => 'defer', 'in_footer' => true ] );
 	}
 
 	public function register(): void {
