@@ -66,4 +66,10 @@ Im Editor sind freie Farben, Verläufe, Schriftgrößen, Abstände und Rahmen ab
 
 ## Hero-Bild
 
-Seit Theme 0.2.0 liegt im Hero ein Hintergrundbild (`assets/images/hero-sonnenaufgang.webp`, Steinturm im Sonnenaufgang, 2000 × 750 px, vom Auftraggeber geliefert). Es ist ein normaler Bild-Block (`bw-hero__image`) und lässt sich im Editor austauschen; dekorativ, daher ohne Alt-Text. Der Hero-Verlauf bleibt als Hintergrund, falls kein Bild gesetzt ist. Ausschnitt: Desktop mittig, mobil nach links verschoben (Steinturm). Neues Bild: mindestens 2000 px breit, WebP, Motiv links und rechts, Mitte ruhig (dort liegt der Textkasten).
+Seit Theme 0.3.0 hat der Hero zwei Hintergrundbilder (vom Auftraggeber geliefert): Querformat `assets/images/hero-sonnenaufgang.webp` (2000 × 750 px) ab 821 px, Hochformat `assets/images/hero-sonnenaufgang-mobil.webp` (1024 × 1536 px) darunter. Beide sind normale Bild-Blöcke (`bw-hero__image--desktop`, `bw-hero__image--mobile`) und im Editor austauschbar; das mobile Bild ist im Editor ausgeblendet und über die Listenansicht erreichbar. Beim Ausgeben fasst `src/HeroImage.php` beide zu einem `<picture>` zusammen, damit jedes Gerät nur sein Bild lädt. Dekorativ, daher ohne Alt-Text.
+
+**Mobil (Variante B, vom Auftraggeber gewählt):** kein Textkasten; Überschrift, ein Satz (`bw-hero__lead`, erster Satz des Hero-Texts) und beide Buttons direkt auf dem Himmel, der zweite Button weiß gefüllt. Der lange Text (`bw-hero__text`) ist mobil ausgeblendet, steht aber im HTML. **Desktop:** unverändert mit blauem Textkasten.
+
+**Schwebender Button** „Zur Interessentenliste“ (nur mobil): erscheint erst, wenn der Hero bzw. Angebotskopf aus dem Bild gescrollt ist (`assets/js/fab.js`, ohne JavaScript immer sichtbar).
+
+Neue Bilder: Querformat mindestens 2000 px breit, Mitte ruhig (Textkasten); Hochformat mit ruhigem Himmel im oberen Drittel (Text) und Motiv unten.

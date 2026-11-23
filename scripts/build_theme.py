@@ -359,12 +359,16 @@ OFFER_URL = {o: C.META[o]["url"] for o in ("basic", "advanced", "clinical")}
 
 def p_hero():
     H = C.HERO
-    box = group(heading(H["h1"], 1, "bw-hero__title") + para(H["paras"][0], "bw-hero__text")
+    first_sentence = H["paras"][0].split(". ")[0] + "."
+    # Mobil nur Überschrift, ein Satz (bw-hero__lead) und Buttons; der lange Text (bw-hero__text) erst ab Tablet.
+    box = group(heading(H["h1"], 1, "bw-hero__title") + para(first_sentence, "bw-hero__lead") + para(H["paras"][0], "bw-hero__text")
                 + buttons(button(H["button_secondary"], "#interessentenliste"), button(H["button_primary"], "#ausbildungen", "secondary"), cls="bw-hero__actions"),
                 "bw-hero__box bw-hero__box--wide")
-    # Hintergrundbild als normaler Bild-Block (im Editor austauschbar); dekorativ, daher leerer Alt-Text.
-    return group(image("{{asset:assets/images/hero-sonnenaufgang.webp}}", "", "bw-hero__image") + box,
-                 "bw-hero bw-hero--v2b", "section", style="gradient-hero", label="Hero")
+    # Hintergrundbilder als normale Bild-Blöcke (im Editor austauschbar, dekorativ). Das Theme fasst beide beim Ausgeben
+    # zu einem <picture> zusammen (src/HeroImage.php), damit jedes Gerät nur sein Bild lädt.
+    images = (image("{{asset:assets/images/hero-sonnenaufgang-mobil.webp}}", "", "bw-hero__image bw-hero__image--mobile")
+              + image("{{asset:assets/images/hero-sonnenaufgang.webp}}", "", "bw-hero__image bw-hero__image--desktop"))
+    return group(images + box, "bw-hero bw-hero--v2b", "section", style="gradient-hero", label="Hero")
 
 
 def p_highlights():
