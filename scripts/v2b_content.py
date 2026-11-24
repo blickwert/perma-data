@@ -307,6 +307,8 @@ ABOUT = {
         {"name": "Mag. Michael Wohlkönig", "role": "Master-Trainer",
          "photo": "[Foto Mag. Michael Wohlkönig]", "alt": "Mag. Michael Wohlkönig, Trainer der PERMA Mind Academy",
          "image": "trainer-michael-wohlkoenig.webp",
+         "figure": ("michael-wohlkoenig-csikszentmihalyi-2014.webp", "Michael Wohlkönig und Mihály Csíkszentmihályi",
+                    "Michael Wohlkönig und Mihály Csíkszentmihályi beim Kongress für Positive Psychologie in Berlin, Juli 2014"),
          "teaser": "Klinischer Psychologe, Gesundheitspsychologe, Sportpsychologe und Mentaltrainer.",
          "profile": [
              "Sein fachlicher Hintergrund umfasst Arbeits- und Organisationspsychologie sowie Weiterbildungen in systemischem und hypnosystemischem Coaching und Neuer Autorität.",
