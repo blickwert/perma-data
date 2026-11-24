@@ -22,11 +22,9 @@ declare(strict_types=1);
 <p class="bw-toc__title">Inhalt</p>
 <!-- /wp:paragraph --><!-- wp:list {"ordered":true,"className":"bw-toc__list"} -->
 <ol class="wp-block-list bw-toc__list"><!-- wp:list-item -->
-<li><a href="#anbieter">Medieninhaber und Diensteanbieter</a></li>
+<li><a href="#anbieter">Websitebetreiber und Medieninhaber</a></li>
 <!-- /wp:list-item --><!-- wp:list-item -->
 <li><a href="#kontakt">Kontakt</a></li>
-<!-- /wp:list-item --><!-- wp:list-item -->
-<li><a href="#vertretung">Vertretungsbefugt</a></li>
 <!-- /wp:list-item --><!-- wp:list-item -->
 <li><a href="#unternehmensgegenstand">Unternehmensgegenstand</a></li>
 <!-- /wp:list-item --><!-- wp:list-item -->
@@ -48,17 +46,15 @@ declare(strict_types=1);
 <!-- /wp:list-item --></ol>
 <!-- /wp:list --></nav>
 <!-- /wp:group --><!-- wp:heading {"anchor":"anbieter"} -->
-<h2 id="anbieter" class="wp-block-heading">Medieninhaber und Diensteanbieter</h2>
+<h2 id="anbieter" class="wp-block-heading">Websitebetreiber und Medieninhaber</h2>
 <!-- /wp:heading --><!-- wp:paragraph {"className":"bw-prose__address"} -->
-<p class="bw-prose__address"><mark class="bw-placeholder">[Name bzw. Firmenname inkl. Rechtsform – bis zur Gründung der OG: Name der verantwortlichen Person]</mark><br>PERMA Mind Academy<br>Plüddemanngasse 104<br>8042 Graz<br>Österreich</p>
+<p class="bw-prose__address">Mag. Michael Wohlkönig<br>PERMA Mind Academy<br>Plüddemanngasse 104, 4. Stock<br>8042 Graz<br>Österreich</p>
+<!-- /wp:paragraph --><!-- wp:paragraph -->
+<p>Diese Angaben betreffen den Betrieb der Website vor der Eintragung der PERMA Mind Academy OG. Die Angaben zum Veranstalter für verbindliche Buchungen folgen mit der Gründung.</p>
 <!-- /wp:paragraph --><!-- wp:heading {"anchor":"kontakt"} -->
 <h2 id="kontakt" class="wp-block-heading">Kontakt</h2>
 <!-- /wp:heading --><!-- wp:paragraph -->
 <p>Telefon: +43 676 511 2763<br>E-Mail: michael@perma-academy.at<br>Web: www.perma-academy.at</p>
-<!-- /wp:paragraph --><!-- wp:heading {"anchor":"vertretung"} -->
-<h2 id="vertretung" class="wp-block-heading">Vertretungsbefugt</h2>
-<!-- /wp:heading --><!-- wp:paragraph -->
-<p><mark class="bw-placeholder">[Inhaber:in bzw. Geschäftsführung, z. B. Mag. Michael Wohlkönig]</mark></p>
 <!-- /wp:paragraph --><!-- wp:heading {"anchor":"unternehmensgegenstand"} -->
 <h2 id="unternehmensgegenstand" class="wp-block-heading">Unternehmensgegenstand</h2>
 <!-- /wp:heading --><!-- wp:paragraph -->
@@ -66,7 +62,7 @@ declare(strict_types=1);
 <!-- /wp:paragraph --><!-- wp:heading {"anchor":"register"} -->
 <h2 id="register" class="wp-block-heading">Register und Steuer</h2>
 <!-- /wp:heading --><!-- wp:paragraph -->
-<p>Firmenbuchnummer: <mark class="bw-placeholder">[FN … – entfällt bei Einzelunternehmen ohne Eintragung]</mark><br>Firmenbuchgericht: <mark class="bw-placeholder">[z. B. Landesgericht für ZRS Graz]</mark><br>UID-Nummer: <mark class="bw-placeholder">[ATU … – falls vorhanden]</mark></p>
+<p><mark class="bw-placeholder">[Firmenbuchnummer, Firmenbuchgericht und UID-Nummer nach Eintragung der OG ergänzen]</mark></p>
 <!-- /wp:paragraph --><!-- wp:heading {"anchor":"aufsicht"} -->
 <h2 id="aufsicht" class="wp-block-heading">Gewerbe, Kammer und Aufsicht</h2>
 <!-- /wp:heading --><!-- wp:paragraph -->
@@ -96,7 +92,7 @@ declare(strict_types=1);
 <!-- /wp:paragraph --><!-- wp:heading {"anchor":"bildnachweis"} -->
 <h2 id="bildnachweis" class="wp-block-heading">Bildnachweis</h2>
 <!-- /wp:heading --><!-- wp:paragraph -->
-<p>Titelbild (Steinturm im Sonnenaufgang): <mark class="bw-placeholder">[Quelle bzw. Fotograf:in oder „KI-generiert“]</mark><br>Trainerfotos: <mark class="bw-placeholder">[Fotograf:in]</mark></p>
+<p>Titelbild (Steinturm im Sonnenaufgang): <mark class="bw-placeholder">[Quelle bzw. Fotograf:in oder „KI-generiert“]</mark><br>Trainerfotos: <mark class="bw-placeholder">[Fotograf:in]</mark><br>Foto Martin Wammerl und Martin Seligman, Rosenheim 2014: <mark class="bw-placeholder">[Fotograf:in bzw. privat]</mark></p>
 <!-- /wp:paragraph --><!-- wp:paragraph {"className":"bw-prose__date"} -->
 <p class="bw-prose__date">Stand: November 2026</p>
 <!-- /wp:paragraph -->

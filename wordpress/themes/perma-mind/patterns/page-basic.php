@@ -61,9 +61,11 @@ declare(strict_types=1);
 <div class="wp-block-group bw-card bw-card--plain"><!-- wp:heading {"level":3,"className":"bw-card__title"} -->
 <h3 class="wp-block-heading bw-card__title">Umfang und Abschluss</h3>
 <!-- /wp:heading --><!-- wp:paragraph {"className":"bw-text"} -->
-<p class="bw-text">Das Curriculum umfasst 148 Einheiten à 45 Minuten: 100 Ausbildungseinheiten, 20 Einheiten Peergruppenarbeit, acht Einheiten Gruppencoaching und 20 Einheiten Praxisprojekt. Der genaue Zeitplan folgt mit der Ausschreibung.</p>
+<p class="bw-text">Voraussichtlicher Start im Herbst 2027. Die Ausbildung findet in Präsenz im Raum Graz statt und umfasst neun Seminartage in drei Blöcken. Die Termine der drei Module und den genauen Veranstaltungsort geben wir noch bekannt.</p>
 <!-- /wp:paragraph --><!-- wp:paragraph {"className":"bw-text"} -->
-<p class="bw-text">Für den ECQA-Abschluss erbringst du die vorgesehenen Ausbildungs- und Praxisleistungen, präsentierst dein Projekt und fasst es schriftlich zusammen. Dein Zertifikat dokumentiert die nachgewiesenen Kompetenzen in einem europäischen Rahmen. Der Basic-Abschluss eröffnet dir den Zugang zu Advanced.</p>
+<p class="bw-text">Die Ausbildung umfasst 148 Einheiten à 45 Minuten. Der Seminarteil umfasst 100 Einheiten. Hinzu kommen 20 Einheiten Peergruppenarbeit, acht Einheiten Gruppencoaching und 20 Einheiten für dein Praxisprojekt. Für den ECQA-Abschluss sind mindestens 80 % Anwesenheit in den Seminareinheiten erforderlich. Du fasst das Projekt schriftlich zusammen und präsentierst es zum Abschluss. Der Basic-Abschluss eröffnet dir den Zugang zu Advanced.</p>
+<!-- /wp:paragraph --><!-- wp:paragraph {"className":"bw-text"} -->
+<p class="bw-text">Der Frühbucherpreis gilt bis acht Wochen vor dem ersten Modul. Das konkrete Datum folgt mit der Ausschreibung. Für mehrteilige Lehrgänge bieten wir auf Anfrage Ratenzahlung an. Die Höhe der Raten und die Zahlungstermine teilen wir dir vor der verbindlichen Anmeldung schriftlich mit.</p>
 <!-- /wp:paragraph --><!-- wp:paragraph {"className":"bw-text bw-link-strong"} -->
 <p class="bw-text bw-link-strong"><a href="<?php echo esc_url( home_url( '/positive-psychologie-advanced/' ) ); ?>">Zum Advanced-Lehrgang →</a></p>
 <!-- /wp:paragraph --></div>
@@ -81,21 +83,27 @@ declare(strict_types=1);
 <!-- /wp:paragraph --></div>
 <!-- /wp:group --><!-- wp:group {"className":"bw-facts__row"} -->
 <div class="wp-block-group bw-facts__row"><!-- wp:paragraph {"className":"bw-facts__term"} -->
+<p class="bw-facts__term">Beginn</p>
+<!-- /wp:paragraph --><!-- wp:paragraph {"className":"bw-facts__value"} -->
+<p class="bw-facts__value">Herbst 2027; die Termine der drei Module werden noch bekannt gegeben</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group --><!-- wp:group {"className":"bw-facts__row"} -->
+<div class="wp-block-group bw-facts__row"><!-- wp:paragraph {"className":"bw-facts__term"} -->
 <p class="bw-facts__term">Aufbau</p>
 <!-- /wp:paragraph --><!-- wp:paragraph {"className":"bw-facts__value"} -->
-<p class="bw-facts__value">Drei Module; neun Seminartage in drei Blöcken zu je drei Tagen geplant</p>
+<p class="bw-facts__value">Neun Seminartage in drei Blöcken</p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group --><!-- wp:group {"className":"bw-facts__row"} -->
 <div class="wp-block-group bw-facts__row"><!-- wp:paragraph {"className":"bw-facts__term"} -->
 <p class="bw-facts__term">Format und Ort</p>
 <!-- /wp:paragraph --><!-- wp:paragraph {"className":"bw-facts__value"} -->
-<p class="bw-facts__value">Präsenz, geplant im Raum Graz; genauer Ort wird bekannt gegeben</p>
+<p class="bw-facts__value">Präsenz im Raum Graz; genauer Ort wird bekannt gegeben</p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group --><!-- wp:group {"className":"bw-facts__row"} -->
 <div class="wp-block-group bw-facts__row"><!-- wp:paragraph {"className":"bw-facts__term"} -->
-<p class="bw-facts__term">Termine</p>
+<p class="bw-facts__term">Umfang</p>
 <!-- /wp:paragraph --><!-- wp:paragraph {"className":"bw-facts__value"} -->
-<p class="bw-facts__value">Die Termine der drei Module werden noch bekannt gegeben</p>
+<p class="bw-facts__value">148 Einheiten à 45 Minuten</p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group --><!-- wp:group {"className":"bw-facts__row"} -->
 <div class="wp-block-group bw-facts__row"><!-- wp:paragraph {"className":"bw-facts__term"} -->
@@ -111,7 +119,7 @@ declare(strict_types=1);
 <!-- /wp:paragraph --><!-- wp:paragraph {"className":"bw-facts__price"} -->
 <p class="bw-facts__price">2.397 € regulär</p>
 <!-- /wp:paragraph --><!-- wp:paragraph {"className":"bw-facts__note"} -->
-<p class="bw-facts__note">Zuzüglich Zertifizierungsgebühren; Höhe wird noch bekannt gegeben. Frühbucherfrist folgt.</p>
+<p class="bw-facts__note">Frühbucherpreis bis acht Wochen vor dem ersten Modul. Zuzüglich Zertifizierungsgebühr; Höhe folgt. Ratenzahlung auf Anfrage.</p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group --></div>
 <!-- /wp:group --><!-- wp:buttons {"className":"bw-facts-card__actions"} -->

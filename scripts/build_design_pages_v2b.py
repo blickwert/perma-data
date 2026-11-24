@@ -366,7 +366,7 @@ def offer_page(key):
     lead_html = f'<p class="bw-page-hero__lead">{lead[0]}</p>' + "".join(f'<p class="bw-page-hero__text">{p}</p>' for p in lead[1:])
     if key == "advanced":  # Voraussetzung verlinkt zur Basic-Ausbildung
         lead_html = lead_html.replace("abgeschlossene Basic-Ausbildung", f'abgeschlossene <a href="{offer_file("basic")}">Basic-Ausbildung</a>')
-    mods = "".join(accordion(t, f'<p class="bw-text">{x}</p>') for t, x in P["modules"])
+    mods = "".join(accordion(m[0], f'<p class="bw-text">{m[1]}</p>') for m in P["modules"])
     scope = paras(P["scope"])
     if P.get("scope_more"):
         scope += f'<h4 class="bw-card__subtitle">{P["scope_more"][0]}</h4>' + paras(P["scope_more"][1])

@@ -33,8 +33,12 @@ Details: `docs/WP-THEME.md`.
 2. **Turnstile-Schlüssel** in Contact Form 7 › Integration (Auftraggeber).
 3. **Empfänger** der Formular-Mails auf `info@perma-academy.at` umstellen (PERMA Kontakte › Einstellungen).
 4. **Rechtstexte:** Entwürfe sind vorgeschrieben (`content/rechtstexte/impressum.html`, `datenschutz.html`, abgestimmt auf die Technik der Website: Kontaktdatenbank, Brevo, Turnstile, lokale Schriften, keine Tracking-Cookies). Offen: gelb markierte Angaben (Rechtsform, Firmenbuch, UID, Gewerbe, Hoster, Speicherfristen, Brevo-Öffnungsstatistik, Bildnachweis) ergänzen und rechtlich prüfen lassen.
-   - **AGB** (`content/rechtstexte/agb.html`, Seite `/agb/`, im Footer verlinkt) aus der Vorlage der Academy übernommen. Offen: Abschnitt 10 „Haftung“ bricht in der Vorlage mitten im Satz ab, Firmenname und Rechtsform.
+   - **AGB** (`content/rechtstexte/agb.html`, Seite `/agb/`): Arbeitsfassung vom 22.11.2026 (ohne internen Vermerk). Laut Academy erst nach ausdrücklicher Freigabe und OG-Eintragung veröffentlichen: **vor dem Livegang Seite auf Entwurf stellen und Footer-Link entfernen**, falls bis dahin keine Freigabe vorliegt.
+   - Datenschutz: gemeinsame Verantwortung (Art. 26 DSGVO) eingetragen, gilt nach beiderseitiger Bestätigung der Vereinbarung.
+   - Impressum: Websitebetreiber Mag. Michael Wohlkönig bis zur OG-Eintragung.
+   - Formular-Empfänger seit 24.11.2026 info@perma-academy.at.
+   - Offen: Porträt Michael Wohlkönig, Foto mit Mihály Csíkszentmihályi (Ort, Jahr), Fotograf:innen für den Bildnachweis.
    - Bis zur Gründung der OG muss im Impressum eine verantwortliche Person stehen (Platzhalter angepasst).
-   - Social Media: Instagram und Facebook im Footer; LinkedIn folgt (Adresse in `SOCIAL` in `scripts/v2b_content.py` eintragen, das Symbol erscheint dann automatisch).
+   - Social Media: Instagram, Facebook und LinkedIn im Footer (`SOCIAL` in `scripts/v2b_content.py`).
 5. **Offene Inhalte:** Trainerfotos, ECQA-Logo, Termine, Orte, Fristen, Zertifizierungsgebühren.
 6. **Live-Seite:** Suchmaschinen zulassen (Einstellungen › Lesen), Brevo-Webhook auf die Live-Adresse („Brevo einrichten“ erneut ausführen), `WP_DEBUG` aus.

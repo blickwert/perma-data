@@ -31,7 +31,7 @@ declare(strict_types=1);
 <div class="wp-block-group bw-footer__col bw-footer__col--social"><!-- wp:paragraph {"className":"bw-footer__title"} -->
 <p class="bw-footer__title">Social Media</p>
 <!-- /wp:paragraph --><!-- wp:social-links {"openInNewTab":true,"className":"bw-footer__social"} -->
-<ul class="wp-block-social-links bw-footer__social"><!-- wp:social-link  {"url":"https://www.instagram.com/permamindacademy/","service":"instagram"} /--><!-- wp:social-link  {"url":"https://www.facebook.com/profile.php?id=61593453518327","service":"facebook"} /--></ul>
+<ul class="wp-block-social-links bw-footer__social"><!-- wp:social-link  {"url":"https://www.instagram.com/permamindacademy/","service":"instagram"} /--><!-- wp:social-link  {"url":"https://www.facebook.com/profile.php?id=61593453518327","service":"facebook"} /--><!-- wp:social-link  {"url":"https://www.linkedin.com/company/145489665/","service":"linkedin"} /--></ul>
 <!-- /wp:social-links --></div>
 <!-- /wp:group --><!-- wp:group {"className":"bw-footer__col bw-footer__col\u002d\u002dlegal"} -->
 <div class="wp-block-group bw-footer__col bw-footer__col--legal"><!-- wp:paragraph {"className":"bw-footer__link"} -->

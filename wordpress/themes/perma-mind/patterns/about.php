@@ -34,12 +34,12 @@ declare(strict_types=1);
 <!-- /wp:details --></div>
 <!-- /wp:group --><!-- wp:group {"className":"bw-team__list"} -->
 <div class="wp-block-group bw-team__list"><!-- wp:group {"tagName":"article","className":"bw-person"} -->
-<article class="wp-block-group bw-person"><!-- wp:group {"className":"bw-person__photo"} -->
-<div class="wp-block-group bw-person__photo"><!-- wp:paragraph {"className":"bw-person__role"} -->
+<article class="wp-block-group bw-person"><!-- wp:group {"className":"bw-person__photo bw-person__photo\u002d\u002dimg"} -->
+<div class="wp-block-group bw-person__photo bw-person__photo--img"><!-- wp:paragraph {"className":"bw-person__role"} -->
 <p class="bw-person__role">Master-Trainer</p>
-<!-- /wp:paragraph --><!-- wp:bw/icon {"icon":"user","size":72,"className":"bw-person__photo-icon"} /--><!-- wp:paragraph {"className":"bw-person__photo-label"} -->
-<p class="bw-person__photo-label">[Foto Dr. Martin Wammerl]</p>
-<!-- /wp:paragraph --></div>
+<!-- /wp:paragraph --><!-- wp:image {"className":"bw-person__img"} -->
+<figure class="wp-block-image bw-person__img"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/trainer-martin-wammerl.webp' ) ); ?>" alt="Dr. Martin Wammerl, Trainer der PERMA Mind Academy"/></figure>
+<!-- /wp:image --></div>
 <!-- /wp:group --><!-- wp:heading {"level":3,"className":"bw-person__name"} -->
 <h3 class="wp-block-heading bw-person__name">Dr. Martin Wammerl MA MSc</h3>
 <!-- /wp:heading --><!-- wp:paragraph {"className":"bw-person__bio"} -->
@@ -50,8 +50,10 @@ declare(strict_types=1);
 <!-- /wp:paragraph --><!-- wp:quote -->
 <blockquote class="wp-block-quote"><!-- wp:paragraph -->
 <p>„Dies ist das umfassendste Buch zur Positiven Psychologie. Es sollte auf dem Schreibtisch aller Therapeut:innen, Coaches und Forscher:innen der Positiven Psychologie liegen.“</p>
-<!-- /wp:paragraph --><cite>Martin Seligman über das Buch</cite></blockquote>
-<!-- /wp:quote --><!-- wp:paragraph {"className":"bw-text"} -->
+<!-- /wp:paragraph --><cite>Martin Seligman über „Einführung in die Positive Psychologie“, facultas Verlag, 2025</cite></blockquote>
+<!-- /wp:quote --><!-- wp:image {"className":"bw-person__figure"} -->
+<figure class="wp-block-image bw-person__figure"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/martin-wammerl-martin-seligman-2014.webp' ) ); ?>" alt="Martin Wammerl und Martin Seligman"/><figcaption class="wp-element-caption">Martin Wammerl und Martin Seligman in Rosenheim, Deutschland, 2014</figcaption></figure>
+<!-- /wp:image --><!-- wp:paragraph {"className":"bw-text"} -->
 <p class="bw-text">In der Academy macht er wissenschaftliche Ergebnisse für die Praxis zugänglich. Seine Schwerpunkte sind die Grundlagen der Positiven Psychologie, Positive Education sowie klinische und psychotherapeutische Anwendungen. Du lernst, Forschungsbefunde kritisch zu lesen und für konkrete Fragestellungen zu nutzen.</p>
 <!-- /wp:paragraph --></details>
 <!-- /wp:details --></article>

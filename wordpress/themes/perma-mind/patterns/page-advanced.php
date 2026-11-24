@@ -26,7 +26,7 @@ declare(strict_types=1);
 <!-- /wp:heading --><!-- wp:paragraph {"className":"bw-page-hero__lead"} -->
 <p class="bw-page-hero__lead">In Advanced vertiefst du die professionelle Anwendung der Positiven Psychologie. Du lernst, Interventionen passend auszuwählen, ihre Ergebnisse zu beurteilen und eigene Workshops und Trainings zu gestalten. Aktuelle Forschung und der internationale Fachaustausch unserer Trainer fließen in die Ausbildung ein.</p>
 <!-- /wp:paragraph --><!-- wp:paragraph {"className":"bw-page-hero__text"} -->
-<p class="bw-page-hero__text">Der Lehrgang richtet sich an Coaches, Berater:innen, Pädagog:innen, Fachkräfte im Gesundheitsbereich, Führungskräfte und Trainer:innen. Voraussetzung ist eine abgeschlossene <a href="<?php echo esc_url( home_url( '/positive-psychologie-basic/' ) ); ?>">Basic-Ausbildung</a> in Positiver Psychologie.</p>
+<p class="bw-page-hero__text">Der Lehrgang richtet sich an Coaches, Berater:innen, Pädagog:innen, Fachkräfte im Gesundheitsbereich, Führungskräfte und Trainer:innen. Voraussetzung ist der Basic-Abschluss oder ein anerkannter gleichwertiger Abschluss.</p>
 <!-- /wp:paragraph --><!-- wp:buttons {"className":"bw-page-hero__actions"} -->
 <div class="wp-block-buttons bw-page-hero__actions"><!-- wp:button {"className":"is-style-light"} -->
 <div class="wp-block-button is-style-light"><a class="wp-block-button__link wp-element-button" href="#interessentenliste">Zur Advanced-Interessentenliste</a></div>
@@ -46,34 +46,38 @@ declare(strict_types=1);
 <!-- /wp:group --><!-- wp:group {"className":"bw-accordion-list"} -->
 <div class="wp-block-group bw-accordion-list"><!-- wp:details {"className":"bw-accordion"} -->
 <details class="wp-block-details bw-accordion"><summary>1 Beyond PERMA: Contemporary Positive Psychology</summary><!-- wp:paragraph {"className":"bw-text"} -->
-<p class="bw-text">Aktuelle Forschung zu Wohlbefinden, Belastung und kulturellen Unterschieden. Du prüfst, welche Erkenntnisse für deine Arbeit relevant sind und wo die Aussagekraft von Modellen und Methoden begrenzt ist.</p>
+<p class="bw-text">Jemand berichtet im Coaching von beruflicher Überlastung. Ist eine Stärkenübung jetzt sinnvoll? Du lernst die Positive Psychologie 2.0 kennen und untersuchst, wie Wohlbefinden und schwierige Gefühle zusammenhängen. An einer Studie zu Stärkenübungen prüfst du, wer teilgenommen hat und was sich aus den Ergebnissen für den Fall ableiten lässt. Du begründest schriftlich, ob und wie du die Übung einsetzen würdest, und beziehst Arbeitsbedingungen und kulturelles Umfeld ein.</p>
 <!-- /wp:paragraph --></details>
 <!-- /wp:details --><!-- wp:details {"className":"bw-accordion"} -->
 <details class="wp-block-details bw-accordion"><summary>2 Positive Coaching & Change</summary><!-- wp:paragraph {"className":"bw-text"} -->
-<p class="bw-text">Stärken, Werte und Ziele in Veränderungsprozessen nutzen. Du arbeitest mit Motivation und Ambivalenz, klärst Aufträge und beachtest die Grenze zwischen Coaching und Behandlung.</p>
+<p class="bw-text">Wie begleitest du jemanden, der sich Veränderung wünscht und zugleich am Gewohnten festhält? Du klärst den Coachingauftrag, arbeitest mit Stärken und Werten und leitest einen machbaren nächsten Schritt ab. In Dreiergruppen übst du Coachinggespräche mit wechselnden Rollen und erhältst Rückmeldung. Dabei besprecht ihr auch, wo die Grenze zwischen Coaching und Behandlung liegt.</p>
 <!-- /wp:paragraph --></details>
 <!-- /wp:details --><!-- wp:details {"className":"bw-accordion"} -->
 <details class="wp-block-details bw-accordion"><summary>3 Positive Education & Development</summary><!-- wp:paragraph {"className":"bw-text"} -->
-<p class="bw-text">Stärken, Beziehungen und Lernmotivation in Bildungsprozessen fördern. Du entwickelst eine eigene Lernsequenz und setzt dich kritisch mit Ansätzen wie Growth Mindset auseinander.</p>
+<p class="bw-text">Du lernst das österreichische Programm PERMA.teach und das Positive-Education-Projekt der australischen Geelong Grammar School kennen. Du vergleichst, wie Lehrkräfte vorbereitet werden und wie Positive Psychologie im Unterricht und im Schulleben verankert wird. Am Beispiel von Growth Mindset prüfst du, welche Schlüsse die Forschung für den Unterricht zulässt. Für eine Bildungseinrichtung entwirfst du einen Einführungsplan mit einer konkreten Lernsequenz. Du legst fest, wie du die Umsetzung dokumentierst und das Wohlbefinden von Lernenden und Lehrenden vor und nach der Einführung erhebst.</p>
 <!-- /wp:paragraph --></details>
 <!-- /wp:details --><!-- wp:details {"className":"bw-accordion"} -->
 <details class="wp-block-details bw-accordion"><summary>4 Positive Health, Resilience & Recovery</summary><!-- wp:paragraph {"className":"bw-text"} -->
-<p class="bw-text">Stress, Erholung und Selbstmitgefühl in der Gesundheitsförderung aufgreifen. Du passt ressourcenorientierte Übungen an Zielgruppe und Belastungssituation an.</p>
+<p class="bw-text">Für die Gesundheitsförderung lernst du Übungen zur Stressregulation, zur Erholung und zum Selbstmitgefühl kennen. An einem Praxisfall entwickelst du eine Präventionsmaßnahme und legst fest, wie du ihren Nutzen überprüfst. Du klärst, was eine Übung leisten kann und wann sich Rahmenbedingungen ändern sollten oder Unterstützung durch eine Fachstelle sinnvoll ist.</p>
 <!-- /wp:paragraph --></details>
 <!-- /wp:details --><!-- wp:details {"className":"bw-accordion"} -->
 <details class="wp-block-details bw-accordion"><summary>5 Positive Leadership & Organizations</summary><!-- wp:paragraph {"className":"bw-text"} -->
-<p class="bw-text">Positive Leadership, PERMA-Lead, psychologische Sicherheit und Feedback im Arbeitsalltag. Du entwickelst Maßnahmen für Teams und überlegst, wie sich ihre Ergebnisse beurteilen lassen.</p>
+<p class="bw-text">Im Mittelpunkt steht Positive Leadership nach Kim Cameron. An einem Teamfall vergleichst du Camerons Ansatz mit PERMA-Lead nach Markus Ebner und untersuchst, wie Führungskräfte Arbeitsbeziehungen stärken und Sinn in der Arbeit vermitteln können. Aus Camerons Ansatz leitest du eine konkrete Maßnahme für das Team ab. Im Rollenspiel übst du, kritisches Feedback klar und wertschätzend zu geben.</p>
 <!-- /wp:paragraph --></details>
 <!-- /wp:details --><!-- wp:details {"className":"bw-accordion"} -->
 <details class="wp-block-details bw-accordion"><summary>6 Interventionen und Trainings gestalten</summary><!-- wp:paragraph {"className":"bw-text"} -->
-<p class="bw-text">Du planst, erprobst und reflektierst eigene Interventionen und Trainings. Kurze Übungssequenzen und Peerfeedback helfen dir, Inhalte verständlich anzuleiten und passend aufzubauen.</p>
+<p class="bw-text">Du entwickelst eine Intervention oder ein Training für eine Zielgruppe aus deinem Berufsfeld. Du planst, was die Teilnehmenden lernen oder ausprobieren sollen und welche Methoden dazu passen. Im Seminar leitest du eine kurze Sequenz an und überarbeitest sie anhand der Rückmeldungen. Du legst fest, wie du den Transfer in den Arbeitsalltag überprüfst.</p>
 <!-- /wp:paragraph --></details>
 <!-- /wp:details --></div>
 <!-- /wp:group --><!-- wp:group {"className":"bw-card bw-card\u002d\u002dplain"} -->
 <div class="wp-block-group bw-card bw-card--plain"><!-- wp:heading {"level":3,"className":"bw-card__title"} -->
 <h3 class="wp-block-heading bw-card__title">Umfang und Abschluss</h3>
 <!-- /wp:heading --><!-- wp:paragraph {"className":"bw-text"} -->
-<p class="bw-text">Geplant sind 94 Einheiten: 60 Seminareinheiten, vier Einheiten Coaching, 20 Einheiten Praxisprojekt und Selbststudium sowie zehn Einheiten Peergruppenarbeit. Dein Projekt führt von der Bedarfsanalyse bis zur Auswertung. Der ECQA-Abschluss setzt die vorgesehenen Ausbildungs-, Praxis- und Abschlussleistungen voraus. Zeitplan und genaue Anforderungen folgen mit der Ausschreibung.</p>
+<p class="bw-text">Advanced umfasst 94 Einheiten à 45 Minuten. Dazu zählen 60 Seminareinheiten, vier Einheiten Gruppencoaching, 20 Einheiten Praxisarbeit und Selbststudium sowie zehn Einheiten Peergruppenarbeit. Für den Abschluss sind mindestens 80 % Anwesenheit in den Seminaren erforderlich. Gruppencoaching, Peergruppenarbeit und Praxisnachweis sind vollständig zu absolvieren.</p>
+<!-- /wp:paragraph --><!-- wp:paragraph {"className":"bw-text"} -->
+<p class="bw-text">Als Praxisnachweis dokumentierst du entweder zwei praktische Anwendungsfälle oder ein selbst durchgeführtes Praxisprojekt. In beiden Varianten reflektierst du dein Vorgehen schriftlich und präsentierst deine Arbeit zum Abschluss. Der ECQA-Abschluss setzt eine positive Beurteilung und die Erfüllung der Abschlussanforderungen voraus.</p>
+<!-- /wp:paragraph --><!-- wp:paragraph {"className":"bw-text"} -->
+<p class="bw-text">Der Frühbucherpreis gilt bis acht Wochen vor dem ersten Modul. Das konkrete Datum folgt mit der Ausschreibung. Für mehrteilige Lehrgänge bieten wir auf Anfrage Ratenzahlung an. Die Höhe der Raten und die Zahlungstermine teilen wir dir vor der verbindlichen Anmeldung schriftlich mit.</p>
 <!-- /wp:paragraph --><!-- wp:heading {"level":4,"className":"bw-card__subtitle"} -->
 <h4 class="wp-block-heading bw-card__subtitle">Berufliche Qualifikation als Basic Trainer</h4>
 <!-- /wp:heading --><!-- wp:paragraph {"className":"bw-text"} -->
@@ -99,19 +103,27 @@ declare(strict_types=1);
 <div class="wp-block-group bw-facts__row"><!-- wp:paragraph {"className":"bw-facts__term"} -->
 <p class="bw-facts__term">Beginn</p>
 <!-- /wp:paragraph --><!-- wp:paragraph {"className":"bw-facts__value"} -->
-<p class="bw-facts__value">Anfang 2028; einzelne Termine folgen</p>
+<p class="bw-facts__value">Anfang 2028; Termine folgen</p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group --><!-- wp:group {"className":"bw-facts__row"} -->
 <div class="wp-block-group bw-facts__row"><!-- wp:paragraph {"className":"bw-facts__term"} -->
 <p class="bw-facts__term">Aufbau und Format</p>
 <!-- /wp:paragraph --><!-- wp:paragraph {"className":"bw-facts__value"} -->
-<p class="bw-facts__value">Sechs Seminartage in drei Zweitagesblöcken in Präsenz geplant; Ort folgt</p>
+<p class="bw-facts__value">Drei Zweitagesblöcke in Präsenz geplant; Ort folgt</p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group --><!-- wp:group {"className":"bw-facts__row"} -->
 <div class="wp-block-group bw-facts__row"><!-- wp:paragraph {"className":"bw-facts__term"} -->
 <p class="bw-facts__term">Voraussetzung</p>
 <!-- /wp:paragraph --><!-- wp:paragraph {"className":"bw-facts__value"} -->
-<p class="bw-facts__value">Abgeschlossene Basic-Ausbildung in Positiver Psychologie</p>
+<p class="bw-facts__value">Basic-Abschluss der PERMA Mind Academy, EUPPA-Basic-Abschluss oder zertifizierte:r Anwender:in der Positiven Psychologie DACH-PP (Level 1)</p>
+<!-- /wp:paragraph --><!-- wp:paragraph {"className":"bw-facts__note"} -->
+<p class="bw-facts__note">Andere Abschlüsse prüfen wir einzeln auf Gleichwertigkeit. Schick uns dafür deinen Abschlussnachweis mit Angaben zu Inhalt und Umfang.</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group --><!-- wp:group {"className":"bw-facts__row"} -->
+<div class="wp-block-group bw-facts__row"><!-- wp:paragraph {"className":"bw-facts__term"} -->
+<p class="bw-facts__term">Umfang</p>
+<!-- /wp:paragraph --><!-- wp:paragraph {"className":"bw-facts__value"} -->
+<p class="bw-facts__value">94 Einheiten à 45 Minuten</p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group --><!-- wp:group {"className":"bw-facts__row"} -->
 <div class="wp-block-group bw-facts__row"><!-- wp:paragraph {"className":"bw-facts__term"} -->
@@ -127,7 +139,7 @@ declare(strict_types=1);
 <!-- /wp:paragraph --><!-- wp:paragraph {"className":"bw-facts__price"} -->
 <p class="bw-facts__price">1.596 € regulär</p>
 <!-- /wp:paragraph --><!-- wp:paragraph {"className":"bw-facts__note"} -->
-<p class="bw-facts__note">Zuzüglich Zertifizierungsgebühren; Höhe wird noch bekannt gegeben. Frühbucherfrist folgt.</p>
+<p class="bw-facts__note">Frühbucherpreis bis acht Wochen vor dem ersten Modul. Zuzüglich Zertifizierungsgebühr; Höhe folgt. Ratenzahlung auf Anfrage.</p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group --></div>
 <!-- /wp:group --><!-- wp:buttons {"className":"bw-facts-card__actions"} -->
