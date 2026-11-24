@@ -25,7 +25,7 @@ Lokale Prüfung (WordPress Playground, PHP 8.3, WordPress aktuell): Theme und `w
 
 ## Aufbau
 
-- **Vorlagen:** `front-page`, `page`, `page-angebot` (Header im Akzent-Verlauf), `page-rechtliches` (wie der Abschnitt „Über uns“ der Startseite: heller Hintergrund, „Rechtliches“ und Titel links, Fließtext darunter, kein farbiger Seitenkopf), `index`, `404`.
+- **Vorlagen:** `front-page`, `page`, `page-angebot` (Header im Akzent-Verlauf), `page-rechtliches` (wie der Abschnitt „Über uns“ der Startseite: heller Hintergrund, „Rechtliches“ und Titel links, Fließtext darunter, kein farbiger Seitenkopf; Inhaltsverzeichnis ab 1001 px als stehende Spalte rechts mit Markierung des aktuellen Abschnitts, `assets/js/front.js`), `index`, `404`.
 - **Vorlagenteile:** `header`, `header-akzent`, `footer`. Sie enthalten je ein Pattern, damit Adressen (`home_url()`) und Logos (`get_theme_file_uri()`) auf jeder Installation stimmen.
 - **Patterns (Kategorie „PERMA Mind: Abschnitte“):** Hero, Profilmerkmale, Einleitung, Warum PERMA Mind Academy, Angebotskarten, Verstehen + PERMA-Modell + Vom Verstehen zum Anwenden, Über uns + Trainer, ECQA-Zertifizierung, Interessentenliste, Häufige Fragen, Newsletter, Kontakt, Angebotskopf, Angebot (Module, Umfang, Eckdaten, Weiterführend), Interessentenliste für ein Angebot.
 - **Seiten-Patterns (Kategorie „PERMA Mind: Seiten“):** Startseite, Basic, Advanced, Clinical Expert, Impressum, Datenschutz. Sie erscheinen beim Anlegen einer neuen Seite zur Auswahl.

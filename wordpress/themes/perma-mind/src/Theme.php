@@ -12,7 +12,7 @@ namespace BW\PermaMind;
 final class Theme {
 
 	public const SLUG    = 'perma-mind';
-	public const VERSION = '0.6.1';
+	public const VERSION = '0.7.0';
 
 	private static ?Theme $instance = null;
 
