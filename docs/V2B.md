@@ -2,7 +2,7 @@
 
 v2b setzt die Inhalte und die Struktur aus dem Kundendokument um, damit sie mit v2 verglichen werden können. Corporate Design, Tokens und CSS-Regeln (Präfix `bw-`, keine Inline-Styles) sind dieselben wie in v2.
 
-Vorschau: https://blickwert.github.io/perma-data/v2b/ (v2 zum Vergleich: https://blickwert.github.io/perma-data/v2/)
+Vorschau: früher https://blickwert.github.io/perma-data/v2b/, seit der WordPress-Umsetzung deaktiviert (nur lokal: `design/v2b/`).
 
 ## Dateien
 
