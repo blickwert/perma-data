@@ -37,7 +37,7 @@ Details: `docs/WP-THEME.md`.
    - Datenschutz: gemeinsame Verantwortung (Art. 26 DSGVO) eingetragen, gilt nach beiderseitiger Bestätigung der Vereinbarung.
    - Impressum: Websitebetreiber Mag. Michael Wohlkönig bis zur OG-Eintragung.
    - Formular-Empfänger seit 24.11.2026 info@perma-academy.at.
-   - Offen: Porträt Michael Wohlkönig, Foto mit Mihály Csíkszentmihályi (Ort, Jahr), Fotograf:innen für den Bildnachweis.
+   - Offen: Foto mit Mihály Csíkszentmihályi (Ort, Jahr), Fotograf:innen für den Bildnachweis.
    - Bis zur Gründung der OG muss im Impressum eine verantwortliche Person stehen (Platzhalter angepasst).
    - Social Media: Instagram, Facebook und LinkedIn im Footer (`SOCIAL` in `scripts/v2b_content.py`).
 5. **Offene Inhalte:** Trainerfotos, ECQA-Logo, Termine, Orte, Fristen, Zertifizierungsgebühren.

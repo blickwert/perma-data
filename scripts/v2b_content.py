@@ -277,6 +277,18 @@ ABOUT = {
         ("Wissenschaftliche Aktualität als Teil der Ausbildung",
          ["Wir nutzen diesen Austausch, um neue Befunde einzuordnen und unsere Lehrinhalte weiterzuentwickeln. Im Seminar verbinden wir Forschungswissen mit Fragen aus der Anwendung: Für wen passt eine Intervention? Welche Ziele unterstützt sie? Welche Voraussetzungen und Grenzen sind zu beachten? So erhältst du Orientierung für fachlich begründete Entscheidungen."]),
     ],
+    # Fotos von den IPPA-Weltkongressen unter den Trainerprofilen (Martin Wammerl, 24.11.2026)
+    "research": {
+        "title": "Aus unserer Forschungsarbeit",
+        "figures": [
+            ("ippa-orlando-2015.webp", "Martin Wammerl und Michael Wohlkönig vor ihrem Poster zum PERMA-Profiler und Positive Psychotherapy Inventory",
+             "Orlando, USA, 25. bis 28. Juni 2015",
+             "Martin Wammerl und Michael Wohlkönig beim 4. IPPA-Weltkongress in Lake Buena Vista bei Orlando. Der PERMA-Profiler und das Positive Psychotherapy Inventory waren in ihren deutschsprachigen Fassungen die ersten beiden multifaktoriellen Verfahren, mit denen die PERMA-Theorie des Wohlbefindens im deutschen Sprachraum empirisch überprüft wurde."),
+            ("ippa-montreal-2017.webp", "Martin Wammerl und Michael Wohlkönig vor ihrem Poster zur Burnoutprävention mit PERMA",
+             "Montreal, Kanada, 13. bis 16. Juli 2017",
+             "Martin Wammerl und Michael Wohlkönig beim 5. IPPA-Weltkongress. Der Posterbeitrag stellte das erste Burnoutpräventionsprogramm im deutschen Sprachraum vor, das auf den fünf PERMA-Bausteinen aufbaute. Das Programm richtete sich an Fachkräfte in psychosozialen Berufen."),
+        ],
+    },
     "trainers": [
         {"name": "Dr. Martin Wammerl MA MSc", "role": "Master-Trainer",
          "photo": "[Foto Dr. Martin Wammerl]", "alt": "Dr. Martin Wammerl, Trainer der PERMA Mind Academy",
@@ -294,6 +306,7 @@ ABOUT = {
          ]},
         {"name": "Mag. Michael Wohlkönig", "role": "Master-Trainer",
          "photo": "[Foto Mag. Michael Wohlkönig]", "alt": "Mag. Michael Wohlkönig, Trainer der PERMA Mind Academy",
+         "image": "trainer-michael-wohlkoenig.webp",
          "teaser": "Klinischer Psychologe, Gesundheitspsychologe, Sportpsychologe und Mentaltrainer.",
          "profile": [
              "Sein fachlicher Hintergrund umfasst Arbeits- und Organisationspsychologie sowie Weiterbildungen in systemischem und hypnosystemischem Coaching und Neuer Autorität.",
