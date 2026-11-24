@@ -314,9 +314,11 @@ body:has(.bw-page-hero--offer.is-style-accent-green){--bw-accent:var(--bw-green)
 }
 
 /* ========== Rechtstexte (Fließtext) ========== */
-/* Wie die Abschnitte der Startseite: Titel mittig, Text als mittige Spalte */
+/* Wie der Abschnitt „Über uns“ der Startseite: heller Hintergrund, Etikett und Titel links, Text darunter */
+.bw-legal{min-height:60vh}
+.bw-legal .bw-section-head{margin-bottom:var(--bw-space-6)}
 .bw-legal .bw-heading-section{hyphens:auto;overflow-wrap:break-word}
-.bw-prose{max-width:780px;margin:0 auto}
+.bw-prose{max-width:840px}
 .bw-prose>:first-child{margin-top:0}
 .bw-prose .bw-prose__lead{margin:0 0 var(--bw-space-8);font-size:var(--bw-fs-lg);font-weight:var(--bw-fw-light);line-height:var(--bw-lh-body)}
 .bw-prose .bw-prose__draft{margin:0 0 var(--bw-space-10);padding:var(--bw-space-3) var(--bw-space-4);border-left:var(--bw-space-1) solid var(--bw-color-accent);background:var(--bw-color-surface-tint);font-size:var(--bw-fs-base);line-height:var(--bw-lh-body)}
