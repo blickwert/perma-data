@@ -320,6 +320,13 @@ NEWSLETTER = {
     "done": "Bitte bestätige deine Newsletter-Anmeldung über den Link in unserer E-Mail.",
 }
 
+# Social Media (Footer). Leere Adresse = Symbol wird nicht angezeigt (LinkedIn folgt laut Besprechung 19.11.2026).
+SOCIAL = [
+    ("instagram", "https://www.instagram.com/permamindacademy/"),
+    ("facebook", "https://www.facebook.com/profile.php?id=61593453518327"),
+    ("linkedin", ""),
+]
+
 CONTACT = {
     "title": "Kontakt",
     "text": "Du möchtest klären, welcher Lehrgang zu deinem beruflichen Hintergrund passt? Schreib uns über das Kontaktformular. Wenn du über den Start informiert werden möchtest, trage dich unverbindlich in die Interessentenliste für die gewünschte Ausbildung ein.",

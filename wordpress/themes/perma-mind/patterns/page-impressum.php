@@ -50,7 +50,7 @@ declare(strict_types=1);
 <!-- /wp:group --><!-- wp:heading {"anchor":"anbieter"} -->
 <h2 id="anbieter" class="wp-block-heading">Medieninhaber und Diensteanbieter</h2>
 <!-- /wp:heading --><!-- wp:paragraph {"className":"bw-prose__address"} -->
-<p class="bw-prose__address"><mark class="bw-placeholder">[Name bzw. Firmenname inkl. Rechtsform]</mark><br>PERMA Mind Academy<br>Plüddemanngasse 104<br>8042 Graz<br>Österreich</p>
+<p class="bw-prose__address"><mark class="bw-placeholder">[Name bzw. Firmenname inkl. Rechtsform – bis zur Gründung der OG: Name der verantwortlichen Person]</mark><br>PERMA Mind Academy<br>Plüddemanngasse 104<br>8042 Graz<br>Österreich</p>
 <!-- /wp:paragraph --><!-- wp:heading {"anchor":"kontakt"} -->
 <h2 id="kontakt" class="wp-block-heading">Kontakt</h2>
 <!-- /wp:heading --><!-- wp:paragraph -->
