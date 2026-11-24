@@ -33,5 +33,8 @@ Details: `docs/WP-THEME.md`.
 2. **Turnstile-Schlüssel** in Contact Form 7 › Integration (Auftraggeber).
 3. **Empfänger** der Formular-Mails auf `info@perma-academy.at` umstellen (PERMA Kontakte › Einstellungen).
 4. **Rechtstexte:** Entwürfe sind vorgeschrieben (`content/rechtstexte/impressum.html`, `datenschutz.html`, abgestimmt auf die Technik der Website: Kontaktdatenbank, Brevo, Turnstile, lokale Schriften, keine Tracking-Cookies). Offen: gelb markierte Angaben (Rechtsform, Firmenbuch, UID, Gewerbe, Hoster, Speicherfristen, Brevo-Öffnungsstatistik, Bildnachweis) ergänzen und rechtlich prüfen lassen.
+   - **AGB** (`content/rechtstexte/agb.html`, Seite `/agb/`, im Footer verlinkt) aus der Vorlage der Academy übernommen. Offen: Abschnitt 10 „Haftung“ bricht in der Vorlage mitten im Satz ab, Firmenname und Rechtsform.
+   - Bis zur Gründung der OG muss im Impressum eine verantwortliche Person stehen (Platzhalter angepasst).
+   - Social Media: Instagram und Facebook im Footer; LinkedIn folgt (Adresse in `SOCIAL` in `scripts/v2b_content.py` eintragen, das Symbol erscheint dann automatisch).
 5. **Offene Inhalte:** Trainerfotos, ECQA-Logo, Termine, Orte, Fristen, Zertifizierungsgebühren.
 6. **Live-Seite:** Suchmaschinen zulassen (Einstellungen › Lesen), Brevo-Webhook auf die Live-Adresse („Brevo einrichten“ erneut ausführen), `WP_DEBUG` aus.

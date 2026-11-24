@@ -30,8 +30,8 @@ declare(strict_types=1);
 <!-- /wp:group --><!-- wp:group {"className":"bw-footer__col bw-footer__col\u002d\u002dsocial"} -->
 <div class="wp-block-group bw-footer__col bw-footer__col--social"><!-- wp:paragraph {"className":"bw-footer__title"} -->
 <p class="bw-footer__title">Social Media</p>
-<!-- /wp:paragraph --><!-- wp:social-links {"className":"bw-footer__social"} -->
-<ul class="wp-block-social-links bw-footer__social"><!-- wp:social-link {"url":"#","service":"instagram"} /--><!-- wp:social-link {"url":"#","service":"linkedin"} /--></ul>
+<!-- /wp:paragraph --><!-- wp:social-links {"openInNewTab":true,"className":"bw-footer__social"} -->
+<ul class="wp-block-social-links bw-footer__social"><!-- wp:social-link  {"url":"https://www.instagram.com/permamindacademy/","service":"instagram"} /--><!-- wp:social-link  {"url":"https://www.facebook.com/profile.php?id=61593453518327","service":"facebook"} /--></ul>
 <!-- /wp:social-links --></div>
 <!-- /wp:group --><!-- wp:group {"className":"bw-footer__col bw-footer__col\u002d\u002dlegal"} -->
 <div class="wp-block-group bw-footer__col bw-footer__col--legal"><!-- wp:paragraph {"className":"bw-footer__link"} -->
@@ -42,6 +42,8 @@ declare(strict_types=1);
 <p class="bw-footer__link"><a href="<?php echo esc_url( home_url( '/impressum/' ) ); ?>">Impressum</a></p>
 <!-- /wp:paragraph --><!-- wp:paragraph {"className":"bw-footer__link"} -->
 <p class="bw-footer__link"><a href="<?php echo esc_url( home_url( '/datenschutz/' ) ); ?>">Datenschutz</a></p>
+<!-- /wp:paragraph --><!-- wp:paragraph {"className":"bw-footer__link"} -->
+<p class="bw-footer__link"><a href="<?php echo esc_url( home_url( '/agb/' ) ); ?>">AGB</a></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group --></div>
 <!-- /wp:group -->

@@ -651,6 +651,7 @@ def build_patterns():
         pages[key] = (f"Seite: {offer_of(key)['name']}", p_offer_hero(key) + p_offer_details(key) + p_offer_interest(key))
     pages["impressum"] = ("Seite: Impressum (Entwurf)", legal_blocks("impressum.html"))
     pages["datenschutz"] = ("Seite: Datenschutz (Entwurf)", legal_blocks("datenschutz.html"))
+    pages["agb"] = ("Seite: AGB (Entwurf)", legal_blocks("agb.html"))
     for key, (title, m) in pages.items():
         write_pattern(f"page-{key}", title, m, "Kompletter Seiteninhalt.", inserter=True,
                       block_types="core/post-content", post_types="page", cats=f"{SLUG}-pages")
@@ -687,11 +688,12 @@ def footer():
     cols = (group(image("{{asset:assets/images/logo-white.svg}}", "PERMA Mind Academy – We create wellbeing", "bw-footer__logo"), "bw-footer__col")
             + group(para("Kontakt", "bw-footer__title") + para(D["address"]) + para(f'Tel: {D["phone"]}') + para(f'Mail: {D["mail"]}'), "bw-footer__col")
             + group(para("Social Media", "bw-footer__title")
-                    + '<!-- wp:social-links {"className":"bw-footer__social"} -->\n<ul class="wp-block-social-links bw-footer__social">'
-                      '<!-- wp:social-link {"url":"#","service":"instagram"} /--><!-- wp:social-link {"url":"#","service":"linkedin"} /--></ul>\n<!-- /wp:social-links -->',
+                    + '<!-- wp:social-links {"openInNewTab":true,"className":"bw-footer__social"} -->\n<ul class="wp-block-social-links bw-footer__social">'
+                    + "".join(f'<!-- wp:social-link {j({"url": u, "service": sv})} /-->' for sv, u in C.SOCIAL if u)
+                    + '</ul>\n<!-- /wp:social-links -->',
                     "bw-footer__col bw-footer__col--social")
             + group("".join(para(f'<a href="{home(u)}">{t}</a>', "bw-footer__link") for u, t in
-                            (("/#kontakt", "Kontakt"), ("/#newsletter", "Newsletter"), ("/impressum/", "Impressum"), ("/datenschutz/", "Datenschutz"))),
+                            (("/#kontakt", "Kontakt"), ("/#newsletter", "Newsletter"), ("/impressum/", "Impressum"), ("/datenschutz/", "Datenschutz"), ("/agb/", "AGB"))),
                     "bw-footer__col bw-footer__col--legal"))
     return group(cols, "bw-container bw-footer__inner")
 
@@ -735,6 +737,9 @@ def build_content():
     pages["datenschutz"] = {"title": "Datenschutzerklärung", "slug": "datenschutz", "template": "page-rechtliches",
                             "markup": legal_blocks("datenschutz.html"),
                             "meta": {"title": "Datenschutz | PERMA Mind Academy", "desc": "Datenschutzerklärung der PERMA Mind Academy."}}
+    pages["agb"] = {"title": "Allgemeine Geschäftsbedingungen", "slug": "agb", "template": "page-rechtliches",
+                    "markup": legal_blocks("agb.html"),
+                    "meta": {"title": "AGB | PERMA Mind Academy", "desc": "Allgemeine Geschäftsbedingungen der PERMA Mind Academy für Workshops, Seminare und Ausbildungen."}}
     pages["newsletter-bestaetigt"] = {"title": "Newsletter bestätigt", "slug": "newsletter-bestaetigt", "template": "",
                                       "markup": p_newsletter_confirmed(),
                                       "meta": {"title": "Newsletter bestätigt | PERMA Mind Academy", "desc": "Deine Anmeldung zum Newsletter der PERMA Mind Academy ist bestätigt."}}

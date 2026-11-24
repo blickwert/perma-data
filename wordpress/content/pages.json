@@ -62,6 +62,16 @@
    "seo_description": "Datenschutzerklärung der PERMA Mind Academy."
   },
   {
+   "key": "agb",
+   "file": "agb.html",
+   "title": "Allgemeine Geschäftsbedingungen",
+   "slug": "agb",
+   "template": "page-rechtliches",
+   "front_page": false,
+   "seo_title": "AGB | PERMA Mind Academy",
+   "seo_description": "Allgemeine Geschäftsbedingungen der PERMA Mind Academy für Workshops, Seminare und Ausbildungen."
+  },
+  {
    "key": "newsletter-bestaetigt",
    "file": "newsletter-bestaetigt.html",
    "title": "Newsletter bestätigt",
