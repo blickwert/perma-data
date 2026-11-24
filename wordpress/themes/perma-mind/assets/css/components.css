@@ -235,7 +235,7 @@ body:has(.bw-page-hero--offer.is-style-accent-green){--bw-accent:var(--bw-green)
 .bw-person__photo--img{display:block;overflow:hidden}
 .bw-person__photo--img .bw-person__role{z-index:1}
 .bw-person__img{margin:0;width:100%;height:100%}
-.bw-person__img img{display:block;width:100%;height:100%;object-fit:cover;object-position:50% 20%}
+.bw-person__img img{display:block;width:100%;height:auto;margin-top:-3%} /* Original im Hochformat, der Rahmen (5:4, overflow hidden) zeigt den oberen Ausschnitt. Kein object-fit: sonst übernimmt die WordPress-Lightbox den Zuschnitt */
 .bw-person__figure{margin:0 0 var(--bw-space-4)}
 .bw-person__figure img{display:block;width:100%;height:auto;border-radius:var(--bw-radius-card)}
 .bw-person__figure figcaption{margin-top:var(--bw-space-2);font-size:var(--bw-fs-xs);color:var(--bw-color-text-muted)}
@@ -246,6 +246,7 @@ body:has(.bw-page-hero--offer.is-style-accent-green){--bw-accent:var(--bw-green)
 .wp-lightbox-container button.lightbox-trigger:not(:hover):not(:active):not(:focus-visible){background-color:var(--bw-navy)} /* WordPress färbt mit :not(:hover):not(:active) grau; gleich spezifisch überschreiben */
 .wp-lightbox-container button.lightbox-trigger:hover,.wp-lightbox-container button.lightbox-trigger:focus-visible{background:var(--bw-blue);color:var(--bw-navy-dark)}
 .bw-person__img .wp-lightbox-container{height:100%}
+.bw-person__img button.lightbox-trigger{top:var(--bw-space-3)!important;right:var(--bw-space-3)!important} /* !important: WordPress setzt top/right inline aus der Bildhöhe; das Hochformat ragt über den Rahmen hinaus */
 .bw-research{margin:var(--bw-space-14) auto 0;max-width:960px}
 .bw-research__title{margin:0 0 var(--bw-space-6);font-size:var(--bw-fs-xl);line-height:var(--bw-lh-heading)}
 .bw-research__grid{display:grid;grid-template-columns:minmax(0,1fr);gap:var(--bw-space-8)}
