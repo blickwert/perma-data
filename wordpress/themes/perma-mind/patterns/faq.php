@@ -27,19 +27,19 @@ declare(strict_types=1);
 <!-- /wp:paragraph --></details>
 <!-- /wp:details --><!-- wp:details {"className":"bw-accordion"} -->
 <details class="wp-block-details bw-accordion"><summary>Welchen Nutzen hat die ECQA-Zertifizierung?</summary><!-- wp:paragraph {"className":"bw-text"} -->
-<p class="bw-text">Gegenüber einer reinen Teilnahmebestätigung weist das ECQA-Zertifikat überprüfte Kompetenzen nach. Gegenüber einem rein institutseigenen Abschluss kommt eine unabhängige Zertifizierungsstelle mit festgelegten Anforderungen hinzu. Der europäisch ausgerichtete Nachweis unterstützt dich dabei, deine Qualifikation gegenüber Arbeitgeber:innen und Auftraggeber:innen zu erläutern. Die Höhe der zusätzlichen Zertifizierungsgebühren wird noch bekannt gegeben.</p>
+<p class="bw-text">Gegenüber einer reinen Teilnahmebestätigung weist das ECQA-Zertifikat überprüfte Kompetenzen nach. Gegenüber einem rein institutseigenen Abschluss kommt eine unabhängige Zertifizierungsstelle mit festgelegten Anforderungen hinzu. Der europäisch ausgerichtete Nachweis unterstützt dich dabei, deine Qualifikation gegenüber Arbeitgeber:innen und Auftraggeber:innen zu erläutern. Die ECQA-Zertifizierung ist für Basic, Advanced sowie für den Clinical-Expert-Gesamtabschluss und die Mikrozertifikate bestätigt. Die Höhe der Zertifizierungsgebühren wird noch bekannt gegeben.</p>
 <!-- /wp:paragraph --></details>
 <!-- /wp:details --><!-- wp:details {"className":"bw-accordion"} -->
 <details class="wp-block-details bw-accordion"><summary>Welche Ausbildung passt zu mir?</summary><!-- wp:paragraph {"className":"bw-text"} -->
-<p class="bw-text">Basic ist dein Einstieg, wenn du Positive Psychologie verstehen und persönlich oder beruflich anwenden möchtest. Advanced baut auf dem abgeschlossenen Basic auf und vertieft die professionelle Arbeit einschließlich eigener Trainings. Clinical Expert richtet sich gezielt an klinische Psycholog:innen und Psychotherapeut:innen.</p>
+<p class="bw-text">Basic ist dein Einstieg, wenn du Positive Psychologie verstehen und persönlich oder beruflich anwenden möchtest. Advanced baut auf dem Basic-Abschluss oder einem anerkannten gleichwertigen Abschluss auf und vertieft die professionelle Arbeit einschließlich eigener Trainings. Clinical Expert richtet sich gezielt an klinische Psycholog:innen und Psychotherapeut:innen.</p>
 <!-- /wp:paragraph --></details>
 <!-- /wp:details --><!-- wp:details {"className":"bw-accordion"} -->
 <details class="wp-block-details bw-accordion"><summary>Welche Voraussetzung gilt für Advanced?</summary><!-- wp:paragraph {"className":"bw-text"} -->
-<p class="bw-text">Eine abgeschlossene Basic-Ausbildung in Positiver Psychologie ist Voraussetzung. Vergleichbare Vorkenntnisse allein ersetzen diesen Abschluss nicht.</p>
+<p class="bw-text">Zum Einstieg berechtigen der Basic-Abschluss der PERMA Mind Academy, der bisherige EUPPA-Basic-Abschluss der European Positive Psychology Academy oder der Abschluss als zertifizierte:r Anwender:in der Positiven Psychologie DACH-PP (Level 1). Andere Abschlüsse prüfen wir einzeln auf Gleichwertigkeit. Kontaktiere uns dafür mit deinem Abschlussnachweis und Angaben zu Inhalt und Umfang deiner Ausbildung.</p>
 <!-- /wp:paragraph --></details>
 <!-- /wp:details --><!-- wp:details {"className":"bw-accordion"} -->
 <details class="wp-block-details bw-accordion"><summary>Wann starten die Lehrgänge?</summary><!-- wp:paragraph {"className":"bw-text"} -->
-<p class="bw-text">Die Termine der drei Basic-Module folgen. Advanced beginnt voraussichtlich Anfang 2028, PERMA Clinical Expert im Frühjahr 2028.</p>
+<p class="bw-text">Basic startet voraussichtlich im Herbst 2027, Advanced Anfang 2028 und PERMA Clinical Expert im Frühjahr 2028. Die genauen Termine folgen mit der Ausschreibung.</p>
 <!-- /wp:paragraph --></details>
 <!-- /wp:details --><!-- wp:details {"className":"bw-accordion"} -->
 <details class="wp-block-details bw-accordion"><summary>Wo finden die Ausbildungen statt?</summary><!-- wp:paragraph {"className":"bw-text"} -->
@@ -47,11 +47,11 @@ declare(strict_types=1);
 <!-- /wp:paragraph --></details>
 <!-- /wp:details --><!-- wp:details {"className":"bw-accordion"} -->
 <details class="wp-block-details bw-accordion"><summary>Kann ich einzelne Module buchen?</summary><!-- wp:paragraph {"className":"bw-text"} -->
-<p class="bw-text">Bei Clinical Expert kannst du einzelne Module buchen und auf das Gesamtzertifikat anrechnen lassen. Dafür sind zusätzlich die Praxis- und Supervisionsleistungen erforderlich. Basic und Advanced sind zusammenhängende Lehrgänge.</p>
+<p class="bw-text">Bei Clinical Expert kannst du einzelne Module buchen. Für jedes Modul erhältst du nach Erfüllung der Anforderungen ein Mikrozertifikat, und abgeschlossene Module sind auf den Gesamtlehrgang anrechenbar. Für den Gesamtabschluss kommen Supervision und Falldokumentation hinzu. Basic und Advanced sind zusammenhängende Lehrgänge.</p>
 <!-- /wp:paragraph --></details>
 <!-- /wp:details --><!-- wp:details {"className":"bw-accordion"} -->
 <details class="wp-block-details bw-accordion"><summary>Wie funktioniert die Anmeldung?</summary><!-- wp:paragraph {"className":"bw-text"} -->
-<p class="bw-text">Trage dich zunächst unverbindlich in die Interessentenliste ein. Sobald die Ausschreibung vorliegt, senden wir dir Termine, Konditionen und Unterlagen für die verbindliche Anmeldung. Der Eintrag reserviert noch keinen Platz. Nach verbindlicher Anmeldung erfolgt die Zahlung per Überweisung.</p>
+<p class="bw-text">Trage dich zunächst unverbindlich in die Interessentenliste ein. Sobald die Ausschreibung vorliegt, senden wir dir Termine, Konditionen und Unterlagen für die verbindliche Anmeldung. Der Eintrag reserviert noch keinen Platz. Nach verbindlicher Anmeldung erfolgt die Zahlung per Überweisung. Für mehrteilige Lehrgänge bieten wir auf Anfrage Ratenzahlung an. Die Höhe der Raten und die Zahlungstermine teilen wir dir vor der verbindlichen Anmeldung schriftlich mit.</p>
 <!-- /wp:paragraph --></details>
 <!-- /wp:details --></div>
 <!-- /wp:group --></div>

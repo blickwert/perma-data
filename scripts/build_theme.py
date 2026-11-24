@@ -324,7 +324,7 @@ def quote(text, cite):
     return (f'<!-- wp:quote -->\n<blockquote class="wp-block-quote">{para(text)}<cite>{cite}</cite></blockquote>\n<!-- /wp:quote -->')
 
 
-def image(src, alt, cls="", href=None):
+def image(src, alt, cls="", href=None, caption=None):
     a = {}
     if cls:
         a["className"] = cls
@@ -333,6 +333,8 @@ def image(src, alt, cls="", href=None):
     img = f'<img src="{src}" alt="{html.escape(alt, quote=True)}"/>'
     if href:
         img = f'<a href="{href}">{img}</a>'
+    if caption:
+        img += f'<figcaption class="wp-element-caption">{caption}</figcaption>'
     return f'<!-- wp:image{j(a)} -->\n<figure{cls_attr("wp-block-image", cls)}>{img}</figure>\n<!-- /wp:image -->'
 
 
@@ -443,9 +445,16 @@ def trainer(t):
     body = paras(t["profile"])
     if t["quote"]:
         body += quote(t["quote"][0], t["quote"][1])
+    if t.get("figure"):
+        f_src, f_alt, f_cap = t["figure"]
+        body += image("{{asset:assets/images/" + f_src + "}}", f_alt, "bw-person__figure", caption=f_cap)
     body += paras(t["after"])
-    photo = group(para(t["role"], "bw-person__role") + icon("user", "bw-person__photo-icon", 72) + para(t["photo"], "bw-person__photo-label"),
-                  "bw-person__photo")
+    if t.get("image"):
+        photo = group(para(t["role"], "bw-person__role") + image("{{asset:assets/images/" + t["image"] + "}}", t["alt"], "bw-person__img"),
+                      "bw-person__photo bw-person__photo--img")
+    else:
+        photo = group(para(t["role"], "bw-person__role") + icon("user", "bw-person__photo-icon", 72) + para(t["photo"], "bw-person__photo-label"),
+                      "bw-person__photo")
     return group(photo + heading(t["name"], 3, "bw-person__name") + para(t["teaser"], "bw-person__bio") + accordion("Profil lesen", body),
                  "bw-person", "article")
 
@@ -548,6 +557,14 @@ def related():
     return group("".join(para(f'<a href="{home(u)}">{t} →</a>', "bw-related__link") for u, t in links), "bw-related", "nav")
 
 
+def module_body(text, goals=None):
+    """Modultext; optional mit Lernzielen („Was du nach dem Modul kannst“, Clinical Expert)."""
+    out = para(text, "bw-text")
+    if goals:
+        out += para("Was du nach dem Modul kannst", "bw-module__goals-title") + lst(goals, "bw-module__goals")
+    return out
+
+
 def p_offer_details(key):
     P = C.PAGES[key]
     scope = paras(P["scope"])
@@ -557,7 +574,7 @@ def p_offer_details(key):
     if P.get("scope_link"):
         kk, label = P["scope_link"]
         scope += para(f'<a href="{home(OFFER_URL[kk])}">{label} →</a>', "bw-text bw-link-strong")
-    main = (section_head(P["content_title"]) + accordions([accordion(t, para(x, "bw-text")) for t, x in P["modules"]])
+    main = (section_head(P["content_title"]) + accordions([accordion(m[0], module_body(*m[1:])) for m in P["modules"]])
             + group(heading(P["scope_title"], 3, "bw-card__title") + scope, "bw-card bw-card--plain"))
     for title, texts in P.get("extras", []):
         main += group(heading(title, 3, "bw-card__title") + paras(texts), "bw-card")
