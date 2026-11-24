@@ -131,6 +131,8 @@ def build_theme_json():
             },
             "blocks": {
                 "core/button": {"color": {"background": False, "text": False}},
+                # Bilder per Klick vergrößern (Lightbox von WordPress); Hero und Logos schalten es einzeln ab.
+                "core/image": {"lightbox": {"enabled": True, "allowEditing": True}},
             },
         },
         "styles": {
@@ -324,10 +326,12 @@ def quote(text, cite):
     return (f'<!-- wp:quote -->\n<blockquote class="wp-block-quote">{para(text)}<cite>{cite}</cite></blockquote>\n<!-- /wp:quote -->')
 
 
-def image(src, alt, cls="", href=None, caption=None):
+def image(src, alt, cls="", href=None, caption=None, lightbox=True):
     a = {}
     if cls:
         a["className"] = cls
+    if not lightbox:
+        a["lightbox"] = {"enabled": False}
     if href:
         a["linkDestination"] = "custom"
     img = f'<img src="{src}" alt="{html.escape(alt, quote=True)}"/>'
@@ -389,8 +393,8 @@ def p_hero():
                 "bw-hero__box bw-hero__box--wide")
     # Hintergrundbilder als normale Bild-Blöcke (im Editor austauschbar, dekorativ). Das Theme fasst beide beim Ausgeben
     # zu einem <picture> zusammen (src/HeroImage.php), damit jedes Gerät nur sein Bild lädt.
-    images = (image("{{asset:assets/images/hero-sonnenaufgang-mobil.webp}}", "", "bw-hero__image bw-hero__image--mobile")
-              + image("{{asset:assets/images/hero-sonnenaufgang.webp}}", "", "bw-hero__image bw-hero__image--desktop"))
+    images = (image("{{asset:assets/images/hero-sonnenaufgang-mobil.webp}}", "", "bw-hero__image bw-hero__image--mobile", lightbox=False)
+              + image("{{asset:assets/images/hero-sonnenaufgang.webp}}", "", "bw-hero__image bw-hero__image--desktop", lightbox=False))
     return group(images + box, "bw-hero bw-hero--v2b", "section", style="gradient-hero", label="Hero")
 
 
@@ -703,7 +707,7 @@ def nav():
 
 def header_bar(accent):
     logo = "{{asset:assets/images/" + ("logo-white.svg" if accent else "logo.svg") + "}}"
-    return group(image(logo, "PERMA Mind Academy – We create wellbeing", "bw-header__logo", href=home("/"))
+    return group(image(logo, "PERMA Mind Academy – We create wellbeing", "bw-header__logo", href=home("/"), lightbox=False)
                  + nav()
                  + buttons(button("Zur Interessentenliste", "#interessentenliste", "light" if accent else None), cls="bw-header__cta"),
                  "bw-header__bar")
@@ -711,7 +715,7 @@ def header_bar(accent):
 
 def footer():
     D = CONTACT_DATA
-    cols = (group(image("{{asset:assets/images/logo-white.svg}}", "PERMA Mind Academy – We create wellbeing", "bw-footer__logo"), "bw-footer__col")
+    cols = (group(image("{{asset:assets/images/logo-white.svg}}", "PERMA Mind Academy – We create wellbeing", "bw-footer__logo", lightbox=False), "bw-footer__col")
             + group(para("Kontakt", "bw-footer__title") + para(D["address"]) + para(f'Tel: {D["phone"]}') + para(f'Mail: {D["mail"]}'), "bw-footer__col")
             + group(para("Social Media", "bw-footer__title")
                     + '<!-- wp:social-links {"openInNewTab":true,"className":"bw-footer__social"} -->\n<ul class="wp-block-social-links bw-footer__social">'

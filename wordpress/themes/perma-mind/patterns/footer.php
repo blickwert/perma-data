@@ -14,7 +14,7 @@ declare(strict_types=1);
 ?>
 <!-- wp:group {"className":"bw-container bw-footer__inner"} -->
 <div class="wp-block-group bw-container bw-footer__inner"><!-- wp:group {"className":"bw-footer__col"} -->
-<div class="wp-block-group bw-footer__col"><!-- wp:image {"className":"bw-footer__logo"} -->
+<div class="wp-block-group bw-footer__col"><!-- wp:image {"className":"bw-footer__logo","lightbox":{"enabled":false}} -->
 <figure class="wp-block-image bw-footer__logo"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/logo-white.svg' ) ); ?>" alt="PERMA Mind Academy – We create wellbeing"/></figure>
 <!-- /wp:image --></div>
 <!-- /wp:group --><!-- wp:group {"className":"bw-footer__col"} -->

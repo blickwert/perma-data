@@ -239,6 +239,13 @@ body:has(.bw-page-hero--offer.is-style-accent-green){--bw-accent:var(--bw-green)
 .bw-person__figure{margin:0 0 var(--bw-space-4)}
 .bw-person__figure img{display:block;width:100%;height:auto;border-radius:var(--bw-radius-card)}
 .bw-person__figure figcaption{margin-top:var(--bw-space-2);font-size:var(--bw-fs-xs);color:var(--bw-color-text-muted)}
+/* Bild vergrößern (Lightbox von WordPress): Symbol immer sichtbar statt nur beim Darüberfahren */
+.wp-lightbox-container button.lightbox-trigger{opacity:1;top:var(--bw-space-3);right:var(--bw-space-3);width:36px;height:36px;padding:0;border-radius:50%;background:var(--bw-navy);color:var(--bw-white);border:0;box-shadow:var(--bw-shadow-card)}
+.wp-lightbox-container button.lightbox-trigger svg{fill:currentColor}
+.wp-lightbox-container button.lightbox-trigger svg path{fill:currentColor}
+.wp-lightbox-container button.lightbox-trigger:not(:hover):not(:active):not(:focus-visible){background-color:var(--bw-navy)} /* WordPress färbt mit :not(:hover):not(:active) grau; gleich spezifisch überschreiben */
+.wp-lightbox-container button.lightbox-trigger:hover,.wp-lightbox-container button.lightbox-trigger:focus-visible{background:var(--bw-blue);color:var(--bw-navy-dark)}
+.bw-person__img .wp-lightbox-container{height:100%}
 .bw-research{margin:var(--bw-space-14) auto 0;max-width:960px}
 .bw-research__title{margin:0 0 var(--bw-space-6);font-size:var(--bw-fs-xl);line-height:var(--bw-lh-heading)}
 .bw-research__grid{display:grid;grid-template-columns:minmax(0,1fr);gap:var(--bw-space-8)}
