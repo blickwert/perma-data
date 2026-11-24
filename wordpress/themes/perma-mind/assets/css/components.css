@@ -248,7 +248,7 @@ body:has(.bw-page-hero--offer.is-style-accent-green){--bw-accent:var(--bw-green)
 .bw-person__img .wp-lightbox-container{height:100%}
 /* Vergrößerte Ansicht: dunkelblauer, leicht durchscheinender Hintergrund, weiße Knöpfe.
    !important: WordPress setzt Hintergrund und Symbolfarbe inline aus der Theme-Palette. */
-.wp-lightbox-overlay .scrim{background-color:var(--bw-navy)!important;opacity:.9}
+.wp-lightbox-overlay .scrim{background-color:color-mix(in srgb,var(--bw-navy) 95%,transparent)!important} /* Transparenz in der Farbe: WordPress blendet opacity per Animation auf 1 */
 .wp-lightbox-overlay .wp-lightbox-close-button,.wp-lightbox-overlay .wp-lightbox-navigation-button{fill:var(--bw-white)!important;color:var(--bw-white)}
 .wp-lightbox-overlay .wp-lightbox-close-button:focus-visible,.wp-lightbox-overlay .wp-lightbox-navigation-button:focus-visible{outline:var(--bw-border-width-strong) solid var(--bw-white);outline-offset:2px}
 .bw-person__img button.lightbox-trigger{top:var(--bw-space-3)!important;right:var(--bw-space-3)!important} /* !important: WordPress setzt top/right inline aus der Bildhöhe; das Hochformat ragt über den Rahmen hinaus */
