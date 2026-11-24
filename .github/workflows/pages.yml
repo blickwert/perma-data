@@ -1,9 +1,10 @@
-name: Design-Vorschau (GitHub Pages)
+name: Design-Vorschau (GitHub Pages, deaktiviert)
+
+# Die statischen Vorschauen (v1, v2, v2b) sind seit der WordPress-Umsetzung deaktiviert,
+# damit Inhalte nicht doppelt gepflegt werden. Der Workflow veröffentlicht nur noch einen Hinweis
+# (alle Adressen, auch alte Links, zeigen ihn). Die Dateien in design/ bleiben als Quelle für das Theme.
 
 on:
-  push:
-    branches: [main]
-    paths: ["design/reference/**", "design/v2/**", "design/v2b/**", ".github/workflows/pages.yml"]
   workflow_dispatch:
 
 permissions:
@@ -22,20 +23,15 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - uses: actions/checkout@v4
-      - name: Seite zusammenstellen
+      - name: Hinweisseite zusammenstellen
         run: |
           mkdir _site
-          cp -r design/reference/. _site/
-          rm -f _site/README-export.md
-          mkdir -p _site/v2
-          cp -r design/v2/. _site/v2/
-          printf '%s\n' '<!doctype html><meta charset="utf-8"><meta http-equiv="refresh" content="0; url=Main.dc.html"><title>PERMA Mind Academy v2</title><a href="Main.dc.html">Zur Vorschau</a>' > _site/v2/index.html
-          mkdir -p _site/v2b
-          cp -r design/v2b/. _site/v2b/
           cat > _site/index.html <<'HTML'
-          <!doctype html><meta charset="utf-8"><meta http-equiv="refresh" content="0; url=Main.dc.html"><title>PERMA Mind Academy</title><a href="Main.dc.html">Zur Vorschau</a>
+          <!doctype html><html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex"><title>PERMA Mind Academy – Vorschau deaktiviert</title>
+          <style>body{margin:0;min-height:100vh;display:grid;place-items:center;font-family:system-ui,sans-serif;background:#f6f8fa;color:#00416b}main{max-width:32rem;padding:2rem;text-align:center}h1{font-size:1.5rem;font-weight:500}</style></head>
+          <body><main><h1>Diese Vorschau ist nicht mehr aktiv</h1><p>Die Website der PERMA Mind Academy wird jetzt direkt in WordPress gepflegt.</p></main></body></html>
           HTML
+          cp _site/index.html _site/404.html
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:

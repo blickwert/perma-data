@@ -4,15 +4,17 @@ Website der **PERMA Mind Academy** („We create wellbeing“). Das Design wird 
 
 **Nächster Schritt:** WordPress-Umsetzung. Arbeitsanweisung: [`docs/WP-UMSETZUNG.md`](docs/WP-UMSETZUNG.md) (Einstieg für neue Sessions: [`CLAUDE.md`](CLAUDE.md)).
 
-## Live-Vorschau (GitHub Pages)
+## Statische Vorschau (deaktiviert)
 
-| Version | Link | Ordner | Doku |
-|---|---|---|---|
-| v2b – Kundenwünsche (Homepagetexte V5), **Basis für WordPress** | <https://blickwert.github.io/perma-data/v2b/> | `design/v2b/` | `docs/V2B.md` |
-| v2 – Corporate Design v2 | <https://blickwert.github.io/perma-data/v2/> | `design/v2/` | `docs/CORPORATE-DESIGN-V2.md` |
-| v1 – ursprüngliches Mockup (nur Vergleich) | <https://blickwert.github.io/perma-data/> | `design/reference/` | – |
+Die Vorschauen v1, v2 und v2b liefen über GitHub Pages. Sie sind seit der WordPress-Umsetzung deaktiviert, damit Inhalte nicht doppelt gepflegt werden; die Adresse zeigt nur noch einen Hinweis (Workflow `.github/workflows/pages.yml`, manuell). Die Ordner bleiben als Quelle und Referenz:
 
-Die Seiten aktualisieren sich bei jedem Push auf `main` (Workflow `.github/workflows/pages.yml`).
+| Version | Ordner | Doku |
+|---|---|---|
+| v2b – Kundenwünsche (Homepagetexte V5), **Basis für WordPress** | `design/v2b/` | `docs/V2B.md` |
+| v2 – Corporate Design v2 | `design/v2/` | `docs/CORPORATE-DESIGN-V2.md` |
+| v1 – ursprüngliches Mockup | `design/reference/` | – |
+
+Lokal ansehen: `python3 -m http.server -d design/v2b` und `http://localhost:8000/Main.dc.html` öffnen.
 
 ## Struktur
 

@@ -4,7 +4,7 @@ Diese Datei ist die Aufgabe für die nächste Session. Sie enthält alle Entsche
 
 ## 1. Ziel
 
-Die Website der PERMA Mind Academy aus der Vorschau **v2b** (`design/v2b/`, live: https://blickwert.github.io/perma-data/v2b/) wird als eigenes **WordPress-Block-Theme** plus eigenes **Formular-Plugin** umgesetzt und auf die Entwicklungsinstallation übertragen. Elementor wird nicht verwendet.
+Die Website der PERMA Mind Academy aus der Vorschau **v2b** (`design/v2b/`; die GitHub-Pages-Vorschau ist inzwischen deaktiviert) wird als eigenes **WordPress-Block-Theme** plus eigenes **Formular-Plugin** umgesetzt und auf die Entwicklungsinstallation übertragen. Elementor wird nicht verwendet.
 
 Ergebnis:
 - Theme `perma-mind` und Plugin `bw-perma-forms` liegen im Repo unter `wordpress/` und sind auf der Dev-Installation aktiv.
