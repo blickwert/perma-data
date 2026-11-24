@@ -531,6 +531,12 @@
 					"background": false,
 					"text": false
 				}
+			},
+			"core/image": {
+				"lightbox": {
+					"enabled": true,
+					"allowEditing": true
+				}
 			}
 		}
 	},

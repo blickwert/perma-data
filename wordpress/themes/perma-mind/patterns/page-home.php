@@ -16,9 +16,9 @@
 declare(strict_types=1);
 ?>
 <!-- wp:group {"tagName":"section","className":"bw-hero bw-hero\u002d\u002dv2b is-style-gradient-hero","metadata":{"name":"Hero"}} -->
-<section class="wp-block-group bw-hero bw-hero--v2b is-style-gradient-hero"><!-- wp:image {"className":"bw-hero__image bw-hero__image\u002d\u002dmobile"} -->
+<section class="wp-block-group bw-hero bw-hero--v2b is-style-gradient-hero"><!-- wp:image {"className":"bw-hero__image bw-hero__image\u002d\u002dmobile","lightbox":{"enabled":false}} -->
 <figure class="wp-block-image bw-hero__image bw-hero__image--mobile"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/hero-sonnenaufgang-mobil.webp' ) ); ?>" alt=""/></figure>
-<!-- /wp:image --><!-- wp:image {"className":"bw-hero__image bw-hero__image\u002d\u002ddesktop"} -->
+<!-- /wp:image --><!-- wp:image {"className":"bw-hero__image bw-hero__image\u002d\u002ddesktop","lightbox":{"enabled":false}} -->
 <figure class="wp-block-image bw-hero__image bw-hero__image--desktop"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/hero-sonnenaufgang.webp' ) ); ?>" alt=""/></figure>
 <!-- /wp:image --><!-- wp:group {"className":"bw-hero__box bw-hero__box\u002d\u002dwide"} -->
 <div class="wp-block-group bw-hero__box bw-hero__box--wide"><!-- wp:heading {"level":1,"className":"bw-hero__title"} -->
