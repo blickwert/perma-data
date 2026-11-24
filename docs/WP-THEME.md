@@ -25,7 +25,7 @@ Lokale Prüfung (WordPress Playground, PHP 8.3, WordPress aktuell): Theme und `w
 
 ## Aufbau
 
-- **Vorlagen:** `front-page`, `page`, `page-angebot` (Header im Akzent-Verlauf), `page-rechtliches` (Seitenkopf mit Titel, Fließtext), `index`, `404`.
+- **Vorlagen:** `front-page`, `page`, `page-angebot` (Header im Akzent-Verlauf), `page-rechtliches` (wie ein Abschnitt der Startseite: „Rechtliches“ und Titel mittig, Fließtext als mittige Spalte, kein farbiger Seitenkopf), `index`, `404`.
 - **Vorlagenteile:** `header`, `header-akzent`, `footer`. Sie enthalten je ein Pattern, damit Adressen (`home_url()`) und Logos (`get_theme_file_uri()`) auf jeder Installation stimmen.
 - **Patterns (Kategorie „PERMA Mind: Abschnitte“):** Hero, Profilmerkmale, Einleitung, Warum PERMA Mind Academy, Angebotskarten, Verstehen + PERMA-Modell + Vom Verstehen zum Anwenden, Über uns + Trainer, ECQA-Zertifizierung, Interessentenliste, Häufige Fragen, Newsletter, Kontakt, Angebotskopf, Angebot (Module, Umfang, Eckdaten, Weiterführend), Interessentenliste für ein Angebot.
 - **Seiten-Patterns (Kategorie „PERMA Mind: Seiten“):** Startseite, Basic, Advanced, Clinical Expert, Impressum, Datenschutz. Sie erscheinen beim Anlegen einer neuen Seite zur Auswahl.
@@ -54,7 +54,7 @@ Im Editor sind freie Farben, Verläufe, Schriftgrößen, Abstände und Rahmen ab
 | Profilmerkmale, Kontaktliste, Eckdaten | `ul`/`dl` | Gruppen mit Absätzen | Symbol pro Eintrag; `dl` gibt es als Block nicht |
 | Schritte | `h3` je Schritt | Listenpunkte, Nummer per CSS | als Liste bearbeitbar |
 | Mobile Navigation | Aufklappfeld unter dem Header | Vollbild-Menü von core/navigation (bis 1000 px) | Core-Block, per Tastatur bedienbar |
-| Rechtstexte | Brotkrumen „Startseite / Impressum“ | ohne Brotkrumen; Einleitung (Datenschutz) steht über dem Text | Seitenkopf kommt aus der Vorlage |
+| Rechtstexte | Brotkrumen, Seitenkopf mit Verlauf | ohne Brotkrumen und Seitenkopf; Titel mittig wie die Abschnitte der Startseite, Text mittig (seit 0.6.0) | Wunsch des Auftraggebers: an die Startseite angleichen |
 | Komponenten-CSS | eine Datei | eine Datei (`components.css`, ca. 25 KB) statt CSS pro Block | einfacher zu pflegen; bei Bedarf später aufteilen |
 | Breakpoints | 561/821/1001 px | gleich (Media Queries statt Container Queries) | Übereinstimmung mit v2b |
 

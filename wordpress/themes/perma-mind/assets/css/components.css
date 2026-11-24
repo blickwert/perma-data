@@ -314,7 +314,10 @@ body:has(.bw-page-hero--offer.is-style-accent-green){--bw-accent:var(--bw-green)
 }
 
 /* ========== Rechtstexte (Fließtext) ========== */
-.bw-prose{max-width:780px;padding:var(--bw-space-10) 0 var(--bw-space-16)}
+/* Wie die Abschnitte der Startseite: Titel mittig, Text als mittige Spalte */
+.bw-legal .bw-heading-section{hyphens:auto;overflow-wrap:break-word}
+.bw-prose{max-width:780px;margin:0 auto}
+.bw-prose>:first-child{margin-top:0}
 .bw-prose .bw-prose__lead{margin:0 0 var(--bw-space-8);font-size:var(--bw-fs-lg);font-weight:var(--bw-fw-light);line-height:var(--bw-lh-body)}
 .bw-prose .bw-prose__draft{margin:0 0 var(--bw-space-10);padding:var(--bw-space-3) var(--bw-space-4);border-left:var(--bw-space-1) solid var(--bw-color-accent);background:var(--bw-color-surface-tint);font-size:var(--bw-fs-base);line-height:var(--bw-lh-body)}
 .bw-prose h2{margin:var(--bw-space-12) 0 0;font-size:var(--bw-fs-2xl);line-height:var(--bw-lh-heading)}
@@ -328,9 +331,6 @@ body:has(.bw-page-hero--offer.is-style-accent-green){--bw-accent:var(--bw-green)
 .bw-toc__list{margin:var(--bw-space-2) 0 0;padding-left:var(--bw-space-5);columns:1;column-gap:var(--bw-space-8)}
 @media (min-width:561px){
   .bw-toc__list{columns:2}
-}
-@media (min-width:821px){
-  .bw-prose{padding:var(--bw-space-14) 0 var(--bw-space-22)}
 }
 
 /* ========== Footer ========== */
