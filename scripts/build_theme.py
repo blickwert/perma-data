@@ -459,11 +459,20 @@ def trainer(t):
                  "bw-person", "article")
 
 
+def research(R):
+    """Fotos aus der Forschungsarbeit unter den Trainerprofilen, mit Ort/Datum und Bildunterschrift."""
+    if not R:
+        return ""
+    figs = "".join(image("{{asset:assets/images/" + f + "}}", alt, "bw-research__figure", caption=f"<strong>{place}</strong><br>{text}")
+                   for f, alt, place, text in R["figures"])
+    return group(heading(R["title"], 3, "bw-research__title") + group(figs, "bw-research__grid"), "bw-research")
+
+
 def p_about():
     A = C.ABOUT
     acc = accordions([accordion(t, paras(p)) for t, p in A["accordions"]], "bw-accordion-list--limit")
     return group(container(section_head(A["title"], A["eyebrow"], A["intro"]) + acc
-                           + group("".join(trainer(t) for t in A["trainers"]), "bw-team__list")),
+                           + group("".join(trainer(t) for t in A["trainers"]), "bw-team__list") + research(A.get("research"))),
                  "bw-block", "section", style="section-neutral", anchor="ueber-uns", label="Über uns und Trainer")
 
 
