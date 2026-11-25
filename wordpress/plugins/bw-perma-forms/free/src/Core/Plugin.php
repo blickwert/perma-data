@@ -17,6 +17,9 @@ final class Plugin {
 	public const REST_NS   = 'bw-perma-forms/v1';
 	public const CAPABILITY = 'manage_options';
 
+	/** Contact list and CSV export; granted to administrators and editors (filter bw_perma_forms_contacts_roles). */
+	public const CONTACTS_CAPABILITY = 'bw_perma_forms_contacts';
+
 	private static ?Plugin $instance = null;
 
 	private Settings $settings;

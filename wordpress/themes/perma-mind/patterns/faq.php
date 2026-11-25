@@ -31,11 +31,11 @@ declare(strict_types=1);
 <!-- /wp:paragraph --></details>
 <!-- /wp:details --><!-- wp:details {"className":"bw-accordion"} -->
 <details class="wp-block-details bw-accordion"><summary>Welche Ausbildung passt zu mir?</summary><!-- wp:paragraph {"className":"bw-text"} -->
-<p class="bw-text">Basic ist dein Einstieg, wenn du Positive Psychologie verstehen und persönlich oder beruflich anwenden möchtest. Advanced baut auf dem Basic-Abschluss oder einem anerkannten gleichwertigen Abschluss auf und vertieft die professionelle Arbeit einschließlich eigener Trainings. Clinical Expert richtet sich gezielt an klinische Psycholog:innen und Psychotherapeut:innen.</p>
+<p class="bw-text">Basic ist dein Einstieg, wenn du Positive Psychologie verstehen und persönlich oder beruflich anwenden möchtest. Advanced baut auf dem Basic-Abschluss oder einem anerkannten gleichwertigen Abschluss auf und vertieft die professionelle Arbeit einschließlich eigener Trainings. Clinical Expert richtet sich an Psycholog:innen, Psychotherapeut:innen, Ärzt:innen und Angehörige anderer helfender Berufe mit abgeschlossener einschlägiger Ausbildung oder abgeschlossenem Studium.</p>
 <!-- /wp:paragraph --></details>
 <!-- /wp:details --><!-- wp:details {"className":"bw-accordion"} -->
 <details class="wp-block-details bw-accordion"><summary>Welche Voraussetzung gilt für Advanced?</summary><!-- wp:paragraph {"className":"bw-text"} -->
-<p class="bw-text">Zum Einstieg berechtigen der Basic-Abschluss der PERMA Mind Academy, der bisherige EUPPA-Basic-Abschluss der European Positive Psychology Academy oder der Abschluss als zertifizierte:r Anwender:in der Positiven Psychologie DACH-PP (Level 1). Andere Abschlüsse prüfen wir einzeln auf Gleichwertigkeit. Kontaktiere uns dafür mit deinem Abschlussnachweis und Angaben zu Inhalt und Umfang deiner Ausbildung.</p>
+<p class="bw-text">Zum Einstieg berechtigen der Basic-Abschluss der PERMA Mind Academy, der EUPPA-Basic-Abschluss der European Positive Psychology Academy oder der Abschluss als zertifizierte:r Anwender:in der Positiven Psychologie DACH-PP (Level 1). Andere Abschlüsse prüfen wir einzeln auf Gleichwertigkeit. Kontaktiere uns dafür mit deinem Abschlussnachweis und Angaben zu Inhalt und Umfang deiner Ausbildung.</p>
 <!-- /wp:paragraph --></details>
 <!-- /wp:details --><!-- wp:details {"className":"bw-accordion"} -->
 <details class="wp-block-details bw-accordion"><summary>Wann starten die Lehrgänge?</summary><!-- wp:paragraph {"className":"bw-text"} -->

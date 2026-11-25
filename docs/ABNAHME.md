@@ -37,7 +37,11 @@ Details: `docs/WP-THEME.md`.
    - Datenschutz: gemeinsame Verantwortung (Art. 26 DSGVO) eingetragen, gilt nach beiderseitiger Bestätigung der Vereinbarung.
    - Impressum: Websitebetreiber Mag. Michael Wohlkönig bis zur OG-Eintragung.
    - Formular-Empfänger seit 24.11.2026 info@perma-academy.at.
-   - Offen: Fotograf:innen für den Bildnachweis.
+   - Offen: Bildnachweis für Michis Porträt, Titelbild und Kongressfotos.
+   - AGB: Clinical Expert nennt noch 2.960 € und vier Raten zu 740 €; seit 25.11.2026 kosten alle acht Module 2.590 € (achtes Modul kostenlos). Vor der Freigabe abstimmen.
+   - Löschfristen der Interessentenliste: Die Academy löscht von Hand innerhalb der vereinbarten Fristen (keine automatische Löschung).
+   - ECQA-Logo: erst nach Freigabe durch die ECQA einbinden.
+   - Zugänge: martin.wammerl und michael.wohlkoenig als Redakteur (Seiten, Bilder, Kontaktliste mit Export; keine Einstellungen). Angelegt ohne Benachrichtigung; das Passwort setzt Blickwert und gibt es selbst weiter.
    - Bis zur Gründung der OG muss im Impressum eine verantwortliche Person stehen (Platzhalter angepasst).
    - Social Media: Instagram, Facebook und LinkedIn im Footer (`SOCIAL` in `scripts/v2b_content.py`).
 5. **Offene Inhalte:** Trainerfotos, ECQA-Logo, Termine, Orte, Fristen, Zertifizierungsgebühren.

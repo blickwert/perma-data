@@ -66,7 +66,7 @@ Im Editor sind freie Farben, Verläufe, Schriftgrößen, Abstände und Rahmen ab
 
 ## Hero-Bild
 
-Seit Theme 0.3.0 hat der Hero zwei Hintergrundbilder (vom Auftraggeber geliefert): Querformat `assets/images/hero-sonnenaufgang.webp` (2000 × 750 px) ab 821 px, Hochformat `assets/images/hero-sonnenaufgang-mobil.webp` (1024 × 1536 px) darunter. Beide sind normale Bild-Blöcke (`bw-hero__image--desktop`, `bw-hero__image--mobile`) und im Editor austauschbar; das mobile Bild ist im Editor ausgeblendet und über die Listenansicht erreichbar. Beim Ausgeben fasst `src/HeroImage.php` beide zu einem `<picture>` zusammen, damit jedes Gerät nur sein Bild lädt. Dekorativ, daher ohne Alt-Text.
+Seit Theme 0.3.0 hat der Hero zwei Hintergrundbilder (vom Auftraggeber geliefert): Querformat `assets/images/steinmandl-sonnenaufgang-alpen.webp` (2000 × 750 px) ab 821 px, Hochformat `assets/images/steinmandl-sonnenaufgang-alpen-mobil.webp` (1024 × 1536 px) darunter. Beide sind normale Bild-Blöcke (`bw-hero__image--desktop`, `bw-hero__image--mobile`) und im Editor austauschbar; das mobile Bild ist im Editor ausgeblendet und über die Listenansicht erreichbar. Beim Ausgeben fasst `src/HeroImage.php` beide zu einem `<picture>` zusammen, damit jedes Gerät nur sein Bild lädt. Dekorativ, daher ohne Alt-Text.
 
 **Mobil (Variante B, vom Auftraggeber gewählt):** kein Textkasten; Überschrift, ein Satz (`bw-hero__lead`, erster Satz des Hero-Texts) und beide Buttons direkt auf dem Himmel, der zweite Button weiß gefüllt. Der lange Text (`bw-hero__text`) ist mobil ausgeblendet, steht aber im HTML. **Desktop:** unverändert mit blauem Textkasten.
 

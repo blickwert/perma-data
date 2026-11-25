@@ -24,7 +24,9 @@ declare(strict_types=1);
 <!-- /wp:paragraph --><!-- wp:heading {"level":1,"className":"bw-page-hero__title"} -->
 <h1 class="wp-block-heading bw-page-hero__title">Fortbildung in klinischer Positiver Psychologie</h1>
 <!-- /wp:heading --><!-- wp:paragraph {"className":"bw-page-hero__lead"} -->
-<p class="bw-page-hero__lead">Erweitere deine klinische Arbeit um einen differenzierten Blick auf Stärken, Wohlbefinden und persönliche Entwicklung. PERMA Clinical Expert richtet sich an klinische Psycholog:innen und Psychotherapeut:innen, die Positive Psychologie in Diagnostik, Behandlungsplanung und Therapie integrieren möchten. Aktuelle Forschung, klinische Erfahrung und Fallarbeit bilden die Grundlage.</p>
+<p class="bw-page-hero__lead">Erweitere deine Arbeit um einen differenzierten Blick auf Stärken, Wohlbefinden und persönliche Entwicklung. PERMA Clinical Expert richtet sich an Psycholog:innen, Psychotherapeut:innen, Ärzt:innen und Angehörige anderer helfender Berufe, beispielsweise Sozialarbeiter:innen, Sozialpädagog:innen, Ergotherapeut:innen sowie Fachkräfte der psychiatrischen Gesundheits- und Krankenpflege. Du lernst, Positive Psychologie in deinem jeweiligen beruflichen Tätigkeitsbereich einzusetzen, beispielsweise in Behandlung, Beratung, Begleitung oder Pflege. Aktuelle Forschung, klinische Erfahrung und Fallarbeit bilden die Grundlage.</p>
+<!-- /wp:paragraph --><!-- wp:paragraph {"className":"bw-page-hero__text"} -->
+<p class="bw-page-hero__text">Voraussetzung für die Teilnahme ist eine abgeschlossene einschlägige Ausbildung beziehungsweise ein abgeschlossenes Studium in einem der genannten Berufsfelder.</p>
 <!-- /wp:paragraph --><!-- wp:buttons {"className":"bw-page-hero__actions"} -->
 <div class="wp-block-buttons bw-page-hero__actions"><!-- wp:button {"className":"is-style-light"} -->
 <div class="wp-block-button is-style-light"><a class="wp-block-button__link wp-element-button" href="#interessentenliste">Zur Clinical-Expert-Interessentenliste</a></div>
@@ -159,19 +161,31 @@ declare(strict_types=1);
 <div class="wp-block-group bw-card bw-card--plain"><!-- wp:heading {"level":3,"className":"bw-card__title"} -->
 <h3 class="wp-block-heading bw-card__title">Gesamtabschluss und Mikrozertifikate</h3>
 <!-- /wp:heading --><!-- wp:paragraph {"className":"bw-text"} -->
-<p class="bw-text">Die Fortbildung richtet sich an klinische Psycholog:innen und Psychotherapeut:innen. Acht zweitägige Module mit je 16 Einheiten ergeben insgesamt 128 Seminareinheiten à 45 Minuten. Die Module können einzeln oder als Lehrgang gebucht werden. Die Mindestanwesenheit beträgt 80 % in jedem Modul.</p>
+<p class="bw-text">PERMA Clinical Expert richtet sich an Psycholog:innen, Psychotherapeut:innen, Ärzt:innen und Angehörige anderer helfender Berufe, beispielsweise Sozialarbeiter:innen, Sozialpädagog:innen, Ergotherapeut:innen sowie Fachkräfte der psychiatrischen Gesundheits- und Krankenpflege. Voraussetzung für die Teilnahme ist eine abgeschlossene einschlägige Ausbildung beziehungsweise ein abgeschlossenes Studium in einem der genannten Berufsfelder. Acht zweitägige Module mit je 16 Einheiten ergeben insgesamt 128 Seminareinheiten à 45 Minuten. Die Module können einzeln oder als Lehrgang gebucht werden. Die Mindestanwesenheit beträgt 80 % in jedem Modul.</p>
 <!-- /wp:paragraph --><!-- wp:paragraph {"className":"bw-text"} -->
 <p class="bw-text">Für den Gesamtabschluss absolvierst du alle acht Module und 25 Supervisionseinheiten à 45 Minuten. Einzel- und Gruppensupervision kannst du kombinieren. Jede absolvierte Einheit zählt gleich. Du dokumentierst und anonymisierst zwei Fälle aus deiner eigenen klinischen Praxis schriftlich und besprichst mindestens einen davon in der Supervision. Der Lehrgang umfasst 153 Seminar- und Supervisionseinheiten. Die Falldokumentation kommt hinzu.</p>
 <!-- /wp:paragraph --><!-- wp:paragraph {"className":"bw-text"} -->
 <p class="bw-text">Für ein Mikrozertifikat eines Einzelmoduls brauchst du mindestens 80 % Anwesenheit im jeweiligen Modul und eine kurze schriftliche Transferaufgabe. Darin beschreibst du, wie du eine Methode aus dem Modul in deiner Praxis einsetzen würdest. Abgeschlossene Module sind auf den Gesamtlehrgang anrechenbar.</p>
 <!-- /wp:paragraph --><!-- wp:paragraph {"className":"bw-text"} -->
-<p class="bw-text">Die ECQA-Zertifizierung ist für Basic, Advanced sowie für den Clinical-Expert-Gesamtabschluss und die Mikrozertifikate bestätigt. Bis zur Ausgabe der ECQA-Mikrozertifikate stellt die Academy die Mikrozertifikate selbst aus. Die gesetzliche Fortbildungsanerkennung nach dem Psychologengesetz und dem Psychotherapiegesetz ist in Arbeit.</p>
+<p class="bw-text">Die ECQA-Zertifizierung ist für Basic, Advanced sowie für den Clinical-Expert-Gesamtabschluss und die Mikrozertifikate bestätigt. Bis zur Ausgabe der ECQA-Mikrozertifikate stellt die Academy die Mikrozertifikate selbst aus.</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group --><!-- wp:group {"className":"bw-card"} -->
+<div class="wp-block-group bw-card"><!-- wp:heading {"level":3,"className":"bw-card__title"} -->
+<h3 class="wp-block-heading bw-card__title">Fortbildungsanerkennung</h3>
+<!-- /wp:heading --><!-- wp:paragraph {"className":"bw-text"} -->
+<p class="bw-text">Die Anerkennung als Fortbildung gemäß § 33 Psychologengesetz 2013 für Klinische Psycholog:innen und gemäß § 41 Psychotherapiegesetz 2024 für Psychotherapeut:innen sowie die DFP-Approbation für Ärzt:innen werden derzeit vorbereitet und sollen zum Start des Lehrgangs vorliegen. Über die anrechenbaren Fortbildungseinheiten und DFP-Punkte informieren wir rechtzeitig vor Beginn.</p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group --><!-- wp:group {"className":"bw-card"} -->
 <div class="wp-block-group bw-card"><!-- wp:heading {"level":3,"className":"bw-card__title"} -->
 <h3 class="wp-block-heading bw-card__title">Preise und Supervision</h3>
 <!-- /wp:heading --><!-- wp:paragraph {"className":"bw-text"} -->
-<p class="bw-text">Einzeln gebuchtes Seminarmodul: 370 €<br>Alle acht Seminarmodule: 2.960 €<br>Einzelsupervision à 45 Minuten: 120 €<br>Gruppensupervision à 45 Minuten, maximal vier Personen: 60 € je Person<br>Alle Seminarmodule plus 25 Gruppensupervisionseinheiten: 4.460 € zuzüglich Zertifizierungsgebühr</p>
+<p class="bw-text"><strong>Seminarmodule</strong><br>Einzeln gebuchtes Modul: 370 €<br>Alle acht Module bei gemeinsamer Buchung: 2.590 € statt 2.960 € (Ersparnis 370 €)</p>
+<!-- /wp:paragraph --><!-- wp:paragraph {"className":"bw-text"} -->
+<p class="bw-text">Wenn du alle acht Module gemeinsam buchst, zahlst du nur sieben. Das achte Modul ist kostenlos.</p>
+<!-- /wp:paragraph --><!-- wp:paragraph {"className":"bw-text"} -->
+<p class="bw-text"><strong>Supervision</strong><br>Einzelsupervision à 45 Minuten: 120 €<br>Gruppensupervision à 45 Minuten, maximal vier Personen: 60 € je Person</p>
+<!-- /wp:paragraph --><!-- wp:paragraph {"className":"bw-text"} -->
+<p class="bw-text"><strong>Zertifizierung</strong><br>Für den Gesamtabschluss kommt eine Zertifizierungsgebühr hinzu; die Höhe geben wir noch bekannt.</p>
 <!-- /wp:paragraph --><!-- wp:paragraph {"className":"bw-text"} -->
 <p class="bw-text">Der Gruppentarif von 60 € pro Person ist ein Fixpreis. Bei kombinierter oder reiner Einzelsupervision hängt der Gesamtpreis von der gewählten Aufteilung ab. Für den Erwerb eines Mikrozertifikats pro Modul ist keine Supervision vorgesehen. Für mehrteilige Lehrgänge bieten wir auf Anfrage Ratenzahlung an. Die Höhe der Raten und die Zahlungstermine teilen wir dir vor der verbindlichen Anmeldung schriftlich mit.</p>
 <!-- /wp:paragraph --></div>
@@ -185,7 +199,13 @@ declare(strict_types=1);
 <div class="wp-block-group bw-facts__row"><!-- wp:paragraph {"className":"bw-facts__term"} -->
 <p class="bw-facts__term">Zielgruppe</p>
 <!-- /wp:paragraph --><!-- wp:paragraph {"className":"bw-facts__value"} -->
-<p class="bw-facts__value">Klinische Psycholog:innen und Psychotherapeut:innen</p>
+<p class="bw-facts__value">Psycholog:innen, Psychotherapeut:innen, Ärzt:innen und andere helfende Berufe, z. B. Sozialarbeit, Sozialpädagogik, Ergotherapie, psychiatrische Gesundheits- und Krankenpflege</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group --><!-- wp:group {"className":"bw-facts__row"} -->
+<div class="wp-block-group bw-facts__row"><!-- wp:paragraph {"className":"bw-facts__term"} -->
+<p class="bw-facts__term">Voraussetzung</p>
+<!-- /wp:paragraph --><!-- wp:paragraph {"className":"bw-facts__value"} -->
+<p class="bw-facts__value">Abgeschlossene einschlägige Ausbildung bzw. abgeschlossenes Studium in einem der genannten Berufsfelder</p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group --><!-- wp:group {"className":"bw-facts__row"} -->
 <div class="wp-block-group bw-facts__row"><!-- wp:paragraph {"className":"bw-facts__term"} -->
@@ -207,13 +227,19 @@ declare(strict_types=1);
 <!-- /wp:paragraph --></div>
 <!-- /wp:group --><!-- wp:group {"className":"bw-facts__row"} -->
 <div class="wp-block-group bw-facts__row"><!-- wp:paragraph {"className":"bw-facts__term"} -->
+<p class="bw-facts__term">Fortbildungsanerkennung</p>
+<!-- /wp:paragraph --><!-- wp:paragraph {"className":"bw-facts__value"} -->
+<p class="bw-facts__value">Die Fortbildungsanerkennung für Klinische Psycholog:innen und Psychotherapeut:innen sowie die DFP-Approbation für Ärzt:innen sind für den Lehrgangsstart vorgesehen.</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group --><!-- wp:group {"className":"bw-facts__row"} -->
+<div class="wp-block-group bw-facts__row"><!-- wp:paragraph {"className":"bw-facts__term"} -->
 <p class="bw-facts__term">Kosten</p>
 <!-- /wp:paragraph --><!-- wp:paragraph {"className":"bw-facts__price"} -->
 <p class="bw-facts__price">370 € je Modul</p>
 <!-- /wp:paragraph --><!-- wp:paragraph {"className":"bw-facts__price"} -->
-<p class="bw-facts__price">2.960 € für alle acht Module</p>
+<p class="bw-facts__price">2.590 € statt 2.960 € für alle acht Module</p>
 <!-- /wp:paragraph --><!-- wp:paragraph {"className":"bw-facts__note"} -->
-<p class="bw-facts__note">Supervision wird gesondert verrechnet. Alle Module plus 25 Gruppensupervisionseinheiten: 4.460 € zuzüglich Zertifizierungsgebühr. Ratenzahlung auf Anfrage.</p>
+<p class="bw-facts__note">Bei gemeinsamer Buchung ist das achte Modul kostenlos (Ersparnis 370 €). Supervision: 120 € je Einzeleinheit, 60 € je Person in der Gruppe (à 45 Minuten). Zuzüglich Zertifizierungsgebühr für den Gesamtabschluss. Ratenzahlung auf Anfrage.</p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group --></div>
 <!-- /wp:group --><!-- wp:buttons {"className":"bw-facts-card__actions"} -->

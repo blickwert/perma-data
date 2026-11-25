@@ -12,7 +12,7 @@ function App() {
 	if ( contact ) {
 		return <Contact id={ Number( contact[ 1 ] ) } />;
 	}
-	if ( '/settings' === path ) {
+	if ( '/settings' === path && window.bwPermaFormsAdmin.canManage ) {
 		return <Settings />;
 	}
 	return <Contacts />;

@@ -30,12 +30,17 @@ ICONS.update({
     "heart": '<path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>',
     "user": '<path d="M18 20a6 6 0 0 0-12 0"/><circle cx="12" cy="10" r="4"/><circle cx="12" cy="12" r="10"/>',
     "check": '<path d="M20 6 9 17l-5-5"/>',
+    # Stufen (Basic = Stufe 1, Advanced = Stufe 2 hervorgehoben): zeigt, dass die Ausbildungen aufeinander aufbauen
+    "steps-1": '<rect x="2.5" y="15" width="5" height="6" rx="1" fill="currentColor"/><rect x="9.5" y="10" width="5" height="11" rx="1"/><rect x="16.5" y="4" width="5" height="17" rx="1"/>',
+    "steps-2": '<rect x="2.5" y="15" width="5" height="6" rx="1"/><rect x="9.5" y="10" width="5" height="11" rx="1" fill="currentColor"/><rect x="16.5" y="4" width="5" height="17" rx="1"/>',
+    # Zwei Personen im Gespräch (Clinical Expert: Therapie und Behandlung)
+    "conversation": '<circle cx="6" cy="11" r="2.5"/><path d="M2 21v-1a4 4 0 0 1 8 0v1"/><circle cx="18" cy="11" r="2.5"/><path d="M14 21v-1a4 4 0 0 1 8 0v1"/><path d="M10 2.5h4a1.5 1.5 0 0 1 1.5 1.5v2a1.5 1.5 0 0 1-1.5 1.5h-1.25L12 9l-.75-1.5H10A1.5 1.5 0 0 1 8.5 6V4A1.5 1.5 0 0 1 10 2.5z"/>',
 })
-OFFER_ICON = {"basic": "book", "advanced": "layers", "clinical": "heart"}
+OFFER_ICON = {"basic": "steps-1", "advanced": "steps-2", "clinical": "conversation"}
 OFFER_CHIP = {"basic": "Einstieg", "advanced": "Vertiefung", "clinical": "Klinische Fortbildung"}
 
 CONTACT = {"address": "Plüddemanngasse 104, 8042 Graz, Österreich", "phone": "+43 676 511 2763",
-           "mail": "michael@perma-academy.at"}
+           "mail": "info@perma-academy.at"}
 
 FONTS = ('<link rel="preconnect" href="https://fonts.googleapis.com">'
          '<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&amp;'
@@ -215,7 +220,7 @@ def index():
     H = C.HERO
     feats = "".join(
         f'<li class="bw-highlight bw-accent--{a}"><span class="bw-highlight__icon">{icon(i, 22)}</span><span>{t}</span></li>'
-        for (a, i), t in zip([("blue", "globe"), ("purple", "flask"), ("green", "badge")], H["features"]))
+        for (a, i), t in zip([("blue", "globe"), ("purple", "book"), ("green", "badge")], H["features"]))
     why = "".join(
         f'<article class="bw-feature bw-feature--raised bw-accent--{a}"><span class="bw-feature__icon">{icon(i, 26)}</span>'
         f'<h3 class="bw-feature__title">{t}</h3><p class="bw-feature__text">{x}</p></article>'

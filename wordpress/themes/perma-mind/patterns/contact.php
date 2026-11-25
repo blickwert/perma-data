@@ -25,7 +25,7 @@ declare(strict_types=1);
 <!-- /wp:group --><!-- wp:group {"className":"bw-contact-list"} -->
 <div class="wp-block-group bw-contact-list"><!-- wp:group {"className":"bw-contact-list__item"} -->
 <div class="wp-block-group bw-contact-list__item"><!-- wp:bw/icon {"icon":"mail","className":"bw-contact-list__icon"} /--><!-- wp:paragraph -->
-<p>michael@perma-academy.at</p>
+<p><a href="mailto:info@perma-academy.at">info@perma-academy.at</a></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group --><!-- wp:group {"className":"bw-contact-list__item"} -->
 <div class="wp-block-group bw-contact-list__item"><!-- wp:bw/icon {"icon":"phone","className":"bw-contact-list__icon"} /--><!-- wp:paragraph -->

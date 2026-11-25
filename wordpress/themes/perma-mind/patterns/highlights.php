@@ -20,7 +20,7 @@ declare(strict_types=1);
 <p>Seit 2014 international vernetzt</p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group --><!-- wp:group {"className":"bw-highlight is-style-accent-purple"} -->
-<div class="wp-block-group bw-highlight is-style-accent-purple"><!-- wp:bw/icon {"icon":"flask","size":22,"className":"bw-highlight__icon"} /--><!-- wp:paragraph -->
+<div class="wp-block-group bw-highlight is-style-accent-purple"><!-- wp:bw/icon {"icon":"book","size":22,"className":"bw-highlight__icon"} /--><!-- wp:paragraph -->
 <p>Wissenschaftlich fundiert und praxisnah</p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group --><!-- wp:group {"className":"bw-highlight is-style-accent-green"} -->
