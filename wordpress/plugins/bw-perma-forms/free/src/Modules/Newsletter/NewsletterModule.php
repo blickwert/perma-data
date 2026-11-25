@@ -99,7 +99,7 @@ final class NewsletterModule extends AbstractModule {
 		$template = <<<HTML
 <div class="bw-form__field"><label class="bw-form__label" for="bw-nl-email">E-Mail-Adresse</label>[email* email id:bw-nl-email class:bw-form__input autocomplete:email]</div>
 <div class="bw-form__field"><label class="bw-form__label" for="bw-nl-vorname">Vorname <span class="bw-form__optional">(optional)</span></label>[text vorname id:bw-nl-vorname class:bw-form__input autocomplete:given-name]</div>
-<div class="bw-form__check">[acceptance consent class:bw-form__checkbox]Ich möchte den Newsletter der PERMA Mind Academy erhalten. Ich kann mich jederzeit wieder abmelden. Informationen zur Verarbeitung meiner Angaben finde ich in der <a href="{$privacy}">Datenschutzerklärung</a>.[/acceptance]</div>
+<div class="bw-form__check">[acceptance consent class:bw-form__checkbox]Ich möchte den Newsletter der PERMA Mind Academy erhalten und bin einverstanden, dass ausgewertet wird, ob ich ihn öffne und welche Links ich anklicke. Ich kann mich jederzeit wieder abmelden. Informationen zur Verarbeitung meiner Angaben finde ich in der <a href="{$privacy}">Datenschutzerklärung</a>.[/acceptance]</div>
 [turnstile]
 [submit class:bw-form__submit "Newsletter abonnieren"]
 HTML;
@@ -115,7 +115,8 @@ HTML;
 				'spam'                => 'Die Anmeldung konnte nicht gesendet werden. Bitte versuche es noch einmal.',
 			],
 			// The confirmation mail comes from Brevo (double opt-in), CF7 sends nothing.
-			additional_settings: 'skip_mail: on',
+			// acceptance_as_validation: the button stays active; a missing consent shows the accept_terms message instead.
+			additional_settings: "skip_mail: on\nacceptance_as_validation: on",
 			normalize: [ self::class, 'normalize' ],
 		);
 	}

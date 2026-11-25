@@ -15,9 +15,11 @@ export default function PageHeader( { title, actions, current }: Props ) {
 				<Link to="/contacts" className={ 'contacts' === current ? 'bwo-tabs__tab is-active' : 'bwo-tabs__tab' }>
 					{ __( 'Contacts', 'bw-perma-forms' ) }
 				</Link>
-				<Link to="/settings" className={ 'settings' === current ? 'bwo-tabs__tab is-active' : 'bwo-tabs__tab' }>
-					{ __( 'Settings', 'bw-perma-forms' ) }
-				</Link>
+				{ window.bwPermaFormsAdmin.canManage && (
+					<Link to="/settings" className={ 'settings' === current ? 'bwo-tabs__tab is-active' : 'bwo-tabs__tab' }>
+						{ __( 'Settings', 'bw-perma-forms' ) }
+					</Link>
+				) }
 			</nav>
 		</div>
 	);

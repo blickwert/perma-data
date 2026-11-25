@@ -26,7 +26,7 @@ final class RestController {
 	}
 
 	public function routes(): void {
-		$perm = static fn(): bool => current_user_can( Plugin::CAPABILITY );
+		$perm = static fn(): bool => current_user_can( Plugin::CONTACTS_CAPABILITY );
 		register_rest_route(
 			Plugin::REST_NS,
 			'/contacts',

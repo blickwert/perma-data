@@ -25,7 +25,7 @@ declare(strict_types=1);
 <article class="wp-block-group bw-offer-card is-style-accent-blue"><!-- wp:group {"className":"bw-offer-card__head"} -->
 <div class="wp-block-group bw-offer-card__head"><!-- wp:paragraph {"className":"bw-chip"} -->
 <p class="bw-chip">Einstieg</p>
-<!-- /wp:paragraph --><!-- wp:bw/icon {"icon":"book","size":30,"className":"bw-offer-card__icon"} /--></div>
+<!-- /wp:paragraph --><!-- wp:bw/icon {"icon":"steps-1","size":30,"className":"bw-offer-card__icon"} /--></div>
 <!-- /wp:group --><!-- wp:heading {"level":3,"className":"bw-offer-card__title"} -->
 <h3 class="wp-block-heading bw-offer-card__title">Positive Psychology Basic</h3>
 <!-- /wp:heading --><!-- wp:paragraph {"className":"bw-offer-card__text"} -->
@@ -45,7 +45,7 @@ declare(strict_types=1);
 <article class="wp-block-group bw-offer-card is-style-accent-purple"><!-- wp:group {"className":"bw-offer-card__head"} -->
 <div class="wp-block-group bw-offer-card__head"><!-- wp:paragraph {"className":"bw-chip"} -->
 <p class="bw-chip">Vertiefung</p>
-<!-- /wp:paragraph --><!-- wp:bw/icon {"icon":"layers","size":30,"className":"bw-offer-card__icon"} /--></div>
+<!-- /wp:paragraph --><!-- wp:bw/icon {"icon":"steps-2","size":30,"className":"bw-offer-card__icon"} /--></div>
 <!-- /wp:group --><!-- wp:heading {"level":3,"className":"bw-offer-card__title"} -->
 <h3 class="wp-block-heading bw-offer-card__title">Positive Psychology Advanced</h3>
 <!-- /wp:heading --><!-- wp:paragraph {"className":"bw-offer-card__text"} -->
@@ -53,6 +53,8 @@ declare(strict_types=1);
 <!-- /wp:paragraph --><!-- wp:list {"className":"bw-offer-card__facts"} -->
 <ul class="wp-block-list bw-offer-card__facts"><!-- wp:list-item -->
 <li>Start Anfang 2028</li>
+<!-- /wp:list-item --><!-- wp:list-item -->
+<li>Präsenz im Raum Graz</li>
 <!-- /wp:list-item --><!-- wp:list-item -->
 <li>Basic-Abschluss oder anerkannter gleichwertiger Abschluss erforderlich</li>
 <!-- /wp:list-item --><!-- wp:list-item -->
@@ -65,18 +67,18 @@ declare(strict_types=1);
 <article class="wp-block-group bw-offer-card is-style-accent-orange"><!-- wp:group {"className":"bw-offer-card__head"} -->
 <div class="wp-block-group bw-offer-card__head"><!-- wp:paragraph {"className":"bw-chip"} -->
 <p class="bw-chip">Klinische Fortbildung</p>
-<!-- /wp:paragraph --><!-- wp:bw/icon {"icon":"heart","size":30,"className":"bw-offer-card__icon"} /--></div>
+<!-- /wp:paragraph --><!-- wp:bw/icon {"icon":"conversation","size":30,"className":"bw-offer-card__icon"} /--></div>
 <!-- /wp:group --><!-- wp:heading {"level":3,"className":"bw-offer-card__title"} -->
 <h3 class="wp-block-heading bw-offer-card__title">PERMA Clinical Expert</h3>
 <!-- /wp:heading --><!-- wp:paragraph {"className":"bw-offer-card__text"} -->
-<p class="bw-offer-card__text">Du arbeitest als klinische:r Psycholog:in oder Psychotherapeut:in? Vertiefe die Arbeit mit Stärken und Ressourcen in Diagnostik, Behandlungsplanung und Therapie. Fallarbeit und Supervision unterstützen die Übertragung in deine klinische Praxis.</p>
+<p class="bw-offer-card__text">Für Psycholog:innen, Psychotherapeut:innen, Ärzt:innen und andere helfende Berufe. Du lernst, Positive Psychologie in deinem jeweiligen beruflichen Tätigkeitsbereich einzusetzen, beispielsweise in Behandlung, Beratung, Begleitung oder Pflege. Fallarbeit und Supervision unterstützen die Übertragung in deine Praxis.</p>
 <!-- /wp:paragraph --><!-- wp:list {"className":"bw-offer-card__facts"} -->
 <ul class="wp-block-list bw-offer-card__facts"><!-- wp:list-item -->
 <li>Start Frühjahr 2028</li>
 <!-- /wp:list-item --><!-- wp:list-item -->
 <li>Präsenz im Raum Graz</li>
 <!-- /wp:list-item --><!-- wp:list-item -->
-<li>370 € je Modul / 2.960 € für acht Module</li>
+<li>370 € je Modul / 2.590 € statt 2.960 € für alle acht Module</li>
 <!-- /wp:list-item --></ul>
 <!-- /wp:list --><!-- wp:paragraph {"className":"bw-link bw-link\u002d\u002don-dark bw-link\u002d\u002dstrong bw-offer-card__link"} -->
 <p class="bw-link bw-link--on-dark bw-link--strong bw-offer-card__link"><a href="<?php echo esc_url( home_url( '/klinische-positive-psychologie/' ) ); ?>">Zur Clinical-Expert-Fortbildung →</a></p>

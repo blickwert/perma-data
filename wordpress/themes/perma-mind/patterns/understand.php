@@ -30,15 +30,15 @@ declare(strict_types=1);
 <p class="bw-eyebrow">Das PERMA-Modell</p>
 <!-- /wp:paragraph --><!-- wp:list {"className":"is-style-perma"} -->
 <ul class="wp-block-list is-style-perma"><!-- wp:list-item {"className":"bw-accent\u002d\u002dblue"} -->
-<li class="bw-accent--blue"><strong>P</strong>Positive Emotionen</li>
+<li class="bw-accent--blue"><strong>P</strong><span>Positive Emotions <span class="bw-perma__de">(Positive Emotionen)</span></span></li>
 <!-- /wp:list-item --><!-- wp:list-item {"className":"bw-accent\u002d\u002dpurple"} -->
-<li class="bw-accent--purple"><strong>E</strong>Engagement</li>
+<li class="bw-accent--purple"><strong>E</strong><span>Engagement <span class="bw-perma__de">(Engagement)</span></span></li>
 <!-- /wp:list-item --><!-- wp:list-item {"className":"bw-accent\u002d\u002dorange"} -->
-<li class="bw-accent--orange"><strong>R</strong>Beziehungen</li>
+<li class="bw-accent--orange"><strong>R</strong><span>Relationships <span class="bw-perma__de">(Beziehungen)</span></span></li>
 <!-- /wp:list-item --><!-- wp:list-item {"className":"bw-accent\u002d\u002dgreen"} -->
-<li class="bw-accent--green"><strong>M</strong>Sinn</li>
+<li class="bw-accent--green"><strong>M</strong><span>Meaning <span class="bw-perma__de">(Sinn)</span></span></li>
 <!-- /wp:list-item --><!-- wp:list-item {"className":"bw-accent\u002d\u002dred"} -->
-<li class="bw-accent--red"><strong>A</strong>Persönlich bedeutsame Ziele erreichen</li>
+<li class="bw-accent--red"><strong>A</strong><span>Accomplishment <span class="bw-perma__de">(Zielerreichung)</span></span></li>
 <!-- /wp:list-item --></ul>
 <!-- /wp:list --></div>
 <!-- /wp:group --></div>

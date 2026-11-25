@@ -109,7 +109,7 @@ declare(strict_types=1);
 <div class="wp-block-group bw-facts__row"><!-- wp:paragraph {"className":"bw-facts__term"} -->
 <p class="bw-facts__term">Aufbau und Format</p>
 <!-- /wp:paragraph --><!-- wp:paragraph {"className":"bw-facts__value"} -->
-<p class="bw-facts__value">Drei Zweitagesblöcke in Präsenz geplant; Ort folgt</p>
+<p class="bw-facts__value">Drei Zweitagesblöcke in Präsenz im Raum Graz; genauer Ort und Termine folgen</p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group --><!-- wp:group {"className":"bw-facts__row"} -->
 <div class="wp-block-group bw-facts__row"><!-- wp:paragraph {"className":"bw-facts__term"} -->

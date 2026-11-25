@@ -214,7 +214,7 @@ def build_assets():
 
 
 # Kleinere Fassungen der Hero-Bilder für srcset (src/HeroImage.php sucht <name>-<breite>.webp neben dem Original).
-HERO_VARIANTS = {"hero-sonnenaufgang.webp": (1200, 1600), "hero-sonnenaufgang-mobil.webp": (640, 768)}
+HERO_VARIANTS = {"steinmandl-sonnenaufgang-alpen.webp": (1200, 1600), "steinmandl-sonnenaufgang-alpen-mobil.webp": (640, 768)}
 
 
 def build_image_variants(img_dir):
@@ -393,14 +393,14 @@ def p_hero():
                 "bw-hero__box bw-hero__box--wide")
     # Hintergrundbilder als normale Bild-Blöcke (im Editor austauschbar, dekorativ). Das Theme fasst beide beim Ausgeben
     # zu einem <picture> zusammen (src/HeroImage.php), damit jedes Gerät nur sein Bild lädt.
-    images = (image("{{asset:assets/images/hero-sonnenaufgang-mobil.webp}}", "", "bw-hero__image bw-hero__image--mobile", lightbox=False)
-              + image("{{asset:assets/images/hero-sonnenaufgang.webp}}", "", "bw-hero__image bw-hero__image--desktop", lightbox=False))
+    images = (image("{{asset:assets/images/steinmandl-sonnenaufgang-alpen-mobil.webp}}", "", "bw-hero__image bw-hero__image--mobile", lightbox=False)
+              + image("{{asset:assets/images/steinmandl-sonnenaufgang-alpen.webp}}", "", "bw-hero__image bw-hero__image--desktop", lightbox=False))
     return group(images + box, "bw-hero bw-hero--v2b", "section", style="gradient-hero", label="Hero")
 
 
 def p_highlights():
     items = "".join(group(icon(i, "bw-highlight__icon", 22) + para(t), "bw-highlight", style=f"accent-{a}")
-                    for (a, i), t in zip([("blue", "globe"), ("purple", "flask"), ("green", "badge")], C.HERO["features"]))
+                    for (a, i), t in zip([("blue", "globe"), ("purple", "book"), ("green", "badge")], C.HERO["features"]))
     return group(container(group(items, "bw-highlights__list")), "bw-highlights", "section", style="section-navy", label="Profilmerkmale")
 
 
@@ -430,8 +430,9 @@ def p_offers():
                  "bw-block", "section", style="section-tint", anchor="ausbildungen", label="Angebotskarten")
 
 
-PERMA = [("P", "blue", "Positive Emotionen"), ("E", "purple", "Engagement"), ("R", "orange", "Beziehungen"),
-         ("M", "green", "Sinn"), ("A", "red", "Persönlich bedeutsame Ziele erreichen")]
+PERMA = [("P", "blue", "Positive Emotions", "Positive Emotionen"), ("E", "purple", "Engagement", "Engagement"),
+         ("R", "orange", "Relationships", "Beziehungen"), ("M", "green", "Meaning", "Sinn"),
+         ("A", "red", "Accomplishment", "Zielerreichung")]
 STEPS = ["Ziele klären", "Methoden auswählen", "Erfahrungen reflektieren", "Die Anwendung anpassen"]
 
 
@@ -439,8 +440,8 @@ def p_understand():
     U = C.UNDERSTAND
     split = group(group(section_head(U["left_title"]) + paras(U["left"]), "bw-split__main")
                   + group(para("Das PERMA-Modell", "bw-eyebrow")
-                          + lst([f"<strong>{l}</strong>{t}" for l, a, t in PERMA], "is-style-perma",
-                                item_cls=[f"bw-accent--{a}" for l, a, t in PERMA]), "bw-split__aside"), "bw-split")
+                          + lst([f'<strong>{l}</strong><span>{en} <span class="bw-perma__de">({de})</span></span>' for l, a, en, de in PERMA],
+                                "is-style-perma", item_cls=[f"bw-accent--{a}" for l, a, en, de in PERMA]), "bw-split__aside"), "bw-split")
     apply_ = group(section_head(U["right_title"]) + paras(U["right"]) + lst(STEPS, "is-style-steps", ordered=True), "bw-apply")
     return group(container(split + apply_), "bw-block", "section", label="Positive Psychologie verstehen und anwenden")
 
@@ -524,7 +525,7 @@ def p_newsletter():
 def p_contact():
     K = C.CONTACT
     items = "".join(group(icon(i, "bw-contact-list__icon") + para(t), "bw-contact-list__item")
-                    for i, t in (("mail", CONTACT_DATA["mail"]), ("phone", CONTACT_DATA["phone"]), ("pin", CONTACT_DATA["address"])))
+                    for i, t in (("mail", f'<a href="mailto:{CONTACT_DATA["mail"]}">{CONTACT_DATA["mail"]}</a>'), ("phone", CONTACT_DATA["phone"]), ("pin", CONTACT_DATA["address"])))
     left = group(section_head(K["title"], lead=K["text"]) + group(items, "bw-contact-list"), "bw-columns__item")
     return group(container(group(left + group(form("contact"), "bw-columns__item bw-form-slot"), "bw-columns")),
                  "bw-block", "section", anchor="kontakt", label="Kontakt")
@@ -716,7 +717,7 @@ def header_bar(accent):
 def footer():
     D = CONTACT_DATA
     cols = (group(image("{{asset:assets/images/logo-white.svg}}", "PERMA Mind Academy – We create wellbeing", "bw-footer__logo", lightbox=False), "bw-footer__col")
-            + group(para("Kontakt", "bw-footer__title") + para(D["address"]) + para(f'Tel: {D["phone"]}') + para(f'Mail: {D["mail"]}'), "bw-footer__col")
+            + group(para("Kontakt", "bw-footer__title") + para(D["address"]) + para(f'Tel: {D["phone"]}') + para(f'Mail: <a href="mailto:{D["mail"]}">{D["mail"]}</a>'), "bw-footer__col")
             + group(para("Social Media", "bw-footer__title")
                     + '<!-- wp:social-links {"openInNewTab":true,"className":"bw-footer__social"} -->\n<ul class="wp-block-social-links bw-footer__social">'
                     + "".join(f'<!-- wp:social-link {j({"url": u, "service": sv})} /-->' for sv, u in C.SOCIAL if u)

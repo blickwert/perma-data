@@ -16,9 +16,13 @@ final class Installer {
 	public const DB_VERSION        = '1';
 	public const DB_VERSION_OPTION = 'bw_perma_forms_db_version';
 
+	public const CAPS_VERSION        = '1';
+	public const CAPS_VERSION_OPTION = 'bw_perma_forms_caps_version';
+
 	/** Runs on plugin activation. */
 	public static function activate(): void {
 		self::install();
+		self::grant_caps();
 	}
 
 	/** Runs the schema update after a plugin update. */
@@ -26,6 +30,26 @@ final class Installer {
 		if ( get_option( self::DB_VERSION_OPTION ) !== self::DB_VERSION ) {
 			self::install();
 		}
+		if ( get_option( self::CAPS_VERSION_OPTION ) !== self::CAPS_VERSION ) {
+			self::grant_caps();
+		}
+	}
+
+	/** Gives the roles that may see the contact list the capability for it. */
+	private static function grant_caps(): void {
+		/**
+		 * Roles that may open the contact list and download the CSV export.
+		 *
+		 * @param string[] $roles
+		 */
+		$roles = (array) apply_filters( 'bw_perma_forms_contacts_roles', [ 'administrator', 'editor' ] );
+		foreach ( $roles as $name ) {
+			$role = get_role( (string) $name );
+			if ( $role ) {
+				$role->add_cap( Plugin::CONTACTS_CAPABILITY );
+			}
+		}
+		update_option( self::CAPS_VERSION_OPTION, self::CAPS_VERSION, false );
 	}
 
 	private static function install(): void {

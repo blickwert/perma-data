@@ -35,7 +35,7 @@ final class ExportController {
 	}
 
 	public function download(): void {
-		if ( ! current_user_can( Plugin::CAPABILITY ) ) {
+		if ( ! current_user_can( Plugin::CONTACTS_CAPABILITY ) ) {
 			wp_die( esc_html__( 'You are not allowed to export contacts.', 'bw-perma-forms' ), 403 );
 		}
 		check_admin_referer( self::ACTION );

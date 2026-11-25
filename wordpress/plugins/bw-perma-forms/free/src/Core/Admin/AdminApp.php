@@ -30,8 +30,8 @@ final class AdminApp {
 	}
 
 	public function menu(): void {
-		add_menu_page( __( 'PERMA contacts', 'bw-perma-forms' ), __( 'PERMA contacts', 'bw-perma-forms' ), Plugin::CAPABILITY, self::PAGE, [ $this, 'render' ], 'dashicons-groups', 26 );
-		add_submenu_page( self::PAGE, __( 'Contacts', 'bw-perma-forms' ), __( 'Contacts', 'bw-perma-forms' ), Plugin::CAPABILITY, self::PAGE, [ $this, 'render' ] );
+		add_menu_page( __( 'PERMA contacts', 'bw-perma-forms' ), __( 'PERMA contacts', 'bw-perma-forms' ), Plugin::CONTACTS_CAPABILITY, self::PAGE, [ $this, 'render' ], 'dashicons-groups', 26 );
+		add_submenu_page( self::PAGE, __( 'Contacts', 'bw-perma-forms' ), __( 'Contacts', 'bw-perma-forms' ), Plugin::CONTACTS_CAPABILITY, self::PAGE, [ $this, 'render' ] );
 		add_submenu_page( self::PAGE, __( 'Settings', 'bw-perma-forms' ), __( 'Settings', 'bw-perma-forms' ), Plugin::CAPABILITY, self::PAGE . '&path=/settings', '__return_null' );
 	}
 
@@ -66,6 +66,7 @@ final class AdminApp {
 						'restNs'   => Plugin::REST_NS,
 						'adminUrl' => admin_url( 'admin.php?page=' . self::PAGE ),
 						'modules'  => array_keys( $this->modules->active() ),
+						'canManage' => current_user_can( Plugin::CAPABILITY ),
 					]
 				)
 			) . ';',

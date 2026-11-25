@@ -90,3 +90,10 @@ Formulartexte stehen in den Modulen (`InterestListModule`, `ContactModule`, `New
 - Brevo-Liste, Double-Opt-in-Vorlage und Bestätigungsseite anlegen (Auftraggeber bzw. beim Einrichten), Webhook in Brevo eintragen.
 - Turnstile-Schlüssel eintragen.
 - Datenschutztext: Turnstile, Brevo und die Kontakt-Datenbank (Speicherdauer) erwähnen.
+
+
+## Rechte (seit 0.4.0)
+
+- `bw_perma_forms_contacts`: Kontaktliste, Kontakt-REST und CSV-Export. Bekommen beim Aktualisieren Administrator und Redakteur (Filter `bw_perma_forms_contacts_roles`).
+- `manage_options`: Einstellungen, Formular-Abgleich, Brevo-Einrichtung (nur Administratoren). Die Admin-App blendet den Reiter „Einstellungen“ für alle anderen aus.
+- Newsletter-Formular mit `acceptance_as_validation: on`: Der Button bleibt aktiv, eine fehlende Einwilligung zeigt eine Meldung statt eines ausgegrauten Buttons.

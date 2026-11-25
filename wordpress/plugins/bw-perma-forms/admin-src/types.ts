@@ -31,6 +31,8 @@ export type AdminData = {
 	restNs: string;
 	adminUrl: string;
 	modules: string[];
+	/** Settings tab only for users who may change settings (administrators). */
+	canManage?: boolean;
 	exportUrl?: string;
 	statuses?: string[];
 	interests?: string[];

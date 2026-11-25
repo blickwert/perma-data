@@ -64,7 +64,7 @@ final class InterestListModule extends AbstractModule {
 <div class="bw-form__field"><label class="bw-form__label" for="bw-il-beruf">Beruf oder bisherige Ausbildung <span class="bw-form__optional">(optional)</span></label>[text beruf id:bw-il-beruf class:bw-form__input]</div>
 <div class="bw-form__field"><label class="bw-form__label" for="bw-il-nachricht">Deine Nachricht an uns <span class="bw-form__optional">(optional)</span></label>[textarea nachricht id:bw-il-nachricht class:bw-form__input x4]</div>
 <p class="bw-form__hint">Mit deinem Eintrag nehmen wir dich in die Interessentenliste für deine ausgewählten Ausbildungen auf. Du erhältst dazu Informationen und später die Unterlagen für die verbindliche Anmeldung per E-Mail. Informationen zur Verarbeitung deiner Angaben findest du in unserer <a href="{$privacy}">Datenschutzerklärung</a>.</p>
-<div class="bw-form__check">[acceptance newsletter optional class:bw-form__checkbox]Ja, ich möchte zusätzlich den Newsletter der PERMA Mind Academy mit Informationen zu Ausbildungen und Seminarterminen erhalten. Ich kann mich jederzeit wieder abmelden.[/acceptance]</div>
+<div class="bw-form__check">[acceptance newsletter optional class:bw-form__checkbox]Ja, ich möchte zusätzlich den Newsletter der PERMA Mind Academy mit Informationen zu Ausbildungen und Seminarterminen erhalten und bin einverstanden, dass ausgewertet wird, ob ich ihn öffne und welche Links ich anklicke. Ich kann mich jederzeit wieder abmelden.[/acceptance]</div>
 [turnstile]
 [submit class:bw-form__submit "Unverbindlich eintragen"]
 HTML;

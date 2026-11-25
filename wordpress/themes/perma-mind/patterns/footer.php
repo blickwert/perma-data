@@ -25,7 +25,7 @@ declare(strict_types=1);
 <!-- /wp:paragraph --><!-- wp:paragraph -->
 <p>Tel: +43 676 511 2763</p>
 <!-- /wp:paragraph --><!-- wp:paragraph -->
-<p>Mail: michael@perma-academy.at</p>
+<p>Mail: <a href="mailto:info@perma-academy.at">info@perma-academy.at</a></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group --><!-- wp:group {"className":"bw-footer__col bw-footer__col\u002d\u002dsocial"} -->
 <div class="wp-block-group bw-footer__col bw-footer__col--social"><!-- wp:paragraph {"className":"bw-footer__title"} -->

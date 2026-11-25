@@ -116,7 +116,7 @@ body:has(.bw-page-hero--offer.is-style-accent-green){--bw-accent:var(--bw-green)
 /* Hintergrundbild: mobil Hochformat (Himmel oben, Steinturm unten), ab Tablet Querformat. src/HeroImage.php macht daraus ein <picture>. */
 .bw-hero__image{position:absolute;inset:0;margin:0}
 .bw-hero__image picture{display:block;width:100%;height:100%}
-.bw-hero__image img{display:block;width:100%;height:100%;object-fit:cover;object-position:50% 100%}
+.bw-hero__image img{display:block;width:100%;height:100%;object-fit:cover;object-position:50% 0%} /* Hochformat: Himmel oben hinter dem Text, Steinmandl darunter */
 .bw-hero__image--mobile{display:none} /* im Frontend schon zusammengefasst; im Editor nur über die Listenansicht erreichbar */
 /* Mobil: kein Kasten, Text direkt auf dem Himmel */
 .bw-hero__box{position:relative;box-sizing:border-box;display:flex;flex-direction:column;gap:var(--bw-space-4)}
@@ -211,6 +211,7 @@ body:has(.bw-page-hero--offer.is-style-accent-green){--bw-accent:var(--bw-green)
 
 .wp-block-list.is-style-perma{list-style:none;margin:var(--bw-space-3) 0 0;padding:0;display:flex;flex-direction:column;gap:var(--bw-space-2)}
 .wp-block-list.is-style-perma li{display:flex;align-items:center;gap:var(--bw-space-4);padding:var(--bw-space-2);background:var(--bw-color-surface-tint);border-radius:var(--bw-radius-card);font-size:var(--bw-fs-base);font-weight:var(--bw-fw-medium);line-height:var(--bw-lh-heading)}
+.wp-block-list.is-style-perma .bw-perma__de{font-size:var(--bw-fs-xs);font-weight:var(--bw-fw-regular);color:var(--bw-color-text-muted)}
 .wp-block-list.is-style-perma li strong{display:flex;align-items:center;justify-content:center;flex:0 0 auto;width:var(--bw-space-12);height:var(--bw-space-12);border-radius:var(--bw-radius-md);background:var(--bw-accent,var(--bw-blue));color:var(--bw-on-accent,var(--bw-navy));font-family:var(--bw-font-heading);font-size:var(--bw-fs-2xl);font-weight:var(--bw-fw-medium);line-height:var(--bw-lh-none)}
 .bw-apply{margin-top:var(--bw-space-16);padding-top:var(--bw-space-12);border-top:var(--bw-border-width-hair) solid var(--bw-color-border)}
 
@@ -254,9 +255,9 @@ body:has(.bw-page-hero--offer.is-style-accent-green){--bw-accent:var(--bw-green)
 .bw-person__img button.lightbox-trigger{top:var(--bw-space-3)!important;right:var(--bw-space-3)!important} /* !important: WordPress setzt top/right inline aus der Bildhöhe; das Hochformat ragt über den Rahmen hinaus */
 .bw-research{margin:var(--bw-space-14) auto 0;max-width:960px}
 .bw-research__title{margin:0 0 var(--bw-space-6);font-size:var(--bw-fs-xl);line-height:var(--bw-lh-heading)}
-.bw-research__grid{display:grid;grid-template-columns:minmax(0,1fr);gap:var(--bw-space-8)}
+.bw-research__grid{display:grid;grid-template-columns:minmax(0,1fr);gap:var(--bw-space-8);align-items:start}
 .bw-research__figure{margin:0}
-.bw-research__figure img{display:block;width:100%;height:auto;aspect-ratio:3/2;object-fit:cover;border-radius:var(--bw-radius-card)}
+.bw-research__figure img{display:block;width:100%;height:auto;border-radius:var(--bw-radius-card)} /* natürliches Seitenverhältnis: kein object-fit, sonst schneidet auch die Vergrößerung zu */
 .bw-research__figure figcaption{margin-top:var(--bw-space-3);text-align:left;font-size:var(--bw-fs-base);line-height:var(--bw-lh-body);color:var(--bw-color-text-muted)}
 .bw-research__figure figcaption strong{display:inline-block;margin-bottom:var(--bw-space-1);color:var(--bw-color-heading)}
 @media (min-width:821px){.bw-research__grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
@@ -382,7 +383,7 @@ body:has(.bw-page-hero--offer.is-style-accent-green){--bw-accent:var(--bw-green)
 
 /* ========== Footer ========== */
 .bw-footer{background:var(--bw-color-surface-dark);color:var(--bw-color-text-on-dark-muted);border-top:6px solid transparent;border-image:var(--wp--preset--gradient--footer-stripe) 1}
-.bw-footer__inner{padding-top:var(--bw-space-10);padding-bottom:var(--bw-space-10);display:flex;flex-wrap:wrap;gap:var(--bw-space-10) var(--bw-space-14);font-size:var(--bw-fs-base);line-height:var(--bw-lh-body)}
+.bw-footer__inner{padding-top:var(--bw-space-10);padding-bottom:calc(var(--bw-space-10) + var(--bw-space-16));display:flex;flex-wrap:wrap;gap:var(--bw-space-10) var(--bw-space-14);font-size:var(--bw-fs-base);line-height:var(--bw-lh-body)}
 .bw-footer__col{flex:1 1 240px;display:flex;flex-direction:column}
 .bw-footer__col p{margin:0}
 .bw-footer__col--social{flex-basis:160px;gap:var(--bw-space-2)}

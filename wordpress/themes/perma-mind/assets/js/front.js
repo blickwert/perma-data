@@ -2,13 +2,25 @@
 ( function () {
 	var reduceMotion = window.matchMedia( '(prefers-reduced-motion: reduce)' ).matches;
 
-	/* Floating "Zur Interessentenliste" button: hidden while the hero (which has its own main button) is visible. */
+	/* Floating "Zur Interessentenliste" button: hidden while the hero (which has its own main button)
+	   or the footer (whose links it would cover) is visible. */
 	var fab = document.querySelector( '.bw-fab' );
-	var hero = document.querySelector( '.bw-hero, .bw-page-hero--offer' );
-	if ( fab && hero && 'IntersectionObserver' in window ) {
-		new IntersectionObserver( function ( entries ) {
-			fab.classList.toggle( 'is-hidden', entries[ 0 ].isIntersecting );
-		} ).observe( hero );
+	var covers = Array.prototype.slice.call( document.querySelectorAll( '.bw-hero, .bw-page-hero--offer, .bw-footer' ) );
+	if ( fab && covers.length && 'IntersectionObserver' in window ) {
+		var visible = new Set();
+		var observer = new IntersectionObserver( function ( entries ) {
+			entries.forEach( function ( entry ) {
+				if ( entry.isIntersecting ) {
+					visible.add( entry.target );
+				} else {
+					visible.delete( entry.target );
+				}
+			} );
+			fab.classList.toggle( 'is-hidden', visible.size > 0 );
+		} );
+		covers.forEach( function ( el ) {
+			observer.observe( el );
+		} );
 	}
 
 	/* Table of contents (legal pages): marks the section currently in view. */
