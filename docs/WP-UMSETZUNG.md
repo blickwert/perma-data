@@ -34,9 +34,9 @@ Ergebnis:
 
 ## 3. Regeln (zuerst lesen)
 
-- `.claude/skills/wp-theme-architecture/SKILL.md` – Theme-Aufbau, theme.json als Designsystem
-- `.claude/skills/wp-plugin-architecture/SKILL.md` – Plugin-Aufbau (OOP, Module, Schichten, Sicherheit)
-- `.claude/skills/html-css-richtlinien/SKILL.md` – CSS-Regeln (keine Inline-Styles, Tokens, Präfix)
+- Im Repo `blickwert/bw-wp-bridge` (in der Session einbinden): `.claude/skills/wp-theme-architecture/SKILL.md` – Theme-Aufbau, theme.json als Designsystem; `.claude/skills/wp-plugin-architecture/SKILL.md` – Plugin-Aufbau (OOP, Module, Schichten, Sicherheit)
+- Hier: `.claude/skills/html-css-richtlinien/SKILL.md` – CSS-Regeln (keine Inline-Styles, Tokens, Präfix)
+- Das Bridge-Repo enthält keine Website-Inhalte; PERMA-Theme, -Plugin und -Inhalte bleiben in diesem Repo.
 - `docs/V2B.md` – Aufbau und Inhalte von v2b
 - `docs/CORPORATE-DESIGN-V2.md`, `docs/DESIGN-TOKENS.md` – Farben, Schriften, Kontraste
 

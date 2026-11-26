@@ -10,7 +10,10 @@ Kurz: Basis ist die Vorschau **v2b** (`design/v2b/`, Texte in `scripts/v2b_conte
 
 ## Regeln
 
-- Skills in `.claude/skills/`: `wp-theme-architecture`, `wp-plugin-architecture`, `html-css-richtlinien`. Immer anwenden.
+- Skills immer anwenden:
+  - `wp-theme-architecture` und `wp-plugin-architecture` liegen im Repo **`blickwert/bw-wp-bridge`** (`.claude/skills/`). Das Bridge-Repo muss in der Session eingebunden sein; sonst zuerst hinzufügen (`add_repo`) und klonen.
+  - `html-css-richtlinien` liegt hier in `.claude/skills/` (projektspezifische CSS-Regeln).
+- Keine Website-Inhalte ins Bridge-Repo (siehe dessen `CLAUDE.md`): Theme, Plugin und Inhalte von PERMA gehören in dieses Repo.
 - Präfix `bw-` (CSS), `bw_` (PHP-Hooks), PHP 8.3, WordPress 7.x.
 - Designwerte nur aus `tokens/tokens.v2.json` (Generatoren anpassen, nicht die erzeugten Dateien von Hand).
 - Keine Schriften oder Skripte von fremden Servern (Ausnahme: Turnstile/Brevo in Formularen).
