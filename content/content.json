@@ -47,7 +47,7 @@
     "title": "Ihre Vorteile",
     "intro": "Sechs Gründe, warum Fachkräfte ihre Weiterbildung in Positiver Psychologie bei uns absolvieren.",
     "items": [
-      {"icon": "flask", "title": "Wissenschaftlich fundiert", "text": "Die Inhalte stützen sich auf den aktuellen Forschungsstand."},
+      {"icon": "book", "title": "Wissenschaftlich fundiert", "text": "Die Inhalte stützen sich auf den aktuellen Forschungsstand."},
       {"icon": "briefcase", "title": "Praxisnah", "text": "Jedes Modul enthält Übungen für Ihren Berufsalltag."},
       {"icon": "user-circle", "title": "Erfahrene Trainer:innen", "text": "Lehre durch Fachleute mit Praxiserfahrung."},
       {"icon": "chat", "title": "Kleine Gruppen", "text": "Raum für Fragen, Austausch und persönliche Begleitung. [Gruppengröße ergänzen]"},
@@ -61,7 +61,7 @@
     "text": "Hier geht es nicht um schnelle Rezepte. Die Academy schafft einen fundierten Rahmen, in dem Theorie, Erfahrung und professionelle Praxis miteinander in Gespräch kommen.",
     "pills": ["Forschungsorientiert", "Praxisbezogen", "Persönlich begleitet"],
     "cards": [
-      {"icon": "flask", "title": "Wissenschaftlich orientiert", "text": "Inhalte werden nachvollziehbar kontextualisiert statt verkürzt vermittelt."},
+      {"icon": "book", "title": "Wissenschaftlich orientiert", "text": "Inhalte werden nachvollziehbar kontextualisiert statt verkürzt vermittelt."},
       {"icon": "layers", "title": "Fachlich vertieft", "text": "Zusammenhänge erhalten Raum, damit Wissen tragfähig wird."},
       {"icon": "briefcase", "title": "Praxisnah gedacht", "text": "Lernimpulse werden mit realen beruflichen und persönlichen Kontexten verbunden."},
       {"icon": "user-circle", "title": "Persönlich begleitet", "text": "Fragen und Reflexion sind integraler Teil des Lernprozesses."}
