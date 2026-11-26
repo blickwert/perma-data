@@ -71,7 +71,7 @@ WHY = {
     "items": [
         ("blue", "globe", "Seit 2014 im Austausch mit der internationalen Forschung",
          "Unsere fachliche Entwicklung ist seit 2014 vom kontinuierlichen Austausch mit führenden Wissenschaftler:innen der Positiven Psychologie geprägt. Dazu zählen Begegnungen und fachlicher Austausch mit Martin Seligman, Mihály Csíkszentmihályi, Barbara Fredrickson, Kim Cameron und Tayyab Rashid sowie weiteren prägenden Persönlichkeiten des Fachs. Teile unserer Ausbildung haben wir direkt bei den Begründern der Positiven Psychologie absolviert."),
-        ("purple", "flask", "Aktuelle Erkenntnisse für deine Praxis",
+        ("purple", "book", "Aktuelle Erkenntnisse für deine Praxis",
          "Wir nehmen seitdem regelmäßig an europäischen und internationalen Fachkonferenzen teil und verfolgen neue Forschungsergebnisse und fachliche Debatten. Diese Impulse fließen in unsere Ausbildung ein. Du lernst, was sich aus der Forschung für deine Arbeit ableiten lässt, welche Fragen offenbleiben und wo Methoden an Grenzen stoßen."),
         ("green", "badge", "Ein Abschluss mit europäischem Zertifizierungsrahmen",
          "Unsere ECQA-anerkannten Ausbildungen ermöglichen einen europäischen Kompetenznachweis durch eine externe Zertifizierungsstelle. Im Unterschied zu einer reinen Teilnahmebestätigung dokumentiert er Kenntnisse und Fähigkeiten anhand definierter Anforderungen. Damit kannst du deine Qualifikation gegenüber Auftraggeber:innen und Arbeitgeber:innen nachvollziehbar darstellen."),
