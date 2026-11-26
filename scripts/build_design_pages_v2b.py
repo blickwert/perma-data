@@ -36,6 +36,8 @@ ICONS.update({
     # Zwei Personen im Gespräch (Clinical Expert: Therapie und Behandlung)
     "conversation": '<circle cx="6" cy="11" r="2.5"/><path d="M2 21v-1a4 4 0 0 1 8 0v1"/><circle cx="18" cy="11" r="2.5"/><path d="M14 21v-1a4 4 0 0 1 8 0v1"/><path d="M10 2.5h4a1.5 1.5 0 0 1 1.5 1.5v2a1.5 1.5 0 0 1-1.5 1.5h-1.25L12 9l-.75-1.5H10A1.5 1.5 0 0 1 8.5 6V4A1.5 1.5 0 0 1 10 2.5z"/>',
 })
+# Reagenzglas nicht verwenden (Wunsch der Academy, 25.11.2026): überall das Buch
+ICONS.pop("flask", None)
 OFFER_ICON = {"basic": "steps-1", "advanced": "steps-2", "clinical": "conversation"}
 OFFER_CHIP = {"basic": "Einstieg", "advanced": "Vertiefung", "clinical": "Klinische Fortbildung"}
 
