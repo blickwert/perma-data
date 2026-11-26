@@ -5,7 +5,7 @@ description: Regeln für sauberes, klassenbasiertes HTML und CSS mit einheitlich
 
 # HTML & CSS schreiben – Richtlinien
 
-Oberstes Ziel: **Konsistenz.** Jede Definition (Farbe, Schrift, Abstand, Rahmen, Button) existiert genau einmal und ist auf allen Seiten identisch. Der Code muss ohne Umbau in ein WordPress-Block-Theme übernommen werden können: Tokens werden zu `theme.json`-Presets (siehe Skill `wp-theme-architecture`).
+Oberstes Ziel: **Konsistenz.** Jede Definition (Farbe, Schrift, Abstand, Rahmen, Button) existiert genau einmal und ist auf allen Seiten identisch. Der Code muss ohne Umbau in ein WordPress-Block-Theme übernommen werden können: Tokens werden zu `theme.json`-Presets (siehe Skill `wp-theme-architecture` im Repo `blickwert/bw-wp-bridge`).
 
 ## 1. Keine Inline-Styles
 
